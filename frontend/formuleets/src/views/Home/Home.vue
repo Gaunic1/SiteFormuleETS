@@ -13,7 +13,7 @@
       </div>
 
       <!-- PART2 -->
-      <div class="flex-initial w-full z-10 bg-first bg-white dark:bg-gray-800">
+      <div class="flex-initial w-full z-10 bg-first bg-white dark:bg-gray-800 overflow-x-hidden">
 
         <!-- QUI SOMME NOUS ? -->
         <div class="flex flex-col lg:flex-row flex-wrap w-full">

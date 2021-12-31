@@ -9,7 +9,7 @@ const HeaderMenus = [
     },
     {
         name: "L'équipe",
-        to: "/teams"
+        to: "/team"
     },
     {
         name: "Commanditaires",
@@ -34,7 +34,7 @@ const HeaderMenus = [
             {
                 name: "Videos",
                 to: "/media/videos"
-            }
+            },
         ]
     },
     {

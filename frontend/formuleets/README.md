@@ -2,9 +2,10 @@
 
 ## Color palette
 
--
--
--
+- red-500
+- gray-800
+- white
+- black
 
 ## Project setup
 ```

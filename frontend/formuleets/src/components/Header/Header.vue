@@ -10,20 +10,20 @@
           <ul class="hidden list-none p-3 lg:flex">
               <template v-for="item of menu" :key="item.name">
                     <!-- DROPDOWN -->
-                    <li v-if="item.type == 'dropdown'" class="dropdown">
+                    <li v-if="item.type == 'dropdown'" class="dropdown flex items-center justify-center">
                         <a class="ml-2 mr-2 no-underline uppercase dark:text-white cursor-pointer" :id="item.name">{{ item.name }}</a>
 
-                        <div class="menu absolute z-50 bg-white dark:bg-gray-800 h-0 overflow-hidden">
+                        <div class="top-full -mt-3 menu absolute z-50 bg-white dark:bg-gray-800 h-0 overflow-hidden">
                             <ul class="h-auto flex flex-col justify-center items-center">
                                 <li v-for="menu of item.menus" :key="menu.name" class="h-10">
-                                    <router-link class="dark:text-white m-2 no-underline uppercase" :to="menu.to">{{ menu.name }}</router-link>
+                                    <router-link class="dark:text-white no-underline uppercase" :to="menu.to">{{ menu.name }}</router-link>
                                 </li>
                             </ul>
                         </div>
                     </li>
 
                     <!-- NOT DROPDOWN -->
-                    <li v-else>
+                    <li v-else class="flex items-center justify-center">
                         <router-link class="ml-2 mr-2 no-underline uppercase dark:text-white" :to="item.to">{{ item.name }}</router-link>
                     </li>
               </template>
@@ -38,25 +38,25 @@
 
           <!-- PHONE -->
             <ul class="flex list-none p-3 lg:hidden">
-              <i @click="showPhoneMenu" class="fas fa-bars cursor-pointer text-3xl dark:text-white"></i>
+              <i @click="showMenu = true" class="fas fa-bars cursor-pointer text-3xl dark:text-white"></i>
 
-              <div class="fixed flex justify-center items-center w-full h-screen bg-white dark:bg-gray-800 top-0 left-0 z-50" :class="showMenu">
+              <div data-aos="fade-right" v-if="showMenu" class="fixed flex justify-center items-center w-full h-screen bg-white dark:bg-gray-800 top-0 left-0 z-50">
                 <!-- close -->
-                <i class="fas fa-times dark:text-white text-3xl absolute right-3 top-3 cursor-pointer" @click="showPhoneMenu"></i>
+                <i class="fas fa-times dark:text-white text-3xl absolute right-3 top-3 cursor-pointer" @click="showMenu = false"></i>
             
                 <ul class="list-none dark:text-white text-center">
                     <template v-for="item of menu" :key="item.name">
                         <!-- DROPDOWN -->
                         <li v-if="item.type == 'dropdown'" class="dropdown m-4 flex">
                             <template v-for="(menu, index) of item.menus" :key="menu.name">
-                                <router-link @click="showPhoneMenu" :to="menu.to" class="ml-2 mr-2 no-underline uppercase">{{ menu.name }}</router-link>
+                                <router-link @click="showMenu = false" :to="menu.to" class="ml-2 mr-2 no-underline uppercase">{{ menu.name }}</router-link>
                                 <span class="text-gray-800 dark:text-white" v-if="index < item.menus.length-1">|</span>
                             </template>
                         </li>
 
                         <!-- NOT DROPDOWN -->
                         <li v-else class="m-4">
-                            <router-link class="ml-2 mr-2 no-underline uppercase" :to="item.to" @click="showPhoneMenu">{{ item.name }}</router-link>
+                            <router-link class="ml-2 mr-2 no-underline uppercase" :to="item.to" @click="showMenu = false">{{ item.name }}</router-link>
                         </li>
                     </template>
 
@@ -91,7 +91,7 @@ export default {
             menu: HeaderMenus,
             logo: require('../../assets/logo-f1.png'),
             headerClass: [],
-            showMenu: "hidden",
+            showMenu: false,
             darkMode: false,
             value: false
         }
@@ -99,15 +99,9 @@ export default {
     methods: {
         scroll(){
             if(window.scrollY > 0) 
-                this.headerClass = ["shadow-md", "bg-white", "h-20", "dark:text-gray-800", "tracking-wider", "dark:bg-gray-800", "dark:text-white"];
+                this.headerClass = ["shadow-md", "bg-white", "h-16", "dark:text-gray-800", "tracking-wider", "dark:bg-gray-800", "dark:text-white"];
             else 
                 this.headerClass = [];
-        },
-        showPhoneMenu(){
-            if(this.showMenu == "hidden") 
-                this.showMenu = "";
-            else 
-                this.showMenu = "hidden";
         },
         setDarkMode(){
             if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {

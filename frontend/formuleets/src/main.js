@@ -9,8 +9,12 @@ import "@/assets/styles/main.css";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
+//Tilt.js
+import VueTilt from 'vue-tilt.js'
+
 createApp(App)
 .use(i18n)
 .use(AOS.init())
+.use(VueTilt)
 .use(router)
 .mount('#app')
