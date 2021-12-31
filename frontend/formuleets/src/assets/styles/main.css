@@ -1,0 +1,12 @@
+/* TAILWIND IMPORT */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+.h-screen-divide{
+    height: 50vh;
+}
+
+.min-200{
+    min-width: 500px;
+}
