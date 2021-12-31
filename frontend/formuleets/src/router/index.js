@@ -25,7 +25,12 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
+});
+
+//go back to top when you change page
+router.beforeEach(() => {
+  window.scrollTo(0, 0)
 })
 
 export default router

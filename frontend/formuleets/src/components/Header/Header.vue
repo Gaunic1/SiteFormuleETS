@@ -104,7 +104,15 @@ export default {
                 this.headerClass = [];
         },
         setDarkMode(){
-            if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            // const modeDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if(!localStorage.theme){
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+                this.darkMode = true;
+                return;
+            }
+
+            if (localStorage.theme === 'dark' || (!('theme' in localStorage))) {
                 document.documentElement.classList.add('dark');
                 localStorage.theme = 'dark';
                 this.darkMode = true;
