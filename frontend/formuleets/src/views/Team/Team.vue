@@ -1,5 +1,5 @@
 <template>
-    <div class="dark:bg-gray-800 w-full h-auto text-center mb-0">
+    <div class="dark:bg-gray-800 w-full h-auto text-center mb-0 overflow-hidden">
         <!-- USELESS. JUST HERE TO DONT GO ON THE HEADER -->
         <div class="h-24"></div>
 
