@@ -36,7 +36,7 @@
         <!-- LE PROJET ? -->
         <div class="flex flex-wrap w-full lg:flex-row">
           <div class="flex-initial p-5 w-full lg:w-1/3 h-full flex items-center justify-center" data-aos="fade-right">
-            <img :src="formuleImg" alt="Teams" class="h-full border-8 border-red-600 rounded">
+            <img :lazy-src="formuleImg" lazy-animation="opacity" alt="Teams" class="h-full border-8 border-red-600 rounded">
           </div>
 
           <div data-aos="fade-left" class="flex-initial p-5 w-full lg:w-2/3">
@@ -82,7 +82,9 @@ export default {
       scrollFormule(){
         const scroll = window.scrollY ? window.scrollY : document.body.scrollTop;
         if(scroll < window.innerHeight){
-          document.querySelector('#formule').style = `transition: none!important; transform: translate(${-scroll}px, ${scroll}px)`;
+          const formule = document.querySelector('#formule');
+          if(formule) formule.style = `transition: none!important; transform: translate(${-scroll}px, ${scroll}px)`;
+          else document.removeEventListener("scroll", this.scrollEventFormule);
         }
       }
     }
