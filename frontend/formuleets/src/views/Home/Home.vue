@@ -1,19 +1,19 @@
 <template>
   <div>
     <!-- PRESENTATION -->
-    <div class="bg-first w-full flex flex-wrap dark:bg-gray-800">
+    <div class="bg-first w-full flex flex-wrap dark:bg-dark-mode">
       <div class="bg-triangle absolute bottom-0 left-0 w-full h-full bg-gradient-to-tr from-red-600 to-red-500 z-10"></div>
 
       <div class="flex-initial h-screen w-full lg:w-1/3 flex flex-col justify-center p-5 z-20" data-aos="fade-right">
-        <h1 class="dark:text-white text-gray-800 font-bold text-5xl italic text-center lg:text-8xl lg:text-left">{{ text.titre }}<span class="text-red-600">{{ text.ETS }}</span></h1>
-        <p class="mt-10 dark:text-white text-gray-800 text-center lg:text-left">{{ text.text }}</p>
+        <h1 class="dark:text-white text-dark-mode font-normal tracking-wider text-5xl italic text-center lg:text-8xl lg:text-left">{{ text.titre }}<span class="text-red-600 font-bold">{{ text.ETS }}</span></h1>
+        <p class="mt-10 dark:text-white text-dark-mode text-center lg:text-left">{{ text.text }}</p>
       </div>
       <div class="flex-initial h-screen w-2/3 justify-center items-center hidden lg:flex z-0">
         <img id="formule" :src="formule" alt="Formule" class="z-0" data-aos="fade-left">
       </div>
 
       <!-- PART2 -->
-      <div class="flex-initial w-full z-10 bg-first bg-white dark:bg-gray-800 overflow-x-hidden">
+      <div class="flex-initial w-full z-10 bg-first bg-white dark:bg-dark-mode overflow-x-hidden">
 
         <!-- QUI SOMME NOUS ? -->
         <div class="flex flex-col lg:flex-row flex-wrap w-full">
@@ -31,7 +31,7 @@
           </div>
         </div>
 
-        <hr class="border-red-600 mr-3 ml-3 mt-5 mb-5">
+        <hr class="border-red-600 mr-3 ml-3 mt-5 mb-5" data-aos="zoom-in">
 
         <!-- LE PROJET ? -->
         <div class="flex flex-wrap w-full lg:flex-row">

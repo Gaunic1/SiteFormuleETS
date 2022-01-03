@@ -1,9 +1,9 @@
 <template>
-    <div class="bg-gray-900 h-56 w-full flex flex-col justify-center z-10">
+    <div class="bg-dark-mode-2 h-56 w-full flex flex-col justify-center z-10">
         <!-- SOCIAL MEDIAS -->
         <div class="flex-initial w-full p-5 flex justify-center items-center">
             <template v-for="media of medias" :key="media">
-                <a :href="media.link" class="ml-3 text-white hover:bg-gray-500 transition-all text-lg bg-gray-700 m-0 rounded-full flex items-center justify-center w-16 h-16">
+                <a :href="media.link" class="ml-3 text-white hover:bg-gray-500 transition-all text-lg border border-white m-0 rounded-full flex items-center justify-center w-16 h-16">
                     <i :class="media.icon" class="absolute"></i>
                 </a>
             </template>

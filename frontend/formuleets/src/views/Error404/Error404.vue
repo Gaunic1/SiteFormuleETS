@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-center items-center text-center w-full h-screen dark:bg-gray-800">
+  <div class="flex flex-col justify-center items-center text-center w-full h-screen dark:bg-dark-mode">
       <div class="w-80 sm:w-96 h-36 bg-cover bg-center" :style="`background-image: url('${image}')`"></div>
   </div>
 </template>
