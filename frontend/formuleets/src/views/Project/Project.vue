@@ -69,7 +69,7 @@ export default {
                 if(diff < 0) delta = -1;
                 else delta = 1;
 
-                this.mouseY = y;
+                this.mouseY = y + delta;
 
                 if(diff < 500) {
                     event.preventDefault();
