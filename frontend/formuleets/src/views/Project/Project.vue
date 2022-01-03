@@ -57,8 +57,8 @@ export default {
         },
         animateFormulePhone(event){
             const y = event.originalEvent.touches[0].clientY;
-            if(this.mouseY - y < 0) this.animateFormule({ deltaY: 100 });
-            else this.animateFormule({ deltaY: -100 });
+            if(this.mouseY - y < 0) this.animateFormule(Object.assign(event, { deltaY: 100 }));
+            else this.animateFormule(Object.assign(event, { deltaY: -100 }));
 
             this.mouseY = y;
         },
