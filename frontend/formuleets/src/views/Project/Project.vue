@@ -34,6 +34,7 @@ export default {
             img: null,
             mouseY: 0,
             countScroll: 0,
+            phoneFormuleSpeed: 3,
             text: {
                 title: "Animation dynamique",
                 label: "Faites défiler vers le bas pour lancer l'animation et voir notre protoype en 3D."
@@ -86,7 +87,7 @@ export default {
 
                 this.countScroll++;
 
-                if(this.countScroll < 5){
+                if(this.countScroll < this.phoneFormuleSpeed){
                     event.preventDefault();
                     return;
                 } else {
