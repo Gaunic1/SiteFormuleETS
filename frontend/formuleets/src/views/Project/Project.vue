@@ -67,8 +67,8 @@ export default {
 
                 const diff = this.mouseY - y;
 
-                if(diff < 0) delta = -1;
-                else delta = 1;
+                if(diff < 0) delta = -100;
+                else delta = 100;
 
                 this.mouseY = y;
 
