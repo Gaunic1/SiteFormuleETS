@@ -28,6 +28,7 @@ export default {
             count: 1,
             img: null,
             scrollEventFormule: null,
+            touchEventFormule: null,
             text: {
                 title: false,
                 label: false
@@ -37,9 +38,11 @@ export default {
     mounted() {
         this.mount3D();
         this.scrollEventFormule = document.addEventListener("wheel", this.animateFormule, { passive: false });
+        this.touchEventFormule = document.addEventListener("touchmove", this.animateFormule, { passive: false });
     },
     beforeUnmount(){
       document.removeEventListener("wheel", this.scrollEventFormule);
+      document.removeEventListener("touchmove", this.touchEventFormule);
     },
     methods: {
         mount3D() {
