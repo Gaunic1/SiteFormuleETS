@@ -8,13 +8,16 @@
         <div class="dark:bg-dark-mode w-full flex justify-center h-screen flex-col lg:flex-row bg-cover bg-center overflow-y-hidden" 
         :lazy-background="require('../../assets/project/curve_line.svg')">
 
-            <div class="lg:w-1/2 w-full flex items-center justify-center flex-col text-center p-5">
+            <!-- TEXT -->
+            <div class="lg:w-1/2 lg:h-full h-1/2 w-full flex items-center justify-center flex-col text-center p-5">
                 <h2 v-if="text.title" data-aos="fade-right" class="text-3xl font-bold text-red-500 uppercase">{{ text.title }}</h2>
                 <p v-if="text.label" data-aos="fade-right" data-aos-delay="300" class="dark:text-white mt-5">{{ text.label }}</p>
                 <i v-if="this.count == 1" class="fas fa-chevron-down dark:text-white mt-5 fade-arrow"></i>
                 <i v-if="this.count == 1" class="fas fa-chevron-down dark:text-white -mt-2 fade-arrow"></i>
             </div>
-            <div class="lg:w-1/2 w-full flex justify-center items-center">
+
+            <!-- FORMULE -->
+            <div class="lg:w-1/2 lg:h-full h-1/2 w-full flex justify-center items-center">
                 <img data-aos="zoom-in" v-if="img" :src="img" alt="3D model">
             </div>
 
@@ -44,12 +47,14 @@ export default {
     },
     mounted() {
         this.mount3D();
+        document.body.style.overflowY = "hidden";
         document.addEventListener("wheel", this.animateFormule, { passive: false });
         document.addEventListener("touchmove", this.animateFormule, { passive: false });
         // document.addEventListener("touchstart", this.animateFormule, { passive: false });
         // document.addEventListener("touchend", this.animateFormule, { passive: false });
     },
     beforeUnmount(){
+      document.body.style.overflowY = "auto";
       document.removeEventListener("wheel", this.animateFormule, { passive: false });
       document.removeEventListener("touchmove", this.animateFormule, { passive: false });
     //   document.removeEventListener("touchstart", this.animateFormule, { passive: false });
@@ -90,7 +95,7 @@ export default {
 
                 this.isPhone = true;
 
-                if(this.count < this.images.length-1 && this.countScroll < this.phoneFormuleSpeed){
+                if((this.count != this.images.length-1) && this.countScroll < this.phoneFormuleSpeed){
                     event.preventDefault();
                     return;
                 } else {
@@ -109,6 +114,8 @@ export default {
             else if(this.count > 1) this.count--;
 
             if(countValid && (scroll == 0 || scroll < delta)) {
+                document.body.style.overflowY = "hidden";
+
                 this.img = this.images[this.count];
                 event.preventDefault();
 
@@ -117,21 +124,23 @@ export default {
                 const index = project.text.find(e => this.text.title == e.title && this.text.label == e.label);
 
                 if(index && this.count < index.imageCount) {
-                    console.log("test")
                     let i = project.text.indexOf(index);
                     if(i > 0) text = project.text[i-1];
                 }
 
                 if(text && (text.title != this.text.title || text.label != this.text.label)) {
-                    this.text.title = this.isPhone ? text.title : false;
-                    this.text.label = this.isPhone ? text.label : false;
+                    this.text.title = false;
+                    this.text.label = false;
 
-                    if(!this.isPhone) setTimeout(() => {
+                    setTimeout(() => {
                         this.text.title = text.title;
                         this.text.label = text.label;
                     }, 200)
                 }
+            } else {
+                document.body.style.overflowY = "auto";
             }
+            
         },
     },
 }
