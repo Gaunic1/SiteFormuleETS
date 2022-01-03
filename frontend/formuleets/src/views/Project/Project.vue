@@ -123,10 +123,10 @@ export default {
                 }
 
                 if(text && (text.title != this.text.title || text.label != this.text.label)) {
-                    this.text.title = this.isPhone ? " " : false;
-                    this.text.label = this.isPhone ? " " : false;
+                    this.text.title = this.isPhone ? text.title : false;
+                    this.text.label = this.isPhone ? text.label : false;
 
-                    setTimeout(() => {
+                    if(!this.isPhone) setTimeout(() => {
                         this.text.title = text.title;
                         this.text.label = text.label;
                     }, 200)
