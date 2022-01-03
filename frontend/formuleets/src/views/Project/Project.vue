@@ -67,6 +67,7 @@ export default {
 
                 this.mouseY = y;
             } catch(e) {
+                alert(e)
                 delta = event.deltaY;
             }
             //END PHONE
