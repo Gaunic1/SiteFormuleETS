@@ -44,14 +44,14 @@ export default {
         this.mount3D();
         document.addEventListener("wheel", this.animateFormule, { passive: false });
         document.addEventListener("touchmove", this.animateFormule, { passive: false });
-        document.addEventListener("touchstart", this.animateFormule, { passive: false });
-        document.addEventListener("touchend", this.animateFormule, { passive: false });
+        // document.addEventListener("touchstart", this.animateFormule, { passive: false });
+        // document.addEventListener("touchend", this.animateFormule, { passive: false });
     },
     beforeUnmount(){
       document.removeEventListener("wheel", this.animateFormule, { passive: false });
       document.removeEventListener("touchmove", this.animateFormule, { passive: false });
-      document.removeEventListener("touchstart", this.animateFormule, { passive: false });
-      document.removeEventListener("touchend", this.animateFormule, { passive: false });
+    //   document.removeEventListener("touchstart", this.animateFormule, { passive: false });
+    //   document.removeEventListener("touchend", this.animateFormule, { passive: false });
     },
     methods: {
         mount3D() {
@@ -86,8 +86,9 @@ export default {
 
                 this.countScroll++;
 
-                if(this.countScroll < 200){
+                if(this.countScroll < 50){
                     event.preventDefault();
+                    return;
                 } else {
                     this.countScroll = 0;
                 }
