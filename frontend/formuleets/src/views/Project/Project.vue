@@ -48,7 +48,11 @@ export default {
     },
     mounted() {
         window.scrollTo(0,0);
-        this.speed = project.speed;
+
+        const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches
+        
+        this.speed = isMobile ? project.phoneSpeed : project.speed;
+
         this.mount3D();
         this.preloadImage();
         document.addEventListener("scroll", this.animateFormule, { passive: false });

@@ -1,6 +1,7 @@
 const project = {
     //animation speed
-    speed: 5,
+    speed: 4,
+    phoneSpeed: 6,
 
     //3d model
     images: {
