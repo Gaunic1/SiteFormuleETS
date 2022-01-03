@@ -30,6 +30,7 @@ export default {
             scrollEventFormule: null,
             touchEventFormule: null,
             mouseY: 0,
+            countScroll: 0,
             text: {
                 title: false,
                 label: false
@@ -69,11 +70,14 @@ export default {
                 if(diff < 0) delta = -1;
                 else delta = 1;
 
-                this.mouseY = y + delta;
+                this.mouseY = y;
 
-                if(diff < 500) {
+                this.countScroll++;
+
+                if(this.countScroll < 50){
                     event.preventDefault();
-                    return;
+                } else {
+                    this.countScroll = 0;
                 }
             } catch(e) {
                 delta = event.deltaY;
