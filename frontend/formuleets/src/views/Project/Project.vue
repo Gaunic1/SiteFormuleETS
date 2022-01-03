@@ -17,8 +17,8 @@
             </div>
 
             <!-- FORMULE -->
-            <div class="lg:w-1/2 lg:h-full h-1/2 w-full flex justify-center items-center">
-                <img data-aos="zoom-in" v-if="img" :src="img" alt="3D model">
+            <div class="lg:w-1/2 lg:h-full w-full flex justify-center items-center">
+                <img lazy-animation="zoomin" v-if="img" :src="img" alt="3D model">
             </div>
 
         </div>
