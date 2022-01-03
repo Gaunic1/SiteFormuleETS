@@ -56,18 +56,22 @@ export default {
             this.img = this.images[0];
         },
         animateFormule(event){
+            let delta = 0;
+
             //Phone support
-            if(event.type == "touchmove"){
+            try{
                 const y = event.originalEvent.touches[0].clientY;
 
-                if(this.mouseY - y < 0) event.deltaY = 100;
-                else event.deltaY = -100;
+                if(this.mouseY - y < 0) delta = 100;
+                else delta = -100;
 
                 this.mouseY = y;
+            } catch(e) {
+                delta = event.deltaY;
             }
+            //END PHONE
 
             const scroll = window.scrollY ? window.scrollY : document.body.scrollTop;
-            const delta = event.deltaY;
 
             const countValid = this.count > 0 && this.count < this.images.length-1;
 
