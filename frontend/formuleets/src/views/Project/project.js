@@ -2,6 +2,9 @@ const project = {
     //animation speed
     speed: 3,
 
+    //height of the car in px
+    height: 256,
+
     //3d model
     images: {
         directory: "/static/formule/",
