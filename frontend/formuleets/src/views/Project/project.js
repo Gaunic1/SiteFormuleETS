@@ -1,7 +1,7 @@
 const project = {
     //animation speed
-    speed: 5,
-    phoneSpeed: 7,
+    speed: 8,
+    phoneSpeed: 8,
     
     //dont show at the start the 3d model
     appearAndDisapear: true,
