@@ -1,9 +1,15 @@
 const project = {
+    //animation speed
+    speed: 3,
+
+    //3d model
     images: {
         directory: "/static/formule/",
         nbImgs: 51,
         extension: "png"
     },
+
+    //text to display
     text: [
         {
             title: "Formule",

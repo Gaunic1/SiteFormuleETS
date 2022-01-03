@@ -1,24 +1,24 @@
 <template>
-    <div :style='`height: ${height}`'>
+    <div>
         <!-- USELESS. JUST HERE TO DONT GO ON THE HEADER -->
         <div class="h-16 dark:bg-dark-mode flex items-end">
              <hr class="bg-red-500 border border-red-500 ml-5 mr-5 w-full opacity-50">
         </div>
 
-        <div class="dark:bg-dark-mode h-screen sticky top-0 w-full flex justify-center flex-col lg:flex-row bg-cover bg-center overflow-x-hidden" 
+        <div class="dark:bg-dark-mode w-full flex justify-center h-screen flex-col lg:flex-row bg-cover bg-center overflow-y-hidden" 
         :lazy-background="require('../../assets/project/curve_line.svg')">
 
             <!-- TEXT -->
-            <div class="flex-initial lg:w-1/2 lg:h-full h-1/2 w-full flex items-center justify-center flex-col text-center p-5">
-                <h2 v-if="text.title" class="text-3xl font-bold text-red-500 uppercase slide-left">{{ text.title }}</h2>
-                <p v-if="text.label" class="dark:text-white mt-5 slide-left delay-300">{{ text.label }}</p>
+            <div class="lg:w-1/2 lg:h-full h-1/2 w-full flex items-center justify-center flex-col text-center p-5">
+                <h2 v-if="text.title" data-aos="fade-right" class="text-3xl font-bold text-red-500 uppercase">{{ text.title }}</h2>
+                <p v-if="text.label" data-aos="fade-right" data-aos-delay="300" class="dark:text-white mt-5">{{ text.label }}</p>
                 <i v-if="this.count == 1" class="fas fa-chevron-down dark:text-white mt-5 fade-arrow"></i>
                 <i v-if="this.count == 1" class="fas fa-chevron-down dark:text-white -mt-2 fade-arrow"></i>
             </div>
 
             <!-- FORMULE -->
             <div class="lg:w-1/2 lg:h-full w-full flex justify-center items-center">
-                <img id="3d-model" lazy-animation="zoomin" v-if="img" :src="img" alt="3D model">
+                <img lazy-animation="zoomin" v-if="img" :src="img" alt="3D model">
             </div>
 
         </div>
@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import project from './project';
+import project from '../project';
 
 export default {
     name: "Project",
@@ -36,12 +36,9 @@ export default {
             count: 1,
             img: null,
             mouseY: 0,
-            height: "100vh",
-            imageHeight: 0,
-            step: 0,
-
-            speed: 1,
-
+            countScroll: 0,
+            phoneFormuleSpeed: 3,
+            isPhone: false,
             text: {
                 title: "Animation dynamique",
                 label: "Faites défiler vers le bas pour lancer l'animation et voir notre protoype en 3D."
@@ -49,13 +46,19 @@ export default {
         };
     },
     mounted() {
-        this.speed = project.speed;
         this.mount3D();
-        this.preloadImage();
-        document.addEventListener("scroll", this.animateFormule, { passive: false });
+        document.body.style.overflowY = "hidden";
+        document.addEventListener("wheel", this.animateFormule, { passive: false });
+        document.addEventListener("touchmove", this.animateFormule, { passive: false });
+        // document.addEventListener("touchstart", this.animateFormule, { passive: false });
+        // document.addEventListener("touchend", this.animateFormule, { passive: false });
     },
     beforeUnmount(){
-      document.removeEventListener("scroll", this.animateFormule, { passive: false });
+      document.body.style.overflowY = "auto";
+      document.removeEventListener("wheel", this.animateFormule, { passive: false });
+      document.removeEventListener("touchmove", this.animateFormule, { passive: false });
+    //   document.removeEventListener("touchstart", this.animateFormule, { passive: false });
+    //   document.removeEventListener("touchend", this.animateFormule, { passive: false });
     },
     methods: {
         mount3D() {
@@ -72,48 +75,50 @@ export default {
                 imageCount: 1
             });
         },
-        preloadImage(){
-            const lst = [];
-            let loaded = false;
-            for(const img of this.images){
-                const load = new Image();
-                load.src = img;
-                load.onload = () => {
-                    if(loaded) return;
+        animateFormule(event){
+            let delta = 0;
 
-                    const height = document.getElementById('3d-model').offsetHeight;
-                    const calc = (height/this.speed)*(this.images.length-1);
-                    const screenDivide = window.innerHeight/2;
-                    this.height = (calc + screenDivide) + "px";
-                    this.imageHeight = height;
+            //Phone support
+            try{
+                const evt = (typeof event.originalEvent === 'undefined') ? event : event.originalEvent;
+                const touch = evt.touches[0] || evt.changedTouches[0];
+                const y = touch.pageY;
 
-                    loaded = true;
+                const diff = this.mouseY - y;
+
+                if(diff < 0) delta = -100;
+                else delta = 100;
+
+                this.mouseY = y;
+
+                this.countScroll++;
+
+                this.isPhone = true;
+
+                if((this.count != this.images.length-1) && this.countScroll < this.phoneFormuleSpeed){
+                    event.preventDefault();
+                    return;
+                } else {
+                    this.countScroll = 0;
                 }
-                lst.push(load);
+            } catch(e) {
+                delta = event.deltaY;
             }
-        },
-        animateFormule(){
+            //END PHONE
+
             const scroll = window.scrollY ? window.scrollY : document.body.scrollTop;
-
-            const delta = -(this.mouseY - scroll);
-
-            this.step += delta;
-
-            const ancient = JSON.parse(JSON.stringify(this.step));
-
-            this.step %= (this.imageHeight/this.speed);
-
-            this.mouseY = scroll;
 
             const countValid = this.count > 0 && this.count < this.images.length-1;
 
-            if(ancient != this.step && delta > 0 && this.count < this.images.length-1) this.count++;
-            else if(this.count > 1 && ancient != this.step) this.count--;
+            if(delta > 0 && this.count < this.images.length-1) this.count++;
+            else if(this.count > 1) this.count--;
 
-            if(countValid ) {
+            if(countValid && (scroll == 0 || scroll < delta)) {
+                document.body.style.overflowY = "hidden";
+
                 this.img = this.images[this.count];
+                event.preventDefault();
 
-                //text handler
                 let text = project.text.find(e => e.imageCount == this.count);
 
                 const index = project.text.find(e => this.text.title == e.title && this.text.label == e.label);
@@ -132,6 +137,8 @@ export default {
                         this.text.label = text.label;
                     }, 200)
                 }
+            } else {
+                document.body.style.overflowY = "auto";
             }
             
         },
