@@ -1,16 +1,21 @@
 <template>
     <div>
         <!-- USELESS. JUST HERE TO DONT GO ON THE HEADER -->
-        <div class="h-24 dark:bg-dark-mode"></div>
+        <div class="h-16 dark:bg-dark-mode flex items-end">
+             <hr class="bg-red-500 border border-red-500 ml-5 mr-5 w-full opacity-50">
+        </div>
 
-        <div class="dark:bg-dark-mode w-full flex justify-center h-screen flex-col lg:flex-row">
+        <div class="dark:bg-dark-mode w-full flex justify-center h-screen flex-col lg:flex-row bg-cover bg-center overflow-y-hidden" 
+        :lazy-background="require('../../assets/project/curve_line.svg')">
 
             <div class="lg:w-1/2 w-full flex items-center justify-center flex-col text-center p-5">
-                <h2 v-if="text.title" data-aos="fade-right" class="dark:text-white text-3xl font-bold">{{ text.title }}</h2>
+                <h2 v-if="text.title" data-aos="fade-right" class="text-3xl font-bold text-red-500 uppercase">{{ text.title }}</h2>
                 <p v-if="text.label" data-aos="fade-right" data-aos-delay="300" class="dark:text-white mt-5">{{ text.label }}</p>
+                <i v-if="this.count == 1" class="fas fa-chevron-down dark:text-white mt-5 fade-arrow"></i>
+                <i v-if="this.count == 1" class="fas fa-chevron-down dark:text-white -mt-2 fade-arrow"></i>
             </div>
             <div class="lg:w-1/2 w-full flex justify-center items-center">
-                <img v-if="img" :src="img" alt="3D model">
+                <img data-aos="zoom-in" v-if="img" :src="img" alt="3D model">
             </div>
 
         </div>
@@ -27,24 +32,22 @@ export default {
             images: [],
             count: 1,
             img: null,
-            scrollEventFormule: null,
-            touchEventFormule: null,
             mouseY: 0,
             countScroll: 0,
             text: {
-                title: false,
-                label: false
+                title: "Animation dynamique",
+                label: "Faites défiler vers le bas pour lancer l'animation et voir notre protoype en 3D."
             }
         };
     },
     mounted() {
         this.mount3D();
-        this.scrollEventFormule = document.addEventListener("wheel", this.animateFormule, { passive: false });
-        this.touchEventFormule = document.addEventListener("touchmove", this.animateFormule, { passive: false });
+        document.addEventListener("wheel", this.animateFormule, { passive: false });
+        document.addEventListener("touchmove", this.animateFormule, { passive: false });
     },
-    unmounted(){
-      document.removeEventListener("wheel", this.scrollEventFormule);
-      document.removeEventListener("touchmove", this.touchEventFormule);
+    beforeUnmount(){
+      document.removeEventListener("wheel", this.animateFormule, { passive: false });
+      document.removeEventListener("touchmove", this.animateFormule, { passive: false });
     },
     methods: {
         mount3D() {
@@ -55,6 +58,11 @@ export default {
                 this.images.push(img);
             }
             this.img = this.images[0];
+            project.text.push({
+                title: this.text.title,
+                label: this.text.label,
+                imageCount: 1
+            });
         },
         animateFormule(event){
             let delta = 0;
@@ -95,7 +103,15 @@ export default {
                 this.img = this.images[this.count];
                 event.preventDefault();
 
-                const text = project.text.find(e => e.imageCount == this.count);
+                let text = project.text.find(e => e.imageCount == this.count);
+
+                const index = project.text.find(e => this.text.title == e.title && this.text.label == e.label);
+
+                if(index && this.count < index.imageCount) {
+                    console.log("test")
+                    let i = project.text.indexOf(index);
+                    if(i > 0) text = project.text[i-1];
+                }
 
                 if(text && (text.title != this.text.title || text.label != this.text.label)) {
                     this.text.title = false;
@@ -112,6 +128,22 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.fade-arrow{
+    opacity: 0;
+    animation: fade-arrow 2s infinite linear;
+    animation-delay: 700ms;
+}
 
+@keyframes fade-arrow {
+    0%{
+        opacity: 0.1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.1;
+    }
+}
 </style>

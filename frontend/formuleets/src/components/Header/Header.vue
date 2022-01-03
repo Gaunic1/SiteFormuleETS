@@ -83,7 +83,7 @@ export default {
         this.setDarkMode();
         window.addEventListener('scroll',this.scroll);
     },
-    unmounted(){
+    beforeUnmount(){
         window.removeEventListener('scroll', this.scroll);
     },
     data(){

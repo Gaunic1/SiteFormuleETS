@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Error404 from '../views/Error404/Error404.vue'
 import Home from '../views/Home/Home.vue'
 import Project from '../views/Project/Project.vue'
-import Sponsors from '../views/Sponsors/Sponsors.vue'
+// import Sponsors from '../views/Sponsors/Sponsors.vue'
 import Team from '../views/Team/Team.vue'
 
 const routes = [
@@ -16,11 +16,11 @@ const routes = [
     name: "Team",
     component: Team
   },
-  {
-    path: "/sponsors",
-    name: "Sponsors",
-    component: Sponsors
-  },
+  // {
+  //   path: "/sponsors",
+  //   name: "Sponsors",
+  //   component: Sponsors
+  // },
   {
     path: "/project",
     name: "Project",

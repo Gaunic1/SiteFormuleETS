@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- PRESENTATION -->
-    <div class="bg-first w-full flex flex-wrap dark:bg-dark-mode">
+    <div class="bg-first w-full flex flex-wrap dark:bg-dark-mode overflow-x-hidden">
       <div class="bg-triangle absolute bottom-0 left-0 w-full h-full bg-gradient-to-tr from-red-600 to-red-500 z-10"></div>
 
       <div class="flex-initial h-screen w-full lg:w-1/3 flex flex-col justify-center p-5 z-20" data-aos="fade-right">
@@ -69,14 +69,13 @@ export default {
         teamsImg: require('../../assets/main/team.jpg'),
         formule: require('../../assets/main/formule.png'),
         formuleImg: require('../../assets/main/formuleETS.jpg'),
-        scrollEventFormule: null
       }
     },
     created(){
-      this.scrollEventFormule = document.addEventListener('scroll', this.scrollFormule);
+      document.addEventListener('scroll', this.scrollFormule);
     },
     beforeUnmount(){
-      document.removeEventListener("scroll", this.scrollEventFormule);
+      document.removeEventListener("scroll", this.scrollFormule);
     },
     methods: {
       scrollFormule(){
@@ -84,7 +83,7 @@ export default {
         if(scroll < window.innerHeight){
           const formule = document.querySelector('#formule');
           if(formule) formule.style = `transition: none!important; transform: translate(${-scroll}px, ${scroll}px)`;
-          else document.removeEventListener("scroll", this.scrollEventFormule);
+          else document.removeEventListener("scroll", this.scrollFormule);
         }
       }
     }
