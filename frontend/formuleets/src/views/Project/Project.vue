@@ -60,7 +60,7 @@ export default {
 
             //Phone support
             try{
-                const y = event.originalEvent.touches[0].clientY;
+                const y = event.originalEvent.changedTouches[0].clientY;
 
                 if(this.mouseY - y < 0) delta = 100;
                 else delta = -100;
