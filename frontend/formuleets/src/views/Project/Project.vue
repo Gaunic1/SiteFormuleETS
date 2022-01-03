@@ -34,7 +34,8 @@ export default {
             img: null,
             mouseY: 0,
             countScroll: 0,
-            phoneFormuleSpeed: 3,
+            phoneFormuleSpeed: 4,
+            isPhone: false,
             text: {
                 title: "Animation dynamique",
                 label: "Faites défiler vers le bas pour lancer l'animation et voir notre protoype en 3D."
@@ -93,6 +94,8 @@ export default {
                 } else {
                     this.countScroll = 0;
                 }
+
+                this.isPhone = true;
             } catch(e) {
                 delta = event.deltaY;
             }
@@ -120,8 +123,8 @@ export default {
                 }
 
                 if(text && (text.title != this.text.title || text.label != this.text.label)) {
-                    this.text.title = false;
-                    this.text.label = false;
+                    this.text.title = this.isPhone ? "" : false;
+                    this.text.label = this.isPhone ? "" : false;
 
                     setTimeout(() => {
                         this.text.title = text.title;
