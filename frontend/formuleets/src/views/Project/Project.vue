@@ -33,12 +33,10 @@ export default {
     data() {
         return {
             images: [],
-            count: 1,
             img: null,
-            mouseY: 0,
             height: "100vh",
             imageHeight: 0,
-            step: 0,
+            count: 1,
 
             speed: 1,
 
@@ -49,6 +47,7 @@ export default {
         };
     },
     mounted() {
+        window.scrollTo(0,0);
         this.speed = project.speed;
         this.mount3D();
         this.preloadImage();
@@ -61,11 +60,14 @@ export default {
         mount3D() {
             const dir = project.images.directory;
             const ext = project.images.extension;
+
             for (let i = 0; i < project.images.nbImgs; ++i) {
                 const img = (dir + (i+1) + "." + ext);
                 this.images.push(img);
             }
+
             this.img = this.images[0];
+
             project.text.push({
                 title: this.text.title,
                 label: this.text.label,
@@ -86,7 +88,7 @@ export default {
                     if(!height || height == 0) return;
 
                     const calc = (height/this.speed)*(this.images.length-1);
-                    const screenDivide = window.innerHeight/2;
+                    const screenDivide = window.innerHeight;
                     this.height = (calc + screenDivide) + "px";
                     this.imageHeight = height;
 
@@ -95,35 +97,49 @@ export default {
                 lst.push(load);
             }
         },
+        countSubstract(nb, substract){
+            if(!substract || substract <= 0) return 1;
+
+            let count = 0;
+            for(let i = 0; i<nb; i+=substract){
+                ++count;
+            }
+            return count;
+        },
         animateFormule(){
             const scroll = window.scrollY ? window.scrollY : document.body.scrollTop;
 
-            const delta = -(this.mouseY - scroll);
+            const count = this.countSubstract(scroll, this.imageHeight/this.speed);
 
-            this.step += delta;
+            this.count = count;
 
-            const ancient = JSON.parse(JSON.stringify(this.step));
+            const countValid = count > 0 && count < this.images.length-1;
 
-            this.step %= (this.imageHeight/this.speed);
-
-            this.mouseY = scroll;
-
-            const countValid = this.count > 0 && this.count < this.images.length-1;
-
-            if(ancient != this.step && delta > 0 && this.count < this.images.length-1) this.count++;
-            else if(this.count > 1 && ancient != this.step) this.count--;
-
-            if(countValid ) {
-                this.img = this.images[this.count];
+            if(countValid) {
+                this.img = this.images[count];
 
                 //text handler
-                let text = project.text.find(e => e.imageCount == this.count);
+                // let text = project.text.filter(e => e.imageCount >= count);
+                // text = text.length > 0 ? text[text.length-1] : false;
 
-                const index = project.text.find(e => this.text.title == e.title && this.text.label == e.label);
+                // const index = project.text.find(e => text.title == e.title && text.label == e.label);
 
-                if(index && this.count < index.imageCount) {
-                    let i = project.text.indexOf(index);
-                    if(i > 0) text = project.text[i-1];
+                // if(index && count < index.imageCount) {
+                //     let i = project.text.indexOf(index);
+                //     if(i > 0) text = project.text[i-1];
+                // }
+
+                let text = {};
+
+                const sort = project.text.sort(function(a,b){
+                    return a.imageCount - b.imageCount;
+                });
+                const filtered = sort.filter(e => count >= e.imageCount);
+
+                if(filtered.length > 0) {
+                    text = filtered[filtered.length-1];
+                } else {
+                    text = text[0];
                 }
 
                 if(text && (text.title != this.text.title || text.label != this.text.label)) {
