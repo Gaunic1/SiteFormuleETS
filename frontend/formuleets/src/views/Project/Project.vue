@@ -64,12 +64,11 @@ export default {
                 const touch = evt.touches[0] || evt.changedTouches[0];
                 const y = touch.pageY;
 
-                if(this.mouseY - y < 0) delta = 100;
-                else delta = -100;
+                if(this.mouseY - y < 0) delta = -1;
+                else delta = 1;
 
                 this.mouseY = y;
             } catch(e) {
-                alert(e)
                 delta = event.deltaY;
             }
             //END PHONE
