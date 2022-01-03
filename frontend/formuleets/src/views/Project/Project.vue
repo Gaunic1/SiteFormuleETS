@@ -82,8 +82,9 @@ export default {
                     if(loaded) return;
 
                     const height = document.getElementById('3d-model').offsetHeight;
-                                        alert(height)
-                                        
+
+                    if(!height || height == 0) return;
+
                     const calc = (height/this.speed)*(this.images.length-1);
                     const screenDivide = window.innerHeight/2;
                     this.height = (calc + screenDivide) + "px";
