@@ -90,7 +90,7 @@ export default {
 
                 this.isPhone = true;
 
-                if(this.countScroll < this.phoneFormuleSpeed){
+                if(this.count < this.images.length-1 && this.countScroll < this.phoneFormuleSpeed){
                     event.preventDefault();
                     return;
                 } else {
@@ -123,8 +123,8 @@ export default {
                 }
 
                 if(text && (text.title != this.text.title || text.label != this.text.label)) {
-                    this.text.title = this.isPhone ? "&nbsp;" : false;
-                    this.text.label = this.isPhone ? "&nbsp;" : false;
+                    this.text.title = this.isPhone ? " " : false;
+                    this.text.label = this.isPhone ? " " : false;
 
                     setTimeout(() => {
                         this.text.title = text.title;
