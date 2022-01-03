@@ -64,7 +64,14 @@ export default {
                 const touch = evt.touches[0] || evt.changedTouches[0];
                 const y = touch.pageY;
 
-                if(this.mouseY - y < 0) delta = -1;
+                const diff = this.mouseY - y;
+
+                if(diff < 500) {
+                    event.preventDefault();
+                    return;
+                }
+
+                if(diff < 0) delta = -1;
                 else delta = 1;
 
                 this.mouseY = y;
