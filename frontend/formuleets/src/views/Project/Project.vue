@@ -29,6 +29,7 @@ export default {
             img: null,
             scrollEventFormule: null,
             touchEventFormule: null,
+            mouseY: 0,
             text: {
                 title: false,
                 label: false
@@ -38,9 +39,9 @@ export default {
     mounted() {
         this.mount3D();
         this.scrollEventFormule = document.addEventListener("wheel", this.animateFormule, { passive: false });
-        this.touchEventFormule = document.addEventListener("touchmove", this.animateFormule, { passive: false });
+        this.touchEventFormule = document.addEventListener("touchmove", this.animateFormulePhone, { passive: false });
     },
-    beforeUnmount(){
+    unmounted(){
       document.removeEventListener("wheel", this.scrollEventFormule);
       document.removeEventListener("touchmove", this.touchEventFormule);
     },
@@ -53,6 +54,13 @@ export default {
                 this.images.push(img);
             }
             this.img = this.images[0];
+        },
+        animateFormulePhone(event){
+            const y = event.originalEvent.touches[0].clientY;
+            if(this.mouseY - y < 0) this.animateFormule({ deltaY: 100 });
+            else this.animateFormule({ deltaY: -100 });
+
+            this.mouseY = y;
         },
         animateFormule(event){
             const scroll = window.scrollY ? window.scrollY : document.body.scrollTop;
