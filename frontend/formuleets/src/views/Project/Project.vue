@@ -12,8 +12,8 @@
             <div class="flex-initial lg:w-1/2 lg:h-full h-1/2 w-full flex items-center justify-center flex-col text-center p-5">
                 <h2 v-if="text.title" class="text-3xl font-bold text-red-500 uppercase slide-left">{{ text.title }}</h2>
                 <p v-if="text.label" class="dark:text-white mt-5 slide-left delay-300">{{ text.label }}</p>
-                <i v-if="this.count == 1" class="fas fa-chevron-down dark:text-white mt-5 fade-arrow"></i>
-                <i v-if="this.count == 1" class="fas fa-chevron-down dark:text-white -mt-2 fade-arrow"></i>
+                <i v-if="this.count <= 1" class="fas fa-chevron-down dark:text-white mt-5 fade-arrow"></i>
+                <i v-if="this.count <= 1" class="fas fa-chevron-down dark:text-white -mt-2 fade-arrow"></i>
             </div>
 
             <!-- FORMULE -->
@@ -116,19 +116,10 @@ export default {
             const countValid = count > 0 && count < this.images.length-1;
 
             if(countValid) {
+                //image handler
                 this.img = this.images[count];
 
                 //text handler
-                // let text = project.text.filter(e => e.imageCount >= count);
-                // text = text.length > 0 ? text[text.length-1] : false;
-
-                // const index = project.text.find(e => text.title == e.title && text.label == e.label);
-
-                // if(index && count < index.imageCount) {
-                //     let i = project.text.indexOf(index);
-                //     if(i > 0) text = project.text[i-1];
-                // }
-
                 let text = {};
 
                 const sort = project.text.sort(function(a,b){
