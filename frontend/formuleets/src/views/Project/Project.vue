@@ -74,7 +74,7 @@ export default {
 
                 this.countScroll++;
 
-                if(this.countScroll < 50){
+                if(this.countScroll < 500){
                     event.preventDefault();
                 } else {
                     this.countScroll = 0;
