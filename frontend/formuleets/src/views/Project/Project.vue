@@ -34,7 +34,7 @@ export default {
             img: null,
             mouseY: 0,
             countScroll: 0,
-            phoneFormuleSpeed: 4,
+            phoneFormuleSpeed: 3,
             isPhone: false,
             text: {
                 title: "Animation dynamique",
@@ -88,14 +88,14 @@ export default {
 
                 this.countScroll++;
 
+                this.isPhone = true;
+
                 if(this.countScroll < this.phoneFormuleSpeed){
                     event.preventDefault();
                     return;
                 } else {
                     this.countScroll = 0;
                 }
-
-                this.isPhone = true;
             } catch(e) {
                 delta = event.deltaY;
             }
@@ -123,8 +123,8 @@ export default {
                 }
 
                 if(text && (text.title != this.text.title || text.label != this.text.label)) {
-                    this.text.title = this.isPhone ? "" : false;
-                    this.text.label = this.isPhone ? "" : false;
+                    this.text.title = this.isPhone ? "&nbsp;" : false;
+                    this.text.label = this.isPhone ? "&nbsp;" : false;
 
                     setTimeout(() => {
                         this.text.title = text.title;
