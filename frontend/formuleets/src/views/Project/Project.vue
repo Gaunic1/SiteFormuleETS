@@ -66,15 +66,15 @@ export default {
 
                 const diff = this.mouseY - y;
 
-                if(diff < 500) {
-                    event.preventDefault();
-                    return;
-                }
-
                 if(diff < 0) delta = -1;
                 else delta = 1;
 
                 this.mouseY = y;
+
+                if(diff < 500) {
+                    event.preventDefault();
+                    return;
+                }
             } catch(e) {
                 delta = event.deltaY;
             }
