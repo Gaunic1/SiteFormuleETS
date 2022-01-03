@@ -39,7 +39,7 @@ export default {
     mounted() {
         this.mount3D();
         this.scrollEventFormule = document.addEventListener("wheel", this.animateFormule, { passive: false });
-        this.touchEventFormule = document.addEventListener("touchmove", this.animateFormulePhone, { passive: false });
+        this.touchEventFormule = document.addEventListener("touchmove", this.animateFormule, { passive: false });
     },
     unmounted(){
       document.removeEventListener("wheel", this.scrollEventFormule);
@@ -55,14 +55,17 @@ export default {
             }
             this.img = this.images[0];
         },
-        animateFormulePhone(event){
-            const y = event.originalEvent.touches[0].clientY;
-            if(this.mouseY - y < 0) this.animateFormule(Object.assign(event, { deltaY: 100 }));
-            else this.animateFormule(Object.assign(event, { deltaY: -100 }));
-
-            this.mouseY = y;
-        },
         animateFormule(event){
+            //Phone support
+            if(event.type == "touchmove"){
+                const y = event.originalEvent.touches[0].clientY;
+
+                if(this.mouseY - y < 0) event.deltaY = 100;
+                else event.deltaY = -100;
+
+                this.mouseY = y;
+            }
+
             const scroll = window.scrollY ? window.scrollY : document.body.scrollTop;
             const delta = event.deltaY;
 
