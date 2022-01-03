@@ -60,12 +60,27 @@ export default {
 
         this.mount3D();
         this.preloadImage();
+
         document.addEventListener("scroll", this.animateFormule, { passive: false });
+        window.addEventListener('resize', this.calcHeight, true);   
     },
     beforeUnmount(){
       document.removeEventListener("scroll", this.animateFormule, { passive: false });
+      window.removeEventListener('resize', this.calcHeight, true);   
     },
     methods: {
+        calcHeight(){
+            const height = document.getElementById('3d-model').offsetHeight;
+
+            if(!height || height == 0) return false;
+
+            const calc = (height/this.speed)*(this.images.length-1);
+            const screenDivide = window.innerHeight;
+            this.height = (calc + screenDivide) + "px";
+            this.imageHeight = height;
+
+            return true;
+        },
         mount3D() {
             const dir = project.images.directory;
             const ext = project.images.extension;
@@ -91,17 +106,7 @@ export default {
                 load.src = img;
                 load.onload = () => {
                     if(loaded) return;
-
-                    const height = document.getElementById('3d-model').offsetHeight;
-
-                    if(!height || height == 0) return;
-
-                    const calc = (height/this.speed)*(this.images.length-1);
-                    const screenDivide = window.innerHeight;
-                    this.height = (calc + screenDivide) + "px";
-                    this.imageHeight = height;
-
-                    loaded = true;
+                    loaded = this.calcHeight();
                 }
                 lst.push(load);
             }

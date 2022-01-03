@@ -1,6 +1,6 @@
 const project = {
     //animation speed
-    speed: 8,
+    speed: 6,
     phoneSpeed: 8,
     
     //dont show at the start the 3d model
