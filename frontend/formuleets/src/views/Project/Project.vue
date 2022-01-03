@@ -12,13 +12,15 @@
             <div class="flex-initial lg:w-1/2 lg:h-full h-1/2 w-full flex items-center justify-center flex-col text-center p-5">
                 <h2 v-if="text.title" class="text-3xl font-bold text-red-500 uppercase slide-left">{{ text.title }}</h2>
                 <p v-if="text.label" class="dark:text-white mt-5 slide-left delay-300">{{ text.label }}</p>
-                <i v-if="this.count <= 1" class="fas fa-chevron-down dark:text-white mt-5 fade-arrow"></i>
-                <i v-if="this.count <= 1" class="fas fa-chevron-down dark:text-white -mt-2 fade-arrow"></i>
+                <i v-if="this.count == 0" class="fas fa-chevron-down dark:text-white mt-5 fade-arrow"></i>
+                <i v-if="this.count == 0" class="fas fa-chevron-down dark:text-white -mt-2 fade-arrow"></i>
             </div>
 
             <!-- FORMULE -->
-            <div class="lg:w-1/2 lg:h-full w-full flex justify-center items-center">
-                <img id="3d-model" lazy-animation="zoomin" v-if="img" :src="img" alt="3D model">
+            <div class="lg:h-full flex justify-center items-center transition-all duration-1000" 
+            :class="count != countToNotDisplay ? 'w-full lg:w-1/2' : 'absolute'">
+                <img id="3d-model" v-if="img" :src="img" alt="3D model" 
+                :class="count != countToNotDisplay ? 'opacity-100 transition-all duration-1000' : 'opacity-0'">
             </div>
 
         </div>
@@ -36,7 +38,8 @@ export default {
             img: null,
             height: "100vh",
             imageHeight: 0,
-            count: 1,
+            count: 0,
+            countToNotDisplay: 0,
 
             speed: 1,
 
@@ -52,6 +55,8 @@ export default {
         const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches
         
         this.speed = isMobile ? project.phoneSpeed : project.speed;
+
+        this.countToNotDisplay = project.appearAndDisapear ? 0 : -1;
 
         this.mount3D();
         this.preloadImage();
