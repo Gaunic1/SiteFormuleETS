@@ -18,6 +18,11 @@ const en = {
         "animation": "dynamic animation",
         "label": "Scroll down to start the animation and see our prototype in 3D."
       }
+    },
+
+    "3dmodel": {
+      "textureLoading": "Loading textures",
+      "modelLoading": "Loading the model"
     }
   }
 }

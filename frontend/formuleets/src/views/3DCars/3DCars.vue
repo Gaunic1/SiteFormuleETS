@@ -1,10 +1,13 @@
 <template>
   <div class="h-screen dark:bg-dark-mode flex justify-center">
-      <div class="h-2/3">
-            <!-- USELESS. JUST HERE TO DONT GO ON THE HEADER -->
-            <div class="h-0"></div>
+      <div id="render" class="flex justify-center items-center h-screen">
+        <div v-if="!finish" id="loading" class="z-10 flex flex-col p-5 items-center justify-center absolute dark:bg-dark-mode bg-white dark:text-white">
+          <h3 v-if="!error" class="text-lg uppercase">{{ $t(title) }}</h3>
+          <span v-if="!error">{{ pourcentage }} %</span>
 
-            <div id="render"></div>
+          <h3 v-if="error" class="text-lg uppercase text-red-500">Error</h3>
+          <span v-if="error" class="text-red-500">{{ error }}</span>
+        </div>
       </div>
   </div>
 </template>
@@ -24,10 +27,18 @@ export default {
     data(){
       return {
         scene: null,
-        camera: null
+        camera: null,
+        pourcentage: 0,
+        finish: false,
+        title: "message.3dmodel.textureLoading",
+        error: false
       }
     },
     mounted(){
+      const sceneExist = document.querySelector('#scene');
+
+      if(sceneExist) sceneExist.remove();
+
       const scene = new THREE.Scene();
       const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
@@ -41,7 +52,6 @@ export default {
       // Create a directional light
       const ambientLight = new THREE.HemisphereLight(0xddeeff, 0x202020, model3d.ambientLight);
       const mainLight = new THREE.DirectionalLight(0xffffff, 3.0);
-      // move the light back and up a bit
 
       // remember to add the light to the scene
       scene.add(ambientLight, mainLight)
@@ -52,6 +62,14 @@ export default {
       // load a resource
       var model;
       const materialsLoader = new MTLLoader();
+
+      // called when loading has errors
+      const vueElement = this;
+
+      const errorHandler = (error) => {
+        vueElement.error = error;
+      }
+
       materialsLoader.load(model3d.texture, function (materialsCreator) {
 
           loader.setMaterials(materialsCreator);
@@ -61,10 +79,6 @@ export default {
 
               model = obj;
 
-              // obj.position.z = model3d.position.z;
-              // obj.position.x = model3d.position.x;
-              // obj.position.y = model3d.position.y;
-
               obj.rotation.z = model3d.rotation.z;
               obj.rotation.x = model3d.rotation.x;
               obj.rotation.y = model3d.rotation.y;
@@ -73,9 +87,16 @@ export default {
 
               controls.update();
 
-          });
+          }, (xhr) => {
+            vueElement.title = "message.3dmodel.modelLoading";
+            vueElement.pourcentage = Math.round(( xhr.loaded / xhr.total * 100 ));
+            if(vueElement.pourcentage == 100 && !vueElement.error) vueElement.finish = true;
+          }, errorHandler);
 
-      });
+      }, (xhr) => {
+        vueElement.title = "message.3dmodel.textureLoading";
+        vueElement.pourcentage = Math.round(( xhr.loaded / xhr.total * 100 ));
+      }, errorHandler);
 
       camera.lookAt(0, 0, 0);
 
@@ -90,6 +111,8 @@ export default {
       };
     
       animate();
+
+      renderer.domElement.id = "scene";
 
       document.querySelector('#render').appendChild( renderer.domElement );
 

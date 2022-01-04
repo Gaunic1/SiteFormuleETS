@@ -18,6 +18,11 @@ const fr = {
         "animation": "animation dynamique",
         "label": "Faites défiler vers le bas pour lancer l'animation et voir notre prototype en 3D."
       }
+    },
+
+    "3dmodel": {
+      "textureLoading": "Chargement des textures",
+      "modelLoading": "Chargement du model"
     }
   }
 }
