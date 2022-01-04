@@ -14,6 +14,7 @@
 import * as THREE from 'three/build/three.module.js';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader'
 
 //local
 import model3d from "./model.js"
@@ -39,12 +40,9 @@ export default {
       const controls = new OrbitControls( camera, renderer.domElement );
 
       // Create a directional light
-      const ambientLight = new THREE.HemisphereLight(0xddeeff, 0x202020, 9);
+      const ambientLight = new THREE.HemisphereLight(0xddeeff, 0x202020, model3d.ambientLight);
       const mainLight = new THREE.DirectionalLight(0xffffff, 3.0);
-      scene.add(ambientLight);
-
       // move the light back and up a bit
-      mainLight.position.set(10, 10, 10);
 
       // remember to add the light to the scene
       scene.add(ambientLight, mainLight)
@@ -54,29 +52,39 @@ export default {
 
       // load a resource
       var model;
-      loader.load(model3d.src, obj => {
-        obj.traverse(function(child) {
-          if (child instanceof THREE.Mesh) {
-            child.material.color = new THREE.Color(0xff0000);
-          }
-        });
+      const materialsLoader = new MTLLoader();
+      materialsLoader.load(model3d.texture, function (materialsCreator) {
 
-        obj.position.y = 0;
+          loader.setMaterials(materialsCreator);
 
-        model = obj;
-        scene.add(obj);
+          loader.load(model3d.src, function (obj) {
+              camera.position.set(model3d.position.x,model3d.position.y,model3d.position.z);
+
+              model = obj;
+
+              // obj.position.z = model3d.position.z;
+              // obj.position.x = model3d.position.x;
+              // obj.position.y = model3d.position.y;
+
+              obj.rotation.z = model3d.rotation.z;
+              obj.rotation.x = model3d.rotation.x;
+              obj.rotation.y = model3d.rotation.y;
+
+              scene.add( obj );
+
+              controls.update();
+
+          });
+
       });
 
-      camera.position.set(10, 10, 10);
-      controls.update();
       camera.lookAt(0, 0, 0);
 
       const animate = function() {
         requestAnimationFrame(animate);
     
         if (model) {
-          model.rotation.x += 0.0005;
-          model.rotation.y += 0.0005;
+          model.rotation.z += 0.0005;
         }
     
         renderer.render(scene, camera);
