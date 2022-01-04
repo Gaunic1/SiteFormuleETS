@@ -76,12 +76,14 @@ export default {
         requestAnimationFrame(animate);
     
         if (model) {
-          model.rotation.x += 0.01;
-          model.rotation.y += 0.01;
+          model.rotation.x += 0.0005;
+          model.rotation.y += 0.0005;
         }
     
         renderer.render(scene, camera);
       };
+
+      console.log(model)
     
       animate();
 
