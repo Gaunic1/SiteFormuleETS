@@ -5,7 +5,7 @@ const model3d = {
     position: {
         x: 0,
         y: 0,
-        z: 5
+        z: 7
     },
     rotation: {
         x: 200,
