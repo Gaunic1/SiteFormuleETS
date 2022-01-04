@@ -1,6 +1,8 @@
 <template>
-  <div class="flex flex-col justify-center items-center text-center w-full h-screen dark:bg-dark-mode">
-      <div class="w-80 sm:w-96 h-36 bg-cover bg-center" :style="`background-image: url('${image}')`"></div>
+  <div class="flex flex-col justify-center items-center text-center w-full h-screen">
+      <div class="w-80 sm:w-96 h-36 bg-cover bg-center" 
+      lazy-background="/static/404/404.gif" 
+      lazy-animation="zoomin"></div>
   </div>
 </template>
 
@@ -9,8 +11,7 @@ export default {
     name: "Error404",
     data(){
         return {
-            title: "Page not found",
-            image: require('../../assets/404.gif')
+
         }
     }
 }

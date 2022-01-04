@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Cars from '../views/3DCars/3DCars.vue'
+import Donate from '../views/Donate/Donate.vue'
 import Error404 from '../views/Error404/Error404.vue'
 import Home from '../views/Home/Home.vue'
 import Project from '../views/Project/Project.vue'
@@ -31,6 +32,11 @@ const routes = [
     path: "/3d-model",
     name: "3DModel",
     component: Cars
+  },
+  {
+    path: "/donate",
+    name: "Donate",
+    component: Donate
   },
 
   //For 404 error, always need to be at the end

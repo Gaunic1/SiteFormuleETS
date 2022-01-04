@@ -4,7 +4,7 @@
           <!-- LOGO -->
           <div id="logo" class="flex-auto h-full p-3">
               <a href="/">
-                <img :src="logo" alt="Logo" class="h-full"/>
+                <img src="/static/header/logo-f1.png" alt="Logo" class="h-full"/>
               </a>
           </div>
 
@@ -100,11 +100,9 @@ export default {
     data(){
         return {
             menu: HeaderMenus,
-            logo: require('../../assets/logo-f1.png'),
             headerClass: [],
             showMenu: false,
             darkMode: false,
-            value: false
         }
     },
     methods: {

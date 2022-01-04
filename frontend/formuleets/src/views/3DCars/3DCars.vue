@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen dark:bg-dark-mode flex justify-center">
+  <div class="h-screen flex justify-center">
       <div id="render" class="flex justify-center items-center h-screen">
         <div v-if="!finish" id="loading" class="z-10 flex flex-col p-5 items-center justify-center absolute dark:bg-dark-mode bg-white dark:text-white">
           <h3 v-if="!error" class="text-lg uppercase">{{ $t(title) }}</h3>

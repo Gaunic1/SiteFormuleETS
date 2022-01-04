@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- PRESENTATION -->
-    <div class="bg-first w-full flex flex-wrap dark:bg-dark-mode overflow-x-hidden">
+    <div class="bg-first w-full flex flex-wrap overflow-x-hidden">
       <div class="bg-triangle absolute bottom-0 left-0 w-full h-full bg-gradient-to-tr from-red-700 to-dark-mode z-10"></div>
 
       <div class="flex-initial h-screen w-full lg:w-1/3 flex flex-col justify-center p-5 z-20" data-aos="fade-right">
@@ -9,11 +9,11 @@
         <p class="mt-10 dark:text-white text-center lg:text-left">{{ text.text }}</p>
       </div>
       <div class="flex-initial h-screen w-2/3 justify-center items-center hidden lg:flex z-0">
-        <img id="formule" :src="formule" alt="Formule" class="z-0" data-aos="fade-left">
+        <img id="formule" src="/static/home/formule.png" alt="Formule" class="z-0" data-aos="fade-left">
       </div>
 
       <!-- PART2 -->
-      <div class="flex-initial w-full z-10 bg-first bg-white dark:bg-dark-mode overflow-x-hidden">
+      <div class="flex-initial w-full z-10 bg-first overflow-x-hidden bg-white dark:bg-dark-mode">
 
         <!-- QUI SOMME NOUS ? -->
         <div class="flex flex-col lg:flex-row flex-wrap w-full">
@@ -27,7 +27,7 @@
           </div>
 
           <div class="flex-initial p-5 w-full lg:w-1/3 h-full flex items-center justify-center" data-aos="fade-left">
-            <img :src="teamsImg" alt="Teams" class="h-full border-8 border-red-600 rounded">
+            <img src="/static/home/team.jpg" alt="Teams" class="h-full border-8 border-red-600 rounded">
           </div>
         </div>
 
@@ -36,7 +36,7 @@
         <!-- LE PROJET ? -->
         <div class="flex flex-wrap w-full lg:flex-row">
           <div class="flex-initial p-5 w-full lg:w-1/3 h-full flex items-center justify-center" data-aos="fade-right">
-            <img :lazy-src="formuleImg" lazy-animation="opacity" alt="Teams" class="h-full border-8 border-red-600 rounded">
+            <img lazy-src="/static/home/formuleETS.jpg" lazy-animation="opacity" alt="Teams" class="h-full border-8 border-red-600 rounded">
           </div>
 
           <div data-aos="fade-left" class="flex-initial p-5 w-full lg:w-2/3">
@@ -66,9 +66,6 @@ export default {
           ETS: "ETS",
           text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
         },
-        teamsImg: require('../../assets/main/team.jpg'),
-        formule: require('../../assets/main/formule.png'),
-        formuleImg: require('../../assets/main/formuleETS.jpg'),
       }
     },
     created(){

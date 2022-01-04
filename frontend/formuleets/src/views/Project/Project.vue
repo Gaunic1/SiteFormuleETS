@@ -6,7 +6,7 @@
         </div>
 
         <div class="dark:bg-dark-mode h-screen sticky top-0 w-full flex justify-center flex-col lg:flex-row bg-cover bg-center overflow-x-hidden" 
-        :lazy-background="require('../../assets/project/curve_line.svg')">
+        lazy-background="/static/project/curve_line.svg">
 
             <!-- TEXT -->
             <div class="flex-initial lg:w-1/2 lg:h-full h-1/2 w-full flex items-center justify-center flex-col text-center p-5">

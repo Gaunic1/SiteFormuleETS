@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       colors: {
         "dark-mode": "#121212",
-        "dark-mode-2": "#121212f8"
+        "dark-mode-2": "#121212f8",
+        "overlay": "#12121290"
       },
     },
   },
