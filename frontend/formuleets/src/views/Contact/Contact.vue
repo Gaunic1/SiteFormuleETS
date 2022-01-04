@@ -4,7 +4,7 @@
 
     <!-- BACKGROUND IMAGE -->
     <div class="h-screen w-full bg-center bg-cover flex justify-center items-center relative" 
-    lazy-background="/static/contact/fond.jpg" lazy-animation="opacity">
+    lazy-background="/static/contact/fond.jpg">
         <!-- OVERLAY -->
         <div class="absolute top-0 left-0 h-full w-full bg-overlay"></div>
 
