@@ -11,7 +11,8 @@ const model3d = {
         x: 200,
         y: 0,
         z: 600
-    }
+    },
+    animate: true
 }
 
 export default model3d;

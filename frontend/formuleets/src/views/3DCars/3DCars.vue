@@ -103,7 +103,7 @@ export default {
       const animate = function() {
         requestAnimationFrame(animate);
     
-        if (model) {
+        if (model && model3d.animate) {
           model.rotation.z += 0.0005;
         }
     
