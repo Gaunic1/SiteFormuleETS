@@ -9,7 +9,7 @@
         <p class="mt-10 dark:text-white text-center lg:text-left">{{ text.text }}</p>
       </div>
       <div class="flex-initial h-screen w-2/3 justify-center items-center hidden lg:flex z-0">
-        <img id="formule" src="/static/home/formule.png" alt="Formule" class="z-0" data-aos="fade-left">
+        <img id="formule" lazy-src="/static/home/formule.png" lazy-animation="slide-right" alt="Formule" class="z-0">
       </div>
 
       <!-- PART2 -->
