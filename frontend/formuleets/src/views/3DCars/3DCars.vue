@@ -90,7 +90,7 @@ export default {
           }, (xhr) => {
             vueElement.title = "message.3dmodel.modelLoading";
             vueElement.pourcentage = Math.round(( xhr.loaded / xhr.total * 100 ));
-            if(vueElement.pourcentage == 100 && !vueElement.error) vueElement.finish = true;
+            if((vueElement.pourcentage == 100 || vueElement.pourcentage == Infinity ) && !vueElement.error) vueElement.finish = true;
           }, errorHandler);
 
       }, (xhr) => {
