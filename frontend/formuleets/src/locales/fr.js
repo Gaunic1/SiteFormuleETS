@@ -10,7 +10,7 @@ const fr = {
       "media": "média",
       "pictures": "photos",
       "movies": "vidéos",
-      "blog": "blog"
+      "model": "Model 3D"
     },
 
     "project": {

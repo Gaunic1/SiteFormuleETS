@@ -38,8 +38,8 @@ const HeaderMenus = [
         ]
     },
     {
-        name: "message.header.blog",
-        to: "/blog"
+        name: "message.header.model",
+        to: "/3d-model"
     }
 ];
 

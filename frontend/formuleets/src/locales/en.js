@@ -10,7 +10,7 @@ const en = {
         "media": "average",
         "pictures": "photos",
         "movies": "Videos",
-        "blog": "blog"
+        "model": "3D Model"
     },
 
     "project": {

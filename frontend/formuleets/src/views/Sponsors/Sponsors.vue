@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    name: "Sponsors"
+    name: "Sponsors",
 }
 </script>
 
