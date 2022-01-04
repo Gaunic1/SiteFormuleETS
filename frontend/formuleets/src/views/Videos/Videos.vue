@@ -79,7 +79,7 @@ export default {
     methods: {
         createEmbed(url = ""){
             const id = url.split("v=")[1];
-            return "https://www.youtube.com/embed/" + id;
+            return "https://www.youtube.com/embed/" + id + "?autoplay=1";
         },
         detectMobile(){
             this.isMobile = window.matchMedia("only screen and (max-width: 760px)").matches
