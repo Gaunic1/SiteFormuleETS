@@ -11,6 +11,10 @@ export default {
   components: {
     Header,
     Footer,
+  },
+  mounted(){
+    const lg = navigator.language;
+    this.$root.$i18n.setLocale(lg);
   }
 }
 </script>

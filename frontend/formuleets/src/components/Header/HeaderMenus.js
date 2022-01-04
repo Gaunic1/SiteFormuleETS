@@ -1,44 +1,44 @@
 const HeaderMenus = [
     {
-        name: "À propos de nous",
+        name: "message.header.aboutus",
         to: "/"
     },
     {
-        name: "Le projet",
+        name: "message.header.project",
         to: "/project"
     },
     {
-        name: "L'équipe",
+        name: "message.header.team",
         to: "/team"
     },
     {
-        name: "Commanditaires",
+        name: "message.header.sponsors",
         to: "/sponsors"
     },
     {
-        name: "Faire un don",
+        name: "message.header.donate",
         to: "/donate"
     },
     {
-        name: "Nous rejoindre",
+        name: "message.header.join-us",
         to: "/join-us"
     },
     {
-        name: "Média",
+        name: "message.header.media",
         type: "dropdown",
         menus: [
             {
-                name: "Photos",
+                name: "message.header.pictures",
                 to: "/media/photos"
             },
             {
-                name: "Videos",
+                name: "message.header.movies",
                 to: "/media/videos"
             },
         ]
     },
     {
-        name: "Blog",
+        name: "message.header.blog",
         to: "/blog"
     }
 ];

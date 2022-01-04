@@ -11,12 +11,12 @@
               <template v-for="item of menu" :key="item.name">
                     <!-- DROPDOWN -->
                     <li v-if="item.type == 'dropdown'" class="dropdown flex items-center justify-center">
-                        <a class="ml-2 mr-2 no-underline uppercase dark:text-white cursor-pointer" :id="item.name">{{ item.name }}</a>
+                        <a class="ml-2 mr-2 no-underline uppercase dark:text-white cursor-pointer" :id="item.name">{{ $t(item.name) }}</a>
 
                         <div class="top-full -mt-3 menu absolute z-50 bg-white dark:bg-dark-mode h-0 overflow-hidden">
                             <ul class="h-auto flex flex-col justify-center items-center">
                                 <li v-for="menu of item.menus" :key="menu.name" class="h-10">
-                                    <router-link class="dark:text-white no-underline uppercase" :to="menu.to">{{ menu.name }}</router-link>
+                                    <router-link class="dark:text-white no-underline uppercase" :to="menu.to">{{ $t(menu.name) }}</router-link>
                                 </li>
                             </ul>
                         </div>
@@ -24,15 +24,19 @@
 
                     <!-- NOT DROPDOWN -->
                     <li v-else class="flex items-center justify-center">
-                        <router-link class="ml-2 mr-2 no-underline uppercase dark:text-white" :to="item.to">{{ item.name }}</router-link>
+                        <router-link class="ml-2 mr-2 no-underline uppercase dark:text-white" :to="item.to">{{ $t(item.name) }}</router-link>
                     </li>
               </template>
               <li>
                 <!-- DARK MODE -->
-                <div class="relative inline-block w-10 mr-2 ml-2 align-middle select-none transition duration-200 ease-in">
-                    <input :checked="darkMode" @change="changeDarkMode" type="checkbox" name="toggle" id="toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer "/>
-                    <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
-                </div>
+                <i class="w-9 h-9 flex justify-center items-center cursor-pointer dark:text-white border border-black dark:border-white rounded-full"
+                :class="darkMode ? 'fas fa-lightbulb' : 'far fa-lightbulb'" @click="changeDarkMode()"></i>
+              </li>
+              <li>
+                  <!-- CHANGE LANGUAGE -->
+                  <p @click="changeLangue()" class="ml-3 w-9 h-9 uppercase flex justify-center items-center cursor-pointer dark:text-white border border-black dark:border-white rounded-full">
+                      {{ $root.$i18n.getLocale() == "fr" ? "en" : "fr" }}
+                  </p>
               </li>
           </ul>
 
@@ -49,23 +53,26 @@
                         <!-- DROPDOWN -->
                         <li v-if="item.type == 'dropdown'" class="dropdown m-4 flex">
                             <template v-for="(menu, index) of item.menus" :key="menu.name">
-                                <router-link @click="showMenu = false" :to="menu.to" class="ml-2 mr-2 no-underline uppercase">{{ menu.name }}</router-link>
+                                <router-link @click="showMenu = false" :to="menu.to" class="ml-2 mr-2 no-underline uppercase">{{ $t(menu.name) }}</router-link>
                                 <span class="text-dark-mode dark:text-white" v-if="index < item.menus.length-1">|</span>
                             </template>
                         </li>
 
                         <!-- NOT DROPDOWN -->
                         <li v-else class="m-4">
-                            <router-link class="ml-2 mr-2 no-underline uppercase" :to="item.to" @click="showMenu = false">{{ item.name }}</router-link>
+                            <router-link class="ml-2 mr-2 no-underline uppercase" :to="item.to" @click="showMenu = false">{{ $t(item.name) }}</router-link>
                         </li>
                     </template>
 
-                    <li>
+                    <li class="flex justify-center items-center">
                         <!-- DARK MODE -->
-                        <div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
-                            <input :checked="darkMode" @change="changeDarkMode" type="checkbox" name="toggle" id="toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer "/>
-                            <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
-                        </div>
+                        <i class="w-12 h-12 flex justify-center items-center cursor-pointer dark:text-white border border-black dark:border-white rounded-full"
+                        :class="darkMode ? 'fas fa-lightbulb' : 'far fa-lightbulb'" @click="changeDarkMode()"></i>
+
+                        <!-- CHANGE LANGUAGE -->
+                        <p @click="changeLangue()" class="ml-5 w-12 h-12 uppercase flex justify-center items-center cursor-pointer dark:text-white border border-black dark:border-white rounded-full">
+                            {{ $root.$i18n.getLocale() == "fr" ? "en" : "fr" }}
+                        </p>
                     </li>
                 </ul>
               </div>
@@ -97,6 +104,10 @@ export default {
         }
     },
     methods: {
+        changeLangue(){
+            const lg = this.$root.$i18n.getLocale()
+            this.$root.$i18n.setLocale(lg == "fr" ? "en" : "fr");
+        },
         scroll(){
             if(window.scrollY > 0) 
                 this.headerClass = ["shadow-md", "bg-white", "h-16", "dark:text-dark-mode", "tracking-wider", "dark:bg-dark-mode", "dark:text-white"];

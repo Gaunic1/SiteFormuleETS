@@ -10,8 +10,8 @@
 
             <!-- TEXT -->
             <div class="flex-initial lg:w-1/2 lg:h-full h-1/2 w-full flex items-center justify-center flex-col text-center p-5">
-                <h2 v-if="text.title" class="text-3xl font-bold text-red-500 uppercase slide-left">{{ text.title }}</h2>
-                <p v-if="text.label" class="dark:text-white mt-5 slide-left delay-300">{{ text.label }}</p>
+                <h2 v-if="text.title" class="text-3xl font-bold text-red-500 uppercase slide-left">{{ $t(text.title) || text.title }}</h2>
+                <p v-if="text.label" class="dark:text-white mt-5 slide-left delay-300">{{ $t(text.label) || text.label }}</p>
                 <i v-if="this.count == 0" class="fas fa-chevron-down dark:text-white mt-5 fade-arrow"></i>
                 <i v-if="this.count == 0" class="fas fa-chevron-down dark:text-white -mt-2 fade-arrow"></i>
             </div>
@@ -19,8 +19,8 @@
             <!-- FORMULE -->
             <div class="lg:h-full flex justify-center items-center transition-all duration-1000" 
             :class="count != countToNotDisplay ? 'w-full lg:w-1/2' : 'absolute'">
-                <img id="3d-model" v-if="img" :src="img" alt="3D model" 
-                :class="count != countToNotDisplay ? 'opacity-100 transition-all duration-1000' : 'opacity-0'">
+                <img id="3d-model" v-if="img" :src="img" alt="3D model" class="pointer-events-none"
+                :class="count != countToNotDisplay ? 'opacity-100 transition-all duration-1000' : 'opacity-0 z-0'">
             </div>
 
         </div>
@@ -44,8 +44,8 @@ export default {
             speed: 1,
 
             text: {
-                title: "Animation dynamique",
-                label: "Faites défiler vers le bas pour lancer l'animation et voir notre protoype en 3D."
+                title: "message.project.default.animation",
+                label: "message.project.default.label"
             }
         };
     },

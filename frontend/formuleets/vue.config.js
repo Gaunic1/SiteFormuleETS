@@ -5,8 +5,6 @@ module.exports = {
       fallbackLocale: 'en',
       localeDir: 'locales',
       enableLegacy: true,
-      runtimeOnly: false,
-      compositionOnly: true,
       fullInstall: true
     }
   }
