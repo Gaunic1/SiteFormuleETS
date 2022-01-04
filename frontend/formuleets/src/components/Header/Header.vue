@@ -107,7 +107,7 @@ export default {
     },
     methods: {
         changeLangue(){
-            const lg = this.$root.$i18n.getLocale()
+            const lg = this.$root.$i18n.getLocale();
             this.$root.$i18n.setLocale(lg == "fr" ? "en" : "fr");
         },
         scroll(){

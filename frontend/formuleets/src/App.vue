@@ -13,7 +13,7 @@ export default {
     Footer,
   },
   mounted(){
-    const lg = navigator.language;
+    const lg = navigator.language.split('-')[0];
     this.$root.$i18n.setLocale(lg);
   }
 }

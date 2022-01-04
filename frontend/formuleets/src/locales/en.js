@@ -13,6 +13,21 @@ const en = {
         "model": "3D Model"
     },
 
+    "404": {
+      "title": "Page not found"
+    },
+
+    "team": {
+      "title": "The team"
+    },
+
+    "sponsors": {
+      "diamond": "Diamonds",
+      "gold": "Gold",
+      "silver": "Silver",
+      "bronze": "Bronze"
+    },
+
     "project": {
       "default": {
         "animation": "dynamic animation",

@@ -3,7 +3,9 @@
         <!-- USELESS. JUST HERE TO DONT GO ON THE HEADER -->
         <div class="h-24"></div>
 
-        <h1 data-aos="zoom-in" class="dark:text-white font-bold text-4xl uppercase italic mb-20">L'équipe</h1>
+        <h1 data-aos="zoom-in" class="dark:text-white font-bold text-4xl uppercase italic mb-20">
+            {{ $t('message.team.title') }}
+        </h1>
 
         <template v-for="categorie of team" :key="categorie.name">
             <hr data-aos="zoom-in" class="border border-red-500 bg-red-500 m-5">
