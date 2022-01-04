@@ -3,7 +3,9 @@
       <nav class="flex justify-center items-center w-full h-full">
           <!-- LOGO -->
           <div id="logo" class="flex-auto h-full p-3">
-              <img :src="logo" alt="Logo" class="h-full"/>
+              <a href="/">
+                <img :src="logo" alt="Logo" class="h-full"/>
+              </a>
           </div>
 
           <!-- COMPUTER -->
