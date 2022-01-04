@@ -89,13 +89,13 @@ export default {
 
           }, (xhr) => {
             vueElement.title = "message.3dmodel.modelLoading";
-            vueElement.pourcentage = Math.round((xhr.loaded / xhr.total) * 100 );
+            if( xhr.lengthComputable ) vueElement.pourcentage = Math.round((xhr.loaded / xhr.total) * 100 );
             if((vueElement.pourcentage >= 100) && !vueElement.error) vueElement.finish = true;
           }, errorHandler);
 
       }, (xhr) => {
         vueElement.title = "message.3dmodel.textureLoading";
-        vueElement.pourcentage = Math.round((xhr.loaded / xhr.total) * 100 );
+        if( xhr.lengthComputable ) vueElement.pourcentage = Math.round((xhr.loaded / xhr.total) * 100 );
       }, errorHandler);
 
       camera.lookAt(0, 0, 0);
