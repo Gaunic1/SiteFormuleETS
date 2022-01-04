@@ -22,6 +22,7 @@ const fr = {
     },
 
     "sponsors": {
+      "button": "Devenez un partenaire",
       "diamond": "Diamants",
       "gold": "Or",
       "silver": "Argent",

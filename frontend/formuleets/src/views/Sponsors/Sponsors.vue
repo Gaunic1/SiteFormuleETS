@@ -7,7 +7,7 @@
       <div class="flex justify-center items-center">
         <a :href="sponsors.button.link">
           <button class="pb-5 pt-5 pl-10 pr-10 mb-5 uppercase dark:bg-white bg-dark-mode dark:text-black text-white font-bold">
-            {{ sponsors.button.title }}
+            {{ $t(sponsors.button.title) }}
           </button>
         </a>
       </div>
@@ -24,7 +24,8 @@
         <div class="w-full flex items-center justify-center flex-wrap p-5 bg-white">
           <template v-for="sponsor of sponsors[categorie.name]" :key="sponsor.src">
             <a :href="sponsor.src || '#'">
-              <img class="m-5 w-64 inline-block opacity-0 lazyattr" 
+              <img class="m-5 w-64 inline-block opacity-0" 
+              lazy-size-height="10rem" 
               :lazy-src="sponsor.imageSrc" 
               lazy-animation="opacity" 
               alt="Sponsor">
@@ -67,9 +68,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-.lazyattr{
-  height: 10rem;
-}
-</style>

@@ -1,7 +1,7 @@
 const sponsors = {
     //BUTTON
     "button": {
-        "title": "Devenez un partenaire",
+        "title": "message.sponsors.button",
         "link": "https://static1.squarespace.com/static/56a2649fe0327c8648d7e51b/t/619ef40e962f9d1b879f47b3/1637807127129/Plan+de+partenariat+2022.pdf"
     },
 

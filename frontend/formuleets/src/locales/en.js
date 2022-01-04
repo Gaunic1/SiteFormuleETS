@@ -22,6 +22,7 @@ const en = {
     },
 
     "sponsors": {
+      "button": "Become a partner",
       "diamond": "Diamonds",
       "gold": "Gold",
       "silver": "Silver",
