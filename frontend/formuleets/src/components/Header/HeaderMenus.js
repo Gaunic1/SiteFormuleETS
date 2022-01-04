@@ -20,8 +20,8 @@ const HeaderMenus = [
         to: "/donate"
     },
     {
-        name: "message.header.join-us",
-        to: "/join-us"
+        name: "message.header.contact-us",
+        to: "/contact-us"
     },
     {
         name: "message.header.media",

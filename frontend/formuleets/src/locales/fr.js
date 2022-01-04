@@ -6,7 +6,7 @@ const fr = {
       "team": "l'équipe",
       "sponsors": "commanditaires",
       "donate": "faire un don",
-      "join-us": "nous joindre",
+      "contact-us": "nous joindre",
       "media": "média",
       "pictures": "photos",
       "movies": "vidéos",
@@ -23,6 +23,10 @@ const fr = {
     "3dmodel": {
       "textureLoading": "Chargement des textures",
       "modelLoading": "Chargement du model"
+    },
+
+    "contact": {
+      "contact": "Nous Joindre"
     },
 
     "donate": {

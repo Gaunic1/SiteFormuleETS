@@ -6,7 +6,7 @@ const en = {
         "team": "the team",
         "sponsors": "Sponsors",
         "donate": "donate",
-        "join-us": "contact us",
+        "contact-us": "contact us",
         "media": "media",
         "pictures": "photos",
         "movies": "Videos",
@@ -23,6 +23,10 @@ const en = {
     "3dmodel": {
       "textureLoading": "Loading textures",
       "modelLoading": "Loading the model"
+    },
+
+    "contact": {
+      "contact": "Contact US"
     },
 
     "donate": {

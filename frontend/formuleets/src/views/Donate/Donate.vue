@@ -1,19 +1,20 @@
 <template>
-  <!-- USELESS (TO DONT GO ON HEADER) -->
-  <div class="h-14 w-full"></div>
+    <!-- USELESS (TO DONT GO ON HEADER) -->
+    <div class="h-14 w-full"></div>
 
-  <div class="lg:h-screen h-auto w-full bg-center bg-cover flex justify-center items-center relative" 
-  lazy-background="/static/donate/fond.jpg">
+    <!-- BACKGROUND IMAGE -->
+    <div class="lg:h-screen h-auto w-full bg-center bg-cover flex justify-center items-center relative" 
+    lazy-background="/static/donate/fond.jpg" lazy-animation="opacity">
 
     <!-- OVERLAY -->
     <div class="absolute top-0 left-0 h-full w-full bg-overlay"></div>
 
     <!-- CONTENT -->
     <div class="p-5 dark:bg-dark-mode dark:text-white bg-white m-5 flex 
-    flex-col z-10 w-full lg:flex-row lg:w-2/3">
+    flex-col z-10 w-full lg:flex-row lg:w-2/3 overflow-x-hidden" data-aos="zoom-in">
 
         <!-- LEFT -->
-        <div class="lg:w-1/2 w-full p-5">
+        <div class="lg:w-1/2 w-full p-5" data-aos="zoom-in">
             <a :href="links.link1">
                 <button class="w-full h-16 dark:bg-white bg-dark-mode text-white dark:text-black uppercase font-bold">
                     {{ $t("message.donate.particular.button") }}
@@ -25,7 +26,7 @@
         </div>
 
         <!-- RIGHT -->
-        <div class="lg:w-1/2 w-full p-5">
+        <div class="lg:w-1/2 w-full p-5" data-aos="zoom-in">
             <a :href="links.link2">
                 <button class="w-full h-16 dark:bg-white bg-dark-mode text-white dark:text-black uppercase font-bold">
                     {{ $t("message.donate.sponsorship.button") }}

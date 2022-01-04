@@ -17,7 +17,7 @@
 
                         <div class="top-full -mt-3 menu absolute z-50 bg-white dark:bg-dark-mode h-0 overflow-hidden">
                             <ul class="h-auto flex flex-col justify-center items-center">
-                                <li v-for="menu of item.menus" :key="menu.name" class="h-10">
+                                <li v-for="menu of item.menus" :key="menu.name" class="h-10 ml-3 mr-3">
                                     <router-link class="dark:text-white no-underline uppercase" :to="menu.to">{{ $t(menu.name) }}</router-link>
                                 </li>
                             </ul>
