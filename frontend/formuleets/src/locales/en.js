@@ -7,7 +7,7 @@ const en = {
         "sponsors": "Sponsors",
         "donate": "donate",
         "join-us": "join us",
-        "media": "average",
+        "media": "media",
         "pictures": "photos",
         "movies": "Videos",
         "model": "3D Model"
