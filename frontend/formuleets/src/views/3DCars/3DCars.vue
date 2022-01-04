@@ -57,7 +57,6 @@ export default {
       loader.load(model3d.src, obj => {
         obj.traverse(function(child) {
           if (child instanceof THREE.Mesh) {
-            console.log(child)
             child.material.color = new THREE.Color(0xff0000);
           }
         });
@@ -82,8 +81,6 @@ export default {
     
         renderer.render(scene, camera);
       };
-
-      console.log(model)
     
       animate();
 

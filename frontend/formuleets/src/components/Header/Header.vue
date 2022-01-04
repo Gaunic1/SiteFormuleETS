@@ -62,7 +62,9 @@
 
                         <!-- NOT DROPDOWN -->
                         <li v-else class="m-4">
-                            <router-link class="ml-2 mr-2 no-underline uppercase" :to="item.to" @click="showMenu = false">{{ $t(item.name) }}</router-link>
+                            <router-link class="m-2 no-underline uppercase" :to="item.to" @click="showMenu = false">
+                                <span>{{ $t(item.name) }}</span>
+                            </router-link>
                         </li>
                     </template>
 
