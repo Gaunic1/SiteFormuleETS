@@ -7,6 +7,7 @@ import Home from '../views/Home/Home.vue'
 import Project from '../views/Project/Project.vue'
 import Sponsors from '../views/Sponsors/Sponsors.vue'
 import Team from '../views/Team/Team.vue'
+import Videos from '../views/Videos/Videos.vue'
 
 const routes = [
   {
@@ -43,6 +44,11 @@ const routes = [
     path: "/contact-us",
     name: "Contact",
     component: Contact
+  },
+  {
+    path: "/media/videos",
+    name: "Videos",
+    component: Videos
   },
 
   //For 404 error, always need to be at the end
