@@ -2,7 +2,9 @@
   <!-- USELESS. JUST HERE TO DONT GO ON THE HEADER -->
   <div class="h-12"></div>
 
-  <div class="calc-height w-full flex justify-center items-center flex-wrap" v-if="!game">
+  <div class="calc-height w-full flex justify-center items-center flex-wrap bg-cover bg-fixed bg-center" 
+  v-if="!game" 
+  lazy-background="/static/easter-egg/fond.svg"> 
     <template v-for="item of games" :key="item.name">
       <button data-aos="zoom-in" 
       @click="game = item.url" 
