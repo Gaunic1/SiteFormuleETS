@@ -1,4 +1,5 @@
 <template>
+    <!-- FOOTER -->
     <div class="bg-dark-mode-2 h-56 w-full flex flex-col justify-center z-10">
         <!-- SOCIAL MEDIAS -->
         <div class="flex-initial w-full p-5 flex justify-center items-center">
@@ -12,6 +13,21 @@
         <!-- ADRESS -->
         <div class="flex-initial w-full p-5 text-center">
             <h2 class="font-serif text-sm text-white">FORMULE ETS, 1219 RUE WILLIAM, MONTRÉAL, QC, H3C 1R1, CANADA514-396-8800 X:7741FORMULE@ENS.ETSMTL.CA</h2>
+        </div>
+
+        <!-- CREDIT -->
+        <div class="flex-initial w-full p-2 text-center">
+            <span class="text-white">
+                Made with
+                <router-link to="/easter-egg/minecraft">
+                    <i 
+                    class="fas fa-heart text-red-600 mr-1 ml-1"></i>
+                </router-link>
+                by 
+                <a href="mailto:charbonn.yoann@gmail.com" class="ml-1 underline">
+                    yoannchb
+                </a>
+            </span>
         </div>
     </div>
 </template>
