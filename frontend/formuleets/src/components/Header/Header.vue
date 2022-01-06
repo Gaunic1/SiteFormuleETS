@@ -36,9 +36,13 @@
               </li>
               <li>
                   <!-- CHANGE LANGUAGE -->
-                  <p @click="changeLangue()" class="ml-3 w-9 h-9 uppercase flex justify-center items-center cursor-pointer dark:text-white border border-black dark:border-white rounded-full">
-                      {{ $root.$i18n.getLocale() == "fr" ? "en" : "fr" }}
-                  </p>
+                  <div @click="changeLangue()" 
+                  class="ml-3 w-9 h-9 uppercase flex justify-center items-center 
+                  cursor-pointer dark:text-white border border-black dark:border-white rounded-full
+                  bg-center bg-cover"
+                  :style="$root.$i18n.getLocale() == 'en' ? background('english') : background('french')">
+                      <!-- {{ $root.$i18n.getLocale() == "fr" ? "en" : "fr" }} -->
+                  </div>
               </li>
           </ul>
 
@@ -74,9 +78,13 @@
                         :class="darkMode ? 'fas fa-lightbulb' : 'far fa-lightbulb'" @click="changeDarkMode()"></i>
 
                         <!-- CHANGE LANGUAGE -->
-                        <p @click="changeLangue()" class="ml-5 w-12 h-12 uppercase flex justify-center items-center cursor-pointer dark:text-white border border-black dark:border-white rounded-full">
-                            {{ $root.$i18n.getLocale() == "fr" ? "en" : "fr" }}
-                        </p>
+                        <div @click="changeLangue()" 
+                        class="ml-7 w-12 h-12 uppercase flex justify-center items-center 
+                        cursor-pointer dark:text-white border border-black dark:border-white rounded-full
+                        bg-center bg-cover"
+                        :style="$root.$i18n.getLocale() == 'en' ? background('english') : background('french')">
+                            <!-- {{ $root.$i18n.getLocale() == "fr" ? "en" : "fr" }} -->
+                        </div>
                     </li>
                 </ul>
               </div>
@@ -106,6 +114,9 @@ export default {
         }
     },
     methods: {
+        background(name = ""){
+            return "background-image: url('/static/flags/" + name + ".png')";
+        },
         changeLangue(){
             const lg = this.$root.$i18n.getLocale();
             this.$root.$i18n.setLocale(lg == "fr" ? "en" : "fr");
