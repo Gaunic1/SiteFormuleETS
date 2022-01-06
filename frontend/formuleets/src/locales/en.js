@@ -21,6 +21,10 @@ const en = {
       "title": "The team"
     },
 
+    "videos": {
+      "title": "Videos"
+    },
+
     "sponsors": {
       "button": "Become a partner",
       "diamond": "Diamonds",

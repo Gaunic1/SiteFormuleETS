@@ -4,7 +4,9 @@
 
   <div class="md:h-screen flex flex-col pl-5 justify-center bg-center bg-fixed bg-cover" 
   lazy-background="/static/videos/contour.svg">
-      <h2 data-aos="fade-right" class="dark:text-white text-3xl uppercase font-bold border-b-4 border-red-900 w-20">Videos</h2>
+      <h2 data-aos="fade-right" class="dark:text-white text-3xl uppercase font-bold border-b-4 border-red-900 w-20">
+          {{ $t("message.videos.title") }}
+      </h2>
 
       <!-- <hr data-aos="zoom-in" class="mt-5 border bg-red-900 border-red-900"> -->
 

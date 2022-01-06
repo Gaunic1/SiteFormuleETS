@@ -21,6 +21,10 @@ const fr = {
       "title": "L'équipe"
     },
 
+    "videos": {
+      "title": "Vidéos"
+    },
+
     "sponsors": {
       "button": "Devenez un partenaire",
       "diamond": "Diamants",
