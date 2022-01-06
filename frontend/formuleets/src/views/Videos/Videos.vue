@@ -2,7 +2,8 @@
   <!-- USELESS. JUST HERE TO DONT GO ON THE HEADER -->
   <div class="h-24" v-if="isMobile"></div>
 
-  <div class="md:h-screen flex flex-col pl-5 justify-center bg-center bg-cover" lazy-background="/static/videos/line.svg">
+  <div class="md:h-screen flex flex-col pl-5 justify-center bg-center bg-fixed bg-cover" 
+  lazy-background="/static/videos/contour.svg">
       <h2 data-aos="fade-right" class="dark:text-white text-3xl uppercase font-bold border-b-4 border-red-900 w-20">Videos</h2>
 
       <!-- <hr data-aos="zoom-in" class="mt-5 border bg-red-900 border-red-900"> -->
@@ -38,9 +39,10 @@
                         <span class="absolute right-0 font-thin w-1/3 text-right">&nbsp; ({{ item.pubDate.split(' ')[0] }})</span>
                     </div>
 
+                    <!-- width: 560, height: 315, diff: 245 -->
                     <iframe 
-                    width="560" 
-                    height="315" 
+                    :width="widthVideo" 
+                    :height="widthVideo - 245" 
                     :class="isMobile ? 'w-full' : ''"
                     :lazy-embed="createEmbed(item.link)" 
                     :lazy-poster="item.thumbnail" 
@@ -65,7 +67,9 @@ export default {
             datas: null,
             showRight: true,
             showLeft: false,
-            isMobile: false
+            isMobile: false,
+
+            widthVideo: 675
         }
     },
     async mounted(){

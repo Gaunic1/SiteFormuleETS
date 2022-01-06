@@ -1,5 +1,8 @@
 <template>
-  <div class="h-screen w-full">
+  <!-- USELESS. JUST HERE TO DONT GO ON THE HEADER -->
+  <div class="h-12"></div>
+
+  <div class="calc-height w-full">
       <iframe
         id="game-iframe"
         width="100%"
@@ -22,6 +25,9 @@ export default {
 }
 </script>
 
-<style>
+<style scroped>
+.calc-height{
+  height: calc(100vh - 3rem);
+}
 
 </style>

@@ -1,5 +1,6 @@
 <template>
-    <div class="w-full h-auto text-center mb-0 overflow-hidden">
+    <div class="w-full h-auto text-center mb-0 overflow-hidden bg-cover bg-center bg-fixed"
+    lazy-background="/static/team/contour2.svg">
         <!-- USELESS. JUST HERE TO DONT GO ON THE HEADER -->
         <div class="h-24"></div>
 
@@ -14,7 +15,7 @@
                 <h2 data-aos="fade-right" class="dark:text-white text-3xl ml-5">{{ categorie.name }}</h2>
 
                 <div data-aos="fade-up">
-                    <div class="inline-block m-5 rounded overflow-hidden calc-size shadow" v-for="member of categorie.members" :key="member.fullName" 
+                    <div class="inline-block m-5 rounded overflow-hidden calc-size shadow bg-white dark:bg-dark-mode" v-for="member of categorie.members" :key="member.fullName" 
                     v-tilt="{glare: true, 'max-glare': 0.4}">
 
                         <div class="bg-cover bg-center h-2/3 w-full lazy-skeleton" :lazy-background="member.img"></div>
