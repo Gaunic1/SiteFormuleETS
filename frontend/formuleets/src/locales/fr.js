@@ -13,6 +13,10 @@ const fr = {
       "model": "Model 3D"
     },
 
+    "other": {
+      "back": "Retour"
+    },
+
     "404": {
       "title": "Page non trouvée"
     },

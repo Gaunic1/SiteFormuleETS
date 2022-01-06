@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Cars from '../views/3DCars/3DCars.vue'
 import Contact from '../views/Contact/Contact.vue'
 import Donate from '../views/Donate/Donate.vue'
-import Minecraft from '../views/Easter-EGG/Minecraft.vue'
+import EASTEREGG from '../views/Easter-EGG/EASTEREGG.vue'
 import Error404 from '../views/Error404/Error404.vue'
 import Home from '../views/Home/Home.vue'
 import Project from '../views/Project/Project.vue'
@@ -54,9 +54,9 @@ const routes = [
 
   //EASTER EGG ;)
   {
-    path: "/easter-egg/minecraft",
-    name: "Minecraft",
-    component: Minecraft
+    path: "/easter-eggs",
+    name: "EASTEREGG",
+    component: EASTEREGG
   },
 
   //For 404 error, always need to be at the end

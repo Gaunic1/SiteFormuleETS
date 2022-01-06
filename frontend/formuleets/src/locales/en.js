@@ -13,6 +13,10 @@ const en = {
         "model": "3D Model"
     },
 
+    "other": {
+      "back": "Go back"
+    },
+
     "404": {
       "title": "Page not found"
     },

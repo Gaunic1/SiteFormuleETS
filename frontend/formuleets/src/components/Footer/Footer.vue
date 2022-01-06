@@ -1,6 +1,6 @@
 <template>
     <!-- FOOTER -->
-    <div class="bg-dark-mode-2 h-56 w-full flex flex-col justify-center z-10">
+    <footer class="bg-dark-mode-2 h-56 w-full flex flex-col justify-center z-10">
         <!-- SOCIAL MEDIAS -->
         <div class="flex-initial w-full p-5 flex justify-center items-center">
             <template v-for="media of medias" :key="media">
@@ -19,7 +19,7 @@
         <div class="flex-initial w-full p-2 text-center">
             <span class="text-white">
                 Made with
-                <router-link to="/easter-egg/minecraft">
+                <router-link to="/easter-eggs">
                     <i 
                     class="fas fa-heart text-red-600 mr-1 ml-1"></i>
                 </router-link>
@@ -29,7 +29,7 @@
                 </a>
             </span>
         </div>
-    </div>
+    </footer>
 </template>
 <script>
 import medias from "./medias"
