@@ -1,6 +1,6 @@
 <template>
   <!-- USELESS. JUST HERE TO DONT GO ON THE HEADER -->
-  <div class="h-24" v-if="isMobile"></div>
+  <div class="h-24 lg:hidden"></div>
 
   <div class="lg:h-screen flex flex-col pl-5 justify-center bg-center bg-fixed bg-cover" 
   lazy-background="/static/videos/contour.svg">
@@ -15,27 +15,25 @@
 
         <!-- LEFT -->
         <div @click="slideLeft" 
-        v-if="!isMobile && showLeft" 
+        v-if="showLeft" 
         class="w-20 h-full absolute left-0 top-0 bg-dark-mode dark:bg-white 
-        z-10 flex justify-center items-center cursor-pointer opacity-80">
+        z-10 lg:flex hidden justify-center items-center cursor-pointer opacity-80">
             <i class="text-white dark:text-black fas fa-chevron-left text-5xl"></i>
         </div>
 
         <!-- RIGHT -->
         <div @click="slideRight" 
-        v-if="!isMobile && showRight" 
+        v-if="showRight" 
         class="w-20 h-full absolute right-0 top-0 bg-dark-mode dark:bg-white 
-        z-10 flex justify-center items-center cursor-pointer opacity-80">
+        z-10 lg:flex hidden justify-center items-center cursor-pointer opacity-80">
             <i class="text-white dark:text-black fas fa-chevron-right text-5xl"></i>
         </div>
 
-        <div id="slider" v-if="datas" class="w-auto overflow-x-hidden mt-5 relative" 
-        :class="isMobile ? '' : 'whitespace-nowrap'">
+        <div id="slider" v-if="datas" class="w-auto overflow-x-hidden mt-5 relative lg:whitespace-nowrap">
 
             <!-- VIDEOS -->
             <template v-for="item of datas" :key="item.pubDate">
-                <div class="mr-5 pt-5 pb-5"
-                :class="isMobile ? 'block' : 'inline-block'">
+                <div class="mr-5 pt-5 pb-5 lg:inline-block">
                     <div class="uppercase text-lg dark:text-white mb-3 relative whitespace-nowrap flex">
                         <div class="w-2/3 font-thin truncate">{{ item.title }}</div>
                         <span class="absolute right-0 font-thin w-1/3 text-right">&nbsp; ({{ item.pubDate.split(' ')[0] }})</span>
@@ -76,7 +74,7 @@ export default {
         }
     },
     watch: {
-        "isMobile"(){
+        "actualSize"(){
             if(this.isMobile) this.widthVideo = document.body.offsetWidth + 75;
             else this.widthVideo = 675;
         }
