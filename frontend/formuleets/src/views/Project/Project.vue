@@ -54,14 +54,15 @@ export default {
     watch: {
         "isMobile"(){
             this.speed = this.isMobile ? project.phoneSpeed : project.speed;
+            this.calcHeight();
         }
     },
     mounted() {
         window.scrollTo(0,0);
 
-        this.speed = this.isMobile ? project.phoneSpeed : project.speed;
-
         this.$data.mobileSize = "768px";
+
+        this.speed = this.isMobile ? project.phoneSpeed : project.speed;
 
         this.countToNotDisplay = project.appearAndDisapear ? 0 : -1;
 
