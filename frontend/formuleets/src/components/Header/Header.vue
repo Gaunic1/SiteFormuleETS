@@ -61,16 +61,16 @@
                 <ul class="list-none dark:text-white text-center max-h-screen p-5">
                     <template v-for="item of menu" :key="item.name">
                         <!-- DROPDOWN -->
-                        <li v-if="item.type == 'dropdown'" class="dropdown m-4 flex">
+                        <li v-if="item.type == 'dropdown'" class="dropdown h-10 m-4 flex justify-center">
                             <template v-for="(menu, index) of item.menus" :key="menu.name">
-                                <router-link @click="showMenu = false" :to="menu.to" class="ml-2 mr-2 no-underline uppercase">{{ $t(menu.name) }}</router-link>
-                                <span class="text-dark-mode dark:text-white" v-if="index < item.menus.length-1">|</span>
+                                <router-link @click="displayMenuPhone(false)" :to="menu.to" class="m-2 no-underline uppercase">{{ $t(menu.name) }}</router-link>
+                                <span class="text-dark-mode dark:text-white m-2" v-if="index < item.menus.length-1">|</span>
                             </template>
                         </li>
 
                         <!-- NOT DROPDOWN -->
-                        <li v-else class="m-4">
-                            <router-link class="m-2 no-underline uppercase" :to="item.to" @click="showMenu = false">
+                        <li v-else class="m-4 h-10">
+                            <router-link class="m-2 no-underline uppercase" :to="item.to" @click="displayMenuPhone(false)">
                                 <span>{{ $t(item.name) }}</span>
                             </router-link>
                         </li>
