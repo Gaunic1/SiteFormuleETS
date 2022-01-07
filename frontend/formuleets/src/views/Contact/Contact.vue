@@ -3,7 +3,7 @@
     <div class="h-14 w-full"></div>
 
     <!-- BACKGROUND IMAGE -->
-    <div class="h-screen w-full bg-center bg-cover flex justify-center items-center relative" 
+    <div class="lg:h-screen min-h-screen h-auto w-full bg-center bg-cover flex justify-center items-center relative" 
     style="background-image: url('/static/contact/fond.jpg')">
         <!-- OVERLAY -->
         <div class="absolute top-0 left-0 h-full w-full bg-overlay"></div>
