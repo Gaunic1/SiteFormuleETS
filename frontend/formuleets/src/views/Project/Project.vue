@@ -5,11 +5,11 @@
              <hr class="bg-red-500 border border-red-500 ml-5 mr-5 w-full opacity-50">
         </div>
 
-        <div class="dark:bg-dark-mode h-screen sticky top-0 w-full flex justify-center flex-col lg:flex-row bg-cover bg-center overflow-x-hidden" 
+        <div class="dark:bg-dark-mode h-screen sticky top-0 w-full flex justify-center flex-col md:flex-row bg-cover bg-center overflow-x-hidden" 
         lazy-background="/static/project/curve_line.svg">
 
             <!-- TEXT -->
-            <div class="flex-initial lg:w-1/2 lg:h-full h-1/2 w-full flex items-center justify-center flex-col text-center p-5">
+            <div class="flex-initial md:w-1/2 md:h-full h-1/2 w-full flex items-center justify-center flex-col text-center p-5">
                 <h2 v-if="text.title" class="text-3xl font-bold text-red-500 uppercase slide-left">{{ $t(text.title) || text.title }}</h2>
                 <p v-if="text.label" class="dark:text-white mt-5 slide-left delay-300">{{ $t(text.label) || text.label }}</p>
                 <i v-if="this.count == 0" class="fas fa-chevron-down dark:text-white mt-5 fade-arrow"></i>
@@ -17,9 +17,9 @@
             </div>
 
             <!-- FORMULE -->
-            <div class="lg:h-full flex justify-center items-center transition-all duration-1000" 
-            :class="count != countToNotDisplay ? 'w-full lg:w-1/2' : 'absolute'">
-                <img id="3d-model" v-if="img" :src="img" alt="3D model" class="pointer-events-none"
+            <div class="md:h-full flex-initial flex justify-center items-center transition-all duration-1000 md:w-1/2" 
+            :class="count != countToNotDisplay ? 'w-full md:w-1/2' : 'absolute'">
+                <img id="3d-model" v-if="img" :src="img" alt="3D model" class="pointer-events-none w-full md:mt-20"
                 :class="count != countToNotDisplay ? 'opacity-100 transition-all duration-1000' : 'opacity-0 z-0'">
             </div>
 
@@ -29,9 +29,11 @@
 
 <script>
 import project from './project';
+import phoneMixin from '../../mixins/phone-mixin';
 
 export default {
     name: "Project",
+    mixins: [phoneMixin],
     data() {
         return {
             images: [],
@@ -49,12 +51,15 @@ export default {
             }
         };
     },
+    watch: {
+        "isMobile"(){
+            this.speed = this.isMobile ? project.phoneSpeed : project.speed;
+        }
+    },
     mounted() {
         window.scrollTo(0,0);
 
-        const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches
-        
-        this.speed = isMobile ? project.phoneSpeed : project.speed;
+        this.$data.mobileSize = "768px";
 
         this.countToNotDisplay = project.appearAndDisapear ? 0 : -1;
 

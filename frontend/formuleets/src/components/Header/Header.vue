@@ -55,7 +55,7 @@
               bg-white dark:bg-dark-mode top-0 left-0 z-50">
 
                 <!-- close -->
-                <i class="fas fa-times dark:text-white text-3xl absolute right-3 top-3 cursor-pointer"
+                <i class="fas fa-times dark:text-white text-3xl absolute right-5 top-3 cursor-pointer"
                  @click="displayMenuPhone(false)"></i>
             
                 <ul class="list-none dark:text-white text-center max-h-screen p-5">
@@ -76,7 +76,7 @@
                         </li>
                     </template>
 
-                    <li class="flex justify-center items-center pb-5">
+                    <li class="m-4 flex justify-center items-center pb-5">
                         <!-- DARK MODE -->
                         <i class="w-12 h-12 flex justify-center items-center cursor-pointer dark:text-white border border-black dark:border-white rounded-full"
                         :class="darkMode ? 'fas fa-lightbulb' : 'far fa-lightbulb'" @click="changeDarkMode()"></i>

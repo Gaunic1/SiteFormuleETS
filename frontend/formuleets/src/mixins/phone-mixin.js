@@ -8,12 +8,13 @@ const phoneMixin = {
     },
     data(){
         return {
+            mobileSize: "1024px",
             isMobile: false,
         }
     },
     methods: {
         detectMobile(){
-            this.isMobile = window.matchMedia("only screen and (max-width: 1024px)").matches
+            this.isMobile = window.matchMedia("only screen and (max-width: " + this.mobileSize + ")").matches
         },
     }
 }
