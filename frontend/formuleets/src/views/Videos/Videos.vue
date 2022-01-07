@@ -61,24 +61,27 @@
 
 <script>
 import ytb from "./ytb"
+import phoneMixin from "../../mixins/phone-mixin";
 
 export default {
     name: "Videos",
+    mixins: [phoneMixin],
     data(){
         return {
             datas: null,
             showRight: true,
             showLeft: false,
-            isMobile: false,
 
             widthVideo: 675
         }
     },
+    watch: {
+        "isMobile"(){
+            if(this.isMobile) this.widthVideo = window.innerWidth + window.innerWidth/8;
+            else this.widthVideo = 675;
+        }
+    },
     async mounted(){
-        //is phone ?
-        this.detectMobile();
-        window.addEventListener('resize', this.detectMobile);
-
         const ytbDatas = localStorage.ybtDatas;
 
         if(ytbDatas){
@@ -94,16 +97,10 @@ export default {
             localStorage.ybtDatas = JSON.stringify(json.items);
         }
     },
-    beforeUnmount(){
-        window.removeEventListener('resize', this.detectMobile);
-    },
     methods: {
         createEmbed(url = ""){
             const id = url.split("v=")[1];
             return "https://www.youtube.com/embed/" + id + "?autoplay=1";
-        },
-        detectMobile(){
-            this.isMobile = window.matchMedia("only screen and (max-width: 760px)").matches
         },
         showRightF(delta = 0, width = 0){
             this.showRight = delta < width;

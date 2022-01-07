@@ -1,6 +1,6 @@
 <template>
     <!-- FOOTER -->
-    <footer class="bg-dark-mode-2 h-56 w-full flex flex-col justify-center z-10">
+    <footer class="bg-dark-mode-2 h-64 w-full flex flex-col justify-center z-10">
         <!-- SOCIAL MEDIAS -->
         <div class="flex-initial w-full p-5 flex justify-center items-center">
             <template v-for="media of medias" :key="media">

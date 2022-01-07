@@ -2,8 +2,18 @@
   <!-- USELESS. JUST HERE TO DONT GO ON THE HEADER -->
   <div class="h-12"></div>
 
+  <!-- ON PHONE -->
+  <div v-if="isMobile"
+  class="calc-height w-full flex justify-center items-center flex-wrap bg-cover bg-fixed bg-center" 
+  lazy-background="/static/easter-egg/fond.svg">
+    <h3 class="dark:text-white text-3xl p-5 text-center">
+      {{ $t("message.eastereggs.phone") }}
+    </h3>
+  </div>
+
+  <!-- MENU -->
   <div class="calc-height w-full flex justify-center items-center flex-wrap bg-cover bg-fixed bg-center" 
-  v-if="!game" 
+  v-if="!game && !isMobile" 
   lazy-background="/static/easter-egg/fond.svg"> 
     <template v-for="item of games" :key="item.name">
       <button data-aos="zoom-in" 
@@ -14,7 +24,8 @@
     </template>
   </div>
 
-  <div class="calc-height w-full" v-if="game">
+  <!-- GAME -->
+  <div class="calc-height w-full" v-if="game && !isMobile">
       <button @click="game = null"
       class="bg-white text-black dark:bg-dark-mode dark:text-white p-2 m-5 uppercase absolute top-12 left-1 z-10 
       border border-black dark:border-white">
@@ -39,9 +50,11 @@
 
 <script>
 import games from "./games"
+import phoneMixin from "../../mixins/phone-mixin"
 
 export default {
     name: "EASTEREGG",
+    mixins: [phoneMixin],
     data(){
       return {
         games: games,

@@ -17,6 +17,10 @@ const en = {
       "back": "Go back"
     },
 
+    "eastereggs": {
+      "phone": "You found an easter egg. But we need a keyboard to be working :/"
+    },
+
     "404": {
       "title": "Page not found"
     },
