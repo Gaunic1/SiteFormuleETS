@@ -13,7 +13,7 @@ const phoneMixin = {
     },
     methods: {
         detectMobile(){
-            this.isMobile = window.matchMedia("only screen and (max-width: 760px)").matches
+            this.isMobile = window.matchMedia("only screen and (max-width: 1024px)").matches
         },
     }
 }
