@@ -4,10 +4,13 @@
     <div class="bg-first w-full flex flex-wrap overflow-x-hidden">
       <div class="bg-triangle absolute bottom-0 left-0 w-full h-full bg-gradient-to-tr from-red-700 to-dark-mode z-10"></div>
 
+      <!-- TITLE -->
       <div class="flex-initial h-screen w-full lg:w-1/3 flex flex-col justify-center p-5 z-20" data-aos="fade-right">
         <h1 class="dark:text-white font-normal tracking-wider text-5xl italic text-center lg:text-8xl lg:text-left">{{ text.titre }}<span class="text-red-600 font-bold">{{ text.ETS }}</span></h1>
         <p class="mt-10 dark:text-white text-center lg:text-left">{{ text.text }}</p>
       </div>
+
+      <!-- ANIMATED FORMULE -->
       <div class="flex-initial h-screen w-2/3 justify-center items-center hidden lg:flex z-0">
         <img id="formule" src="/static/home/formule.png" data-aos="fade-left" alt="Formule" class="z-0">
       </div>

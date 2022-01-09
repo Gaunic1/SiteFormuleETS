@@ -2,3 +2,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.perspective-3d{
+    overflow: visible !important;
+    transform-style: preserve-3d!important;
+    perspective: 1000px;
+}
+
+.translate-z-25{
+    transform: translateZ(25px)!important;
+}
+
+.translate-z-30{
+    transform: translateZ(30px)!important;
+}
+
+.translate-z-40{
+    transform: translateZ(40px)!important;
+}

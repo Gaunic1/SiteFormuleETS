@@ -15,14 +15,20 @@
                 <h2 data-aos="fade-right" class="dark:text-white text-3xl ml-5">{{ categorie.name }}</h2>
 
                 <div data-aos="fade-up">
-                    <div class="inline-block m-5 rounded overflow-hidden calc-size shadow bg-white dark:bg-dark-mode" v-for="member of categorie.members" :key="member.fullName" 
+                    <div class="inline-block m-5 rounded overflow-hidden calc-size shadow 
+                    bg-white dark:bg-dark-mode perspective-3d" 
+                    v-for="member of categorie.members" :key="member.fullName" 
                     v-tilt="{glare: true, 'max-glare': 0.4}">
 
-                        <div class="bg-cover bg-center h-2/3 w-full lazy-skeleton" :lazy-background="member.img"></div>
-                        <div class="h-1/3 w-full text-center dark:text-white flex flex-col justify-around p-3">
-                            <h3 class="text-yellow-500 text-xl uppercase font-bold">{{ member.fullName }}</h3>
-                            <p class="text-lg" v-if="member.role && member.role.trim() != ''">{{ member.role }}</p>
-                            <p class="text-lg break-words">{{ member.mail }}</p>
+                        <!-- IMAGE -->
+                        <div class="bg-cover bg-center h-2/3 w-full lazy-skeleton" 
+                        :lazy-background="member.img"></div>
+
+                        <!-- TEXT -->
+                        <div class="h-1/3 w-full text-center dark:text-white flex flex-col justify-around p-3 perspective-3d">
+                            <h3 class="text-yellow-500 text-xl uppercase font-bold translate-z-40">{{ member.fullName }}</h3>
+                            <p class="text-lg translate-z-30" v-if="member.role && member.role.trim() != ''">{{ member.role }}</p>
+                            <p class="text-lg break-words translate-z-25">{{ member.mail }}</p>
                         </div>
 
                     </div>
