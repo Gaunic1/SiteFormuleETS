@@ -13,6 +13,10 @@ const en = {
         "model": "3D Model"
     },
 
+    "home": {
+      "presentation": "FormuleETS is a club bringing together several passionate students in order to design from A to Z a mini formula 1. Find our different sections on this site to learn more about our club and our formula!"
+    },
+
     "other": {
       "back": "Go back"
     },
@@ -64,6 +68,7 @@ const en = {
         "text": `By clicking on the link above, you will be transferred to the secure site of the ÉTS Development Fund. In order to make a donation as an individual, be sure to check "individual" then complete the form.`,
         "italic": "We are very grateful for your help!"
       },
+
       "sponsorship": {
         "button": "Sponsorship (company)",
         "title": "THE FINANCIAL SPONSORSHIP",

@@ -13,6 +13,10 @@ const fr = {
       "model": "Model 3D"
     },
 
+    "home": {
+      "presentation": "FormuleETS est un club regroupants plusieurs étudiants passionnés dans le but de concevoir de A à Z une mini formule 1. Retrouver nos différencetes sections sur ce site pour en apprendre plus sur notre club et notre formule!"
+    },
+
     "other": {
       "back": "Retour"
     },
@@ -64,6 +68,7 @@ const fr = {
         "text": `En cliquant sur le lien ci-dessus, vous serez transféré au site sécurisé du Fonds de développement de l'ÉTS. Afin d'effectuer un don en tant que particulier, assurez-vous de cocher "particulier" puis remplissez le formulaire.`,
         "italic": "Nous sommes très reconnaissants de votre aide!"
       },
+
       "sponsorship": {
         "button": "Commandite (compagnie)",
         "title": "LA COMMANDITE FINANCIÈRE",

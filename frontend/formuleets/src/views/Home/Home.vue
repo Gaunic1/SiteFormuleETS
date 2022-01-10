@@ -2,12 +2,12 @@
   <div>
     <!-- PRESENTATION -->
     <div class="bg-first w-full flex flex-wrap overflow-x-hidden">
-      <div class="bg-triangle absolute bottom-0 left-0 w-full h-full bg-gradient-to-tr from-red-700 to-dark-mode z-10"></div>
+      <div class="bg-triangle absolute bottom-0 left-0 w-full h-full bg-gradient-to-tr from-red-600 to-dark-mode z-10"></div>
 
       <!-- TITLE -->
-      <div class="flex-initial h-screen w-full lg:w-1/3 flex flex-col justify-center p-5 z-20" data-aos="fade-right">
+      <div class="flex-initial h-screen w-full lg:w-1/3 flex flex-col justify-center p-5 z-20 text-dark-mode-2" data-aos="fade-right">
         <h1 class="dark:text-white font-normal tracking-wider text-5xl italic text-center lg:text-8xl lg:text-left">{{ text.titre }}<span class="text-red-600 font-bold">{{ text.ETS }}</span></h1>
-        <p class="mt-10 dark:text-white text-center lg:text-left">{{ text.text }}</p>
+        <p class="mt-10 dark:text-white text-center lg:text-left">{{ $t('message.home.presentation') }}</p>
       </div>
 
       <!-- ANIMATED FORMULE -->
@@ -67,7 +67,6 @@ export default {
         text: {
           titre: "Formule",
           ETS: "ETS",
-          text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
         },
       }
     },
