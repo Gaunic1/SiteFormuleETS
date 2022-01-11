@@ -14,7 +14,21 @@ const fr = {
     },
 
     "home": {
-      "presentation": "FormuleETS est un club regroupants plusieurs étudiants passionnés dans le but de concevoir de A à Z une mini formule 1. Retrouver nos différencetes sections sur ce site pour en apprendre plus sur notre club et notre formule!"
+      "presentation": "FormuleETS est un club regroupants plusieurs étudiants passionnés dans le but de concevoir de A à Z une mini formule 1. Retrouver nos différencetes sections sur ce site pour en apprendre plus sur notre club et notre formule!",
+      "aboutUs": {
+        "title": "Qui somme nous ?",
+        "text": "Formule ETS est une équipe de Formule SAE composée d'étudiants en ingénierie de l'École de technologie supérieure de Montréal. Les compétitions de la Collegiate Design Series regroupe plus de 600 équipes universitaires à travers le monde. Elles s’affrontent en présentant un plan d'affaires à des juges, en décrivant leur philosophie de conception de leur véhicule, en créant la liste des coûts du projet et bien sûr en se mesurant aux meilleures équipes de la Formule SAE lors de courses palpitantes. <br><br> Pour la première fois en plus de 30 ans, l’équipe Formule ETS conçoit et fabrique sa première itération de voiture électrique. Par le passé, nous nous sommes démarqués de la compétition en ayant à plusieurs reprises le véhicule le plus léger en compétition, en démontrant une finition du véhicule exemplaire et en ayant à de nombreuses reprises atteint les marches du podium lors des nombreuses compétitions auxquels l’équipe participe."
+      },
+      "project": {
+        "title": "Le projet !",
+        "text": `Formule ETS est une équipe d'étudiants en ingénierie de l'École de technologie supérieure à Montréal. L'équipe conçoit et fabrique des voitures de course dans le but de participer à des compétitions de Formula SAE depuis maintenant un peu plus de 30 ans avec toujours le même objectif : "GAGNER" <br><br> ` +
+        `Les véhicules qui sortent de l'atelier de la Formule ETS reflètent notre philosophie de conception. Ainsi, nous poursuivons incessamment la conception du véhicule le plus léger, année après année. Cette année, nous avons décidé de relever un nouveau défi, soit de construire notre première formule électrique. <br><br>` +
+        `Notre première voiture électrique pèse environ 195 kg et est propulsée par quatre moteurs AMK situés à chaque roue. MANIC est chaussée de pneu Hoosier de 16 pouces montés sur des roues en aluminium et des étriers de frein conçu spécialement pour chacune de celle-ci.`
+      },
+      "team": {
+        "title": "L'équipe !",
+        "text": `Formule ETS est un club composé de plus de 30 membres tous passionné par la conception, l'ingénierie et la mécanique.<br><br> C'est pourquoi au sein de notre équipe vous pourrez retrouver une ambiance de solidarité et d'entraide. Si vous souhaitez nous aider n'hésitez pas à venir nous voir dans nos bureaux.<br><br> Pour en apprendre plus sur notre équipe aller dans la section "Léquipe".`
+      }
     },
 
     "other": {

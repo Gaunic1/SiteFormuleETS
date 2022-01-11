@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- PRESENTATION -->
-    <div class="bg-first w-full flex flex-wrap overflow-x-hidden">
+    <div class="bg-first w-full flex flex-wrap overflow-hidden">
       <div class="bg-triangle absolute bottom-0 left-0 w-full h-full bg-gradient-to-tr from-red-600 to-dark-mode z-10"></div>
 
       <!-- TITLE -->
@@ -14,56 +14,46 @@
       <div class="flex-initial h-screen w-2/3 justify-center items-center hidden lg:flex z-0">
         <img id="formule" src="/static/home/formule.png" data-aos="fade-left" alt="Formule" class="z-0">
       </div>
-
-      <!-- PART2 -->
-      <div class="flex-initial w-full z-10 bg-first overflow-x-hidden bg-white dark:bg-dark-mode">
-
-        <!-- QUI SOMME NOUS ? -->
-        <div class="flex flex-col lg:flex-row flex-wrap w-full">
-          <div data-aos="fade-right" class="flex-initial p-5 w-full lg:w-2/3">
-            <h1 class="text-black dark:text-white text-4xl font-bold italic">Qui somme nous ?</h1>
-            <p class="mt-3 text-black dark:text-white text-justify">
-              Formule ETS est une équipe de Formule SAE composée d'étudiants en ingénierie de l'École de technologie supérieure de Montréal. Les compétitions de la Collegiate Design Series regroupe plus de 600 équipes universitaires à travers le monde. Elles s’affrontent en présentant un plan d'affaires à des juges, en décrivant leur philosophie de conception de leur véhicule, en créant la liste des coûts du projet et bien sûr en se mesurant aux meilleures équipes de la Formule SAE lors de courses palpitantes. 
-              <br><br>
-              Pour la première fois en plus de 30 ans, l’équipe Formule ETS conçoit et fabrique sa première itération de voiture électrique. Par le passé, nous nous sommes démarqués de la compétition en ayant à plusieurs reprises le véhicule le plus léger en compétition, en démontrant une finition du véhicule exemplaire et en ayant à de nombreuses reprises atteint les marches du podium lors des nombreuses compétitions auxquels l’équipe participe. 
-            </p>
-          </div>
-
-          <div class="flex-initial p-5 w-full lg:w-1/3 h-full flex items-center justify-center" data-aos="fade-left">
-            <img src="/static/home/team.jpg" alt="Teams" class="h-full border-8 border-red-600 rounded">
-          </div>
-        </div>
-
-        <hr class="border-red-600 mr-3 ml-3 mt-5 mb-5" data-aos="zoom-in">
-
-        <!-- LE PROJET ? -->
-        <div class="flex flex-wrap w-full lg:flex-row">
-          <div class="flex-initial p-5 w-full lg:w-1/3 h-full flex items-center justify-center" data-aos="fade-right">
-            <img lazy-src="/static/home/formuleETS.jpg" lazy-animation="opacity" alt="Teams" class="h-full border-8 border-red-600 rounded">
-          </div>
-
-          <div data-aos="fade-left" class="flex-initial p-5 w-full lg:w-2/3">
-            <h1 class="text-black dark:text-white text-4xl font-bold italic">Le projet ?</h1>
-            <p class="mt-3 text-black dark:text-white text-justify">
-              Formule ETS est une équipe d'étudiants en ingénierie de l'École de technologie supérieure à Montréal. L'équipe conçoit et fabrique des voitures de course dans le but de participer à des compétitions de Formula SAE depuis maintenant un peu plus de 30 ans avec toujours le même objectif : "GAGNER"
-              <br><br>
-              Les véhicules qui sortent de l'atelier de la Formule ETS reflètent notre philosophie de conception. Ainsi, nous poursuivons incessamment la conception du véhicule le plus léger, année après année. Cette année, nous avons décidé de relever un nouveau défi, soit de construire notre première formule électrique.
-              <br><br>
-              Notre première voiture électrique pèse environ 195 kg et est propulsée par quatre moteurs AMK situés à chaque roue. MANIC est chaussée de pneu Hoosier de 16 pouces montés sur des roues en aluminium et des étriers de frein conçu spécialement pour chacune de celle-ci.    
-            </p>
-          </div>
-        </div>
-
-      </div>
     </div>
+  </div>
+
+  <!-- PART2 -->
+  <div>
+      <template v-for="(item, index) of home" :key="item.title">
+          <div class="lg:sticky top-0 w-full h-auto lg:h-screen bg-center bg-cover bg-fixed overflow-hidden" 
+          :style="`background-image: url('${item.image}')`">
+
+            <!-- OVERLAY -->
+            <div class="lg:h-full h-auto w-full bg-overlay-2 
+            flex justify-center text-white flex-col p-5"
+            :class="index%2==0 ? 'items-start' : 'items-end'">
+
+              <!-- TEXT COTNAINER -->
+              <div data-aos="zoom-in" class="w-full lg:w-1/2 text-center border-white border-4 p-5">
+
+                <h2 data-aos="fade-left" class="text-red-500 uppercase text-3xl font-bold mb-10 italic">
+                  {{ $t(item.text + '.title') }}
+                </h2>
+
+                <p data-aos="fade-right" class="m-5 text-xl" v-html="$t(item.text + '.text')"></p>
+
+              </div>
+
+            </div>
+
+          </div>
+        </template>
   </div>
 </template>
 
 <script>
+import home from "./home";
+
 export default {
     name: "Home",
     data(){
       return {
+        home: home,
         text: {
           titre: "Formule",
           ETS: "ETS",
