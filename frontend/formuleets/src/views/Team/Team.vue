@@ -27,7 +27,7 @@
                         <!-- TEXT -->
                         <div class="h-1/3 w-full text-center dark:text-white flex flex-col justify-around p-3 perspective-3d">
                             <h3 class="text-yellow-500 text-xl uppercase font-bold translate-z-40">{{ member.fullName }}</h3>
-                            <p class="text-lg translate-z-30" v-if="member.role && member.role.trim() != ''">{{ member.role }}</p>
+                            <p class="text-lg translate-z-30" v-if="member.role && member.role.trim() != ''">{{ $t(member.role) }}</p>
                             <p class="text-lg break-words translate-z-25">{{ member.mail }}</p>
                         </div>
 

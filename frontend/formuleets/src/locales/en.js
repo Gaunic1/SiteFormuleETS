@@ -52,7 +52,17 @@ const en = {
       "electronics": "Electronics",
       "power_n_drive": "Power & Drive",
       "machining": "Machining",
-      "sponsors_n_media": "Sponsors & Media"
+      "sponsors_n_media": "Sponsors & Media",
+      "roles": {
+        "captain": "Captain",
+        "technical-director": "Technical director",
+        "management-director": "Management director",
+        "head-aerodynamics": "Head of Aerodynamics",
+        "head-chassis": "Head of chassis",
+        "heade-dynamic": "Head of dynamics",
+        "head-electronic": "Head of electronics",
+        "head-media-sponsors": "Head of Sponsors & Media"
+      }
     },
 
     "videos": {

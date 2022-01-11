@@ -52,7 +52,17 @@ const fr = {
       "electronics": "Électronique",
       "power_n_drive": "Groupe motopropulseur",
       "machining": "Usinage",
-      "sponsors_n_media": "Commanditaires & Média"
+      "sponsors_n_media": "Commanditaires & Média",
+      "roles": {
+        "captain": "Capitaine",
+        "technical-director": "Directeur technique",
+        "management-director": "Directeur de gestion",
+        "head-aerodynamics": "Chef d'aérodynamique",
+        "head-chassis": "Chef de châssis",
+        "heade-dynamic": "Chef de dynamique",
+        "head-electronic": "Chef d'électronique",
+        "head-media-sponsors": "Chef de Commanditaires & Média"
+      }
     },
 
     "videos": {

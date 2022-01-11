@@ -5,19 +5,19 @@ const team = [
             {
                 img: '/static/team/members/daniel_gavrila.jpg',
                 fullName: "Daniel Gavrila",
-                role: "Capitaine",
+                role: "message.team.roles.captain",
                 mail: "d.gavrila.formule.ets@gmail.com"
             },
             {
                 img: '/static/team/members/steve_groleau.jpg',
                 fullName: "Steve Groleau",
-                role: "Directeur technique",
+                role: "message.team.roles.technical-director",
                 mail: "s.groleau.formule.ets@gmail.com"
             },
             {
                 img: '/static/team/members/simon_aubin_lavoie.jpg',
                 fullName: "SIMON AUBIN-LAVOIE",
-                role: "Directeur de gestion",
+                role: "message.team.roles.management-director",
                 mail: "s.aubinlavoie.formule.ets@gmail.com"
             }
         ]
@@ -28,13 +28,13 @@ const team = [
             {
                 img: '/static/team/members/xavier_brien.jpg',
                 fullName: "XAVIER BRIEN",
-                role: "Chef d'aérodynamique",
+                role: "message.team.roles.head-aerodynamics",
                 mail: "x.brien.formule.ets@gmail.com"
             },
             {
                 img: '/static/team/members/daniel_gavrila.jpg',
                 fullName: "Daniel Gavrila",
-                role: "Capitaine",
+                role: "message.team.roles.captain",
                 mail: "d.gavrila.formule.ets@gmail.com"
             },
         ]
@@ -45,7 +45,7 @@ const team = [
             {
                 img: '/static/team/members/samuel_gagne.jpg',
                 fullName: "SAMUEL GAGNÉ",
-                role: "Chef de châssis",
+                role: "message.team.roles.head-chassis",
                 mail: "s.gagne.formule.ets@gmail.com"
             },
         ]
@@ -56,7 +56,7 @@ const team = [
             {
                 img: '/static/team/members/alexandre_valsorda.jpg',
                 fullName: "ALEXANDRE VALSORDA",
-                role: "Chef de dynamique",
+                role: "message.team.roles.heade-dynamic",
                 mail: "a.valsorda.formule.ets@gmail.com"
             },
             {
@@ -91,7 +91,7 @@ const team = [
             {
                 img: '/static/team/members/victor_avezard.jpg',
                 fullName: "VICTOR AVEZARD",
-                role: "Chef d’électronique",
+                role: "message.team.roles.head-electronic",
                 mail: "v.avezard.formule.ets@gmail.com"
             },
             {
@@ -126,7 +126,7 @@ const team = [
             {
                 img: '/static/team/members/steve_groleau.jpg',
                 fullName: "Steve Groleau",
-                role: "Directeur technique",
+                role: "message.team.roles.technical-director",
                 mail: "s.groleau.formule.ets@gmail.com"
             },
             {
@@ -196,7 +196,7 @@ const team = [
             {
                 img: '/static/team/members/minh_dat.jpg',
                 fullName: "MINH DAT QUACH",
-                role: "Chef de Commanditaires & Média",
+                role: "message.team.roles.head-media-sponsors",
                 mail: "m.quach.formule.ets@gmail.com"
             },
             {
