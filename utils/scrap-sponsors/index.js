@@ -1,5 +1,6 @@
 const got = require('got');
 const { FastHTMLParser } = require('fast-html-dom-parser');
+const download = require('image-downloader')
 const fs = require('fs');
 
 (async function(){
@@ -25,9 +26,19 @@ const fs = require('fs');
         const imageSrc = img.getAttribute('data-src');
         const src = img.parentNode.getAttribute('href');
 
+        let imageName = imageSrc.split('/');
+        imageName = imageName[imageName.length-1];
+
+        const options = {
+            url: imageSrc,
+            dest: './sponsors'                // will be saved to /path/to/dest/image.jpg
+        }
+
+        await download.image(options);
+
         res.push({
             src: src,
-            imageSrc: imageSrc
+            imageSrc: "/static/sponsors/"+imageName
         });
     }
 

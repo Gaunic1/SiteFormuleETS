@@ -1,6 +1,6 @@
 const team = [
     {
-        name: "Gestion",
+        name: "message.team.management",
         members: [
             {
                 img: '/static/team/members/daniel_gavrila.jpg',
@@ -23,7 +23,7 @@ const team = [
         ]
     },
     {
-        name: "Aérodynamique",
+        name: "message.team.aerodynamic",
         members: [
             {
                 img: '/static/team/members/xavier_brien.jpg',
@@ -40,7 +40,7 @@ const team = [
         ]
     },
     {
-        name: "Châssis",
+        name: "message.team.chassis",
         members: [
             {
                 img: '/static/team/members/samuel_gagne.jpg',
@@ -51,7 +51,7 @@ const team = [
         ]
     },
     {
-        name: "Dynamique",
+        name: "message.team.dynamics",
         members: [
             {
                 img: '/static/team/members/alexandre_valsorda.jpg',
@@ -86,7 +86,7 @@ const team = [
         ]
     },
     {
-        name: "Électronique",
+        name: "message.team.electronics",
         members: [
             {
                 img: '/static/team/members/victor_avezard.jpg',
@@ -121,7 +121,7 @@ const team = [
         ]
     },
     {
-        name: "Groupe motopropulseur",
+        name: "message.team.power_n_drive",
         members: [
             {
                 img: '/static/team/members/steve_groleau.jpg',
@@ -144,7 +144,7 @@ const team = [
         ]
     },
     {
-        name: "Usinage",
+        name: "message.team.machining",
         members: [
             {
                 img: '/static/team/members/steve_groleau.jpg',
@@ -191,7 +191,7 @@ const team = [
         ]
     },
     {
-        name: "Commanditaires & Média",
+        name: "message.team.sponsors_n_media",
         members: [
             {
                 img: '/static/team/members/minh_dat.jpg',

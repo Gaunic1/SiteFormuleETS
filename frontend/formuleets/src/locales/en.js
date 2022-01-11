@@ -44,7 +44,15 @@ const en = {
     },
 
     "team": {
-      "title": "The team"
+      "title": "The team",
+      "management": "Management",
+      "aerodynamic": "Aerodynamics",
+      "chassis": "Chassis",
+      "dynamics": "Dynamics",
+      "electronics": "Electronics",
+      "power_n_drive": "Power & Drive",
+      "machining": "Machining",
+      "sponsors_n_media": "Sponsors & Media"
     },
 
     "videos": {

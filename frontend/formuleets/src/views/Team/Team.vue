@@ -12,7 +12,7 @@
             <hr data-aos="zoom-in" class="border border-red-500 bg-red-500 m-5">
 
             <div class="mt-5 text-left">
-                <h2 data-aos="fade-right" class="dark:text-white text-3xl ml-5">{{ categorie.name }}</h2>
+                <h2 data-aos="fade-right" class="dark:text-white text-3xl ml-5">{{ $t(categorie.name) }}</h2>
 
                 <div data-aos="fade-up">
                     <div class="inline-block m-5 rounded overflow-hidden calc-size shadow 

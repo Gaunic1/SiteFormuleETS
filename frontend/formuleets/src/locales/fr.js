@@ -44,7 +44,15 @@ const fr = {
     },
 
     "team": {
-      "title": "L'équipe"
+      "title": "L'équipe",
+      "management": "Gestion",
+      "aerodynamic": "Aérodynamique",
+      "chassis": "Châssis",
+      "dynamics": "Dynamique",
+      "electronics": "Électronique",
+      "power_n_drive": "Groupe motopropulseur",
+      "machining": "Usinage",
+      "sponsors_n_media": "Commanditaires & Média"
     },
 
     "videos": {
