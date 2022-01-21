@@ -78,22 +78,26 @@ export default {
     },
     methods: {
         calcHeight(){
-            const height = document.getElementById('3d-model').offsetHeight;
+            try{
+                const height = document.getElementById('3d-model').offsetHeight;
 
-            if(!height || height == 0) return false;
+                if(!height || height == 0) return false;
 
-            const calc = (height/this.speed)*(this.images.length-1);
-            const screenDivide = window.innerHeight;
-            this.height = (calc + screenDivide) + "px";
-            this.imageHeight = height;
+                const calc = (height/this.speed)*(this.images.length-1);
+                const screenDivide = window.innerHeight;
+                this.height = (calc + screenDivide) + "px";
+                this.imageHeight = height;
 
-            return true;
+                return true;
+            } catch(e){
+                return false;
+            }
         },
         mount3D() {
             const dir = project.images.directory;
             const ext = project.images.extension;
 
-            for (let i = 0; i < project.images.nbImgs; ++i) {
+            for (let i = 0; i < project.images.nbImgs+1; ++i) {
                 const img = (dir + (i+1) + "." + ext);
                 this.images.push(img);
             }
@@ -103,7 +107,7 @@ export default {
             project.text.push({
                 title: this.text.title,
                 label: this.text.label,
-                imageCount: 1
+                imageCount: 0
             });
         },
         preloadImage(){
@@ -135,7 +139,7 @@ export default {
 
             this.count = count;
 
-            const countValid = count > 0 && count < this.images.length-1;
+            const countValid = count >= 0 && count < this.images.length-1;
 
             if(countValid) {
                 //image handler
@@ -147,12 +151,14 @@ export default {
                 const sort = project.text.sort(function(a,b){
                     return a.imageCount - b.imageCount;
                 });
+
                 const filtered = sort.filter(e => count >= e.imageCount);
+                const reversed = sort.filter(e => count <= e.imageCount);
 
                 if(filtered.length > 0) {
                     text = filtered[filtered.length-1];
                 } else {
-                    text = text[0];
+                    text = reversed[reversed.length-1];
                 }
 
                 if(text && (text.title != this.text.title || text.label != this.text.label)) {

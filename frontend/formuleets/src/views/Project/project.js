@@ -1,7 +1,7 @@
 const project = {
     //animation speed
-    speed: 6,
-    phoneSpeed: 8,
+    speed: 5,
+    phoneSpeed: 7,
     
     //dont show at the start the 3d model
     appearAndDisapear: true,
@@ -9,21 +9,22 @@ const project = {
     //3d model
     images: {
         directory: "/static/formule/",
-        nbImgs: 51,
-        extension: "png"
+        nbImgs: 35,
+        extension: "jpg"
     },
 
     //text to display
+    //always start  at 2
     text: [
         {
-            title: "Formule",
-            label: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-            imageCount: 2,
+            title: "message.project.text.1.title",
+            label: "message.project.text.1.label",
+            imageCount: 1,
         },
         {
-            title: "Formule 2",
-            label: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-            imageCount: 27,
+            title: "message.project.text.2.title",
+            label: "message.project.text.2.label",
+            imageCount: 17,
         },
     ]
 }
