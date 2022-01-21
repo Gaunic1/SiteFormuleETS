@@ -14,7 +14,7 @@ const project = {
     },
 
     //text to display
-    //always start  at 2
+    //always start  at 1
     text: [
         {
             title: "message.project.text.1.title",

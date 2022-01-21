@@ -12,6 +12,7 @@ import Project from '../views/Project/Project.vue'
 import Sponsors from '../views/Sponsors/Sponsors.vue'
 import Team from '../views/Team/Team.vue'
 import Videos from '../views/Videos/Videos.vue'
+import Photos from '../views/Photos/Photos.vue'
 
 
 
@@ -80,6 +81,14 @@ const routes = [
       title: "FormuleETS | Videos"
     }
   },
+  {
+    path: "/media/photos",
+    name: "Photos",
+    component: Photos,
+    meta: {
+      title: "FormuleETS | Photos"
+    }
+  },
 
   //EASTER EGG ;)
   {
@@ -113,7 +122,7 @@ router.beforeEach((to, from, next) => {
   window.scrollTo(0, 0);
 
   //setup SEO
-  meta(to, from, next)
+  meta(to, from, next);
 })
 
 export default router
