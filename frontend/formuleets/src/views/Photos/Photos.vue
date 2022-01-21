@@ -60,7 +60,7 @@ export default {
     methods: {
         zoomFolder(index){
             const el = document.querySelectorAll('.zoom')[index];
-            el.style = "position: fixed; width: calc(100% - 2 * 1.25rem); height: calc(100vh - 2 * 1.25rem - 3rem); left: 0; top: 3rem; z-index: 50";
+            el.style = "position: fixed; width: calc(100% - 2 * 1.25rem); height: calc(100vh - 2 * 1.25rem - 3rem); left: 0; top: 3rem; z-index: 45";
         },
         closeZoom(index){
             const el = document.querySelectorAll('.zoom')[index];

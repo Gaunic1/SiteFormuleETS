@@ -12,7 +12,7 @@
 
       <!-- ANIMATED FORMULE -->
       <div class="flex-initial h-screen w-2/3 justify-center items-center hidden lg:flex z-0">
-        <img id="formule" src="/static/home/formule.png" data-aos="fade-left" alt="Formule" class="z-0">
+        <img id="formule" src="/static/home/rendernobg.png" data-aos="fade-left" alt="Formule" class="z-0">
       </div>
     </div>
   </div>
