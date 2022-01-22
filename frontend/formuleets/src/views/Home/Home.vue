@@ -1,7 +1,8 @@
 <template>
   <div>
     <!-- PRESENTATION -->
-    <div class="bg-first w-full flex flex-wrap overflow-hidden">
+    <div class="bg-first w-full flex flex-wrap overflow-hidden h-screen bg-center bg-fixed bg-cover"
+    lazy-background="/static/home/fond.svg">
       <div class="bg-triangle absolute bottom-0 left-0 w-full h-full bg-gradient-to-tr from-red-600 to-dark-mode z-10"></div>
 
       <!-- TITLE -->
@@ -12,7 +13,7 @@
 
       <!-- ANIMATED FORMULE -->
       <div class="flex-initial h-screen w-2/3 justify-center items-center hidden lg:flex z-0">
-        <img id="formule" src="/static/home/rendernobg.png" data-aos="fade-left" alt="Formule" class="z-0">
+        <img id="formule" src="/static/home/f1.png" data-aos="fade-left" alt="Formule" class="ml-10 z-0 w-2/3">
       </div>
     </div>
   </div>

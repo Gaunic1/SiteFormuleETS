@@ -1,7 +1,7 @@
 const project = {
     //animation speed
-    speed: 5,
-    phoneSpeed: 7,
+    speed: 8,
+    phoneSpeed: 10,
     
     //dont show at the start the 3d model
     appearAndDisapear: true,
@@ -9,8 +9,12 @@ const project = {
     //3d model
     images: {
         directory: "/static/formule/",
-        nbImgs: 35,
-        extension: "jpg"
+
+        startWith: "Chassis with dynamics_animations.133_",
+        padStart: true,
+
+        nbImgs: 280,
+        extension: "png"
     },
 
     //text to display
@@ -24,7 +28,12 @@ const project = {
         {
             title: "message.project.text.2.title",
             label: "message.project.text.2.label",
-            imageCount: 17,
+            imageCount: 100,
+        },
+        {
+            title: "message.project.text.3.title",
+            label: "message.project.text.3.label",
+            imageCount: 200,
         },
     ]
 }

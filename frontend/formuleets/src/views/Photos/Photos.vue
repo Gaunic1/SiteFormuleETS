@@ -7,7 +7,7 @@
      <div class="p-5 flex flex-wrap justify-center h-full relative">
         <template v-for="(item,index) of folders.sort((a,b) => a.name - b.name)" :key="item.name">
 
-            <div class="m-5 zoom transition-all border dark:border-white p-2 w-56 h-11
+            <div class="m-5 zoom transition-all border dark:border-white border-black p-2 w-56 h-11
              dark:bg-dark-mode bg-white overflow-hidden">
 
                 <div>

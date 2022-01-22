@@ -96,9 +96,12 @@ export default {
         mount3D() {
             const dir = project.images.directory;
             const ext = project.images.extension;
+            const startWith = project.images.startWith || "";
+            const pad = project.images.padStart;
+            const nbImg = project.images.nbImgs;
 
-            for (let i = 0; i < project.images.nbImgs+1; ++i) {
-                const img = (dir + (i+1) + "." + ext);
+            for (let i = 0; i < nbImg+1; ++i) {
+                const img = (dir + startWith + (pad ? (i+1).toString().padStart(nbImg.toString().length, "0") : (i+1)) + "." + ext);
                 this.images.push(img);
             }
 
