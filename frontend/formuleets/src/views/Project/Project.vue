@@ -19,7 +19,7 @@
             <!-- FORMULE -->
             <div class="md:h-full flex-initial flex justify-center items-center transition-all duration-1000 md:w-1/2" 
             :class="count != countToNotDisplay ? 'w-full md:w-1/2' : 'absolute'">
-                <img id="3d-model" v-if="img" :src="img" alt="3D model" class="pointer-events-none w-full md:mt-20"
+                <img id="3d-model" v-if="img" :src="img" alt="3D model" class="pointer-events-none w-full md:mt-10"
                 :class="count != countToNotDisplay ? 'opacity-100 transition-all duration-1000' : 'opacity-0 z-0'">
             </div>
 
