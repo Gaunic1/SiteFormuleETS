@@ -3,7 +3,7 @@
     <!-- PRESENTATION -->
     <div class="bg-first w-full flex flex-wrap overflow-hidden h-screen bg-center bg-fixed bg-cover"
     lazy-background="/static/home/fond.svg">
-      <div class="bg-triangle absolute bottom-0 left-0 w-full h-full bg-gradient-to-tr from-red-600 to-dark-mode z-10"></div>
+      <div class="bg-triangle absolute bottom-0 left-0 w-full h-screen bg-gradient-to-tr from-red-600 to-dark-mode z-10"></div>
 
       <!-- TITLE -->
       <div class="flex-initial h-screen w-full lg:w-1/3 flex flex-col justify-center p-5 z-20 text-dark-mode-2" data-aos="fade-right">
