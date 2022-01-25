@@ -43,6 +43,9 @@ export default {
             count: 0,
             countToNotDisplay: 0,
 
+            nbPreloaded: 0,
+            preloadCount: 10,
+
             speed: 1,
 
             text: {
@@ -116,7 +119,7 @@ export default {
         preloadImage(){
             const lst = [];
             let loaded = false;
-            for(const img of this.images){
+            for(const img of this.images.slice(this.nbPreloaded,this.nbPreloaded+this.preloadCount)){
                 const load = new Image();
                 load.src = img;
                 load.onload = () => {
@@ -125,6 +128,7 @@ export default {
                 }
                 lst.push(load);
             }
+            this.nbPreloaded += this.preloadCount;
         },
         countSubstract(nb, substract){
             if(!substract || substract <= 0) return 1;
@@ -147,6 +151,10 @@ export default {
             if(countValid) {
                 //image handler
                 this.img = this.images[count];
+
+                if(count+(this.preloadCount/2) > this.nbPreloaded){
+                    this.preloadImage();
+                }
 
                 //text handler
                 let text = {};

@@ -133,7 +133,8 @@ export default {
         },
         scroll(){
             if(window.scrollY > 0) 
-                this.headerClass = ["shadow-md", "bg-white", "h-16", "dark:text-dark-mode", "tracking-wider", "dark:bg-dark-mode", "dark:text-white"];
+                this.headerClass = ["shadow-md", "bg-white", "h-16",
+                "tracking-wider", "dark:bg-dark-mode"];
             else 
                 this.headerClass = [];
         },
