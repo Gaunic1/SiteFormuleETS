@@ -1,8 +1,12 @@
 <template>
   <div>
     <!-- PRESENTATION -->
-    <div class="bg-first w-full flex flex-wrap overflow-x-hidden">
-      <div class="bg-triangle absolute bottom-0 left-0 w-full h-full bg-gradient-to-tr from-red-600 to-dark-mode z-10"></div>
+    <div class="bg-first w-full flex flex-wrap overflow-x-hidden bg-center bg-fixed bg-cover"
+    lazy-background="/static/home/fond.svg">
+
+      <!-- TRIANGLE -->
+      <!-- <div class="bg-triangle absolute bottom-0 left-0 w-full h-screen bg-gradient-to-tr from-red-600 
+      to-dark-mode z-10"></div> -->
 
       <!-- TITLE -->
       <div class="flex-initial h-screen w-full lg:w-1/3 flex flex-col justify-center p-5 z-20 text-dark-mode-2" data-aos="fade-right">
@@ -11,48 +15,42 @@
       </div>
 
       <!-- ANIMATED FORMULE -->
-      <div class="flex-initial h-screen w-2/3 justify-center items-center hidden lg:flex z-0">
-        <img id="formule" src="/static/home/formule.png" data-aos="fade-left" alt="Formule" class="z-0">
+      <div class="flex-initial h-screen w-2/3 justify-center items-center hidden lg:flex z-0 pl-20">
+        <img id="formule" src="/static/home/f1.png" data-aos="fade-left" alt="Formule" class="z-0 w-2/3">
       </div>
 
       <!-- PART2 -->
       <div class="flex-initial w-full z-10 bg-first overflow-x-hidden bg-white dark:bg-dark-mode">
 
-        <!-- QUI SOMME NOUS ? -->
-        <div class="flex flex-col lg:flex-row flex-wrap w-full">
-          <div data-aos="fade-right" class="flex-initial p-5 w-full lg:w-2/3">
-            <h1 class="text-black dark:text-white text-4xl font-bold italic">Qui somme nous ?</h1>
-            <p class="mt-3 text-black dark:text-white text-justify">
-              Formule ETS est une équipe de Formule SAE composée d'étudiants en ingénierie de l'École de technologie supérieure de Montréal. Les compétitions de la Collegiate Design Series regroupe plus de 600 équipes universitaires à travers le monde. Elles s’affrontent en présentant un plan d'affaires à des juges, en décrivant leur philosophie de conception de leur véhicule, en créant la liste des coûts du projet et bien sûr en se mesurant aux meilleures équipes de la Formule SAE lors de courses palpitantes. 
-              <br><br>
-              Pour la première fois en plus de 30 ans, l’équipe Formule ETS conçoit et fabrique sa première itération de voiture électrique. Par le passé, nous nous sommes démarqués de la compétition en ayant à plusieurs reprises le véhicule le plus léger en compétition, en démontrant une finition du véhicule exemplaire et en ayant à de nombreuses reprises atteint les marches du podium lors des nombreuses compétitions auxquels l’équipe participe. 
-            </p>
+        <template v-for="(item, index) of home" :key="item.text">
+
+          <!-- BORDER -->
+          <hr lazy-animation="zoomin" lazy-reset class="border-red-600 mr-3 ml-3 mt-5 mb-5">
+
+          <!-- CONTENT GENERATION -->
+          <div class="flex flex-col lg:flex-row flex-wrap w-full min-h-screen 
+          justify-center items-center bg-cover bg-center bg-fixed"
+          :lazy-background="'/static/home/' + (index%2 == 0 ? 'fond2.svg' : 'fond.svg')">
+
+            <div :data-aos="index%2 == 0 ? 'fade-left' : 'fade-right'" 
+            class="flex-initial p-5 w-full lg:w-2/3" 
+            :class="index%2 == 0 ? 'lg:order-2' : ''">
+              <h1 class="text-red-600 text-5xl font-bold italic mb-12 md:text-left text-center tracking-wider text-shadow">
+                {{ $t(item.text + '.title') }}
+              </h1>
+              <p class="mt-3 text-black dark:text-white text-justify text-lg" v-html="$t(item.text + '.text')"></p>
+            </div>
+
+            <div class="flex-initial p-5 w-full lg:w-1/3 h-full flex items-center justify-center">
+              <img :lazy-src="item.image"
+              :data-aos="index%2 == 0 ? 'fade-right' : 'fade-left'"
+              alt="Teams" 
+              class="w-full border-8 border-red-600 rounded">
+            </div>
+
           </div>
 
-          <div class="flex-initial p-5 w-full lg:w-1/3 h-full flex items-center justify-center" data-aos="fade-left">
-            <img src="/static/home/team.jpg" alt="Teams" class="h-full border-8 border-red-600 rounded">
-          </div>
-        </div>
-
-        <hr class="border-red-600 mr-3 ml-3 mt-5 mb-5" data-aos="zoom-in">
-
-        <!-- LE PROJET ? -->
-        <div class="flex flex-wrap w-full lg:flex-row">
-          <div class="flex-initial p-5 w-full lg:w-1/3 h-full flex items-center justify-center" data-aos="fade-right">
-            <img lazy-src="/static/home/formuleETS.jpg" lazy-animation="opacity" alt="Teams" class="h-full border-8 border-red-600 rounded">
-          </div>
-
-          <div data-aos="fade-left" class="flex-initial p-5 w-full lg:w-2/3">
-            <h1 class="text-black dark:text-white text-4xl font-bold italic">Le projet ?</h1>
-            <p class="mt-3 text-black dark:text-white text-justify">
-              Formule ETS est une équipe d'étudiants en ingénierie de l'École de technologie supérieure à Montréal. L'équipe conçoit et fabrique des voitures de course dans le but de participer à des compétitions de Formula SAE depuis maintenant un peu plus de 30 ans avec toujours le même objectif : "GAGNER"
-              <br><br>
-              Les véhicules qui sortent de l'atelier de la Formule ETS reflètent notre philosophie de conception. Ainsi, nous poursuivons incessamment la conception du véhicule le plus léger, année après année. Cette année, nous avons décidé de relever un nouveau défi, soit de construire notre première formule électrique.
-              <br><br>
-              Notre première voiture électrique pèse environ 195 kg et est propulsée par quatre moteurs AMK situés à chaque roue. MANIC est chaussée de pneu Hoosier de 16 pouces montés sur des roues en aluminium et des étriers de frein conçu spécialement pour chacune de celle-ci.    
-            </p>
-          </div>
-        </div>
+        </template>
 
       </div>
     </div>
@@ -60,10 +58,13 @@
 </template>
 
 <script>
+import home from "./home"
+
 export default {
     name: "Home",
     data(){
       return {
+        home: home,
         text: {
           titre: "Formule",
           ETS: "ETS",
@@ -93,4 +94,18 @@ export default {
 .bg-triangle{
   clip-path: polygon(0 0, 60% 100%, 0 100%);
 }
+
+.text-shadow{
+  text-shadow: 4px 4px 0px #000;
+}
+
+.dark .text-shadow{
+  text-shadow: 4px 4px 0px #fff;
+}
+
+/* .bg-cover{
+  background-size: 100% auto!important;
+  background-repeat: no-repeat;
+  background-position: 0 0!important;
+} */
 </style>
