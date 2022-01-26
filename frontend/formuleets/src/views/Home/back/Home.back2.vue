@@ -1,10 +1,8 @@
 <template>
   <div>
     <!-- PRESENTATION -->
-    <div class="bg-first w-full flex flex-wrap overflow-x-hidden bg-center bg-fixed bg-cover"
+    <div class="bg-first w-full flex flex-wrap overflow-hidden h-screen bg-center bg-fixed bg-cover"
     lazy-background="/static/home/fond.svg">
-
-      <!-- TRIANGLE -->
       <div class="bg-triangle absolute bottom-0 left-0 w-full h-screen bg-gradient-to-tr from-red-600 to-dark-mode z-10"></div>
 
       <!-- TITLE -->
@@ -15,48 +13,42 @@
 
       <!-- ANIMATED FORMULE -->
       <div class="flex-initial h-screen w-2/3 justify-center items-center hidden lg:flex z-0">
-        <img id="formule" src="/static/home/f1.png" data-aos="fade-left" alt="Formule" class="z-0 w-2/3">
+        <img id="formule" src="/static/home/f1.png" data-aos="fade-left" alt="Formule" class="ml-10 z-0 w-2/3">
       </div>
+    </div>
+  </div>
 
-      <!-- PART2 -->
-      <div class="flex-initial w-full z-10 bg-first overflow-x-hidden bg-white dark:bg-dark-mode">
+  <!-- PART2 -->
+  <div>
+      <template v-for="(item, index) of home" :key="item.title">
+          <div class="lg:sticky top-0 w-full h-auto lg:h-screen bg-center bg-cover bg-fixed overflow-hidden" 
+          :style="`background-image: url('${item.image}')`">
 
-        <template v-for="(item, index) of home" :key="item.text">
+            <!-- OVERLAY -->
+            <div class="lg:h-full h-auto w-full bg-overlay-2 
+            flex justify-center text-white flex-col p-5"
+            :class="index%2==0 ? 'items-start' : 'items-end'">
 
-          <!-- CONTENT GENERATION -->
-          <div class="flex flex-col lg:flex-row flex-wrap w-full min-h-screen 
-          justify-center items-center bg-cover bg-center bg-fixed"
-          :lazy-background="'/static/home/' + (index%2 == 0 ? 'fond2.svg' : 'fond.svg')">
+              <!-- TEXT COTNAINER -->
+              <div data-aos="zoom-in" class="w-full lg:w-1/2 text-center border-white border-4 p-5">
 
-            <div data-aos="fade-right" class="flex-initial p-5 w-full lg:w-2/3" 
-            :class="index%2 == 0 ? 'order-2' : ''">
-              <h1 class="text-red-600 text-5xl font-bold italic mb-12 md:text-left text-center tracking-wider">
-                {{ $t(item.text + '.title') }}
-              </h1>
-              <p class="mt-3 text-black dark:text-white text-justify text-lg" v-html="$t(item.text + '.text')"></p>
-            </div>
+                <h2 data-aos="fade-left" class="text-red-500 uppercase text-3xl font-bold mb-10 italic">
+                  {{ $t(item.text + '.title') }}
+                </h2>
 
-            <div class="flex-initial p-5 w-full lg:w-1/3 h-full flex items-center justify-center">
-              <img :lazy-src="item.image" :lazy-animation="index%2 == 0 ? 'slide-left' : 'slide-right'" 
-              lazy-reset
-              alt="Teams" 
-              class="w-full border-8 border-red-600 rounded">
+                <p data-aos="fade-right" class="m-5 text-xl" v-html="$t(item.text + '.text')"></p>
+
+              </div>
+
             </div>
 
           </div>
-
-          <!-- BOTTOM BORDER -->
-          <hr lazy-animation="zoomin" lazy-reset class="border-red-600 mr-3 ml-3 mt-5 mb-5">
-
         </template>
-
-      </div>
-    </div>
   </div>
 </template>
 
 <script>
-import home from "./home"
+import home from "./home";
 
 export default {
     name: "Home",
