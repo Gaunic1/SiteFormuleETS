@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full min-h-screen bg-fixed bg-cover bg-center"
+  <div class="w-full min-h-screen bg-fixed bg-cover bg-center dark:bg-dark-mode bg-white"
   lazy-background="/static/photos/fond.svg">
       <!-- USELESS. JUST HERE TO DONT GO ON THE HEADER -->
      <div class="w-full h-12"></div>

@@ -4,7 +4,7 @@
 
   <!-- ON PHONE -->
   <div v-if="isMobile"
-  class="calc-height w-full flex justify-center items-center flex-wrap bg-cover bg-fixed bg-center" 
+  class="calc-height w-full flex justify-center items-center flex-wrap bg-cover bg-fixed bg-center dark:bg-dark-mode bg-white" 
   lazy-background="/static/easter-egg/fond.svg">
     <h3 class="dark:text-white text-3xl p-5 text-center">
       {{ $t("message.eastereggs.phone") }}
@@ -12,7 +12,7 @@
   </div>
 
   <!-- MENU -->
-  <div class="calc-height w-full flex justify-center items-center flex-wrap bg-cover bg-fixed bg-center" 
+  <div class="calc-height w-full flex justify-center items-center flex-wrap bg-cover bg-fixed bg-center dark:bg-dark-mode bg-white" 
   v-if="!game && !isMobile" 
   lazy-background="/static/easter-egg/fond.svg"> 
     <template v-for="item of games" :key="item.name">

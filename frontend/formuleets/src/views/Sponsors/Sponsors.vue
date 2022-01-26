@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex flex-col justify-center overflow-x-hidden">
+  <div class="w-full flex flex-col justify-center overflow-x-hidden dark:bg-dark-mode bg-white">
       <!-- USELESS. JUST HERE TO DONT GO ON THE HEADER -->
       <div class="h-24"></div>
 

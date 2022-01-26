@@ -16,7 +16,11 @@ import VueTilt from 'vue-tilt.js'
 import lazyattr from 'lazy-attr'
 import 'lazy-attr/dist/lazy-attr-animation.css'
 
+//Parallax
+import ScrollParallax from '@/components/Parallax/ScrollParallax.vue';
+
 createApp(App)
+.component('scroll-parallax', ScrollParallax)
 .use(i18n)
 .use(AOS.init())
 .use(lazyattr)

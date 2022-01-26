@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-auto text-center mb-0 overflow-hidden bg-cover bg-center bg-fixed"
+    <div class="w-full h-auto text-center mb-0 overflow-hidden bg-cover bg-center bg-fixed dark:bg-dark-mode bg-white"
     lazy-background="/static/team/contour2.svg">
         <!-- USELESS. JUST HERE TO DONT GO ON THE HEADER -->
         <div class="h-24"></div>
