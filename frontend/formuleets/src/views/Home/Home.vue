@@ -28,8 +28,9 @@
           justify-center items-center bg-cover bg-center bg-fixed"
           :lazy-background="'/static/home/' + (index%2 == 0 ? 'fond2.svg' : 'fond.svg')">
 
-            <div data-aos="fade-right" class="flex-initial p-5 w-full lg:w-2/3" 
-            :class="index%2 == 0 ? 'order-2' : ''">
+            <div :data-aos="index%2 == 0 ? 'fade-left' : 'fade-right'" 
+            class="flex-initial p-5 w-full lg:w-2/3" 
+            :class="index%2 == 0 ? 'lg:order-2' : ''">
               <h1 class="text-red-600 text-5xl font-bold italic mb-12 md:text-left text-center tracking-wider">
                 {{ $t(item.text + '.title') }}
               </h1>
@@ -37,8 +38,8 @@
             </div>
 
             <div class="flex-initial p-5 w-full lg:w-1/3 h-full flex items-center justify-center">
-              <img :lazy-src="item.image" :lazy-animation="index%2 == 0 ? 'slide-left' : 'slide-right'" 
-              lazy-reset
+              <img :lazy-src="item.image"
+              :data-aos="index%2 == 0 ? 'fade-right' : 'fade-left'"
               alt="Teams" 
               class="w-full border-8 border-red-600 rounded">
             </div>
@@ -92,4 +93,10 @@ export default {
 .bg-triangle{
   clip-path: polygon(0 0, 60% 100%, 0 100%);
 }
+
+/* .bg-cover{
+  background-size: 100% auto!important;
+  background-repeat: no-repeat;
+  background-position: 0 0!important;
+} */
 </style>
