@@ -154,7 +154,7 @@ export default {
 
 <style scoped>
 .bg-triangle{
-  clip-path: polygon(0 0, 60% 100%, 0 100%);
+  clip-path: polygon(0 0, 60% 100vh, 0 100vh);
 }
 
 .text-shadow{
