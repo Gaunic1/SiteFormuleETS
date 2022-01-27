@@ -25,7 +25,7 @@
         <template v-for="(item, index) of home" :key="item.text">
 
           <!-- BORDER -->
-          <hr lazy-animation="zoomin" lazy-reset class="border-red-600 mr-3 ml-3 mb-3">
+          <hr lazy-animation="zoomin" lazy-reset class="border-red-600 m-3">
 
           <!-- SPONSORS -->
           <template v-if="index == 1">
@@ -51,7 +51,7 @@
                 </scroll-parallax>
             </div>
 
-            <hr lazy-animation="zoomin" lazy-reset class="border-red-600 mr-3 ml-3 mb-3">
+            <hr lazy-animation="zoomin" lazy-reset class="border-red-600 m-3">
           </template>
 
           <!-- CONTENT GENERATION -->
@@ -81,8 +81,8 @@
         </template>
 
         <!-- CONTACT US -->
-        <hr lazy-animation="zoomin" lazy-reset class="border-red-600 mr-3 ml-3 mb-3">
-        
+        <hr lazy-animation="zoomin" lazy-reset class="border-red-600 m-3">
+
         <div class="min-h-screen dark:text-white flex flex-col md:flex-row justify-center items-center 
         bg-cover bg-center bg-fixed"
         lazy-background="/static/home/fond.svg">
