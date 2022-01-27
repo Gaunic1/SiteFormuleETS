@@ -58,12 +58,12 @@
           <div class="flex flex-col flex-wrap w-full min-h-screen relative overflow-hidden">
 
             <scroll-parallax direction="y">
-              <img :src="item.image" alt="Image">
+              <img :src="item.image" class="hidden lg:block" alt="Image">
             </scroll-parallax>
 
-            <div class="h-full md:h-auto md:w-2/5 text-justify p-10 absolute dark:bg-dark-mode bg-white 
-            border-b border-black dark:border-white"
-            :class="index%2 != 0 ? 'right-0 md:border-l' : 'left-0 md:border-r'">
+            <div class="h-full mlg:h-auto lg:w-2/5 text-justify p-10 lg:absolute dark:bg-dark-mode bg-white 
+            lg:border-b border-black dark:border-white"
+            :class="index%2 != 0 ? 'right-0 lg:border-l' : 'left-0 lg:border-r'">
 
               <h1 class="text-red-600 text-5xl m-3
               font-bold italic tracking-wider text-shadow z-10"
@@ -72,7 +72,7 @@
                 {{ $t(item.text + '.title') }}
               </h1>
 
-              <p class="mt-10 mb-10 text-justify text-black dark:text-white text-lg truncate-mul" 
+              <p class="mt-10 mb-10 text-justify text-black dark:text-white text-lg" 
               v-html="$t(item.text + '.text')" :data-aos="index%2 == 0 ? 'fade-right' : 'fade-left'"></p>
             </div>
 
@@ -81,6 +81,8 @@
         </template>
 
         <!-- CONTACT US -->
+        <hr lazy-animation="zoomin" lazy-reset class="border-red-600 mr-3 ml-3 mb-3">
+        
         <div class="min-h-screen dark:text-white flex flex-col md:flex-row justify-center items-center 
         bg-cover bg-center bg-fixed"
         lazy-background="/static/home/fond.svg">
@@ -95,7 +97,8 @@
           <form name="contact" 
           lazy-animation="slide-right"
           lazy-reset
-          class="w-full md:w-2/3 flex justify-center items-center flex-col text-black relative" netlify>
+          class="w-full md:w-2/3 flex justify-center items-center flex-col text-black relative" 
+          method="POST" data-netlify="true">
             <input class="p-5 m-5 w-3/4 h-10" type="text" name="name" placeholder="Name"/>
             <input class="p-5 m-5 w-3/4 h-10" type="email" name="email" placeholder="Email"/>
             <input class="p-5 m-5 w-3/4 h-10" type="subject" name="email" placeholder="Subject"/>
