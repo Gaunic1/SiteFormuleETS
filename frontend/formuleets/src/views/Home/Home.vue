@@ -5,7 +5,7 @@
     lazy-background="/static/home/fond.svg">
 
       <!-- TRIANGLE -->
-      <div class="bg-triangle absolute bottom-0 left-0 w-full h-screen bg-gradient-to-tr from-red-600 
+      <div class="bg-triangle absolute top-0 left-0 w-full h-screen bg-gradient-to-tr from-red-600 
       to-dark-mode z-10"></div>
 
       <!-- TITLE -->
@@ -154,7 +154,7 @@ export default {
 
 <style scoped>
 .bg-triangle{
-  clip-path: polygon(0 0, 60% 100vh, 0 100vh);
+  clip-path: polygon(0 0, 60vw 100vh, 0 100vh);
 }
 
 .text-shadow{
