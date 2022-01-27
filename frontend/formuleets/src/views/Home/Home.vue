@@ -101,8 +101,8 @@
           method="POST" data-netlify="true">
             <input class="p-5 m-5 w-3/4 h-10 border border-dark-mode" type="text" name="name" placeholder="Name"/>
             <input class="p-5 m-5 w-3/4 h-10 border border-dark-mode" type="email" name="email" placeholder="Email"/>
-            <input class="p-5 m-5 w-3/4 h-10 border border-dark-mode" type="subject" name="email" placeholder="Subject"/>
-            <textarea class="p-5 m-5 w-3/4 h-32 border border-dark-mode" type="Message" name="email" placeholder="Message"></textarea>
+            <input class="p-5 m-5 w-3/4 h-10 border border-dark-mode" type="text" name="subject" placeholder="Subject"/>
+            <textarea class="p-5 m-5 w-3/4 h-32 border border-dark-mode" name="message" placeholder="Message"></textarea>
 
             <div class="flex items-end justify-end md:w-3/4">
               <button class="bg-red-600 p-3 pl-10 pr-10 text-white" type="submit">Send</button>
