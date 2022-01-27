@@ -27,6 +27,7 @@
           <!-- BORDER -->
           <hr lazy-animation="zoomin" lazy-reset class="border-red-600 mr-3 ml-3 mb-3">
 
+          <!-- SPONSORS -->
           <template v-if="index == 1">
             <div class="w-full flex-col flex justify-center items-center h-screen p-10
             bg-cover bg-center bg-fixed" 
@@ -42,7 +43,8 @@
                   <div class="w-full flex h-48">
 
                     <template v-for="sponsor of sponsors.diamond" :key="sponsor.src">
-                      <img :lazy-src="sponsor.imageSrc" alt="Sponsor" lazy-animation="opacity">
+                      <img lazy-size-height="100%" :lazy-src="sponsor.imageSrc" 
+                      alt="Sponsor" lazy-animation="opacity" class="opacity-0">
                     </template>
 
                   </div>
@@ -70,7 +72,7 @@
                 {{ $t(item.text + '.title') }}
               </h1>
 
-              <p class="mt-10 mb-10 text-justify text-black dark:text-white text-lg" 
+              <p class="mt-10 mb-10 text-justify text-black dark:text-white text-lg truncate-mul" 
               v-html="$t(item.text + '.text')" :data-aos="index%2 == 0 ? 'fade-right' : 'fade-left'"></p>
             </div>
 
@@ -78,6 +80,7 @@
 
         </template>
 
+        <!-- CONTACT US -->
         <div class="min-h-screen dark:text-white flex flex-col md:flex-row justify-center items-center 
         bg-cover bg-center bg-fixed"
         lazy-background="/static/home/fond.svg">
@@ -161,5 +164,12 @@ export default {
 
 *:focus {
     outline: none;
+}
+
+.truncate-mul::before {
+  content: "...";
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 </style>
