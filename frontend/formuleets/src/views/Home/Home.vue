@@ -62,7 +62,7 @@
             </scroll-parallax>
 
             <div class="h-full mlg:h-auto lg:w-2/5 text-justify p-10 lg:absolute dark:bg-dark-mode bg-white 
-            lg:border-b border-black dark:border-white"
+            border-black dark:border-white flex justify-center flex-col"
             :class="index%2 != 0 ? 'right-0 lg:border-l' : 'left-0 lg:border-r'">
 
               <h1 class="text-red-600 text-5xl m-3
@@ -99,10 +99,10 @@
           lazy-reset
           class="w-full md:w-2/3 flex justify-center items-center flex-col text-black relative" 
           method="POST" data-netlify="true">
-            <input class="p-5 m-5 w-3/4 h-10" type="text" name="name" placeholder="Name"/>
-            <input class="p-5 m-5 w-3/4 h-10" type="email" name="email" placeholder="Email"/>
-            <input class="p-5 m-5 w-3/4 h-10" type="subject" name="email" placeholder="Subject"/>
-            <input class="p-5 m-5 w-3/4 h-32" type="Message" name="email" placeholder="Message"/>
+            <input class="p-5 m-5 w-3/4 h-10 border border-dark-mode" type="text" name="name" placeholder="Name"/>
+            <input class="p-5 m-5 w-3/4 h-10 border border-dark-mode" type="email" name="email" placeholder="Email"/>
+            <input class="p-5 m-5 w-3/4 h-10 border border-dark-mode" type="subject" name="email" placeholder="Subject"/>
+            <input class="p-5 m-5 w-3/4 h-32 border border-dark-mode" type="Message" name="email" placeholder="Message"/>
 
             <div class="flex items-end justify-end md:w-3/4">
               <button class="bg-red-600 p-3 pl-10 pr-10 text-white" type="submit">Send</button>
