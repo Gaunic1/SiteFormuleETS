@@ -39,34 +39,30 @@
                     Sponsors
               </h1>
 
-                  <div class="w-full flex h-48" style="margin-left: -100vh"
-                  parallaxy-x 
-                  parallaxy-overflow-x 
-                  parallaxy-speed-x="0.65"
-                  parallaxy-inverted-x
-                  parallaxy-scale="1">
+              <scroll-parallax direction="x">
+                  <div class="w-full flex h-48">
 
                     <template v-for="sponsor of sponsors.diamond" :key="sponsor.src">
                       <img lazy-size-height="100%" :lazy-src="sponsor.imageSrc" 
-                      alt="Sponsor" lazy-animation="opacity" class="opacity-0 h-full">
+                      alt="Sponsor" lazy-animation="opacity" class="opacity-0">
                     </template>
 
                   </div>
+                </scroll-parallax>
             </div>
 
             <hr lazy-animation="zoomin" lazy-reset class="border-red-600 m-3">
           </template>
 
           <!-- CONTENT GENERATION -->
-          <div class="flex justify-center items-center
-           flex-col flex-wrap w-full min-h-screen lg:h-screen relative overflow-hidden">
+          <div class="flex flex-col flex-wrap w-full min-h-screen relative overflow-hidden">
 
-            <img :src="item.image" class="hidden lg:block w-full" alt="Image" 
-            parallaxy-y parallaxy-scale="1" parallaxy-speed-y="0.65" parallaxy-overflow-y
-            parallaxy-breakpoint="(max-width: 1024px)">
+            <scroll-parallax direction="y">
+              <img :src="item.image" class="hidden lg:block" alt="Image">
+            </scroll-parallax>
 
-            <div class="h-full lg:h-auto lg:w-2/5 text-justify p-10 lg:absolute dark:bg-dark-mode bg-white 
-            border-black dark:border-white flex justify-center flex-col top-0"
+            <div class="h-full mlg:h-auto lg:w-2/5 text-justify p-10 lg:absolute dark:bg-dark-mode bg-white 
+            border-black dark:border-white flex justify-center flex-col"
             :class="index%2 != 0 ? 'right-0 lg:border-l' : 'left-0 lg:border-r'">
 
               <h1 class="text-red-600 text-5xl m-3
