@@ -10,7 +10,7 @@
         lazy-background="/static/project/curve_line.svg">
 
             <!-- AUTO SCROLL -->
-            <button class="p-3 border dark:border-white border-black text-red-500 absolute top-20 left-5"
+            <button class="p-3 underline text-red-500 absolute top-20 left-5"
             @click="autoScroll()">
                 {{ $t(autoMsg) }}
             </button>
@@ -172,7 +172,7 @@ export default {
                     }
 
                     window.scrollBy({
-                        top: project.autoSpeed || 120
+                        top: project.autoSpeed * (this.isMobile ? project.speed/project.phoneSpeed : 1)
                     });
                 }, 100);
             } else {

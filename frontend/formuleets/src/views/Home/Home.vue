@@ -33,8 +33,8 @@
             bg-cover bg-center bg-fixed" 
             lazy-background="/static/home/fond2.svg">
 
-              <h1 class="text-red-600 text-7xl m-10 mb-20
-                  font-bold italic tracking-wider text-shadow z-10"
+              <h1 class="text-red-600 text-4xl lg:text-7xl m-10 mb-20
+                  font-bold italic tracking-wider text-shadow z-10 "
                   data-aos="zoom-in">
                     {{ $t("message.header.sponsors") }}
               </h1>
@@ -47,8 +47,7 @@
                   parallaxy-scale="1">
 
                     <template v-for="sponsor of sponsors.diamond" :key="sponsor.src">
-                      <img lazy-size-height="100%" :lazy-src="sponsor.imageSrc" 
-                      alt="Sponsor" lazy-animation="opacity" class="opacity-0 h-full">
+                      <img :src="sponsor.imageSrc" alt="Sponsor" class="h-full">
                     </template>
 
                   </div>
@@ -63,7 +62,7 @@
 
             <img :src="item.image" class="hidden lg:block w-full" alt="Image" 
             parallaxy-y parallaxy-scale="1" parallaxy-speed-y="0.65" parallaxy-overflow-y
-            parallaxy-breakpoint="(max-width: 1024px)">
+            parallaxy-breakpoint="(max-width: 1024px)" v-if="!isMobile">
 
             <div class="h-full overflow-y-auto lg:w-2/5 text-justify p-10 lg:absolute dark:bg-dark-mode bg-white 
             border-black dark:border-white flex justify-center flex-col top-0"
@@ -122,9 +121,11 @@
 <script>
 import home from "./home"
 import sponsors from "../Sponsors/sponsors";
+import phoneMixin from '../../mixins/phone-mixin';
 
 export default {
     name: "Home",
+    mixins: [phoneMixin],
     data() {
         return {
             home: home,
@@ -136,6 +137,7 @@ export default {
         };
     },
     created() {
+        this.$data.mobileSize = "1024px";
         document.addEventListener("scroll", this.scrollFormule);
     },
     beforeUnmount() {
