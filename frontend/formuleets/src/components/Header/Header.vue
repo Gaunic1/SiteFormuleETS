@@ -129,7 +129,10 @@ export default {
         },
         changeLangue(){
             const lg = this.$root.$i18n.getLocale();
-            this.$root.$i18n.setLocale(lg == "fr" ? "en" : "fr");
+            const newLg = lg == "fr" ? "en" : "fr";
+            this.$root.$i18n.setLocale(newLg);
+
+            localStorage.langage = newLg;
         },
         scroll(){
             if(window.scrollY > 0) 

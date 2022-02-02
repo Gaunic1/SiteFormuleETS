@@ -36,7 +36,7 @@
               <h1 class="text-red-600 text-7xl m-10 mb-20
                   font-bold italic tracking-wider text-shadow z-10"
                   data-aos="zoom-in">
-                    Sponsors
+                    {{ $t("message.header.sponsors") }}
               </h1>
 
                   <div class="w-full flex h-48" style="margin-left: -100vh"
@@ -95,7 +95,7 @@
               font-bold italic tracking-wider text-shadow z-10 p-5 text-center"
               lazy-animation="slide-left"
               lazy-reset>
-                Contact US
+                {{ $t("message.header.contact-us") }}
           </h1>
 
           <form name="contact" 

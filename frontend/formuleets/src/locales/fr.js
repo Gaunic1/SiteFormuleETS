@@ -4,9 +4,9 @@ const fr = {
       "aboutus": "à propos de nous",
       "project": "le projet",
       "team": "l'équipe",
-      "sponsors": "commanditaires",
+      "sponsors": "Commanditaires",
       "donate": "faire un don",
-      "contact-us": "nous joindre",
+      "contact-us": "Nous joindre",
       "media": "média",
       "pictures": "photos",
       "movies": "vidéos",
@@ -32,7 +32,7 @@ const fr = {
     },
 
     "other": {
-      "back": "Retour"
+      "back": "Retour",
     },
 
     "eastereggs": {
@@ -78,6 +78,8 @@ const fr = {
     },
 
     "project": {
+      "auto": "Automatique",
+      "stop": "Arrêter",
       "default": {
         "animation": "animation dynamique",
         "label": "Faites défiler vers le bas pour lancer l'animation et voir notre prototype en 3D."

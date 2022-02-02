@@ -1,12 +1,19 @@
 <template>
-    <div :style='`height: ${height}`'>
+    <div :style='`height: ${height}`' id="project">
         <!-- USELESS. JUST HERE TO DONT GO ON THE HEADER -->
         <div class="h-16 dark:bg-dark-mode flex items-end">
              <hr class="bg-red-500 border border-red-500 ml-5 mr-5 w-full opacity-50">
         </div>
 
-        <div class="dark:bg-dark-mode h-screen sticky top-0 w-full flex justify-center flex-col md:flex-row bg-cover bg-center overflow-x-hidden" 
+        <div class="dark:bg-dark-mode h-screen sticky top-0 w-full flex 
+        justify-center flex-col md:flex-row bg-cover bg-center overflow-x-hidden" 
         lazy-background="/static/project/curve_line.svg">
+
+            <!-- AUTO SCROLL -->
+            <button class="p-3 border dark:border-white border-black text-red-500 absolute top-20 left-5"
+            @click="autoScroll()">
+                {{ $t(autoMsg) }}
+            </button>
 
             <!-- TEXT -->
             <div class="flex-initial md:w-1/2 md:h-full h-1/2 w-full flex items-center justify-center flex-col text-center p-5">
@@ -42,6 +49,11 @@ export default {
             imageHeight: 0,
             count: 0,
             countToNotDisplay: 0,
+            autoScrollInterval: null,
+
+            autoMsg: "message.project.auto",
+
+            autoScrollActivate: false,
 
             nbPreloaded: 0,
             preloadCount: 10,
@@ -76,6 +88,9 @@ export default {
         window.addEventListener('resize', this.calcHeight, true);   
     },
     beforeUnmount(){
+      document.body.style.overflowY = "auto";
+      clearInterval(this.autoScrollInterval);
+
       document.removeEventListener("scroll", this.animateFormule, { passive: false });
       window.removeEventListener('resize', this.calcHeight, true);   
     },
@@ -138,6 +153,33 @@ export default {
                 ++count;
             }
             return count;
+        },
+        autoScroll(){
+            const max = parseInt(this.height.split('px')[0]);
+            document.body.style.overflowY = "hidden";
+
+            this.autoScrollActivate = !this.autoScrollActivate;
+
+            if(this.autoScrollActivate) {
+                //AUTO SCROLL
+                this.autoMsg = "message.project.stop";
+                this.autoScrollInterval = setInterval(() => {
+                    if(window.scrollY + window.innerHeight >= max) {
+                        console.log("[INFO] Stopping auto scroll animation");
+                        document.body.style.overflowY = "auto";
+                        clearInterval(this.autoScrollInterval);
+                    }
+
+                    window.scrollBy({
+                        top: project.autoSpeed || 120
+                    });
+                }, 100);
+            } else {
+                //STOP AUTO SCROLL
+                this.autoMsg = "message.project.auto";
+                clearInterval(this.autoScrollInterval);
+                document.body.style.overflowY = "auto";
+            }
         },
         animateFormule(){
             const scroll = window.scrollY ? window.scrollY : document.body.scrollTop;

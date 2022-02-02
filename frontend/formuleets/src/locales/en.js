@@ -6,7 +6,7 @@ const en = {
         "team": "the team",
         "sponsors": "Sponsors",
         "donate": "donate",
-        "contact-us": "contact us",
+        "contact-us": "Contact us",
         "media": "media",
         "pictures": "photos",
         "movies": "Videos",
@@ -78,6 +78,8 @@ const en = {
     },
 
     "project": {
+      "auto": "Automatic",
+      "stop": "Stop",
       "default": {
         "animation": "dynamic animation",
         "label": "Scroll down to start the animation and see our prototype in 3D."
