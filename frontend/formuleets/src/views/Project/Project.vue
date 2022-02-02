@@ -167,6 +167,7 @@ export default {
                     if(window.scrollY + window.innerHeight >= max) {
                         console.log("[INFO] Stopping auto scroll animation");
                         document.body.style.overflowY = "auto";
+                        this.autoMsg = "message.project.auto";
                         clearInterval(this.autoScrollInterval);
                     }
 
