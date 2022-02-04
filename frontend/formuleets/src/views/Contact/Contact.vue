@@ -6,7 +6,7 @@
     <div class="h-screen w-full flex justify-center items-center relative overflow-hidden">
 
         <!-- BACKGROUND IMAGE -->
-        <img src="/static/contact/fond.jpg" alt="Fond" class="absolute h-full lg:w-full left-0 top-0"
+        <img src="/static/contact/fond.jpg" alt="Fond" class="absolute h-screen w-auto lg:w-full left-0 top-0"
         parallaxy-x parallaxy-speed-x="0.15" parallaxy-inverted-x>
 
         <!-- OVERLAY -->
