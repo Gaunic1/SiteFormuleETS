@@ -92,14 +92,12 @@
 
           <h1 class="text-red-600 text-7xl m-10 mb-20 w-full md:w-1/3
               font-bold italic tracking-wider text-shadow z-10 p-5 text-center"
-              lazy-animation="slide-left"
-              lazy-reset>
+              data-aos="fade-right">
                 {{ $t("message.header.contact-us") }}
           </h1>
 
           <form name="contact" 
-          lazy-animation="slide-right"
-          lazy-reset
+          data-aos="fade-left"
           class="w-full md:w-2/3 flex justify-center items-center flex-col text-black relative" 
           method="POST" data-netlify="true">
             <input class="p-5 m-5 w-3/4 h-10 border border-dark-mode" type="text" name="name" placeholder="Name"/>
@@ -163,13 +161,13 @@ export default {
   clip-path: polygon(0 0, 60vw 100vh, 0 100vh);
 }
 
-.text-shadow{
+/* .text-shadow{
   text-shadow: 4px 4px 0px #000;
 }
 
 .dark .text-shadow{
   text-shadow: 4px 4px 0px #fff;
-}
+} */
 
 *:focus {
     outline: none;
