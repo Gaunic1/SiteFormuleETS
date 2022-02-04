@@ -18,7 +18,7 @@ import 'lazy-attr/dist/lazy-attr-animation.css'
 
 //Parallax
 import ScrollParallax from '@/components/Parallax/ScrollParallax.vue';
-import parallaxy from "parallaxy-img/dist/parallaxy";
+import parallaxy from "parallaxy-img/src/parallaxy";
 
 createApp(App)
 .component('scroll-parallax', ScrollParallax)

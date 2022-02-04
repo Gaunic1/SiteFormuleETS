@@ -2,9 +2,12 @@
     <!-- USELESS (TO DONT GO ON HEADER) -->
     <div class="h-14 w-full"></div>
 
+    <!-- CONTAINER -->
+    <div class="lg:h-screen h-auto w-full flex justify-center items-center relative overflow-hidden">
+        
     <!-- BACKGROUND IMAGE -->
-    <div class="lg:h-screen h-auto w-full bg-center bg-cover flex justify-center items-center relative" 
-    style="background-image: url('/static/donate/fond.jpg')">
+    <img src="/static/donate/fond.jpg" alt="Fond" class="absolute h-full lg:w-full left-0 top-0"
+    parallaxy-x parallaxy-speed-x="0.15">
 
     <!-- OVERLAY -->
     <div class="absolute top-0 left-0 h-full w-full bg-overlay"></div>

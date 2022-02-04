@@ -2,9 +2,13 @@
     <!-- USELESS (TO DONT GO ON HEADER) -->
     <div class="h-14 w-full"></div>
 
-    <!-- BACKGROUND IMAGE -->
-    <div class="lg:h-screen min-h-screen h-auto w-full bg-center bg-cover flex justify-center items-center relative" 
-    style="background-image: url('/static/contact/fond.jpg')">
+    <!-- CONTAINER -->
+    <div class="lg:h-screen min-h-screen h-auto w-full flex justify-center items-center relative overflow-hidden">
+
+        <!-- BACKGROUND IMAGE -->
+        <img src="/static/contact/fond.jpg" alt="Fond" class="absolute h-full lg:w-full left-0 top-0"
+        parallaxy-x parallaxy-speed-x="0.15" parallaxy-inverted-x>
+
         <!-- OVERLAY -->
         <div class="absolute top-0 left-0 h-full w-full bg-overlay"></div>
 
