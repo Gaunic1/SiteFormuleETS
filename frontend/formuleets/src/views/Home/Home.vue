@@ -33,8 +33,8 @@
             bg-cover bg-center bg-fixed" 
             lazy-background="/static/home/fond2.svg">
 
-              <h1 class="text-red-600 text-4xl lg:text-7xl m-10 mb-20
-                  font-bold italic tracking-wider text-shadow z-10 "
+              <h1 class="text-red-600 text-4xl lg:text-5xl m-10 mb-20
+                  font-bold italic tracking-wider text-shadow z-10 uppercase"
                   data-aos="zoom-in">
                     {{ $t("message.header.sponsors") }}
               </h1>
@@ -69,7 +69,7 @@
             :class="index%2 != 0 ? 'right-0 lg:border-l' : 'left-0 lg:border-r'">
 
               <h1 class="text-red-600 text-5xl m-3
-              font-bold italic tracking-wider text-shadow z-10"
+              font-bold italic tracking-wider text-shadow z-10 uppercase"
               data-aos="zoom-in"
               :class="index%2 != 0 ? 'text-right' : 'text-left'">
                 {{ $t(item.text + '.title') }}
@@ -90,8 +90,8 @@
         bg-cover bg-center bg-fixed"
         lazy-background="/static/home/fond.svg">
 
-          <h1 class="text-red-600 text-7xl m-10 mb-20 w-full md:w-1/3
-              font-bold italic tracking-wider text-shadow z-10 p-5 text-center"
+          <h1 class="text-red-600 text-5xl m-10 mb-20 w-full md:w-1/3
+              font-bold italic tracking-wider text-shadow z-10 p-5 text-center uppercase"
               data-aos="fade-right">
                 {{ $t("message.header.contact-us") }}
           </h1>
