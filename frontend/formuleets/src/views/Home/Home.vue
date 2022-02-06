@@ -58,13 +58,13 @@
 
           <!-- CONTENT GENERATION -->
           <div class="flex justify-center items-center
-           flex-col flex-wrap w-full min-h-screen lg:h-screen relative overflow-hidden">
+           flex-col flex-wrap w-full min-h-screen relative overflow-hidden">
 
             <img :src="item.image" class="hidden lg:block w-full" alt="Image" 
             parallaxy-y parallaxy-scale="1" parallaxy-speed-y="0.65" parallaxy-overflow-y
             parallaxy-breakpoint="(max-width: 1024px)" v-if="!isMobile">
 
-            <div class="h-full overflow-y-auto lg:w-2/5 text-justify p-10 lg:absolute dark:bg-dark-mode bg-white 
+            <div class="h-full lg:w-2/5 text-justify p-10 lg:absolute dark:bg-dark-mode bg-white 
             border-black dark:border-white flex justify-center flex-col top-0"
             :class="index%2 != 0 ? 'right-0 lg:border-l' : 'left-0 lg:border-r'">
 

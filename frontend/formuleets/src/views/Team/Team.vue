@@ -14,8 +14,8 @@
             <div class="mt-5 text-left">
                 <h2 data-aos="fade-right" class="dark:text-white text-3xl ml-5">{{ $t(categorie.name) }}</h2>
 
-                <div data-aos="fade-up">
-                    <div class="inline-block m-5 rounded overflow-hidden calc-size shadow 
+                <div data-aos="fade-up" class="flex flex-wrap">
+                    <div class="m-5 rounded overflow-hidden calc-size shadow 
                     bg-white dark:bg-dark-mode perspective-3d" 
                     v-for="member of categorie.members" :key="member.fullName" 
                     v-tilt="{glare: true, 'max-glare': 0.4}">

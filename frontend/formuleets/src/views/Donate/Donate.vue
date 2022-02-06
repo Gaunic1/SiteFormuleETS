@@ -7,7 +7,7 @@
         
     <!-- BACKGROUND IMAGE -->
     <img src="/static/donate/fond.jpg" alt="Fond" class="absolute h-full lg:w-full left-0 top-0"
-    parallaxy-x parallaxy-speed-x="0.15">
+    parallaxy-x parallaxy-inverted-x parallaxy-speed-x="0.15">
 
     <!-- OVERLAY -->
     <div class="absolute top-0 left-0 h-full w-full bg-overlay"></div>
