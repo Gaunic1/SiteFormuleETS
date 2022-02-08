@@ -106,8 +106,13 @@
 
             <form name="contact" 
             data-aos="fade-left"
+            action="/pages/success"
             class="flex flex-col justify-center items-center w-full"
-            method="POST" @submit="submitForm" data-netlify="true" v-if="!formMessage">
+            method="POST" 
+            @submit="submitForm" 
+            data-netlify="true" v-if="!formMessage">
+              <input type="hidden" name="form-name" value="contact" />
+
               <input v-model="form.name" class="p-5 m-5 w-3/4 h-10 border border-dark-mode" type="text" name="name" placeholder="Name"/>
               <input v-model="form.email" class="p-5 m-5 w-3/4 h-10 border border-dark-mode" type="email" name="email" placeholder="Email"/>
               <input v-model="form.subject" class="p-5 m-5 w-3/4 h-10 border border-dark-mode" type="text" name="subject" placeholder="Subject"/>
