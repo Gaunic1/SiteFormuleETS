@@ -96,19 +96,29 @@
                 {{ $t("message.header.contact-us") }}
           </h1>
 
-          <form name="contact" 
-          data-aos="fade-left"
-          class="w-full md:w-2/3 flex justify-center items-center flex-col text-black relative" 
-          method="POST" data-netlify="true">
-            <input class="p-5 m-5 w-3/4 h-10 border border-dark-mode" type="text" name="name" placeholder="Name"/>
-            <input class="p-5 m-5 w-3/4 h-10 border border-dark-mode" type="email" name="email" placeholder="Email"/>
-            <input class="p-5 m-5 w-3/4 h-10 border border-dark-mode" type="text" name="subject" placeholder="Subject"/>
-            <textarea class="p-5 m-5 w-3/4 h-32 border border-dark-mode" name="message" placeholder="Message"></textarea>
+          <div class="w-full md:w-2/3 flex justify-center items-center text-black">
 
-            <div class="flex items-end justify-end md:w-3/4">
-              <button class="bg-red-600 p-3 pl-10 pr-10 text-white" type="submit">Send</button>
-            </div>
-          </form>
+            <p v-if="formMessage" 
+            class="text-xl"
+            :class="formMessage.type == 'error' ? 'text-red-500' : 'text-green-500'">
+              {{ formMessage.message }}
+            </p>
+
+            <form name="contact" 
+            data-aos="fade-left"
+            class="flex flex-col justify-center items-center w-full"
+            method="POST" @submit="submitForm" data-netlify="true" v-if="!formMessage">
+              <input v-model="form.name" class="p-5 m-5 w-3/4 h-10 border border-dark-mode" type="text" name="name" placeholder="Name"/>
+              <input v-model="form.email" class="p-5 m-5 w-3/4 h-10 border border-dark-mode" type="email" name="email" placeholder="Email"/>
+              <input v-model="form.subject" class="p-5 m-5 w-3/4 h-10 border border-dark-mode" type="text" name="subject" placeholder="Subject"/>
+              <textarea v-model="form.message" class="p-5 m-5 w-3/4 h-32 border border-dark-mode" name="message" placeholder="Message"></textarea>
+
+              <div class="flex items-end justify-end md:w-3/4">
+                <button class="bg-red-600 p-3 pl-10 pr-10 text-white disabled:opacity-50" 
+                :disabled="isDisabled" type="submit">Send</button>
+              </div>
+            </form>
+          </div>
         </div>
 
       </div>
@@ -132,6 +142,13 @@ export default {
                 titre: "Formule",
                 ETS: "ETS",
             },
+            form: {
+              email: null,
+              name: null,
+              subject: null,
+              message: null
+            },
+            formMessage: null
         };
     },
     created() {
@@ -141,7 +158,38 @@ export default {
     beforeUnmount() {
         document.removeEventListener("scroll", this.scrollFormule);
     },
+    computed: {
+      isDisabled(){
+        for(const key of Object.keys(this.form)){
+          if(!this.form[key] || this.form[key].trim() == ""){
+            return true;
+          }
+        }
+        return false;
+      }
+    },
     methods: {
+        submitForm(e){
+          e.preventDefault();
+            let myForm = document.querySelector('form');
+            let formData = new FormData(myForm);
+
+            fetch("/", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: new URLSearchParams(formData).toString(),
+            })
+            .then(() => {
+              this.form = {
+                email: null,
+                name: null,
+                subject: null,
+                message: null
+              }
+              this.formMessage = {type: "sucess", message: "Form successfully submitted"};
+            })
+            .catch((error) => this.formMessage = {type: "error", message: error});
+        },
         scrollFormule() {
             const scroll = window.scrollY ? window.scrollY : document.body.scrollTop;
             if (scroll < window.innerHeight) {
