@@ -108,7 +108,7 @@
             data-aos="fade-left"
             class="flex flex-col justify-center items-center w-full"
             method="POST" 
-
+            @submit="submitForm" 
             action="/pages/success"
             data-netlify="true" 
             data-netlify-honeypot="bot-field"
