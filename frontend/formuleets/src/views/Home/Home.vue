@@ -106,12 +106,13 @@
 
             <form name="contact" 
             data-aos="fade-left"
-            action="/pages/success"
             class="flex flex-col justify-center items-center w-full"
             method="POST" 
-            @submit="submitForm" 
+
+            action="/pages/success"
+            data-netlify="true" 
             data-netlify-honeypot="bot-field"
-            data-netlify="true" v-if="!formMessage">
+            v-if="!formMessage">
               <input type="hidden" name="form-name" value="contact" />
 
               <input v-model="form.name" class="p-5 m-5 w-3/4 h-10 border border-dark-mode" type="text" name="name" placeholder="Name"/>
