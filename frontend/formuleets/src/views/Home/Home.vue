@@ -110,8 +110,7 @@
             class="flex flex-col justify-center items-center w-full"
             method="POST" 
             @submit="submitForm" 
-            netlify
-            netlify-honeypot="bot-field"
+            data-netlify-honeypot="bot-field"
             data-netlify="true" v-if="!formMessage">
               <input type="hidden" name="form-name" value="contact" />
 
