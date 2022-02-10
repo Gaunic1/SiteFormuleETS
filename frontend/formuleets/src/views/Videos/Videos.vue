@@ -10,7 +10,7 @@
 
       <!-- <hr data-aos="zoom-in" class="mt-5 border bg-red-900 border-red-900"> -->
 
-      <div class="w-full relative h-auto">
+      <section class="w-full relative h-auto">
         <!-- ARROWS -->
 
         <!-- LEFT -->
@@ -33,7 +33,7 @@
 
             <!-- VIDEOS -->
             <template v-for="item of datas" :key="item.pubDate">
-                <div class="mr-5 pt-5 pb-5 lg:inline-block">
+                <article class="mr-5 pt-5 pb-5 lg:inline-block">
                     <div class="uppercase text-lg dark:text-white mb-3 relative whitespace-nowrap flex">
                         <div class="w-2/3 font-thin truncate">{{ item.title }}</div>
                         <span class="absolute right-0 font-thin w-1/3 text-right">&nbsp; ({{ item.pubDate.split(' ')[0] }})</span>
@@ -50,10 +50,10 @@
                     frameborder="0" 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                     allowfullscreen></iframe>
-                </div>
+                </article>
             </template>
         </div>
-      </div>
+      </section>
   </div>
 </template>
 

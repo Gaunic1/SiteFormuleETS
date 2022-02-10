@@ -4,13 +4,19 @@
     <div class="bg-first w-full flex flex-wrap overflow-x-hidden bg-center bg-fixed bg-cover dark:bg-dark-mode bg-white"
     lazy-background="/static/home/fond.svg">
 
-      <!-- TRIANGLE -->
-      <div class="bg-triangle absolute top-0 left-0 w-full h-screen bg-gradient-to-tr from-red-600 
-      to-dark-mode z-10"></div>
+      <!-- TRIANGLE bg-gradient-to-tr from-red-600 
+      to-dark-mode -->
+      <div class="bg-triangle absolute top-0 left-0 w-full h-screen z-10 bg-red-700"></div>
 
       <!-- TITLE -->
       <div class="flex-initial h-screen w-full lg:w-1/3 flex flex-col justify-center p-5 z-20 text-dark-mode-2" data-aos="fade-right">
-        <h1 class="dark:text-white font-normal tracking-wider text-5xl italic text-center lg:text-8xl lg:text-left">{{ text.titre }}<span class="text-red-600 font-bold">{{ text.ETS }}</span></h1>
+        <!-- <h1 class="dark:text-white font-normal tracking-wider text-5xl italic text-center lg:text-8xl lg:text-left">
+          {{ text.titre }}
+            <span class="text-red-600 font-bold">
+              {{ text.ETS }}
+            </span>
+          </h1> -->
+        <img src="/static/home/logo-fets.png" alt="logo" class="w-full logow">
         <p class="mt-10 dark:text-white text-center lg:text-left">{{ $t('message.home.presentation') }}</p>
       </div>
 
@@ -29,7 +35,7 @@
 
           <!-- SPONSORS -->
           <template v-if="index == 1">
-            <div class="w-full flex-col flex justify-center items-center h-screen p-10
+            <section class="w-full flex-col flex justify-center items-center h-screen p-10
             bg-cover bg-center bg-fixed" 
             lazy-background="/static/home/fond2.svg">
 
@@ -51,20 +57,32 @@
                     </template>
 
                   </div>
-            </div>
+
+                  <div class="w-full flex h-48" style="margin-left: -100vh"
+                  parallaxy-x 
+                  parallaxy-overflow-x 
+                  parallaxy-speed-x="0.65"
+                  parallaxy-scale="1">
+
+                    <template v-for="sponsor of otherDiamond" :key="sponsor.imageSrc">
+                      <img :src="sponsor.imageSrc" alt="Sponsor" class="h-full">
+                    </template>
+
+                  </div>
+            </section>
 
             <hr lazy-animation="zoomin" lazy-reset class="border-red-600 m-3">
           </template>
 
           <!-- CONTENT GENERATION -->
-          <div class="flex justify-center items-center
+          <section class="flex justify-center items-center
            flex-col flex-wrap w-full min-h-screen relative overflow-hidden">
 
             <img :src="item.image" class="hidden lg:block w-full" alt="Image" 
             parallaxy-y parallaxy-scale="1" parallaxy-speed-y="0.65" parallaxy-overflow-y
             parallaxy-breakpoint="(max-width: 1024px)" v-if="!isMobile">
 
-            <div class="h-full lg:w-2/5 text-justify p-10 lg:absolute dark:bg-dark-mode bg-white 
+            <article class="h-full lg:w-2/5 text-justify p-10 lg:absolute dark:bg-dark-mode bg-white 
             border-black dark:border-white flex justify-center flex-col top-0"
             :class="index%2 != 0 ? 'right-0 lg:border-l' : 'left-0 lg:border-r'">
 
@@ -77,16 +95,16 @@
 
               <p class="mt-10 mb-10 text-justify text-black dark:text-white text-lg" 
               v-html="$t(item.text + '.text')" :data-aos="index%2 == 0 ? 'fade-right' : 'fade-left'"></p>
-            </div>
+            </article>
 
-          </div>
+          </section>
 
         </template>
 
         <!-- CONTACT US -->
         <hr lazy-animation="zoomin" lazy-reset class="border-red-600 m-3">
 
-        <div class="min-h-screen dark:text-white flex flex-col md:flex-row justify-center items-center 
+        <section class="min-h-screen dark:text-white flex flex-col md:flex-row justify-center items-center 
         bg-cover bg-center bg-fixed"
         lazy-background="/static/home/fond.svg">
 
@@ -126,7 +144,7 @@
               </div>
             </form>
           </div>
-        </div>
+        </section>
 
       </div>
     </div>
@@ -158,14 +176,16 @@ export default {
             formMessage: null
         };
     },
-    created() {
-        this.$data.mobileSize = "1024px";
-        document.addEventListener("scroll", this.scrollFormule);
-    },
-    beforeUnmount() {
-        document.removeEventListener("scroll", this.scrollFormule);
-    },
     computed: {
+      otherDiamond(){
+        const list = JSON.parse(JSON.stringify(this.sponsors.diamond));
+        const half = Math.ceil(list.length / 2);    
+
+        const firstHalf = list.splice(0, half);
+        const secondHalf = list.splice(-half);
+
+        return secondHalf.concat(firstHalf);
+      },
       isDisabled(){
         for(const key of Object.keys(this.form)){
           if(!this.form[key] || this.form[key].trim() == ""){
@@ -174,6 +194,13 @@ export default {
         }
         return false;
       }
+    },
+    created() {
+        this.$data.mobileSize = "1024px";
+        document.addEventListener("scroll", this.scrollFormule);
+    },
+    beforeUnmount() {
+        document.removeEventListener("scroll", this.scrollFormule);
     },
     methods: {
         submitForm(e){
@@ -214,6 +241,10 @@ export default {
 <style scoped>
 .bg-triangle{
   clip-path: polygon(0 0, 60vw 100vh, 0 100vh);
+}
+
+.logow{
+  min-width: 40vw;
 }
 
 /* .text-shadow{
