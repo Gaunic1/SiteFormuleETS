@@ -15,8 +15,8 @@
       </div>
 
       <!-- ANIMATED FORMULE -->
-      <div class="flex-initial h-screen w-2/3 justify-center items-center hidden lg:flex z-0 pl-20">
-        <img id="formule" src="/static/home/f1.png" data-aos="fade-left" alt="Formule" class="z-0 w-2/3">
+      <div class="flex-initial h-screen w-2/3 justify-center items-center hidden lg:flex z-0">
+        <img id="formule" src="/static/home/f1.png" data-aos="fade-left" alt="Formule" class="z-0 w-4/5 ml-20">
       </div>
 
       <!-- PART2 -->

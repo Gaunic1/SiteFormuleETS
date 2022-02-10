@@ -1,0 +1,6 @@
+- Logo a la place du titre formule ets
+- Sponsors tout doit etre visible pour diamants
+- Traingle bonne couleur home page
+- Ancien membres avec une navbar/aside par années
+- Team member linkedink overlay sur l'image
+- Tema member reduire mouevement carte
