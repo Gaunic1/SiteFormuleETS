@@ -10,7 +10,7 @@
         <section class="flex-1 relative">
             <div class="absolute top-12 left-5 flex dark:text-white justify-center 
             items-center p-3 text-2xl cursor-pointer z-10" @click="modal = true">
-                <p class="mr-3">Teams</p>
+                <p class="mr-3">{{ $t('message.team.teams') }}</p>
                 <i class="fa-solid fa-circle-arrow-right"></i>
             </div>
 
@@ -70,8 +70,8 @@
         </section>
 
         <Aside :opened="modal" @close="modal = false" 
-        :beforeItem="$t('message.team.title') + ' - ' " :itemsMenu="teams" @clicked="changeDefault"
-        :title="'Teams'"></Aside>
+        :beforeItem="$t('message.team.year') + ' - ' " :itemsMenu="teams" @clicked="changeDefault"
+        :title="$t('message.team.teams')"></Aside>
     </div>
 </template>
 <script>

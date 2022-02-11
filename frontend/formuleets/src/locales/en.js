@@ -45,6 +45,8 @@ const en = {
 
     "team": {
       "title": "The team",
+      "teams": "Teams",
+      "year": "Year",
       "management": "Management",
       "aerodynamic": "Aerodynamics",
       "chassis": "Chassis",

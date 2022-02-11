@@ -45,6 +45,8 @@ const fr = {
 
     "team": {
       "title": "L'équipe",
+      "teams": "Équipes",
+      "year": "Année",
       "management": "Gestion",
       "aerodynamic": "Aérodynamique",
       "chassis": "Châssis",
