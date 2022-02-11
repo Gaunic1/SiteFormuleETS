@@ -6,7 +6,7 @@
 
       <!-- TRIANGLE bg-gradient-to-tr from-red-600 
       to-dark-mode -->
-      <div class="bg-triangle absolute top-0 left-0 w-full h-screen z-10 bg-red-700"></div>
+      <!-- <div class="bg-triangle absolute top-0 left-0 w-full h-screen z-10 bg-red-700"></div> -->
 
       <!-- TITLE -->
       <div class="flex-initial h-screen w-full lg:w-1/3 flex flex-col justify-center p-5 z-20 text-dark-mode-2" data-aos="fade-right">
@@ -17,7 +17,7 @@
             </span>
           </h1> -->
         <img src="/static/home/logo-fets.png" alt="logo" class="w-full logow">
-        <p class="mt-10 dark:text-white text-center lg:text-left">{{ $t('message.home.presentation') }}</p>
+        <p class="mt-5 dark:text-white text-center lg:text-left">{{ $t('message.home.presentation') }}</p>
       </div>
 
       <!-- ANIMATED FORMULE -->
