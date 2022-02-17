@@ -9,23 +9,17 @@ import "@/assets/styles/main.css";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
-//Tilt.js
-import VueTilt from 'vue-tilt.js'
-
 //Lazy-attr
 import lazyattr from 'lazy-attr'
 import 'lazy-attr/dist/lazy-attr-animation.css'
 
 //Parallax
-import ScrollParallax from '@/components/Parallax/ScrollParallax.vue';
 import parallaxy from "parallaxy-img/src/parallaxy";
 
 createApp(App)
-.component('scroll-parallax', ScrollParallax)
 .use(i18n)
 .use(AOS.init())
 .use(parallaxy)
 .use(lazyattr)
-.use(VueTilt)
 .use(router)
 .mount('#app')

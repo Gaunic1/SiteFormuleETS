@@ -22,9 +22,7 @@
             <div class="flex-initial w-full p-2 text-center">
                 <span class="text-white">
                     Made with
-                    <router-link to="/easter-eggs">
-                        <i class="fas fa-heart text-red-600 mr-1 ml-1"></i>
-                    </router-link>
+                    <i class="fas fa-heart text-red-600 mr-1 ml-1"></i>
                     by 
                     <a href="mailto:charbonn.yoann@gmail.com" class="ml-1 underline">
                         yoannchb

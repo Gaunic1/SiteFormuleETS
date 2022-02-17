@@ -2,12 +2,12 @@
     <div v-if="opened">
         <!-- OVERLAY -->
         <div class="fixed top-0 left-0 w-full h-screen bg-overlay z-50" 
-        style="backdrop-filter: blur(7px)" 
+        style="backdrop-filter: blur(8px)" 
         @click="close"></div>
 
         <!-- MENU -->
-        <aside class="fixed left-0 top-0 w-full h-screen bg-white dark:bg-dark-mode sm:w-72 z-50
-        flex flex-col items-center" data-aos="fade-right">
+        <aside class="fixed left-0 top-0 w-4/5 h-screen bg-white dark:bg-dark-mode sm:w-72 z-50
+        flex flex-col items-center overflow-y-auto" data-aos="fade-right">
             <div>
                 <i class="fa-solid fa-xmark text-red-500 absolute top-5 right-5 cursor-pointer text-lg" 
                 @click="close"></i>
