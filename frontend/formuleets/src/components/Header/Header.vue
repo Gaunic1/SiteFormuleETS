@@ -2,11 +2,11 @@
   <header :class="headerClass" class="fixed top-0 left-0 h-12 transition-all w-full dark:text-dark-mode z-50">
       <nav class="flex justify-center items-center w-full h-full">
           <!-- LOGO -->
-          <div id="logo" class="flex-auto h-full p-3">
+          <!-- <div id="logo" class="flex-auto h-full p-3">
               <a href="/">
                 <img src="/static/header/logo-f1.png" alt="Logo" class="h-full"/>
               </a>
-          </div>
+          </div> -->
 
           <!-- COMPUTER -->
           <ul class="hidden list-none p-3 lg:flex">
@@ -47,7 +47,7 @@
           </ul>
 
           <!-- PHONE -->
-            <ul class="flex list-none p-3 lg:hidden">
+            <ul class="flex list-none p-3 lg:hidden absolute right-0">
               <i @click="displayMenuPhone()" class="fas fa-bars cursor-pointer text-3xl dark:text-white"></i>
 
               <div data-aos="fade-right" v-if="showMenu" 

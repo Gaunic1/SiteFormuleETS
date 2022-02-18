@@ -7,10 +7,6 @@ const home = [
         text: "message.home.project",
         image: "/static/home/formuleETS.jpg"
     },
-    // {
-    //     text: "message.home.team",
-    //     image: "/static/home/team.jpg"
-    // }
 ];
 
 export default home;

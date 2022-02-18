@@ -6,19 +6,19 @@
         @click="close"></div>
 
         <!-- MENU -->
-        <aside class="fixed left-0 top-0 w-4/5 h-screen bg-white dark:bg-dark-mode sm:w-72 z-50
+        <aside class="fixed dark:text-white text-black left-0 top-0 w-4/5 h-screen bg-white dark:bg-dark-mode sm:w-72 z-50
         flex flex-col items-center overflow-y-auto" data-aos="fade-right">
             <div>
-                <i class="fa-solid fa-xmark text-red-500 absolute top-5 right-5 cursor-pointer text-lg" 
+                <i class="fa-solid fa-xmark absolute top-5 right-5 cursor-pointer text-lg" 
                 @click="close"></i>
 
-                <h2 class="text-3xl text-red-500 m-10 font-bold" data-aos="zoom-in">{{ title }}</h2>
+                <h2 class="text-3xl m-10 font-bold" data-aos="zoom-in">{{ title }}</h2>
                 <hr class="border border-red-500 bg-red-500 mb-5">
             </div>
             <nav>
                 <ul>
                     <template v-for="(item, index) of itemsMenu" :key="item.title">
-                        <li class="cursor-pointer text-xl uppercase text-red-500 m-3" @click="clicked(index)">
+                        <li class="cursor-pointer text-xl uppercase m-3" @click="clicked(index)">
                             {{ beforeItem }} {{ item.title }}
                         </li>
                     </template>

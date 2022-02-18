@@ -22,7 +22,7 @@
             <template v-for="categorie of team.members" :key="categorie.name">
                 <hr data-aos="zoom-in" class="border border-red-500 bg-red-500 m-5" />
 
-                <div class="mt-5 text-left">
+                <div class="mt-5 text-left m-3">
                     <h2
                         data-aos="fade-left"
                         class="dark:text-white text-3xl ml-5"
