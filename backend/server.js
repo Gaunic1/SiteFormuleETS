@@ -1,7 +1,9 @@
-// Require the framework and instantiate it
+"use strict";
+
 const fastify = require('fastify')({ logger: true });
 const GetGoogleDrive = require('drive-album');
 const fs = require('fs');
+const serverless = require("serverless-http");
 
 function TimeBetweenTwoDate(startDate, stopDate){
     const diff = (stopDate.getTime() - startDate.getTime()) / 1000;
@@ -61,18 +63,4 @@ fastify.route({
       }
 });
 
-// Run the server!
-const start = async () => {
-  try {
-    const PORT = Number(process.env.port) || 3000;
-    const HOST = process.env.host || "localhost";
-    await fastify.listen(PORT, HOST, async (err) => {
-      if (err) console.error(err);
-      console.log(`server listening on port ${PORT}`);
-    })
-  } catch (err) {
-    fastify.log.error(err)
-    process.exit(1)
-  }
-}
-start();
+module.exports.handler = serverless(fastify);

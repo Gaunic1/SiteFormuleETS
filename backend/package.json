@@ -12,6 +12,7 @@
   "dependencies": {
     "drive-album": "^1.0.0",
     "fastify": "^3.27.2",
-    "fastify-cors": "^6.0.2"
+    "fastify-cors": "^6.0.2",
+    "serverless-http": "^2.7.0"
   }
 }
