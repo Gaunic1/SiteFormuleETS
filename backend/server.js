@@ -26,10 +26,9 @@ fastify.register(require('fastify-cors'), (instance) => (req, callback) => {
     callback(new Error("Not allowed"));
 });
 
-fastify.route({
-    method: 'GET',
-    url: '/album/:id',
-    handler: async (request) => {
+fastify.get(
+    '/album/:id',
+    async (request) => {
         const id = request.params.id;
         const file = "./db/" + id + ".json"
       
@@ -61,6 +60,6 @@ fastify.route({
             return {error: true, msg: e};
         }
       }
-});
+);
 
 module.exports.handler = serverless(fastify);
