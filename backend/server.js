@@ -64,10 +64,15 @@ fastify.route({
 // Run the server!
 const start = async () => {
   try {
-    await fastify.listen(3000)
+    const PORT = Number(process.env.port) || 3000;
+    const HOST = process.env.host || "localhost";
+    await fastify.listen(PORT, HOST, async (err) => {
+      if (err) console.error(err);
+      console.log(`server listening on port ${PORT}`);
+    })
   } catch (err) {
     fastify.log.error(err)
     process.exit(1)
   }
 }
-start()
+start();
