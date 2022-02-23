@@ -2,6 +2,7 @@
 
 const fastify = require('fastify')({ logger: true });
 const GetGoogleDrive = require('drive-album');
+const path = require('path');
 const fs = require('fs');
 const serverless = require("serverless-http");
 
@@ -30,7 +31,7 @@ fastify.get(
     '/album/:id',
     async (request) => {
         const id = request.params.id;
-        const file = "./db/" + id + ".json"
+        const file = path.join(__dirname, "./db/" + id + ".json");
       
         const startDate = new Date();
       
@@ -62,4 +63,7 @@ fastify.get(
       }
 );
 
+fastify.use('/.netlify/functions/server', router);
+
+module.exports = fastify;
 module.exports.handler = serverless(fastify);
