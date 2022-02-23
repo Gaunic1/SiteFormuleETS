@@ -15,6 +15,7 @@
             :modules="modules">
             <swiper-slide v-for="img of db.images" :key="img.id">
 
+                <!-- IMAGE -->
                 <div class="bg-cover bg-center w-full h-full lazy-skeleton" 
                 :lazy-background="img.url">
                 </div>
