@@ -14,6 +14,7 @@
     "lazy-attr": "^1.2.3",
     "parallaxy-img": "^1.0.7",
     "prerender-spa-plugin": "^3.4.0",
+    "swiper": "^8.0.6",
     "three": "^0.136.0",
     "vue": "^3.0.0",
     "vue-2-3": "^1.0.0",

@@ -13,6 +13,7 @@ import Sponsors from '../views/Sponsors/Sponsors.vue'
 import Team from '../views/Team/Team.vue'
 import Videos from '../views/Videos/Videos.vue'
 import Photos from '../views/Photos/Photos.vue'
+import Album from '../views/Photos/Album.vue'
 
 
 
@@ -87,6 +88,15 @@ const routes = [
     component: Photos,
     meta: {
       title: "FormuleETS | Photos"
+    }
+  },
+  {
+    path: "/album/:id",
+    name: "Album",
+    props: true,
+    component: Album,
+    meta: {
+      title: "FormuleETS | Album"
     }
   },
 
