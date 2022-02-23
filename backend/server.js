@@ -4,7 +4,7 @@ const fastify = require('fastify')({ logger: true });
 const GetGoogleDrive = require('drive-album');
 const path = require('path');
 const fs = require('fs');
-const serverless = require("serverless-http");
+const awsLambdaFastify = require('aws-lambda-fastify')
 
 function TimeBetweenTwoDate(startDate, stopDate){
     const diff = (stopDate.getTime() - startDate.getTime()) / 1000;
@@ -63,7 +63,8 @@ fastify.get(
       }
 );
 
-fastify.use('/.netlify/functions/server', router);
+const proxy = awsLambdaFastify(fastify)
+// or
+// const proxy = awsLambdaFastify(app, { binaryMimeTypes: ['application/octet-stream'], serializeLambdaArguments: false /* default is true */ })
 
-module.exports = fastify;
-module.exports.handler = serverless(fastify);
+exports.handler = proxy;

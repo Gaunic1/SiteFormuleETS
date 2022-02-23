@@ -11,6 +11,7 @@
   "author": "yoannchb",
   "license": "MIT",
   "dependencies": {
+    "aws-lambda-fastify": "^2.1.0",
     "drive-album": "^1.0.0",
     "fastify": "^3.27.2",
     "fastify-cors": "^6.0.2",
