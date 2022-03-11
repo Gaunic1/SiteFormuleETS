@@ -74,34 +74,45 @@
     </div>
 </template>
 <script>
-import team2022 from "./teams/team-2022"
-import team2021 from "./teams/team-2021";
+import teams from "./teams/teams";
 import Aside from "../../components/Asidebar/Aside.vue";
 
 export default {
     name: "Team",
+    props: ["year"],
+    components: { Aside },
     data() {
         return {
-            teams: [team2022, team2021],
-            default: 0,
+            teams: teams,
+            team: {},
+            default: (new Date()).getFullYear().toString(),
 
             modal: false
         };
     },
-    computed: {
-        team() {
-            return this.teams[this.default];
+    watch: {
+        year(){
+            this.changeYear();
         }
     },
     mounted() {
         this.teams = this.teams.sort((a, b) => b.title - a.title);
+        this.changeYear();
     },
     methods: {
-        changeDefault(index = 0) {
-            this.default = index;
+        changeYear(){
+            const year = this.year ? this.year.toString() : this.default;
+            this.team = this.teams.find(e => e.title == year);
+        },
+        changeDefault(title) {
+            this.$router.push({
+                name: "TeamYear",
+                params: {
+                    year: title
+                }
+            })
         }
     },
-    components: { Aside }
 }
 </script>
 <style scoped>

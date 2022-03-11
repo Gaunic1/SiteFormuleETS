@@ -17,8 +17,8 @@
             </div>
             <nav>
                 <ul>
-                    <template v-for="(item, index) of itemsMenu" :key="item.title">
-                        <li class="cursor-pointer text-xl uppercase m-3" @click="clicked(index)">
+                    <template v-for="item of itemsMenu" :key="item.title">
+                        <li class="cursor-pointer text-xl uppercase m-3" @click="clicked(item.title)">
                             {{ beforeItem }} {{ item.title }}
                         </li>
                     </template>
@@ -52,8 +52,8 @@ export default {
         }
     },
     methods: {
-        clicked(index = 0){
-            this.$emit("clicked", index);
+        clicked(title){
+            this.$emit("clicked", title);
             this.close();
         },
         close(){

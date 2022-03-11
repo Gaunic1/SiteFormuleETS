@@ -4,12 +4,16 @@
       <!-- USELESS. JUST HERE TO DONT GO ON THE HEADER -->
      <div class="w-full h-16"></div>
 
-     <div class="flex flex-wrap h-full relative gap-10 justify-center gap-10">
+     <div class="flex flex-wrap h-full relative gap-10 justify-center">
+        <!-- LOADER -->
+        <i v-if="!loaded" class="mt-10 fa-solid fa-spinner text-red-500 text-7xl animate-spin"></i>
+
+        <!-- CONTENT -->
         <template v-for="item of db.albums.sort((a,b) => a.name - b.name)" :key="item.name">
 
-            <router-link :to="'/album/' + item.id">
+            <router-link :to="'/photos/' + item.id">
                 <div class="dark:text-white
-                calc-w bg-dark-mode border dark:border-white cursor-pointer"
+                calc-w border dark:bg-dark-mode bg-white dark:border-white cursor-pointer"
                 data-aos="zoom-in">
                     <div class="flex p-2 items-center relative w-full">
                         <i class="fas fa-image"></i>
@@ -33,9 +37,15 @@ import googleDriveMixin from "./google-drive-mixin";
 export default {
     name: "Photos",
     mixins: [googleDriveMixin],
+    data(){
+        return {
+            loaded: false
+        }
+    },
 
     async mounted(){
         await this.getDb(this.drive);
+        this.loaded = true;
     },
 
     methods: {

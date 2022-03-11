@@ -12,8 +12,8 @@ import Project from '../views/Project/Project.vue'
 import Sponsors from '../views/Sponsors/Sponsors.vue'
 import Team from '../views/Team/Team.vue'
 import Videos from '../views/Videos/Videos.vue'
-import Photos from '../views/Photos/Photos.vue'
-import Album from '../views/Photos/Album.vue'
+import AlbumView from '../views/Photos/AlbumView.vue'
+import PhotosView from '../views/Photos/PhotosView.vue'
 
 
 
@@ -30,6 +30,15 @@ const routes = [
     path: "/team",
     name: "Team",
     component: Team,
+    meta: {
+      title: "FormuleETS | Team"
+    }
+  },
+  {
+    path: "/team/:year",
+    name: "TeamYear",
+    component: Team,
+    props: true,
     meta: {
       title: "FormuleETS | Team"
     }
@@ -84,19 +93,19 @@ const routes = [
   },
   {
     path: "/media/photos",
-    name: "Photos",
-    component: Photos,
+    name: "AlbumView",
+    component: AlbumView,
     meta: {
       title: "FormuleETS | Photos"
     }
   },
   {
-    path: "/album/:id",
-    name: "Album",
+    path: "/photos/:id",
+    name: "PhotosView",
     props: true,
-    component: Album,
+    component: PhotosView,
     meta: {
-      title: "FormuleETS | Album"
+      title: "FormuleETS | Photos"
     }
   },
 

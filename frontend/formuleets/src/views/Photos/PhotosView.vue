@@ -1,7 +1,17 @@
 <template>
-    <div class="h-screen flex justify-center items-center">
+    <div class="h-screen flex justify-center items-center bg-no-repeat bg-center bg-cover bg-fixed"
+    lazy-background="/static/photos/fond.svg">
+
+        <!-- GO BACK -->
+        <div @click="$router.go(-1)"
+        class="cursor-pointer flex justify-center items-center p-3 dark:text-white text-xl absolute left-5 top-10">
+            <i class="fa-solid fa-door-open"></i>
+            <span class="ml-2">{{ $t('message.other.back') }}</span>
+        </div>
+
+        <!-- SLIDE -->
         <swiper
-            class="w-full h-screen-c m-20 mySwiper"
+            class="size"
             :slides-per-view="1"
             :navigation="true"
             :loop="true"
@@ -30,7 +40,7 @@ import googleDriveMixin from './google-drive-mixin'
 
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue/swiper-vue.js';
-import { Pagination, Autoplay } from "swiper";
+import { Pagination, Autoplay, Navigation } from "swiper";
 import "swiper/swiper-bundle.css";
 
 export default {
@@ -49,26 +59,31 @@ export default {
     },
     setup() {
       return {
-        modules: [Pagination, Autoplay],
+        modules: [Pagination, Autoplay, Navigation],
       };
     },
 }
 </script>
 
 <style scope>
-.h-screen-c{
-    height: calc(100vh - 10rem);
+.size{
+    width: 60rem;
+    height: 33rem;
+    max-width: 100vw;
 }
 
 @media only screen and (max-width: 728px) {
-  .h-screen-c{
-      margin: 0!important;
-      height: 80vw;
+  .size{
+      height: 20rem;
   }
 }
 
+.swiper-pagination-bullet{
+    background-color: #ffffff;
+}
+
 .swiper-pagination-bullet-active {
-  background-color: red;
+  background-color: red!important;
 }
 
 .swiper-button-next,

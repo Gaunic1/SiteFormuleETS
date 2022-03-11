@@ -1,262 +1,127 @@
 <template>
   <div>
     <!-- PRESENTATION -->
-    <div class="bg-first w-full flex flex-wrap overflow-x-hidden bg-center bg-fixed bg-cover dark:bg-dark-mode bg-white"
-    lazy-background="/static/home/fond.svg">
-
-      <!-- TRIANGLE bg-gradient-to-tr from-red-600 
-      to-dark-mode -->
-      <!-- <div class="bg-triangle absolute top-0 left-0 w-full h-screen z-10 bg-red-700"></div> -->
-
-      <!-- TITLE -->
-      <div class="flex-initial h-screen w-full lg:w-1/3 flex flex-col justify-center p-10 z-20 text-dark-mode-2" data-aos="fade-right">
-        <!-- <h1 class="dark:text-white font-normal tracking-wider text-5xl italic text-center lg:text-8xl lg:text-left">
-          {{ text.titre }}
-            <span class="text-red-600 font-bold">
-              {{ text.ETS }}
-            </span>
-          </h1> -->
-        <img src="/static/home/logo-fets.png" alt="logo" class="w-full logow -m-2">
-        <p class="mt-5 dark:text-white text-center lg:text-left">{{ $t('message.home.presentation') }}</p>
+    <div
+      class="bg-first w-full flex flex-wrap overflow-x-hidden bg-center bg-fixed bg-cover bg-no-repeat
+       dark:bg-dark-mode bg-white"
+      lazy-background="/static/home/fond.svg"
+    >
+     <div class="flex flex-col lg:flex-row justify-center items-center h-screen">
+        <!-- TITLE -->
+      <div
+        class="flex-initial lg:h-screen w-full lg:w-1/3 flex flex-col justify-center p-10 z-20 text-dark-mode-2"
+        data-aos="fade-right" :class="isMobile ? 'items-center' : ''"
+      >
+        <img :src=" isMobile ? '/static/home/logo-fets-mobile.png' : '/static/home/logo-fets.png'" 
+        alt="logo" class="w-full logow -m-2" />
+        <p
+          class="mt-7 dark:text-white text-center lg:text-left"
+        >{{ $t('message.home.presentation') }}</p>
       </div>
 
       <!-- ANIMATED FORMULE -->
-      <div class="flex-initial h-screen w-2/3 justify-center items-center hidden lg:flex z-0">
-        <img id="formule" src="/static/home/f1.png" data-aos="fade-left" alt="Formule" class="z-0 w-4/5 ml-20">
+      <div class="flex-initial lg:h-screen w-full lg:w-2/3 justify-center items-center flex z-0">
+        <img
+          id="formule"
+          src="/static/home/f1.png"
+          data-aos="fade-left"
+          alt="Formule"
+          class="z-0 w-4/5 lg:ml-20"
+        />
       </div>
+     </div>
 
-      <!-- PART2 -->
+      <!-- MAIN CONTENT -->
       <div class="flex-initial w-full z-10 bg-first overflow-x-hidden bg-white dark:bg-dark-mode">
+        <hr lazy-animation="zoomin" lazy-reset class="border-red-600 m-3" />
 
-        <template v-for="(item, index) of home" :key="item.text">
+        <!-- PARALLAX LEFT -->
+        <ParallaxHome
+          :item="{text: 'message.home.aboutUs', image: '/static/home/fond3.jpg'}"
+          :isMobile="isMobile"
+          position="left"
+        ></ParallaxHome>
 
-          <!-- BORDER -->
-          <hr lazy-animation="zoomin" lazy-reset class="border-red-600 m-3">
+        <hr lazy-animation="zoomin" lazy-reset class="border-red-600 m-3" />
 
-          <!-- SPONSORS -->
-          <template v-if="index == 1">
-            <section class="w-full flex-col flex justify-center items-center h-screen p-10
-            bg-cover bg-center bg-fixed" 
-            lazy-background="/static/home/fond2.svg">
+        <!-- SPONSORS -->
+        <SponsorsHome v-if="!isMobile" :sponsors="sponsors"></SponsorsHome>
 
-              <h1 class="text-red-600 text-4xl lg:text-5xl m-10 mb-20
-                  font-bold italic tracking-wider text-shadow z-10 uppercase"
-                  data-aos="zoom-in">
-                    {{ $t("message.header.sponsors") }}
-              </h1>
+        <hr v-if="!isMobile" lazy-animation="zoomin" lazy-reset class="border-red-600 m-3" />
 
-                  <div class="w-full flex h-48" style="margin-left: -100vh"
-                  parallaxy-x 
-                  parallaxy-overflow-x 
-                  parallaxy-speed-x="0.65"
-                  parallaxy-inverted-x
-                  parallaxy-scale="1">
+        <!-- PARALLAX RIGHT -->
+        <ParallaxHome
+          :item="{text: 'message.home.project', image: '/static/home/formuleETS.jpg'}"
+          :isMobile="isMobile"
+          position="right"
+        ></ParallaxHome>
 
-                    <template v-for="sponsor of sponsors.diamond" :key="sponsor.src">
-                      <img :src="sponsor.imageSrc" alt="Sponsor" class="h-full">
-                    </template>
-
-                  </div>
-
-                  <div class="w-full flex h-48" style="margin-left: -100vh"
-                  parallaxy-x 
-                  parallaxy-overflow-x 
-                  parallaxy-speed-x="0.65"
-                  parallaxy-scale="1">
-
-                    <template v-for="sponsor of otherDiamond" :key="sponsor.imageSrc">
-                      <img :src="sponsor.imageSrc" alt="Sponsor" class="h-full">
-                    </template>
-
-                  </div>
-            </section>
-
-            <hr lazy-animation="zoomin" lazy-reset class="border-red-600 m-3">
-          </template>
-
-          <!-- CONTENT GENERATION -->
-          <section class="flex justify-center items-center
-           flex-col flex-wrap w-full min-h-screen relative overflow-hidden">
-
-            <img :src="item.image" class="hidden lg:block w-full" alt="Image" 
-            parallaxy-y parallaxy-scale="1" parallaxy-speed-y="0.65" parallaxy-overflow-y
-            parallaxy-breakpoint="(max-width: 1024px)" v-if="!isMobile">
-
-            <article class="h-full lg:w-2/5 text-justify p-10 lg:absolute dark:bg-dark-mode bg-white 
-            border-black dark:border-white flex justify-center flex-col top-0"
-            :class="index%2 != 0 ? 'right-0 lg:border-l' : 'left-0 lg:border-r'">
-
-              <h1 class="text-red-600 text-5xl m-3
-              font-bold italic tracking-wider text-shadow z-10 uppercase"
-              data-aos="zoom-in"
-              :class="index%2 != 0 ? 'text-right' : 'text-left'">
-                {{ $t(item.text + '.title') }}
-              </h1>
-
-              <p class="mt-10 mb-10 text-justify text-black dark:text-white text-lg" 
-              v-html="$t(item.text + '.text')" :data-aos="index%2 == 0 ? 'fade-right' : 'fade-left'"></p>
-            </article>
-
-          </section>
-
-        </template>
+        <hr lazy-animation="zoomin" lazy-reset class="border-red-600 m-3" />
 
         <!-- CONTACT US -->
-        <hr lazy-animation="zoomin" lazy-reset class="border-red-600 m-3">
-
-        <section class="min-h-screen dark:text-white flex flex-col md:flex-row justify-center items-center 
-        bg-cover bg-center bg-fixed"
-        lazy-background="/static/home/fond.svg">
-
-          <h1 class="text-red-600 text-5xl m-10 mb-20 w-full md:w-1/3
-              font-bold italic tracking-wider text-shadow z-10 p-5 text-center uppercase"
-              data-aos="fade-right">
-                {{ $t("message.header.contact-us") }}
-          </h1>
-
-          <div class="w-full md:w-2/3 flex justify-center items-center text-black">
-
-            <p v-if="formMessage" 
-            class="text-xl"
-            :class="formMessage.type == 'error' ? 'text-red-500' : 'text-green-500'">
-              {{ formMessage.message }}
-            </p>
-
-            <form name="contact" 
-            data-aos="fade-left"
-            class="flex flex-col justify-center items-center w-full"
-            method="POST" 
-            @submit="submitForm" 
-            action="/pages/success"
-            data-netlify="true" 
-            data-netlify-honeypot="bot-field"
-            v-if="!formMessage">
-              <input type="hidden" name="form-name" value="contact" />
-
-              <input v-model="form.name" class="p-5 m-5 w-3/4 h-10 border border-dark-mode" type="text" name="name" placeholder="Name"/>
-              <input v-model="form.email" class="p-5 m-5 w-3/4 h-10 border border-dark-mode" type="email" name="email" placeholder="Email"/>
-              <input v-model="form.subject" class="p-5 m-5 w-3/4 h-10 border border-dark-mode" type="text" name="subject" placeholder="Subject"/>
-              <textarea v-model="form.message" class="p-5 m-5 w-3/4 h-32 border border-dark-mode" name="message" placeholder="Message"></textarea>
-
-              <div class="flex items-end justify-end md:w-3/4">
-                <button class="bg-red-600 p-3 pl-10 pr-10 text-white disabled:opacity-50" 
-                :disabled="isDisabled" type="submit">Send</button>
-              </div>
-            </form>
-          </div>
-        </section>
-
+        <FormContact></FormContact>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import home from "./home"
 import sponsors from "../Sponsors/sponsors";
 import phoneMixin from '../../mixins/phone-mixin';
+import ParallaxHome from "../../components/home/ParallaxHome.vue";
+import SponsorsHome from "../../components/home/SponsorsHome.vue";
+import FormContact from "../../components/Form/FormContact.vue";
 
 export default {
-    name: "Home",
-    mixins: [phoneMixin],
-    data() {
-        return {
-            home: home,
-            sponsors: sponsors,
-            text: {
-                titre: "Formule",
-                ETS: "ETS",
-            },
-            form: {
-              email: null,
-              name: null,
-              subject: null,
-              message: null
-            },
-            formMessage: null
-        };
-    },
-    computed: {
-      otherDiamond(){
-        const list = JSON.parse(JSON.stringify(this.sponsors.diamond));
-        const half = Math.ceil(list.length / 2);    
-
-        const firstHalf = list.splice(0, half);
-        const secondHalf = list.splice(-half);
-
-        return secondHalf.concat(firstHalf);
+  name: "Home",
+  mixins: [phoneMixin],
+  components: { ParallaxHome, FormContact, SponsorsHome },
+  data() {
+    return {
+      sponsors: sponsors,
+      text: {
+        titre: "Formule",
+        ETS: "ETS",
       },
-      isDisabled(){
-        for(const key of Object.keys(this.form)){
-          if(!this.form[key] || this.form[key].trim() == ""){
-            return true;
-          }
-        }
-        return false;
+    };
+  },
+  created() {
+    this.$data.mobileSize = "1024px";
+    document.addEventListener("scroll", this.scrollFormule);
+  },
+  beforeUnmount() {
+    document.removeEventListener("scroll", this.scrollFormule);
+  },
+  methods: {
+    scrollFormule() {
+      const scroll = window.scrollY ? window.scrollY : document.body.scrollTop;
+      if (scroll < window.innerHeight) {
+        const formule = document.querySelector("#formule");
+        if (formule)
+          formule.style = `transition: none!important; transform: translate(${-scroll}px, ${scroll}px)`;
+        else
+          document.removeEventListener("scroll", this.scrollFormule);
       }
-    },
-    created() {
-        this.$data.mobileSize = "1024px";
-        document.addEventListener("scroll", this.scrollFormule);
-    },
-    beforeUnmount() {
-        document.removeEventListener("scroll", this.scrollFormule);
-    },
-    methods: {
-        submitForm(e){
-          e.preventDefault();
-            let myForm = document.querySelector('form');
-            let formData = new FormData(myForm);
-
-            fetch("/", {
-              method: "POST",
-              headers: { "Content-Type": "application/x-www-form-urlencoded" },
-              body: new URLSearchParams(formData).toString(),
-            })
-            .then(() => {
-              this.form = {
-                email: null,
-                name: null,
-                subject: null,
-                message: null
-              }
-              this.formMessage = {type: "sucess", message: "Form successfully submitted"};
-            })
-            .catch((error) => this.formMessage = {type: "error", message: error});
-        },
-        scrollFormule() {
-            const scroll = window.scrollY ? window.scrollY : document.body.scrollTop;
-            if (scroll < window.innerHeight) {
-                const formule = document.querySelector("#formule");
-                if (formule)
-                    formule.style = `transition: none!important; transform: translate(${-scroll}px, ${scroll}px)`;
-                else
-                    document.removeEventListener("scroll", this.scrollFormule);
-            }
-        }
     }
+  },
 }
 </script>
 
 <style scoped>
-.bg-triangle{
+.h-screen-div{
+  height: 50vh;
+}
+
+.bg-triangle {
   clip-path: polygon(0 0, 60vw 100vh, 0 100vh);
 }
 
-.logow{
+.logow {
   min-width: 40vw;
 }
 
-/* .text-shadow{
-  text-shadow: 4px 4px 0px #000;
-}
-
-.dark .text-shadow{
-  text-shadow: 4px 4px 0px #fff;
-} */
-
 *:focus {
-    outline: none;
+  outline: none;
 }
 
 .truncate-mul::before {
