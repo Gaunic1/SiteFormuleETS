@@ -28,6 +28,7 @@
           data-aos="fade-left"
           alt="Formule"
           class="z-0 w-full"
+          style="will-change: transform;"
         />
       </div>
      </div>
