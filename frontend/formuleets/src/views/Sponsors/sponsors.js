@@ -9,39 +9,48 @@ const sponsors = {
     "diamond": [
         {
             "src": "https://www.3mcanada.ca/3M/fr_CA/company-ca/",
-            "imageSrc": "/static/sponsors/3M.png"
+            "imageSrc": "/static/sponsors/3M.png",
+            "whiteVersion": "/static/sponsors/3M-white.png"
         },
         {
             "src": "http://www.avior.ca/index_fr.html",
-            "imageSrc": "/static/sponsors/Avior.png"
+            "imageSrc": "/static/sponsors/Avior.png",
+            "whiteVersion": "/static/sponsors/Avior-white.png"
         },
         {
             "src": "http://www.blaxes.com/",
-            "imageSrc": "/static/sponsors/Blaxes.png"
+            "imageSrc": "/static/sponsors/Blaxes.png",
+            "whiteVersion": "/static/sponsors/Blaxes-white.png"
         },
-        {
-            "src": "http://www.diacarb.com/",
-            "imageSrc": "/static/sponsors/Diacarb.png"
-        },
+        //Plus notre sponsor en 2022
+        // {
+        //     "src": "http://www.diacarb.com/",
+        //     "imageSrc": "/static/sponsors/Diacarb.png"
+        // },
         {
             "src": "https://www.etsmtl.ca/",
-            "imageSrc": "/static/sponsors/ETS.png"
+            "imageSrc": "/static/sponsors/ETS.png",
+            "whiteVersion": "/static/sponsors/ETS-white.png"
         },
         {
             "src": "http://fddaeets.com/",
-            "imageSrc": "/static/sponsors/FDDAEETS.png"
+            "imageSrc": "/static/sponsors/FDDAEETS.png",
+            "whiteVersion": "/static/sponsors/FDDAEETS-white.png"
         },
         {
             "src": "https://www.etsmtl.ca/fdets/Accueil",
-            "imageSrc": "/static/sponsors/FDETS.png"
+            "imageSrc": "/static/sponsors/FDETS.png",
+            "whiteVersion": "/static/sponsors/FDETS-white.png"
         },
         {
             "src": "https://www.kisssoft.ch/english/home/index.php",
-            "imageSrc": "/static/sponsors/KISSsoft.png"
+            "imageSrc": "/static/sponsors/KISSsoft.png",
+            "whiteVersion": "/static/sponsors/KISSsoft-white.png"
         },
         {
             "src": "https://mern.gouv.qc.ca/",
-            "imageSrc": "/static/sponsors/MERN.png"
+            "imageSrc": "/static/sponsors/MERN.png",
+            "whiteVersion": "/static/sponsors/MERN-white.png"
         },
         {
             "src": "https://www.multimatic.com/",
@@ -53,15 +62,18 @@ const sponsors = {
         },
         {
             "src": "https://www.speedgoat.com/",
-            "imageSrc": "/static/sponsors/Speedgoat.png"
+            "imageSrc": "/static/sponsors/Speedgoat.png",
+            "whiteVersion": "/static/sponsors/Speedgoat-white.png"
         },
         {
             "src": "http://supalloy.com/fr/",
-            "imageSrc": "/static/sponsors/Technologie+Superieure+D%27alliage.png"
+            "imageSrc": "/static/sponsors/Technologie+Superieure+D%27alliage.png",
+            "whiteVersion": "/static/sponsors/Technologie+Superieure+D_alliage-white.png"
         },
         {
             "src": "http://usinagevilleneuve.com/",
-            "imageSrc": "/static/sponsors/Usinage+Villeneuve.png"
+            "imageSrc": "/static/sponsors/Usinage+Villeneuve.png",
+            "whiteVersion": "/static/sponsors/Usinage+Villeneuve-white.png"
         },
     ],
 

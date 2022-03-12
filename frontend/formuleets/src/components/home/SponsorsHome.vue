@@ -18,7 +18,9 @@
             parallaxy-scale="1"
         >
             <template v-for="sponsor of sponsors.diamond" :key="sponsor.src">
-                <img :src="sponsor.imageSrc" alt="Sponsor" class="h-full" />
+                <img :src="isDarModeActually ? 
+                (sponsor.whiteVersion ? sponsor.whiteVersion : sponsor.imageSrc) 
+                : sponsor.imageSrc" alt="Sponsor" class="h-full" />
             </template>
         </div>
 
@@ -31,7 +33,9 @@
             parallaxy-scale="1"
         >
             <template v-for="sponsor of otherDiamond" :key="sponsor.imageSrc">
-                <img :src="sponsor.imageSrc" alt="Sponsor" class="h-full" />
+                <img :src="isDarModeActually ? 
+                (sponsor.whiteVersion ? sponsor.whiteVersion : sponsor.imageSrc) 
+                : sponsor.imageSrc" alt="Sponsor" class="h-full" />
             </template>
         </div>
     </section>
@@ -40,12 +44,39 @@
 <script>
 export default {
     name: "SponsorsHome",
+    data(){
+        return {
+            darkModeEnabled: this.verifyDarkMode(),
+            observer: null,
+        }
+    },
     props: {
         sponsors: {
             required: true
         }
     },
+    beforeUnmount(){
+        this.observer.disconnect();
+    },
+    mounted(){
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                if (mutation.type === "attributes") {
+                    this.darkModeEnabled = this.verifyDarkMode();
+                }
+            });
+        });
+
+        observer.observe(document.documentElement, {
+            attributes: true //configure it to listen to attribute changes
+        });
+
+        this.observer = observer;
+    },
     computed: {
+        isDarModeActually(){
+            return this.darkModeEnabled;
+        },
         otherDiamond() {
             const list = JSON.parse(JSON.stringify(this.sponsors.diamond));
             const half = Math.ceil(list.length / 2);
@@ -53,6 +84,11 @@ export default {
             const secondHalf = list.splice(-half);
             return secondHalf.concat(firstHalf);
         },
+    },
+    methods: {
+        verifyDarkMode(){
+            return document.documentElement.classList.contains('dark');
+        }
     }
 }
 </script>

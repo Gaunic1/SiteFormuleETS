@@ -5,7 +5,7 @@
         lazy-background="/static/home/fond.svg"
     >
         <h1
-            class="text-red-600 text-5xl m-10 mb-20 w-full md:w-1/3 font-bold italic tracking-wider text-shadow z-10 p-5 text-center uppercase"
+            class="text-red-600 text-4xl m-10 mb-20 w-full md:w-1/3 font-bold italic tracking-wider text-shadow z-10 p-5 text-center uppercase"
             data-aos="fade-right"
         >{{ $t("message.header.contact-us") }}</h1>
 
@@ -59,7 +59,7 @@
 
                 <div class="flex items-end justify-end md:w-3/4">
                     <button
-                        class="bg-red-600 p-3 pl-10 pr-10 text-white disabled:opacity-50"
+                        class="bg-red-600 p-3 pl-10 pr-10 text-white disabled:opacity-50 mb-5"
                         :disabled="isDisabled"
                         type="submit"
                     >Send</button>

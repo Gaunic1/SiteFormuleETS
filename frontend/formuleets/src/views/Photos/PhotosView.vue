@@ -4,7 +4,8 @@
 
         <!-- GO BACK -->
         <div @click="$router.go(-1)"
-        class="cursor-pointer flex justify-center items-center p-3 dark:text-white text-xl absolute left-5 top-10">
+        class="cursor-pointer flex justify-center items-center p-3 animate-pulse
+        dark:text-white text-xl absolute left-5 top-10">
             <i class="fa-solid fa-door-open"></i>
             <span class="ml-2">{{ $t('message.other.back') }}</span>
         </div>

@@ -8,7 +8,7 @@
 
         <!-- TEAM DISPLAY -->
         <section class="flex-1 relative">
-            <div class="absolute top-12 left-5 flex dark:text-white justify-center 
+            <div class="absolute top-12 left-5 flex dark:text-white justify-center animate-pulse
             items-center p-3 text-2xl cursor-pointer z-10" @click="modal = true">
                 <p class="mr-3">{{ $t('message.team.teams') }}</p>
                 <i class="fa-solid fa-circle-arrow-right"></i>

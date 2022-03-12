@@ -31,7 +31,7 @@
             :class="position == 'right' != 0 ? 'right-0 lg:border-l' : 'left-0 lg:border-r'"
         >
             <h1
-                class="text-red-600 text-5xl m-3 font-bold italic tracking-wider text-shadow z-10 uppercase text-center"
+                class="text-red-600 text-4xl m-3 font-bold italic tracking-wider text-shadow z-10 uppercase text-center"
                 data-aos="zoom-in"
                 :class="position == 'right' != 0 ? 'lg:text-right' : 'lg:text-left'"
             >{{ $t(item.text + '.title') }}</h1>

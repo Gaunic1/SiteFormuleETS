@@ -10,9 +10,12 @@
         lazy-background="/static/project/curve_line.svg">
 
             <!-- AUTO SCROLL -->
-            <button class="p-3 underline text-red-500 absolute top-20 left-5"
+            <button class="p-3 absolute top-20 left-5 animate-pulse"
             @click="autoScroll()">
-                {{ $t(autoMsg) }}
+                <p class="text-red-500">
+                    <i class="fa-solid fa-play mr-2"></i>
+                    {{ $t(autoMsg) }}
+                </p>
             </button>
 
             <!-- TEXT -->

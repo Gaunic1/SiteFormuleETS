@@ -6,27 +6,28 @@
        dark:bg-dark-mode bg-white"
       lazy-background="/static/home/fond.svg"
     >
-     <div class="flex flex-col lg:flex-row justify-center items-center h-screen">
+     <div class="flex flex-col md:flex-row justify-center items-center h-screen">
         <!-- TITLE -->
       <div
-        class="flex-initial lg:h-screen w-full lg:w-1/3 flex flex-col justify-center p-10 z-20 text-dark-mode-2"
+        class="flex-1 md:h-screen w-full
+        md:w-1/2 flex flex-col justify-end md:justify-center items-center z-20 text-dark-mode-2 p-10"
         data-aos="fade-right" :class="isMobile ? 'items-center' : ''"
       >
-        <img :src=" isMobile ? '/static/home/logo-fets-mobile.png' : '/static/home/logo-fets.png'" 
+        <img :src="isMobile ? '/static/home/logo-fets-mobile.png' : '/static/home/logo-fets.png'" 
         alt="logo" class="w-full logow -m-2" />
         <p
-          class="mt-7 dark:text-white text-center lg:text-left"
+          class="mt-7 dark:text-white text-center md:text-left"
         >{{ $t('message.home.presentation') }}</p>
       </div>
 
       <!-- ANIMATED FORMULE -->
-      <div class="flex-initial lg:h-screen w-full lg:w-2/3 justify-center items-center flex z-0">
+      <div class="flex-1 md:h-screen w-full md:w-1/3 justify-center md:justify-end items-start md:items-center flex z-0">
         <img
           id="formule"
-          src="/static/home/f1.png"
+          src="/static/home/formuleets-nobg2.png"
           data-aos="fade-left"
           alt="Formule"
-          class="z-0 w-4/5 lg:ml-20"
+          class="z-0 w-full"
         />
       </div>
      </div>
@@ -108,26 +109,11 @@ export default {
 </script>
 
 <style scoped>
-.h-screen-div{
-  height: 50vh;
-}
-
-.bg-triangle {
-  clip-path: polygon(0 0, 60vw 100vh, 0 100vh);
-}
-
 .logow {
   min-width: 40vw;
 }
 
 *:focus {
   outline: none;
-}
-
-.truncate-mul::before {
-  content: "...";
-  position: absolute;
-  bottom: 0;
-  right: 0;
 }
 </style>
