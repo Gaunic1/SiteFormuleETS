@@ -51,14 +51,14 @@
               <i @click="displayMenuPhone()" class="fas fa-bars cursor-pointer text-3xl dark:text-white"></i>
 
               <div data-aos="fade-right" v-if="showMenu" 
-              class="overflow-y-auto p-5 fixed flex justify-center items-center w-full h-screen
+              class="overflow-y-auto p-5 fixed flex justify-center items-center w-full h-full
               bg-white dark:bg-dark-mode top-0 left-0 z-50">
 
                 <!-- close -->
                 <i class="fas fa-times dark:text-white text-3xl absolute right-5 top-3 cursor-pointer"
                  @click="displayMenuPhone(false)"></i>
             
-                <ul class="list-none dark:text-white text-center max-h-screen p-5">
+                <ul class="list-none dark:text-white text-center p-5 absolute top-10">
                     <template v-for="item of menu" :key="item.name">
                         <!-- DROPDOWN -->
                         <li v-if="item.type == 'dropdown'" class="dropdown h-10 m-4 flex justify-center">
