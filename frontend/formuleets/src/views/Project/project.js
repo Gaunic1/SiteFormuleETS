@@ -13,10 +13,10 @@ const project = {
     images: {
         directory: "/static/formule/",
 
-        startWith: "Chassis with dynamics_animations.133_",
-        padStart: true,
+        startWith: "Render",
+        padStart: false,
 
-        nbImgs: 280,
+        nbImgs: 938,
         extension: "png"
     },
 
@@ -24,19 +24,34 @@ const project = {
     //always start  at 1
     text: [
         {
-            title: "message.project.text.1.title",
-            label: "message.project.text.1.label",
+            title: "message.project.text.chassis.title",
+            label: "message.project.text.chassis.label",
             imageCount: 1,
         },
         {
-            title: "message.project.text.2.title",
-            label: "message.project.text.2.label",
-            imageCount: 100,
+            title: "message.project.text.chassis.title",
+            label: "message.project.text.chassis.label",
+            imageCount: 125,
         },
         {
-            title: "message.project.text.3.title",
-            label: "message.project.text.3.label",
-            imageCount: 200,
+            title: "message.project.text.power_drive.title",
+            label: "message.project.text.power_drive.label",
+            imageCount: 285,
+        },
+        {
+            title: "message.project.text.dynamics.title",
+            label: "message.project.text.dynamics.label",
+            imageCount: 465,
+        },
+        {
+            title: "message.project.text.electronics.title",
+            label: "message.project.text.electronics.label",
+            imageCount: 630,
+        },
+        {
+            title: "message.project.text.aerodynamics.title",
+            label: "message.project.text.aerodynamics.label",
+            imageCount: 790,
         },
     ]
 }

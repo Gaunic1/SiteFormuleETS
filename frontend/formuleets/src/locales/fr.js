@@ -87,17 +87,25 @@ const fr = {
         "label": "Faites défiler vers le bas pour lancer l'animation et voir notre prototype en 3D."
       },
       "text": {
-        "1": {
-          "title": "Formule",
-          "label": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+        "chassis": {
+          "title": "Châssis",
+          "label": "Monocoque en fibre de carbone développée autour du pilote. <br> Structure en cœur de nid d’abeille optimisée pour la sécurité du pilote, la rigidité de la plateforme et sa légèreté. <br> Méthode de fabrication précise et efficace."
         },
-        "2": {
-          "title": "Formule 2",
-          "label": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+        "power_drive": {
+          "title": "Motopropulseur",
+          "label": "Uprights conçus sur mesure et usinés sur machine 5-axes CNC à l’interne. <br> Assemblage de boîte d’engrenage planétaire. <br> Système de refroidissement au liquide complet."
         },
-        "3": {
-          "title": "Formule 3",
-          "label": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+        "dynamics": {
+          "title": "Dynamique du véhicule",
+          "label": "Amortisseurs sur mesure découplés de roulis (roll). <br> Conception d’étrier de freins sur-mesure avant/arrière à pistons multiples. <br> Système à tiges à traction à l’avant (pull rod) et de tiges poussantes à l’arrière (push rod)."
+        },
+        "electronics": {
+          "title": "Électronique",
+          "label": "<b>Conçu par Formule ETS :</b> <br> - Accumulateur <br> - Module de gestion du courant (Power Management Unit) <br><br> Unité de contrôle du véhicule (VCU) programmée. <br> Dessins 3D complets en CAO des harnais bas voltage (LV), haut voltage (HV) et des composantes électriques."
+        },
+        "aerodynamics": {
+          "title": "Aérodynamique",
+          "label": "Assemblage aérodynamique cohésif et efficace. <br> Assemblage exploitant l’effet du sol. <br> Système de réduction de trainée à double action."
         }
       }
     },

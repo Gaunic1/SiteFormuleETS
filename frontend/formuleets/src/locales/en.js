@@ -87,17 +87,25 @@ const en = {
         "label": "Scroll down to start the animation and see our prototype in 3D."
       },
       "text": {
-        "1": {
-          "title": "Formule",
-          "label": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+        "chassis": {
+          "title": "Chassis",
+          "label": "Carbon fibre monocoque designed around the driver. <br> Honeycomb core structure optimized for driver safety, chassis rigidity and low mass. <br> Precise and efficient manufacturing method."
         },
-        "2": {
-          "title": "Formule 2",
-          "label": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+        "power_drive": {
+          "title": "Power & Drive",
+          "label": "In-house designed uprights and manufactured on 5-axis CNC. <br> Planetary gearbox assembly. <br> Complete liquid cooling system."
         },
-        "3": {
-          "title": "Formule 3",
-          "label": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book"
+        "dynamics": {
+          "title": "Dynamics",
+          "label": "Custom decoupled roll dampers. <br> Conception of custom front/rear brake calipers. <br> Front pull rods and rear push rod system."
+        },
+        "electronics": {
+          "title": "Electronics",
+          "label": "<b>Formule ETS Designed :</b> <br> - Accumulator <br> -PMU (power Management Unit) <br><br> Programmed Vehicle Control Unit (VCU). <br> Full 3D CAD drawing of Low Voltage (LV), High Voltage (HV) harness and electrical components."
+        },
+        "aerodynamics": {
+          "title": "Aerodynamics",
+          "label": "Efficient and cohesive packaging. <br> Aerodynamic package exploiting ground effect. <br> Double action drag reduction system (DRS)."
         }
       }
     },

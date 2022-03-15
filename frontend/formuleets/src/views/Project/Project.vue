@@ -6,7 +6,7 @@
         </div>
 
         <section class="dark:bg-dark-mode h-screen sticky top-0 w-full flex 
-        justify-center flex-col md:flex-row bg-cover bg-center overflow-x-hidden" 
+        justify-center flex-col tb:flex-row bg-cover bg-center overflow-x-hidden" 
         lazy-background="/static/project/curve_line.svg">
 
             <!-- AUTO SCROLL -->
@@ -19,17 +19,17 @@
             </button>
 
             <!-- TEXT -->
-            <article class="flex-initial md:w-1/2 md:h-full h-1/2 w-full flex items-center justify-center flex-col text-center p-5">
+            <article class="flex-initial tb:w-1/2 tb:h-full h-1/2 w-full flex items-center justify-center flex-col text-center p-5">
                 <h2 v-if="text.title" class="text-3xl font-bold text-red-500 uppercase slide-left">{{ $t(text.title) || text.title }}</h2>
-                <p v-if="text.label" class="dark:text-white mt-5 slide-left delay-300">{{ $t(text.label) || text.label }}</p>
+                <p v-if="text.label" class="dark:text-white mt-5 slide-left delay-300" v-html="$t(text.label) || text.label"></p>
                 <i v-if="this.count == 0" class="fas fa-chevron-down dark:text-white mt-5 fade-arrow"></i>
                 <i v-if="this.count == 0" class="fas fa-chevron-down dark:text-white -mt-2 fade-arrow"></i>
             </article>
 
             <!-- FORMULE -->
-            <article class="md:h-full flex-initial flex justify-center items-center transition-all duration-1000 md:w-1/2" 
-            :class="count != countToNotDisplay ? 'w-full md:w-1/2' : 'absolute'">
-                <img id="3d-model" v-if="img" :src="img" alt="3D model" class="pointer-events-none w-full md:mt-10"
+            <article class="tb:h-full flex-initial flex justify-center items-center transition-all duration-1000 tb:w-1/2" 
+            :class="count != countToNotDisplay ? 'w-full tb:w-1/2' : 'absolute'">
+                <img id="3d-model" v-if="img" :src="img" alt="3D model" class="pointer-events-none w-full tb:mt-10"
                 :class="count != countToNotDisplay ? 'opacity-100 transition-all duration-1000' : 'opacity-0 z-0'">
             </article>
 
@@ -59,7 +59,7 @@ export default {
             autoScrollActivate: false,
 
             nbPreloaded: 0,
-            preloadCount: 10,
+            preloadCount: 20,
 
             speed: 1,
 

@@ -6,30 +6,32 @@
        dark:bg-dark-mode bg-white"
       lazy-background="/static/home/fond.svg"
     >
-     <div class="flex flex-col md:flex-row justify-center items-center h-screen">
-        <!-- TITLE -->
-      <div
-        class="flex-1 md:h-screen w-full
-        md:w-1/2 flex flex-col justify-end md:justify-center items-center z-20 text-dark-mode-2 p-10"
-        data-aos="fade-right" :class="isMobile ? 'items-center' : ''"
-      >
-        <img :src="isMobile ? '/static/home/logo-fets-mobile.png' : '/static/home/logo-fets.png'" 
-        alt="logo" class="w-full logow -m-2" />
-        <p
-          class="mt-7 dark:text-white text-center md:text-left"
-        >{{ $t('message.home.presentation') }}</p>
-      </div>
+     <div class="h-screen overflow-hidden">
+       <div class="flex flex-col tb:flex-row justify-center items-center min-h-screen">
+          <!-- TITLE -->
+        <div
+          class="flex-1 tb:h-screen w-full
+          tb:w-1/2 flex flex-col justify-end tb:justify-center items-center z-20 text-dark-mode-2 p-10"
+          data-aos="fade-right" :class="isMobile ? 'items-center' : ''"
+        >
+          <img :src="isMobile ? '/static/home/logo-fets-mobile.png' : '/static/home/logo-fets.png'" 
+          alt="logo" class="w-full logow -m-2" />
+          <p
+            class="mt-7 dark:text-white text-center tb:text-left"
+          >{{ $t('message.home.presentation') }}</p>
+        </div>
 
-      <!-- ANIMATED FORMULE -->
-      <div class="flex-1 md:h-screen w-full md:w-1/3 justify-center md:justify-end items-start md:items-center flex z-0">
-        <img
-          id="formule"
-          src="/static/home/formuleets-nobg2.png"
-          data-aos="fade-left"
-          alt="Formule"
-          class="z-0 w-full"
-          style="will-change: transform;"
-        />
+        <!-- ANIMATED FORMULE -->
+        <div class="flex-1 tb:h-screen w-full tb:w-1/3 justify-center tb:justify-end items-start tb:items-center flex z-0">
+          <img
+            id="formule"
+            src="/static/home/formuleets-nobg2.png"
+            data-aos="fade-left"
+            alt="Formule"
+            class="z-0 w-full"
+            style="will-change: transform;"
+          />
+        </div>
       </div>
      </div>
 

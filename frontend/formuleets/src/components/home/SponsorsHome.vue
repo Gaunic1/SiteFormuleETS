@@ -9,7 +9,7 @@
         >{{ $t("message.header.sponsors") }}</h1>
 
         <div
-            class="w-full flex h-48"
+            class="w-full flex h-36"
             style="margin-left: -100vh"
             parallaxy-x
             parallaxy-overflow-x
@@ -25,7 +25,7 @@
         </div>
 
         <div
-            class="w-full flex h-48"
+            class="w-full flex h-36"
             style="margin-left: -100vh"
             parallaxy-x
             parallaxy-overflow-x

@@ -54,11 +54,13 @@ const sponsors = {
         },
         {
             "src": "https://www.multimatic.com/",
-            "imageSrc": "/static/sponsors/Multimatic.png"
+            "imageSrc": "/static/sponsors/Multimatic.png",
+            "whiteVersion": "/static/sponsors/Multimatic-white.png"
         },
         {
             "src": "http://aeets.com/",
-            "imageSrc": "/static/sponsors/RACE.png"
+            "imageSrc": "/static/sponsors/RACE.png",
+            "whiteVersion": "/static/sponsors/RACE-white.png"
         },
         {
             "src": "https://www.speedgoat.com/",
