@@ -7,7 +7,6 @@ const path = [];
 
 let res;
 while((res = reg.exec(textRoutes)) != null){
-    console.log(res)
     if(!res[1].includes(':')) path.push(res[1]);
 }
 
