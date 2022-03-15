@@ -2,6 +2,8 @@ const path = require('path');
 const PrerenderSPAPlugin = require('prerender-spa-plugin');
 const routes = require('./routes.match');
 
+console.log('Automated pre-rendering: ', routes);
+
 module.exports = {
   configureWebpack: () => {
     if (process.env.NODE_ENV !== 'production') return;
