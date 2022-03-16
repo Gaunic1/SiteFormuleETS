@@ -7,22 +7,23 @@
       lazy-background="/static/home/fond.svg"
     >
      <div class="h-screen overflow-hidden">
-       <div class="flex flex-col tb:flex-row justify-center items-center min-h-screen">
+       <div class="flex flex-col landscape:flex-row tb:flex-row justify-center items-center min-h-screen">
           <!-- TITLE -->
         <div
-          class="flex-1 tb:h-screen w-full
-          tb:w-1/2 flex flex-col justify-end tb:justify-center items-center z-20 text-dark-mode-2 p-10"
+          class="flex-1 landscape:h-screen tb:h-screen w-full
+          landscape:w-1/2 tb:w-1/2 flex flex-col justify-end landscape:justify-center tb:justify-center items-center z-20 text-dark-mode-2 p-10"
           data-aos="fade-right" :class="isMobile ? 'items-center' : ''"
         >
           <img :src="isMobile ? '/static/home/logo-fets-mobile.png' : '/static/home/logo-fets.png'" 
           alt="logo" class="w-full logow -m-2" />
           <p
-            class="mt-7 dark:text-white text-center tb:text-left"
+            class="mt-7 dark:text-white text-center landscape:text-left tb:text-left"
           >{{ $t('message.home.presentation') }}</p>
         </div>
 
         <!-- ANIMATED FORMULE -->
-        <div class="flex-1 tb:h-screen w-full tb:w-1/3 justify-center tb:justify-end items-start tb:items-center flex z-0">
+        <div class="flex-1 landscape:h-screen tb:h-screen w-full landscape:w-1/3 tb:w-1/3 justify-center landscape:justify-end
+         tb:justify-end items-start landscape:items-center tb:items-center flex z-0">
           <img
             id="formule"
             src="/static/home/formuleets-nobg2.png"

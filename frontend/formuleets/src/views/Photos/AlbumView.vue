@@ -13,7 +13,7 @@
 
             <router-link :to="'/photos/' + item.id">
                 <div class="dark:text-white
-                calc-w rounded-md dark:bg-dark-mode bg-white border-op cursor-pointer"
+                calc-w rounded-md dark:bg-dark-mode bg-white border-op cursor-pointer mb-5"
                 data-aos="zoom-in">
                     <div class="flex p-2 items-center relative w-full">
                         <i class="fas fa-image"></i>

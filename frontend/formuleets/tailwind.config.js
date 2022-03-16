@@ -5,6 +5,9 @@ module.exports = {
     extend: {
       screens: {
         'tb': '840px',
+        'nesthub': '1030px',
+        'portrait': {'raw': '(orientation: portrait)'}, 
+        'landscape': {'raw': '(orientation: landscape)'}
       },
       colors: {
         "dark-mode": "#121212",

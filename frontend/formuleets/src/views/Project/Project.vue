@@ -1,16 +1,11 @@
 <template>
     <div :style='`height: ${height}`' id="project">
-        <!-- USELESS. JUST HERE TO DONT GO ON THE HEADER -->
-        <div class="h-16 dark:bg-dark-mode flex items-end">
-             <hr class="bg-red-500 border border-red-500 ml-5 mr-5 w-full opacity-50">
-        </div>
-
         <section class="dark:bg-dark-mode h-screen sticky top-0 w-full flex 
-        justify-center flex-col tb:flex-row bg-cover bg-center overflow-x-hidden" 
+        justify-center items-center flex-col landscape:flex-row tb:flex-row bg-cover bg-center overflow-x-hidden" 
         lazy-background="/static/project/curve_line.svg">
 
             <!-- AUTO SCROLL -->
-            <button class="p-3 absolute top-20 left-5 animate-pulse"
+            <button class="p-3 absolute top-16 right-2 animate-pulse"
             @click="autoScroll()">
                 <p class="text-red-500">
                     <i class="fa-solid fa-play mr-2"></i>
@@ -19,17 +14,17 @@
             </button>
 
             <!-- TEXT -->
-            <article class="flex-initial tb:w-1/2 tb:h-full h-1/2 w-full flex items-center justify-center flex-col text-center p-5">
-                <h2 v-if="text.title" class="text-3xl font-bold text-red-500 uppercase slide-left">{{ $t(text.title) || text.title }}</h2>
-                <p v-if="text.label" class="dark:text-white mt-5 slide-left delay-300" v-html="$t(text.label) || text.label"></p>
+            <article class="flex-initial overflow-hidden landscape:w-1/2 landscape:h-full tb:w-1/2 tb:h-full h-1/2 w-full flex items-center justify-center flex-col text-center p-5">
+                <h2 v-if="text.title" class="text-xl md:text-3xl font-bold text-red-500 uppercase slide-left">{{ $t(text.title) || text.title }}</h2>
+                <p v-if="text.label" class="text-xs md:text-base dark:text-white mt-5 slide-left delay-300" v-html="$t(text.label) || text.label"></p>
                 <i v-if="this.count == 0" class="fas fa-chevron-down dark:text-white mt-5 fade-arrow"></i>
                 <i v-if="this.count == 0" class="fas fa-chevron-down dark:text-white -mt-2 fade-arrow"></i>
             </article>
 
             <!-- FORMULE -->
-            <article class="tb:h-full flex-initial flex justify-center items-center transition-all duration-1000 tb:w-1/2" 
+            <article class="landscape:h-full tb:h-full flex-initial flex justify-center items-center transition-all duration-1000 landscape:w-1/2 tb:w-1/2" 
             :class="count != countToNotDisplay ? 'w-full tb:w-1/2' : 'absolute'">
-                <img id="3d-model" v-if="img" :src="img" alt="3D model" class="pointer-events-none w-full tb:mt-10"
+                <img id="3d-model" v-if="img" :src="img" alt="3D model" class="pointer-events-none w-full landscape:mt-10 tb:mt-10"
                 :class="count != countToNotDisplay ? 'opacity-100 transition-all duration-1000' : 'opacity-0 z-0'">
             </article>
 

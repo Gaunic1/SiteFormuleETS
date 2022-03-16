@@ -9,7 +9,7 @@
           </div> -->
 
           <!-- COMPUTER -->
-          <ul class="hidden list-none p-3 lg:flex">
+          <ul class="hidden list-none p-3 nesthub:flex">
               <template v-for="item of menu" :key="item.name">
                     <!-- DROPDOWN -->
                     <li v-if="item.type == 'dropdown'" class="dropdown flex items-center justify-center">
@@ -47,8 +47,8 @@
           </ul>
 
           <!-- PHONE -->
-            <ul class="flex list-none p-3 lg:hidden absolute right-0">
-              <i @click="displayMenuPhone()" class="fas fa-bars cursor-pointer text-3xl dark:text-white"></i>
+            <ul class="flex list-none p-3 nesthub:hidden absolute right-0">
+              <i @click="displayMenuPhone()" class="dark:bg-dark-mode bg-white pr-1 pl-1 rounded-lg fas fa-bars cursor-pointer text-3xl dark:text-white"></i>
 
               <div data-aos="fade-right" v-if="showMenu" 
               class="overflow-y-auto p-5 fixed flex justify-center items-center w-full h-full
@@ -136,8 +136,8 @@ export default {
         },
         scroll(){
             if(window.scrollY > 0) 
-                this.headerClass = ["shadow-md", "bg-white", "h-16",
-                "tracking-widest", "dark:bg-dark-mode"];
+                this.headerClass = ["nesthub:shadow-md", "nesthub:bg-white", "h-16",
+                "nesthub:tracking-widest", "nesthub:dark:bg-dark-mode"];
             else 
                 this.headerClass = [];
         },
