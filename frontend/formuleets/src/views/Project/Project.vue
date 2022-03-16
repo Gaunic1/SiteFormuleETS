@@ -142,9 +142,8 @@ export default {
                 if(this.nbPreloaded == 0) load.onload = () => {
                     this.calcHeight();
                 }
-                this.nbPreloaded
+                this.nbPreloaded++;
             }
-            // this.nbPreloaded += this.preloadCount;
         },
         countSubstract(nb, substract){
             if(!substract || substract <= 0) return 1;
