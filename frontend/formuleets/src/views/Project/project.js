@@ -13,16 +13,45 @@ const project = {
     images: {
         directory: "/static/formule/",
 
-        startWith: "Render",
-        padStart: false,
+        startWith: "Untitled00108",
+        padStart: true,
 
-        nbImgs: 938,
+        nbImgs: 999,
         extension: "png"
     },
 
     //text to display
     //always start  at 1
     text: [
+        {
+            title: "message.project.text.chassis.title",
+            label: "message.project.text.chassis.label",
+            imageCount: 702,
+        },
+        {
+            title: "message.project.text.power_drive.title",
+            label: "message.project.text.power_drive.label",
+            imageCount: 504,
+        },
+        {
+            title: "message.project.text.dynamics.title",
+            label: "message.project.text.dynamics.label",
+            imageCount: 312,
+        },
+        {
+            title: "message.project.text.electronics.title",
+            label: "message.project.text.electronics.label",
+            imageCount: 162,
+        },
+        {
+            title: "message.project.text.aerodynamics.title",
+            label: "message.project.text.aerodynamics.label",
+            imageCount: 1,
+        },
+    ]
+}
+
+/** Past render
         {
             title: "message.project.text.chassis.title",
             label: "message.project.text.chassis.label",
@@ -53,7 +82,6 @@ const project = {
             label: "message.project.text.aerodynamics.label",
             imageCount: 790,
         },
-    ]
-}
+ */
 
 export default project;

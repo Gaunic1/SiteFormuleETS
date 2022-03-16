@@ -26,7 +26,7 @@
          tb:justify-end items-start landscape:items-center tb:items-center flex z-0">
           <img
             id="formule"
-            src="/static/home/formuleets-nobg2.png"
+            src="/static/home/final2022.png"
             data-aos="fade-left"
             alt="Formule"
             class="z-0 w-full"

@@ -5,7 +5,7 @@
         <!-- GO BACK -->
         <div @click="$router.go(-1)"
         class="cursor-pointer flex justify-center items-center p-3 animate-pulse
-        dark:text-white text-xl absolute left-5 top-10">
+        dark:text-white absolute left-2 top-0 nesthub:top-10 text-sm md:text-xl">
             <i class="fa-solid fa-door-open"></i>
             <span class="ml-2">{{ $t('message.other.back') }}</span>
         </div>
@@ -76,6 +76,13 @@ export default {
 @media only screen and (max-width: 728px) {
   .size{
       height: 20rem;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: 1025px){
+   .size{
+      height: 80vh!important;
+      width: 120vh!important;
   }
 }
 
