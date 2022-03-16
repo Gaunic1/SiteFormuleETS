@@ -106,7 +106,11 @@ const en = {
         "aerodynamics": {
           "title": "Aerodynamics",
           "label": "Efficient and cohesive packaging. <br> Aerodynamic package exploiting ground effect. <br> Double action drag reduction system (DRS)."
-        }
+        },
+        "thank": {
+          "title": "Thank you!",
+          "label": "Thank you for following this animation to the end."
+        } 
       }
     },
 

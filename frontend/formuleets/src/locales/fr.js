@@ -106,6 +106,10 @@ const fr = {
         "aerodynamics": {
           "title": "Aérodynamique",
           "label": "Assemblage aérodynamique cohésif et efficace. <br> Assemblage exploitant l’effet du sol. <br> Système de réduction de trainée à double action."
+        },
+        "thank": {
+          "title": "Merci !",
+          "label": "Merci d'avoir suivi cette animation jusqu'au bout."
         }
       }
     },

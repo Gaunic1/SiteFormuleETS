@@ -13,10 +13,10 @@ const project = {
     images: {
         directory: "/static/formule/",
 
-        startWith: "Untitled00108",
-        padStart: true,
+        startWith: "",
+        padStart: false,
 
-        nbImgs: 999,
+        nbImgs: 770,
         extension: "png"
     },
 
@@ -24,64 +24,36 @@ const project = {
     //always start  at 1
     text: [
         {
-            title: "message.project.text.chassis.title",
-            label: "message.project.text.chassis.label",
-            imageCount: 702,
-        },
-        {
-            title: "message.project.text.power_drive.title",
-            label: "message.project.text.power_drive.label",
-            imageCount: 504,
-        },
-        {
             title: "message.project.text.dynamics.title",
             label: "message.project.text.dynamics.label",
-            imageCount: 312,
+            imageCount: 1,
         },
         {
             title: "message.project.text.electronics.title",
             label: "message.project.text.electronics.label",
-            imageCount: 162,
+            imageCount: 113,
+        },
+        {
+            title: "message.project.text.chassis.title",
+            label: "message.project.text.chassis.label",
+            imageCount: 250,
+        },
+        {
+            title: "message.project.text.power_drive.title",
+            label: "message.project.text.power_drive.label",
+            imageCount: 386,
         },
         {
             title: "message.project.text.aerodynamics.title",
             label: "message.project.text.aerodynamics.label",
-            imageCount: 1,
+            imageCount: 533,
+        },
+        {
+            title: "message.project.text.thank.title",
+            label: "message.project.text.thank.label",
+            imageCount: 653,
         },
     ]
-}
-
-/** Past render
-        {
-            title: "message.project.text.chassis.title",
-            label: "message.project.text.chassis.label",
-            imageCount: 1,
-        },
-        {
-            title: "message.project.text.chassis.title",
-            label: "message.project.text.chassis.label",
-            imageCount: 125,
-        },
-        {
-            title: "message.project.text.power_drive.title",
-            label: "message.project.text.power_drive.label",
-            imageCount: 285,
-        },
-        {
-            title: "message.project.text.dynamics.title",
-            label: "message.project.text.dynamics.label",
-            imageCount: 465,
-        },
-        {
-            title: "message.project.text.electronics.title",
-            label: "message.project.text.electronics.label",
-            imageCount: 630,
-        },
-        {
-            title: "message.project.text.aerodynamics.title",
-            label: "message.project.text.aerodynamics.label",
-            imageCount: 790,
-        },
- */
+};
 
 export default project;
