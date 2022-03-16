@@ -24,7 +24,12 @@
             <!-- FORMULE -->
             <article class="landscape:h-full tb:h-full flex-initial flex justify-center items-center transition-all duration-1000 landscape:w-1/2 tb:w-1/2" 
             :class="count != countToNotDisplay ? 'w-full tb:w-1/2' : 'absolute'">
-                <img id="3d-model" v-if="img" :src="img" alt="3D model" class="pointer-events-none w-full landscape:mt-10 tb:mt-10"
+                <img id="3d-model" 
+                v-if="img" 
+                rel="preload"
+                :src="img" 
+                alt="Animation image" 
+                class="pointer-events-none w-full landscape:mt-10 tb:mt-10"
                 :class="count != countToNotDisplay ? 'opacity-100 transition-all duration-1000' : 'opacity-0 z-0'">
             </article>
 
@@ -130,18 +135,16 @@ export default {
             });
         },
         preloadImage(){
-            const lst = [];
-            let loaded = false;
             for(const img of this.images.slice(this.nbPreloaded,this.nbPreloaded+this.preloadCount)){
                 const load = new Image();
+                load.setAttribute('rel', 'preload');
                 load.src = img;
-                load.onload = () => {
-                    if(loaded) return;
-                    loaded = this.calcHeight();
+                if(this.nbPreloaded == 0) load.onload = () => {
+                    this.calcHeight();
                 }
-                lst.push(load);
+                this.nbPreloaded
             }
-            this.nbPreloaded += this.preloadCount;
+            // this.nbPreloaded += this.preloadCount;
         },
         countSubstract(nb, substract){
             if(!substract || substract <= 0) return 1;
