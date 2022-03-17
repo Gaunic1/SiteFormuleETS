@@ -1,7 +1,7 @@
 <template>
     <section
         class="min-h-screen dark:text-white flex flex-col md:flex-row justify-center items-center
-         bg-cover bg-center bg-fixed"
+         bg-cover bg-center bg-fixed w-full bg-no-repeat"
         lazy-background="/static/home/fond.svg"
     >
         <h1

@@ -2,7 +2,8 @@
   <!-- USELESS. JUST HERE TO DONT GO ON THE HEADER -->
   <div class="h-24 lg:hidden"></div>
 
-  <div class="min-h-screen flex flex-col pl-5 justify-center bg-center bg-fixed bg-cover dark:bg-dark-mode bg-white" 
+  <div class="min-h-screen w-full flex flex-col pl-5 justify-center bg-center bg-fixed bg-cover bg-no-repeat
+   dark:bg-dark-mode bg-white" 
   lazy-background="/static/videos/contour.svg">
       <h2 data-aos="fade-right" class="dark:text-white text-3xl uppercase font-bold border-b-4 border-red-900 w-20">
           {{ $t("message.videos.title") }}
