@@ -59,7 +59,7 @@ export default {
             autoScrollActivate: false,
 
             nbPreloaded: 0,
-            preloadCount: 20,
+            preloadCount: 30,
 
             speed: 1,
 
@@ -76,7 +76,7 @@ export default {
         }
     },
     mounted() {
-        window.scrollTo(0,0);
+        window.scrollTo(0, 0);
 
         this.$data.mobileSize = "768px";
 
@@ -88,7 +88,7 @@ export default {
         this.preloadImage();
 
         document.addEventListener("scroll", this.animateFormule, { passive: false });
-        window.addEventListener('resize', this.calcHeight, true);   
+        window.addEventListener('resize', this.calcHeight, true);
     },
     beforeUnmount(){
       document.body.style.overflowY = "auto";
@@ -185,7 +185,7 @@ export default {
         animateFormule(){
             const scroll = window.scrollY ? window.scrollY : document.body.scrollTop;
 
-            const count = this.countSubstract(scroll, this.imageHeight/this.speed);
+            const count = scroll == 0 ? 0 : this.countSubstract(scroll, this.imageHeight/this.speed);
 
             this.count = count;
 
