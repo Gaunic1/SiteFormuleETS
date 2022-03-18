@@ -92,10 +92,10 @@ export default {
   },
   created() {
     this.$data.mobileSize = "1024px";
-    document.addEventListener("scroll", this.scrollFormule);
+    document.addEventListener("scroll", this.scrollFormule, {passive: true});
   },
   beforeUnmount() {
-    document.removeEventListener("scroll", this.scrollFormule);
+    document.removeEventListener("scroll", this.scrollFormule, {passive: true});
   },
   methods: {
     scrollFormule() {
