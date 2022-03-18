@@ -105,7 +105,7 @@ const routes = [
 
 //setup meta
 routes.forEach(e => {
-  const title = e.pageName + " — FormuleETS";
+  const title = e.pageName + " — FormuleETS Montréal";
 
   e.meta = {};
   e.meta.title = title;
