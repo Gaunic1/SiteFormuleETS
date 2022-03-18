@@ -13,11 +13,16 @@
               <template v-for="item of menu" :key="item.name">
                     <!-- DROPDOWN -->
                     <li v-if="item.type == 'dropdown'" class="dropdown flex items-center justify-center">
-                        <a class="ml-2 mr-2 no-underline uppercase dark:text-white cursor-pointer" :id="item.name">{{ $t(item.name) }}</a>
+                        <a class="ml-2 mr-2 no-underline uppercase dark:text-white cursor-pointer" :id="item.name">
+                            <i class="fa-solid fa-caret-down text-lg"></i>
+                            {{ $t(item.name) }}
+                        </a>
 
-                        <div class="top-full -mt-3 menu absolute z-50 bg-white dark:bg-dark-mode h-0 overflow-hidden">
-                            <ul class="h-auto flex flex-col justify-center items-center">
-                                <li v-for="menu of item.menus" :key="menu.name" class="h-10 ml-3 mr-3">
+                        <div class="top-full -mt-5 menu absolute z-50 h-0 overflow-hidden">
+                            <ul class="h-auto flex flex-col justify-center items-center items
+                            bg-white dark:bg-dark-mode">
+                                <li v-for="menu of item.menus" :key="menu.name" 
+                                class="py-2 px-8 flex justify-center items-center">
                                     <router-link class="dark:text-white no-underline uppercase" :to="menu.to">{{ $t(menu.name) }}</router-link>
                                 </li>
                             </ul>
@@ -190,8 +195,36 @@ a::after{
     width: 100%;
 }
 
+.menu::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1rem;
+    height: 1rem;
+    background: rgba(0,0,0,0.5);
+
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+
+    transform-origin: 0;
+    transform: translateX(-25%)  rotate(45deg);
+}
+
+.dark .menu::before{
+        background: rgba(255,255,255,0.5)!important;
+}
+
 .dropdown:hover .menu, .menu:hover{
     height: auto;
+}
+
+.menu .items{
+    margin-top: 0.85rem;
+    border: thin solid rgba(0,0,0,0.3);
+}
+
+.dark .menu .items{
+    border: thin solid rgba(255,255,255,0.3)!important;
 }
 
 .toggle-checkbox:checked {
