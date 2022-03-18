@@ -15,7 +15,36 @@ import Videos from '../views/Videos/Videos.vue'
 import AlbumView from '../views/Photos/AlbumView.vue'
 import PhotosView from '../views/Photos/PhotosView.vue'
 
-
+const basicMetaTag = [
+  {
+    name: "title",
+    content: "FormuleETS Website"
+  },
+  {
+    name: "description",
+    content: "Welcome to the formuleETS website !"
+  },
+  {
+    name: "keywords",
+    content: "formuleets, formule, ets, student, website, ca, canada, sponsors, team, photos, video, club, project, f1, formula, sponsors, donate, media",
+  },
+  {
+    name: "robots",
+    content: "index, follow"
+  },
+  {
+    "http-equiv": "Content-Type",
+    content: "text/html; charset=utf-8"
+  },
+  {
+    name: "author",
+    content: "formuleets"
+  },
+  {
+    property: "og:image",
+    content: "/favicon.png"
+  }
+]
 
 const routes = [
   {
@@ -23,7 +52,7 @@ const routes = [
     name: 'Home',
     component: Home,
     meta: {
-      title: "FormuleETS | Home"
+      title: "FormuleETS | Home",
     }
   },
   {
@@ -128,7 +157,9 @@ const routes = [
       title: "FormuleETS | Not found"
     }
   }
-]
+];
+
+routes.forEach(e => e.meta.metaTags = basicMetaTag);
 
 const router = createRouter({
   mode: "history",
