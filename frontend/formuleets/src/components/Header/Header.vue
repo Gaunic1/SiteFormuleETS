@@ -12,9 +12,10 @@
           <ul class="hidden list-none p-3 nesthub:flex">
               <template v-for="item of menu" :key="item.name">
                     <!-- DROPDOWN -->
-                    <li v-if="item.type == 'dropdown'" class="dropdown flex items-center justify-center">
-                        <a class="ml-2 mr-2 no-underline uppercase dark:text-white cursor-pointer" :id="item.name">
-                            <i class="fa-solid fa-caret-down text-lg"></i>
+                    <li v-if="item.type == 'dropdown'" class="dropdown flex items-center justify-center group">
+                        <a class="ml-2 mr-2 relative no-underline uppercase dark:text-white cursor-pointer" :id="item.name">
+                            <i class="fa-solid fa-caret-right text-lg group-hover:opacity-0"></i>
+                            <i class="fa-solid fa-caret-down absolute left-0 text-lg opacity-0 group-hover:opacity-100"></i>
                             {{ $t(item.name) }}
                         </a>
 
