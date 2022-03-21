@@ -1,6 +1,6 @@
 <template>
     <div
-        class="w-full min-h-screen text-center mb-0 overflow-hidden bg-cover bg-center bg-fixed bg-no-repeat
+        class="w-full min-h-screen text-center mb-0 overflow-hidden bg-screen bg-center bg-fixed bg-no-repeat
          dark:bg-dark-mode bg-white"
         lazy-background="/static/team/contour2.svg"
     >

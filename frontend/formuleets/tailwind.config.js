@@ -15,6 +15,9 @@ module.exports = {
         "overlay": "#12121290",
         "overlay-2": "#121212c0"
       },
+      backgroundSize: {
+        'screen': '100% 100vh'
+      }
     },
   },
   variants: {

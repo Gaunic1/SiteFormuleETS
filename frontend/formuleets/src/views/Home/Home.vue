@@ -2,7 +2,7 @@
   <div>
     <!-- PRESENTATION -->
     <div
-      class="bg-first w-full flex flex-wrap overflow-x-hidden bg-center bg-fixed bg-cover min-h-screen bg-no-repeat
+      class="bg-first w-full flex flex-wrap overflow-x-hidden bg-center bg-fixed bg-screen min-h-screen bg-no-repeat
        dark:bg-dark-mode bg-white"
       lazy-background="/static/home/fond.svg"
     >
