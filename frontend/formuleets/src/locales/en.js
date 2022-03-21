@@ -108,8 +108,8 @@ const en = {
           "label": "Efficient and cohesive packaging. <br> Aerodynamic package exploiting ground effect. <br> Double action drag reduction system (DRS)."
         },
         "thank": {
-          "title": "Thank you!",
-          "label": "Thank you for following this animation to the end."
+          "title": "Media",
+          "label": "Media thanks you for following this animation to the end ! <br><br> Media mainly deals with photos/videos, website, social networks and sponsors. <br> And many other things !"
         } 
       }
     },
