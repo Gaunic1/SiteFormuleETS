@@ -109,7 +109,7 @@ const fr = {
         },
         "thank": {
           "title": "Média",
-          "label": "Média vous remercie d'avoir suivi cette animation jusqu'au bout ! <br><br> Média s'occupe principalement des photos/vidéos, du site, des réseaux sociaux et des sponsors. <br> Et plein d'autres choses !"
+          "label": "Réalisations des photos et vidéos. <br> Maintenance du site. <br> Gestion des réseaux sociaux et des sponsors. <br><br> Nous vous remercions d'avoir suivi cette animation jusqu'au bout."
         }
       }
     },

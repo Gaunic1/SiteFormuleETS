@@ -109,7 +109,7 @@ const en = {
         },
         "thank": {
           "title": "Media",
-          "label": "Media thanks you for following this animation to the end ! <br><br> Media mainly deals with photos/videos, website, social networks and sponsors. <br> And many other things !"
+          "label": "Production of photos and videos. <br> Maintenance of the website. <br> Management of social networks and sponsors. <br><br> Thank you for following this animation to the end."
         } 
       }
     },
