@@ -23,6 +23,15 @@ const project = {
     //text to display
     //always start  at 1
     text: [
+        //Never delete this one
+        {
+            title: "message.project.default.animation",
+            label: "message.project.default.label",
+            imageCount: 0
+        },
+        //end
+
+
         {
             title: "message.project.text.dynamics.title",
             label: "message.project.text.dynamics.label",

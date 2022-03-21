@@ -1,5 +1,28 @@
 <template>
-    <div :style='`height: ${height}`' id="project">
+    <div class="flex" :style='`height: ${height}`' id="project">
+        <!-- SCROLL MENU -->
+        <div class="h-screen w-12 flex flex-col justify-center overflow-visible items-center p-5 sticky top-0">
+            <div class="h-16 w-2"></div>
+
+            <div class="bg-red-900 w-2 h-full rounded-lg relative flex flex-col items-center">
+
+                    <!-- POURCENTAGE -->
+                    <div class="w-full bg-red-500 rounded-full" :style="menuBarHeight"></div>
+
+                    <!-- CIRCLE -->
+                    <a @click="scrollToPosition(item.imageCount)" 
+                    class="absolute rounded-full bg-red-900 w-5 h-5 text-white flex justify-center items-center
+                    cursor-pointer"
+                    :style="`top: ${((item.imageCount-1)/project.images.nbImgs)*100}%`"
+                     v-for="(item, index) of project.text" :key="item.imageCount"
+                     :title="$t(item.title)">
+                        <span class="text-xs">{{ index }}</span>
+                    </a>
+
+            </div>
+        </div>
+
+        <!-- MAIN SECTION -->
         <section class="dark:bg-dark-mode h-screen sticky top-0 w-full flex 
         justify-center items-center flex-col landscape:flex-row tb:flex-row bg-cover bg-center overflow-x-hidden" 
         lazy-background="/static/project/curve_line.svg">
@@ -46,6 +69,7 @@ export default {
     mixins: [phoneMixin],
     data() {
         return {
+            project: project,
             images: [],
             img: null,
             height: "100vh",
@@ -53,6 +77,7 @@ export default {
             count: 0,
             countToNotDisplay: 0,
             autoScrollInterval: null,
+            actualScroll: 0,
 
             autoMsg: "message.project.auto",
 
@@ -68,6 +93,12 @@ export default {
                 label: "message.project.default.label"
             }
         };
+    },
+    computed: {
+        menuBarHeight(){
+            const prc = (this.actualScroll/parseInt(this.height))*100;
+            return `height: ${prc + 3}%`;
+        }
     },
     watch: {
         "isMobile"(){
@@ -98,6 +129,13 @@ export default {
       window.removeEventListener('resize', this.calcHeight, true);   
     },
     methods: {
+        scrollToPosition(count){
+            window.scrollTo(0, (this.imageHeight/this.speed) * count);
+        },
+        calcPrcTop(nb, total){
+            const prc = (nb/total) * 100;
+            return `top: ${prc}%`;
+        },
         calcHeight(){
             try{
                 const height = document.getElementById('3d-model').offsetHeight;
@@ -127,12 +165,6 @@ export default {
             }
 
             this.img = this.images[0];
-
-            project.text.push({
-                title: this.text.title,
-                label: this.text.label,
-                imageCount: 0
-            });
         },
         preloadImage(){
             for(const img of this.images.slice(this.nbPreloaded,this.nbPreloaded+this.preloadCount)){
@@ -184,6 +216,7 @@ export default {
         },
         animateFormule(){
             const scroll = window.scrollY ? window.scrollY : document.body.scrollTop;
+            this.actualScroll = scroll;
 
             const count = scroll == 0 ? 0 : this.countSubstract(scroll, this.imageHeight/this.speed);
 
