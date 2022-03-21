@@ -109,7 +109,7 @@ const fr = {
         },
         "thank": {
           "title": "Média",
-          "label": "Réalisations des photos et vidéos. <br> Maintenance du site. <br> Gestion des réseaux sociaux et des sponsors. <br><br> Nous vous remercions d'avoir suivi cette animation jusqu'au bout."
+          "label": "Réalisations des photos et vidéos. <br> Maintenance du site. <br> Gestion des réseaux sociaux et des commanditaires. <br><br> Nous vous remercions d'avoir suivi cette animation jusqu'au bout."
         }
       }
     },
