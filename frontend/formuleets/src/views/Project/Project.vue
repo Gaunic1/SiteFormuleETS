@@ -4,14 +4,14 @@
         <div class="h-screen w-12 flex flex-col justify-center overflow-visible items-center p-5 sticky top-0">
             <div class="h-16 w-2"></div>
 
-            <div class="bg-red-900 w-2 h-full rounded-lg relative flex flex-col items-center">
+            <div class="bg-red-900 w-1 h-full rounded-lg relative flex flex-col items-center">
 
                     <!-- POURCENTAGE -->
                     <div class="w-full bg-red-500 rounded-full" :style="menuBarHeight"></div>
 
                     <!-- CIRCLE -->
                     <a @click="scrollToPosition(item.imageCount)" 
-                    class="absolute rounded-full bg-red-900 w-5 h-5 text-white flex justify-center items-center
+                    class="absolute transform hover:scale-150 rounded-full bg-red-900 w-4 h-4 text-white flex justify-center items-center
                     cursor-pointer"
                     :style="`top: ${((item.imageCount-1)/project.images.nbImgs)*100}%`"
                      v-for="(item, index) of project.text" :key="item.imageCount"
@@ -97,7 +97,7 @@ export default {
     computed: {
         menuBarHeight(){
             const prc = (this.actualScroll/parseInt(this.height))*100;
-            return `height: ${prc + 3}%`;
+            return `height: ${prc + 2}%`;
         }
     },
     watch: {
