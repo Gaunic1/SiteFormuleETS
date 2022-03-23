@@ -110,10 +110,10 @@ export default {
     name: "Header",
     created(){
         this.setDarkMode();
-        window.addEventListener('scroll',this.scroll);
+        document.addEventListener('scroll',this.scroll, {passive: true});
     },
     beforeUnmount(){
-        window.removeEventListener('scroll', this.scroll);
+        document.removeEventListener('scroll', this.scroll, {passive: true});
     },
     data(){
         return {

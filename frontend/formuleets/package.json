@@ -12,7 +12,7 @@
     "aos": "^2.3.4",
     "core-js": "^3.6.5",
     "lazy-attr": "^1.2.3",
-    "parallaxy-img": "^1.0.7",
+    "parallaxy-img": "^1.0.8",
     "prerender-spa-plugin": "^3.4.0",
     "swiper": "^8.0.6",
     "three": "^0.136.0",

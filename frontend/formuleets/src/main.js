@@ -14,7 +14,7 @@ import lazyattr from 'lazy-attr'
 import 'lazy-attr/dist/lazy-attr-animation.css'
 
 //Parallax
-import parallaxy from "parallaxy-img/src/parallaxy";
+import parallaxy from "parallaxy-img/dist/parallaxy";
 
 createApp(App)
 .use(i18n)
