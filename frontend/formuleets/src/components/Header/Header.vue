@@ -227,12 +227,4 @@ a::after{
 .dark .menu .items{
     border: thin solid rgba(255,255,255,0.3)!important;
 }
-
-.toggle-checkbox:checked {
-    right: 0;
-    border-color: red;
-}
-.toggle-checkbox:checked + .toggle-label {
-    background-color: red;
-}
 </style>

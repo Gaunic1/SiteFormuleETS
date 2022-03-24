@@ -3,8 +3,8 @@
   <div class="h-12"></div>
 
   <!-- ON PHONE -->
-  <div v-if="isMobile"
-  class="calc-height w-full flex justify-center items-center flex-wrap bg-cover bg-fixed bg-center dark:bg-dark-mode bg-white" 
+  <div class="lg:hidden calc-height w-full flex justify-center items-center flex-wrap bg-cover bg-fixed
+   bg-center dark:bg-dark-mode bg-white" 
   lazy-background="/static/easter-egg/fond.svg">
     <h3 class="dark:text-white text-3xl p-5 text-center">
       {{ $t("message.eastereggs.phone") }}
@@ -12,8 +12,8 @@
   </div>
 
   <!-- MENU -->
-  <div class="calc-height w-full flex justify-center items-center flex-wrap bg-cover bg-fixed bg-center dark:bg-dark-mode bg-white" 
-  v-if="!game && !isMobile" 
+  <div class="hidden lg:flex calc-height w-full justify-center items-center flex-wrap bg-cover bg-fixed bg-center dark:bg-dark-mode bg-white" 
+  v-if="!game" 
   lazy-background="/static/easter-egg/fond.svg"> 
     <template v-for="item of games" :key="item.name">
       <button data-aos="zoom-in" 
@@ -25,7 +25,7 @@
   </div>
 
   <!-- GAME -->
-  <div class="calc-height w-full" v-if="game && !isMobile">
+  <div class="calc-height w-full hidden lg:block" v-if="game">
       <button @click="game = null"
       class="bg-white text-black dark:bg-dark-mode dark:text-white p-2 m-5 uppercase absolute top-12 left-1 z-10 
       border border-black dark:border-white">
@@ -50,11 +50,9 @@
 
 <script>
 import games from "./games"
-import phoneMixin from "../../mixins/phone-mixin"
 
 export default {
     name: "EASTEREGG",
-    mixins: [phoneMixin],
     data(){
       return {
         games: games,
@@ -64,9 +62,8 @@ export default {
 }
 </script>
 
-<style scroped>
+<style scoped>
 .calc-height{
   height: calc(100vh - 3rem);
 }
-
 </style>

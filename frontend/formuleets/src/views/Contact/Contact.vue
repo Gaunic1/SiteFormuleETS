@@ -44,7 +44,3 @@ export default {
     name: "Contact",
 }
 </script>
-
-<style>
-
-</style>

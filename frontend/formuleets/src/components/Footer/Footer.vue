@@ -1,5 +1,5 @@
 <template>
-    <footer class="z-back h-72 w-full">
+    <footer class="h-72 w-full">
         <div class="bg-dark-mode-2 h-72 w-full flex flex-col justify-around">
             <!-- SOCIAL MEDIAS -->
             <div class="flex-initial w-full p-5 flex justify-center items-center">
@@ -44,13 +44,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-.z-back{
-    z-index: -1;
-}
-
-.top-calc{
-    top: calc(100% - 18rem);
-}
-</style>

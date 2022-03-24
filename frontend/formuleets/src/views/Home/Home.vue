@@ -12,10 +12,10 @@
         <div
           class="flex-1 landscape:h-screen tb:h-screen w-full
           landscape:w-1/2 tb:w-1/2 flex flex-col justify-end landscape:justify-center tb:justify-center items-center z-20 text-dark-mode-2 p-10"
-          data-aos="fade-right" :class="isMobile ? 'items-center' : ''"
+          data-aos="fade-right"
         >
           <img :src="isMobile ? '/static/home/logo-fets-mobile.png' : '/static/home/logo-fets.png'" 
-          alt="logo" class="w-full logow -m-2" />
+          alt="logo" class="w-full min-w-[40vw] -m-2" />
           <p
             class="mt-7 dark:text-white text-center landscape:text-left tb:text-left"
           >{{ $t('message.home.presentation') }}</p>
@@ -52,7 +52,7 @@
         <!-- SPONSORS -->
         <SponsorsHome v-if="!isMobile" :sponsors="sponsors"></SponsorsHome>
 
-        <hr v-if="!isMobile" lazy-animation="zoomin" lazy-reset class="border-red-600 m-3" />
+        <hr lazy-animation="zoomin" lazy-reset class="border-red-600 m-3 hidden lg:block" />
 
         <!-- PARALLAX RIGHT -->
         <ParallaxHome
@@ -113,10 +113,6 @@ export default {
 </script>
 
 <style scoped>
-.logow {
-  min-width: 40vw;
-}
-
 *:focus {
   outline: none;
 }
