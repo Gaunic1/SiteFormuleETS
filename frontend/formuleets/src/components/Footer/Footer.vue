@@ -2,11 +2,11 @@
     <footer class="h-72 w-full">
         <div class="bg-dark-mode-2 h-72 w-full flex flex-col justify-around">
             <!-- SOCIAL MEDIAS -->
-            <div class="flex-initial w-full p-5 flex justify-center items-center">
+            <div class="flex-initial w-full p-3 flex justify-center items-center gap-3">
                 <template v-for="media of medias" :key="media">
                     <a :href="media.link" 
                     class="ml-3 text-white hover:bg-gray-500 transition-all 
-                    text-lg border border-white m-0 rounded-full flex items-center 
+                    text-lg md:border border-gray-500 rounded-full flex items-center 
                     justify-center w-16 h-16">
                         <i :class="media.icon" class="absolute"></i>
                     </a>
@@ -24,7 +24,7 @@
                     Made with
                     <i class="fas fa-heart text-red-600 mr-1 ml-1"></i>
                     by 
-                    <a href="mailto:charbonn.yoann@gmail.com" class="ml-1 underline">
+                    <a href="mailto:charbonn.yoann@gmail.com" class="ml-1 font-bold">
                         yoannchb
                     </a>
                 </span>

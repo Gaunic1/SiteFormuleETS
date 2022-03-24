@@ -52,7 +52,7 @@
         <!-- SPONSORS -->
         <SponsorsHome v-if="!isMobile" :sponsors="sponsors"></SponsorsHome>
 
-        <hr lazy-animation="zoomin" lazy-reset class="border-red-600 m-3 hidden lg:block" />
+        <hr lazy-animation="zoomin" lazy-reset class="border-red-600 m-3 hidden nesthub:block" />
 
         <!-- PARALLAX RIGHT -->
         <ParallaxHome

@@ -3,7 +3,7 @@
         class="flex justify-center items-center flex-col flex-wrap w-full min-h-screen relative overflow-hidden"
     >
         <!-- IMAGE PARALLAX -->
-        <div class="flex justify-center items-center overflow-hidden h-48 lg:h-full">
+        <div class="flex justify-center items-center overflow-hidden h-48 nesthub:h-full">
             <img
                 v-if="!isMobile"
                 :src="item.image"
@@ -21,19 +21,20 @@
                 alt="Image"
                 parallaxy-y
                 parallaxy-scale="1.4"
-                :parallaxy-speed-y="0.15"
+                :parallaxy-speed-y="0.3"
+                parallaxy-axes="80"
             />
         </div>
 
         <!-- TEXT CONTENT -->
         <article
-            class="h-full lg:w-2/5 text-justify p-10 lg:absolute dark:bg-dark-mode bg-white border-black dark:border-white flex justify-center flex-col top-0"
-            :class="position == 'right' != 0 ? 'right-0 lg:border-l' : 'left-0 lg:border-r'"
+            class="h-full nesthub:w-2/5 text-justify p-10 nesthub:absolute dark:bg-dark-mode bg-white border-black dark:border-white flex justify-center flex-col top-0"
+            :class="position == 'right' != 0 ? 'right-0 nesthub:border-l' : 'left-0 nesthub:border-r'"
         >
             <h1
                 class="text-red-600 text-4xl my-3 font-bold italic tracking-wider text-shadow z-10 uppercase text-center"
                 data-aos="zoom-in"
-                :class="position == 'right' != 0 ? 'lg:text-right' : 'lg:text-left'"
+                :class="position == 'right' != 0 ? 'nesthub:text-right' : 'nesthub:text-left'"
             >{{ $t(item.text + '.title') }}</h1>
 
             <p
