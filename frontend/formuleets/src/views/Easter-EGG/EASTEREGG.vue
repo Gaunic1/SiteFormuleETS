@@ -3,7 +3,7 @@
   <div class="h-12"></div>
 
   <!-- ON PHONE -->
-  <div class="lg:hidden calc-height w-full flex justify-center items-center flex-wrap bg-cover bg-fixed
+  <div class="lg:hidden h-[calc(100vh-3rem)] w-full flex justify-center items-center flex-wrap bg-cover bg-fixed
    bg-center dark:bg-dark-mode bg-white" 
   lazy-background="/static/easter-egg/fond.svg">
     <h3 class="dark:text-white text-3xl p-5 text-center">
@@ -12,7 +12,7 @@
   </div>
 
   <!-- MENU -->
-  <div class="hidden lg:flex calc-height w-full justify-center items-center flex-wrap bg-cover bg-fixed bg-center dark:bg-dark-mode bg-white" 
+  <div class="hidden lg:flex h-[calc(100vh-3rem)] w-full justify-center items-center flex-wrap bg-cover bg-fixed bg-center dark:bg-dark-mode bg-white" 
   v-if="!game" 
   lazy-background="/static/easter-egg/fond.svg"> 
     <template v-for="item of games" :key="item.name">
@@ -25,7 +25,7 @@
   </div>
 
   <!-- GAME -->
-  <div class="calc-height w-full hidden lg:block" v-if="game">
+  <div class="h-[calc(100vh-3rem)] w-full hidden lg:block" v-if="game">
       <button @click="game = null"
       class="bg-white text-black dark:bg-dark-mode dark:text-white p-2 m-5 uppercase absolute top-12 left-1 z-10 
       border border-black dark:border-white">
@@ -61,9 +61,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-.calc-height{
-  height: calc(100vh - 3rem);
-}
-</style>

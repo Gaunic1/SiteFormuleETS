@@ -31,19 +31,23 @@
 
                     <article data-aos="fade-up" class="flex flex-wrap">
                         <div
-                            class="m-5 rounded overflow-hidden calc-size shadow bg-white dark:bg-dark-mode"
+                            class="m-5 rounded overflow-hidden 
+                            h-[30rem] 
+                            w-[calc(100%-(2*1.225rem))]
+                            sm:w-[20rem]
+                            shadow bg-white dark:bg-dark-mode group"
                             v-for="member of categorie.members"
                             :key="member.fullName"
                         >
                             <!-- IMAGE -->
                             <div
-                                class="bg-cover h-2/3 w-full lazy-skeleton card cursor-pointer"
+                                class="bg-cover bg-center h-2/3 w-full lazy-skeleton card cursor-pointer"
                                 :lazy-background="member.img"
                             >
                                 <!-- OVERLAY -->
                                 <a v-if="member.linkedin" :href="member.linkedin">
                                     <div
-                                        class="flex justify-center items-center text-white h-full w-full bg-overlay cursor-pointer"
+                                        class="opacity-0 group-hover:opacity-1 flex justify-center items-center text-white h-full w-full bg-overlay cursor-pointer"
                                     >
                                         <i class="fa-brands fa-linkedin text-5xl"></i>
                                     </div>
@@ -116,33 +120,3 @@ export default {
     },
 }
 </script>
-<style scoped>
-.calc-size {
-    width: calc(100% - (2 * 1.225rem));
-    height: calc(100vh - 10rem);
-}
-
-.calc-size > div{
-    background-position: center;
-}
-
-.card > a > div {
-    transition: 0.3s ease;
-    opacity: 0;
-}
-
-.card:hover > a > div {
-    opacity: 1;
-}
-
-@media (min-width: 640px) {
-    .calc-size {
-        width: 20rem;
-        height: 30rem;
-    }
-
-    .calc-size > div{
-        background-position: top;
-    }
-}
-</style>
