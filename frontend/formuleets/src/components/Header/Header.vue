@@ -1,5 +1,5 @@
 <template>
-  <header :class="headerClass" class="fixed top-0 left-0 h-12 transition-all w-full dark:text-dark-mode z-50">
+  <header :class="headerClass" class="fixed top-0 left-0 transition-all w-full dark:text-dark-mode z-50">
       <nav class="flex justify-center items-center w-full h-full">
           <!-- LOGO -->
           <!-- <div id="logo" class="flex-auto h-full p-3">
@@ -118,7 +118,7 @@ export default {
     data(){
         return {
             menu: HeaderMenus,
-            headerClass: [],
+            headerClass: ["h-12"],
             showMenu: false,
             darkMode: false,
         }
@@ -145,7 +145,7 @@ export default {
                 this.headerClass = ["nesthub:shadow-md", "nesthub:bg-white", "h-16",
                 "nesthub:tracking-widest", "nesthub:dark:bg-dark-mode"];
             else 
-                this.headerClass = [];
+                this.headerClass = ["h-12"];
         },
         setDarkMode(){
             // const modeDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
