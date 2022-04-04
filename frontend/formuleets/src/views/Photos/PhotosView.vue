@@ -16,6 +16,7 @@
             :slides-per-view="1"
             :navigation="true"
             :loop="true"
+            :initialSlide="1"
             :autoplay="{
                 delay: 7000,
                 disableOnInteraction: false,
