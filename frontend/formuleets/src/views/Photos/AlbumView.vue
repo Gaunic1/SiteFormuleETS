@@ -13,7 +13,7 @@
 
             <router-link :to="'/photos/' + item.id">
                 <div class="dark:text-white
-                calc-w rounded-md dark:bg-dark-mode bg-white border-op cursor-pointer mb-5"
+                calc-w rounded-md dark:bg-dark-mode bg-white border dark:border-gray-100 cursor-pointer mb-5"
                 data-aos="zoom-in">
                     <div class="flex p-2 items-center relative w-full">
                         <i class="fas fa-image"></i>
@@ -58,18 +58,11 @@ export default {
 </script>
 
 <style scoped>
-.dark  .border-op{
-    border: thin solid rgba(255, 255, 255, 0.5);
-}
-
-.border-op{
-    border: thin solid rgba(0,0,0, 0.4);
-}
 .calc-w{
      width: 24rem;
 }
 
-@media only screen and (max-width: 728px) {
+@media only screen and (max-width: 728px) and (orientation: portrait){
   .calc-w{
     width: calc(100vw - 5rem);
   }
