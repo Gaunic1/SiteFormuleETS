@@ -35,7 +35,8 @@
                             h-[30rem] 
                             w-[calc(100%-(2*1.225rem))]
                             sm:w-[20rem]
-                            shadow bg-white dark:bg-dark-mode group"
+                            shadow bg-white dark:bg-dark-mode 
+                            group"
                             v-for="member of categorie.members"
                             :key="member.fullName"
                         >
@@ -47,7 +48,7 @@
                                 <!-- OVERLAY -->
                                 <a v-if="member.linkedin" :href="member.linkedin">
                                     <div
-                                        class="opacity-0 group-hover:opacity-1 flex justify-center items-center text-white h-full w-full bg-overlay cursor-pointer"
+                                        class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex justify-center items-center text-white h-full w-full bg-overlay cursor-pointer"
                                     >
                                         <i class="fa-brands fa-linkedin text-5xl"></i>
                                     </div>
@@ -65,7 +66,7 @@
                                     class="text-lg"
                                     v-if="member.role && member.role.trim() != ''"
                                 >{{ $t(member.role) }}</p>
-                                <p class="text-lg break-words translate-z-25">{{ member.mail }}</p>
+                                <a :href="'mailto:'+member.mail" class="underline text-lg break-words translate-z-25">{{ member.mail }}</a>
                             </div>
                         </div>
                     </article>
