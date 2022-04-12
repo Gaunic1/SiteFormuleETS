@@ -2,16 +2,16 @@
   <section class="text-center">
     <h2 class="text-red-600 text-4xl my-8 font-bold italic tracking-wider text-shadow 
     z-10 uppercase"
-    data-aos="fade-down">
+    data-aos="fade-up">
       {{ $t('message.date.mainTitle') }}
     </h2>
   </section>
 
-  <section class="h-auto w-full dark:bg-dark-mode bg-white
-  flex justify-center items-center flex-col bg-cover bg-center bg-fixed relative min-h-screen" 
+  <section class="h-screen w-full dark:bg-dark-mode bg-white
+  flex justify-center items-center flex-col bg-cover bg-center bg-no-repeat bg-fixed relative py-5" 
   lazy-background="/static/home/fond2.svg">
     <!-- BAR -->
-    <div class="bg-red-600 w-2 h-full my-5 rounded-md absolute" data-aos="zoom-out"></div>
+    <div class="bg-red-600 w-2 h-full rounded-md absolute" data-aos="zoom-in"></div>
 
     <!-- CONTENT -->
     <div v-for="(item, index) of dateList" 
