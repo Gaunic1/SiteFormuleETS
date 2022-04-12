@@ -80,7 +80,7 @@
     </div>
 </template>
 <script>
-import teams from "./teams/teams";
+import teams from "./teams";
 import Aside from "../../components/Asidebar/Aside.vue";
 
 export default {
@@ -91,8 +91,6 @@ export default {
         return {
             teams: teams,
             team: {},
-            default: (new Date()).getFullYear().toString(),
-
             modal: false
         };
     },
@@ -102,12 +100,12 @@ export default {
         }
     },
     mounted() {
-        this.teams = this.teams.sort((a, b) => b.title - a.title);
-        this.changeYear();
+        if(this.teams.length > 1) this.teams = this.teams.sort((a, b) => b.title.localeCompare(a.title));
+        this.team = this.teams[this.teams.length - 1];
     },
     methods: {
         changeYear(){
-            const year = this.year ? this.year.toString() : this.default;
+            const year = this.year.toString();
             this.team = this.teams.find(e => e.title == year);
         },
         changeDefault(title) {

@@ -1,6 +1,32 @@
 const team2021 = {
     title: "2021",
-    members:[
+    members: [
+        {
+            name: "message.team.management",
+            members: [
+                {
+                    img: '/static/team/members/daniel_gavrila.jpg',
+                    fullName: "Daniel Gavrila",
+                    role: "message.team.roles.captain",
+                    mail: "d.gavrila.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                },
+                {
+                    img: '/static/team/members/steve_groleau.jpg',
+                    fullName: "Steve Groleau",
+                    role: "message.team.roles.technical-director",
+                    mail: "s.groleau.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                },
+                {
+                    img: '/static/team/members/simon_aubin_lavoie.jpg',
+                    fullName: "SIMON AUBIN-LAVOIE",
+                    role: "message.team.roles.management-director",
+                    mail: "s.aubinlavoie.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                }
+            ]
+        },
         {
             name: "message.team.aerodynamic",
             members: [
@@ -56,11 +82,39 @@ const team2021 = {
                     mail: "o.lefebvre.formule.ets@gmail.com",
                     linkedin: "https://www.linkedin.com/"
                 },
+                {
+                    img: '/static/team/members/lea_bruneau.jpg',
+                    fullName: "LÉA BRUNEAU",
+                    role: "",
+                    mail: "l.bruneau.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                },
+                {
+                    img: '/static/team/members/karl_vreeze.jpg',
+                    fullName: "KARL DE VREEZE",
+                    role: "",
+                    mail: "k.devreeze.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                },
             ]
         },
         {
             name: "message.team.electronics",
             members: [
+                {
+                    img: '/static/team/members/victor_avezard.jpg',
+                    fullName: "VICTOR AVEZARD",
+                    role: "message.team.roles.head-electronic",
+                    mail: "v.avezard.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                },
+                {
+                    img: '/static/team/members/marc_antoine.jpg',
+                    fullName: "MARC-ANTOINE DOYON",
+                    role: "",
+                    mail: "ma.doyon.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                },
                 {
                     img: '/static/team/members/felix_groleau.jpg',
                     fullName: "FELIX GROLEAU",
@@ -95,6 +149,13 @@ const team2021 = {
                     linkedin: "https://www.linkedin.com/"
                 },
                 {
+                    img: '/static/team/members/alexandre_martin.jpg',
+                    fullName: "ALEXANDRE MARTIN",
+                    role: "",
+                    mail: "alexandre.martin.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                },
+                {
                     img: '/static/team/members/jean_carlo.jpg',
                     fullName: "JEAN-CARLO DORAY",
                     role: "",
@@ -125,6 +186,27 @@ const team2021 = {
                     fullName: "JÉRÔME BRIDEAU",
                     role: "",
                     mail: "j.brideau.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                },
+                {
+                    img: '/static/team/members/samuel_gagne.jpg',
+                    fullName: "SAMUEL GAGNÉ",
+                    role: "",
+                    mail: "s.gagne.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                },
+                {
+                    img: '/static/team/members/jimmy_jr.jpg',
+                    fullName: "JIMMY JR OZAETA",
+                    role: "",
+                    mail: "j.ozaeta.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                },
+                {
+                    img: '/static/team/members/xavier_brien.jpg',
+                    fullName: "XAVIER BRIEN",
+                    role: "",
+                    mail: "x.brien.formule.ets@gmail.com",
                     linkedin: "https://www.linkedin.com/"
                 },
                 {
