@@ -1,2 +1,3 @@
--text
--linkedin/teams years
+- text
+- date
+- linkedin/teams years
