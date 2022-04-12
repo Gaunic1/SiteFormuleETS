@@ -40,6 +40,10 @@
       <div class="flex-initial w-full z-10 bg-first overflow-x-hidden bg-white dark:bg-dark-mode">
         <hr lazy-animation="zoomin" lazy-reset class="border-red-600 m-3" />
 
+        <Date></Date>
+
+        <hr lazy-animation="zoomin" lazy-reset class="border-red-600 m-3" />
+
         <!-- PARALLAX LEFT -->
         <ParallaxHome
           :item="{text: 'message.home.aboutUs', image: '/static/home/fond3.jpg'}"
@@ -73,14 +77,15 @@
 <script>
 import sponsors from "../Sponsors/sponsors";
 import phoneMixin from '../../mixins/phone-mixin';
-import ParallaxHome from "../../components/home/ParallaxHome.vue";
-import SponsorsHome from "../../components/home/SponsorsHome.vue";
+import ParallaxHome from "../../components/Home/ParallaxHome.vue";
+import SponsorsHome from "../../components/Home/SponsorsHome.vue";
 import FormContact from "../../components/Form/FormContact.vue";
+import Date from "../../components/Date/Date.vue";
 
 export default {
   name: "Home",
   mixins: [phoneMixin],
-  components: { ParallaxHome, FormContact, SponsorsHome },
+  components: { ParallaxHome, FormContact, SponsorsHome, Date },
   data() {
     return {
       sponsors: sponsors,

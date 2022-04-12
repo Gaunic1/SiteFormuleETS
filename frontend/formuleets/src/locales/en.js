@@ -31,6 +31,16 @@ const en = {
       }
     },
 
+    "date": {
+      "mainTitle": "Important dates",
+      "title": {
+        "unveiling": "Unveiling",
+        "toronto": "Toronto competition",
+        "france": "France challenge"
+      },
+      "time": "{0} Days {1} Hours {2} Minutes {3} Seconds"
+    },
+
     "other": {
       "back": "Go back"
     },
