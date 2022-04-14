@@ -73,7 +73,10 @@ const en = {
         "head-chassis": "Head of chassis",
         "heade-dynamic": "Head of dynamics",
         "head-electronic": "Head of electronics",
-        "head-media-sponsors": "Head of Sponsors & Media"
+        "head-media-sponsors": "Head of Sponsors & Media",
+        "head-power-drive": "Head of power & drive",
+        "head-power-drive-elec": "Head of power & drive electrical",
+        "head-power-drive-meca": "Head of power & drive mechanical"
       }
     },
 

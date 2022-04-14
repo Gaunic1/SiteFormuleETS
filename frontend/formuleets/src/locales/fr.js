@@ -73,7 +73,10 @@ const fr = {
         "head-chassis": "Chef de châssis",
         "heade-dynamic": "Chef de dynamique",
         "head-electronic": "Chef d'électronique",
-        "head-media-sponsors": "Chef de Commanditaires & Média"
+        "head-media-sponsors": "Chef de Commanditaires & Média",
+        "head-power-drive": "Chef de motopropulseur",
+        "head-power-drive-elec": "Chef de motopropulseur électrique",
+        "head-power-drive-meca": "Chef de motopropulseur mécanique"
       }
     },
 

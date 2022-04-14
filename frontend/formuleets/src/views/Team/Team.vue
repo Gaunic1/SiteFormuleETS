@@ -43,7 +43,7 @@
                             <!-- IMAGE -->
                             <div
                                 class="bg-cover bg-center h-2/3 w-full lazy-skeleton card cursor-pointer"
-                                :lazy-background="member.img"
+                                :lazy-background="member.img != '' && member.img ? member.img : '/static/team/members/default.png'"
                             >
                                 <!-- OVERLAY -->
                                 <a v-if="member.linkedin" :href="member.linkedin">
@@ -101,7 +101,7 @@ export default {
     },
     mounted() {
         if(this.teams.length > 1) this.teams = this.teams.sort((a, b) => b.title.localeCompare(a.title));
-        this.team = this.teams[this.teams.length - 1];
+        this.team = this.teams[0];
     },
     methods: {
         changeYear(){
