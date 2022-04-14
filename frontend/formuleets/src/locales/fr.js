@@ -6,7 +6,7 @@ const fr = {
       "team": "l'équipe",
       "sponsors": "Commanditaires",
       "donate": "faire un don",
-      "contact-us": "Nous joindre",
+      "contact-us": "Nous trouver",
       "media": "média",
       "pictures": "photos",
       "movies": "vidéos",

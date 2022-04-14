@@ -7,7 +7,7 @@
         <h1
             class="text-red-600 text-4xl m-10 mb-20 w-full md:w-1/3 font-bold italic tracking-wider text-shadow z-10 p-5 text-center uppercase"
             data-aos="fade-right"
-        >{{ $t("message.header.contact-us") }}</h1>
+        >{{ $t("message.contact.contact") }}</h1>
 
         <div class="w-full md:w-2/3 flex justify-center items-center text-black">
             <p

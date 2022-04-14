@@ -6,7 +6,7 @@ const en = {
         "team": "the team",
         "sponsors": "Sponsors",
         "donate": "donate",
-        "contact-us": "Contact us",
+        "contact-us": "Find US",
         "media": "media",
         "pictures": "photos",
         "movies": "Videos",

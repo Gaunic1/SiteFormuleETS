@@ -15,7 +15,9 @@
         <!-- CONTENT -->
         <section class="z-10 m-5 w-full md:w-2/3 flex flex-col justify-center items-center dark:bg-dark-mode 
         bg-white dark:text-white p-5 overflow-x-hidden">
-            <h2 data-aos="fade-right" class="text-4xl font-thin uppercase">{{ $t('message.contact.contact') }}</h2>
+            <h2 data-aos="fade-right" class="text-4xl font-thin uppercase">
+                {{ $t('message.header.contact-us') }}
+                </h2>
             
             <hr class="dark:bg-white bg-black border dark:border-white boder-black w-full m-5" data-aos="zoom-in">
 
