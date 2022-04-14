@@ -14,15 +14,15 @@ const en = {
     },
 
     "home": {
-      "presentation": "FormuleETS is a club bringing together several passionate students in order to design from A to Z a mini formula 1. Find our different sections on this site to learn more about our club and our formula!",
+      "presentation": "Formule ETS is a club bringing together several students from the École de technologie supérieure, passionate about designing an electric racing car.",
       "aboutUs": {
         "title": "Who are we ?",
-        "text": "Formule ETS is a Formula SAE team made up of engineering students from the École de technologie supérieure de Montreal. The Collegiate Design Series competitions bring together more than 600 university teams around the world. compete by presenting a business plan to judges, describing their vehicle design philosophy, creating the project cost list and of course competing against top Formula SAE teams in thrilling races. <br > <br> For the first time in over 30 years, the Formula ETS team designs and manufactures its first iteration of an electric car. In the past, we have stood out from the competition by repeatedly having the lightest vehicle in competition, demonstrating an exemplary finish of the vehicle and having repeatedly reached the podium steps in the many competitions in which the team participates. "
+        "text": "Formule ETS is a Formula SAE team made up of engineering students from the École de technologie supérieure de Montreal. The Collegiate Design Series competitions bring together more than 600 university teams around the world. compete by presenting a business plan to judges, describing their vehicle design philosophy, creating the project cost list and of course competing against top Formula SAE teams in thrilling races. <br > <br> In the past, we have stood out from the competition by repeatedly having the lightest vehicle in competition, demonstrating an exemplary finish of the vehicle and having repeatedly reached the podium steps in the many competitions in which the team participates. Formule ETS has been designing electric cars since 2020."
       },
       "project": {
         "title": "The project !",
-        "text": `Formule ETS is a team of engineering students from the École de technologie supérieure in Montreal. The team has been designing and building racing cars with the aim of participating in Formula SAE competitions for a little over 30 years now with the same goal: "WIN" <br> <br> `+
-        `The vehicles that come out of the Formula ETS workshop reflect our design philosophy. Thus, we constantly pursue the design of the lightest vehicle, year after year. This year, we have decided to take up a new challenge, namely to build our first electric formula. <br> <br> ` +
+        "text": `Formule ETS has been designing and building racing cars with the aim of participating in Formula SAE competitions for a little over 30 years now with the same goal: "WIN" <br> <br> `+
+        `The vehicles that come out of the Formula ETS workshop reflect our design philosophy. Thus, we constantly pursue the design of the lightest vehicle, year after year. <br> <br> ` +
         `Our first electric car weighs around 195 kg and is powered by four AMK motors located at each wheel. MANIC is shod with 16-inch Hoosier tires mounted on aluminum wheels and specially designed brake calipers for each one.`
       },
       "team": {
