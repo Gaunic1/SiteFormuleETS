@@ -31,35 +31,36 @@
 
                 <input
                     v-model="form.name"
-                    class="p-5 m-5 w-3/4 h-10 border border-dark-mode"
+                    class="p-5 m-5 w-3/4 h-10 border border-dark-mode rounded-md"
                     type="text"
                     name="name"
                     placeholder="Name"
                 />
                 <input
                     v-model="form.email"
-                    class="p-5 m-5 w-3/4 h-10 border border-dark-mode"
+                    class="p-5 m-5 w-3/4 h-10 border border-dark-mode rounded-md"
                     type="email"
                     name="email"
                     placeholder="Email"
                 />
                 <input
                     v-model="form.subject"
-                    class="p-5 m-5 w-3/4 h-10 border border-dark-mode"
+                    class="p-5 m-5 w-3/4 h-10 border border-dark-mode rounded-md"
                     type="text"
                     name="subject"
                     placeholder="Subject"
                 />
                 <textarea
                     v-model="form.message"
-                    class="p-5 m-5 w-3/4 h-32 border border-dark-mode"
+                    class="p-5 m-5 w-3/4 h-32 border border-dark-mode rounded-md"
+                    style="resize: none"
                     name="message"
                     placeholder="Message"
                 ></textarea>
 
                 <div class="flex items-end justify-end md:w-3/4">
                     <button
-                        class="bg-red-600 p-3 pl-10 pr-10 text-white disabled:opacity-50 mb-5"
+                        class="bg-red-600 p-3 pl-10 pr-10 text-white disabled:opacity-50 mb-5 rounded-md"
                         :disabled="isDisabled"
                         type="submit"
                     >Send</button>
