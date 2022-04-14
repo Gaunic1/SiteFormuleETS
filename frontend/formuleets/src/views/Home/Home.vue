@@ -1,12 +1,7 @@
 <template>
   <div>
     <!-- PRESENTATION -->
-    <div
-      class="bg-first w-full flex flex-wrap overflow-x-hidden bg-center bg-fixed bg-cover min-h-screen bg-no-repeat
-       dark:bg-dark-mode bg-white"
-      lazy-background="/static/home/fond.svg"
-    >
-     <div class="h-screen overflow-hidden">
+     <div class="h-screen overflow-hidden bg-center bg-cover" lazy-background="/static/home/fond.svg">
        <div class="flex flex-col landscape:flex-row tb:flex-row justify-center items-center min-h-screen">
           <!-- TITLE -->
         <div
@@ -70,7 +65,6 @@
         <!-- CONTACT US -->
         <FormContact></FormContact>
       </div>
-    </div>
   </div>
 </template>
 

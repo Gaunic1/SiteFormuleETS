@@ -8,7 +8,7 @@
   </section>
 
   <section class="h-screen w-full dark:bg-dark-mode bg-white
-  flex justify-center items-center flex-col bg-cover bg-center bg-no-repeat bg-fixed relative py-5" 
+  flex justify-center items-center flex-col bg-cover bg-center bg-no-repeat relative py-5" 
   lazy-background="/static/home/fond2.svg">
     <!-- BAR -->
     <div class="bg-red-600 w-2 h-full rounded-md absolute" data-aos="zoom-in"></div>

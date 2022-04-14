@@ -61,7 +61,6 @@
 <script>
 import ytb from "./ytb"
 import phoneMixin from "../../mixins/phone-mixin";
-
 export default {
     name: "Videos",
     mixins: [phoneMixin],
@@ -70,7 +69,6 @@ export default {
             datas: null,
             showRight: true,
             showLeft: false,
-
             widthVideo: 675
         }
     },
@@ -82,7 +80,6 @@ export default {
     },
     async mounted(){
         const ytbDatas = localStorage.ybtDatas;
-
         if(ytbDatas){
             console.log('[INFO] YouTube Datas already loaded !');
             this.datas = JSON.parse(ytbDatas);
@@ -111,24 +108,19 @@ export default {
             const elem = document.querySelector('#slider');
             
             let left = document.body.offsetWidth;
-
             let scroll = left * delta;
-
             //right
             if((elem.scrollLeft + scroll*2 + scroll/2) >= elem.scrollWidth) {
                 scroll = elem.scrollWidth + 10;
             }
-
             //left
             if((elem.scrollLeft + scroll*2 - scroll/2) <= 0) {
                 scroll = -elem.scrollWidth - 10;
             }
-
             elem.scrollBy({
                 left: scroll,
                 behavior: "smooth"
             });
-
             this.showLeftF(elem.scrollLeft + scroll);
             this.showRightF(elem.scrollLeft + scroll, elem.scrollWidth);
         },

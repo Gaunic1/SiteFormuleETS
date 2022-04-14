@@ -1,6 +1,6 @@
 <template>
     <section
-        class="w-full flex-col flex justify-center items-center h-screen p-10 bg-cover bg-center bg-fixed"
+        class="w-full flex-col flex justify-center items-center h-screen p-10 bg-cover bg-center"
         lazy-background="/static/home/fond2.svg"
     >
         <h1
