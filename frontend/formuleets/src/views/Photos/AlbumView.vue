@@ -14,7 +14,7 @@
             <router-link :to="'/photos/' + item.id">
                 <div class="dark:text-white
                 calc-w rounded-md dark:bg-dark-mode bg-white border dark:border-gray-100 cursor-pointer mb-5"
-                data-aos="zoom-in">
+                lazy-animation="zoomin">
                     <div class="flex p-2 items-center relative w-full">
                         <i class="fas fa-image"></i>
                         <h2 class="absolute right-2">{{ item.name }}</h2>
