@@ -9,7 +9,7 @@
         <i v-if="!loaded" class="mt-10 fa-solid fa-spinner text-red-500 text-7xl animate-spin"></i>
 
         <!-- CONTENT -->
-        <template v-for="item of db.albums.sort((a,b) => a.name - b.name)" :key="item.name">
+        <template v-for="item of db.albums" :key="item.name">
 
             <router-link :to="'/photos/' + item.id">
                 <div class="dark:text-white
@@ -19,7 +19,7 @@
                         <i class="fas fa-image"></i>
                         <h2 class="absolute right-2">{{ item.name }}</h2>
                     </div>
-                    <div class="bg-cover bg-center w-full h-60 lazy-skeleton" 
+                    <div class="bg-center w-full h-52 lazy-skeleton" style="background-size: 100% auto"
                     :lazy-background="getImage(item.name)">
                     </div>
                 </div>

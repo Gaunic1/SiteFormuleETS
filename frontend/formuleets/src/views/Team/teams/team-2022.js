@@ -184,7 +184,7 @@ const team2022 = {
                 {
                     img: '',
                     fullName: "Thomas Viejo",
-                    role: "message.team.roles.head-media-sponsors",
+                    role: "",
                     mail: "t.viejo.formule.ets@gmail.com",
                     linkedin: "https://www.linkedin.com/"
                 },
