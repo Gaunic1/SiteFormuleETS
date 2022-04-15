@@ -19,7 +19,7 @@
                         <i class="fas fa-image"></i>
                         <h2 class="absolute right-2">{{ item.name }}</h2>
                     </div>
-                    <div class="bg-center w-full h-52 lazy-skeleton" style="background-size: 100% auto"
+                    <div class="bg-cover bg-center w-full h-52 lazy-skeleton"
                     :lazy-background="getImage(item.name)">
                     </div>
                 </div>
