@@ -62,7 +62,7 @@ export default {
      width: 24rem;
 }
 
-@media only screen and (max-width: 728px) and (orientation: portrait){
+@media only screen and (max-width: 500px) and (orientation: portrait){
   .calc-w{
     width: calc(100vw - 5rem);
   }
