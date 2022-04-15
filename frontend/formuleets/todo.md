@@ -1,3 +1,5 @@
-- text
-- date
-- linkedin/teams years
+- date et animation
+- default photo team
+- 3d cars
+- folder pour les photos par années
+- linkedin
