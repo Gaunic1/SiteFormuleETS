@@ -11,13 +11,6 @@ const team2022 = {
                     mail: "s.aubinlavoie.formule.ets@gmail.com",
                     linkedin: "https://www.linkedin.com/"
                 },
-                {
-                    img: '/static/team/members/daniel_gavrila.jpg',
-                    fullName: "Daniel Gavrila",
-                    role: "",
-                    mail: "d.gavrila.formule.ets@gmail.com",
-                    linkedin: "https://www.linkedin.com/"
-                },
             ]
         },
         {
@@ -28,6 +21,13 @@ const team2022 = {
                     fullName: "XAVIER BRIEN",
                     role: "message.team.roles.head-aerodynamics",
                     mail: "x.brien.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                },
+                {
+                    img: '/static/team/members/daniel_gavrila.jpg',
+                    fullName: "Daniel Gavrila",
+                    role: "",
+                    mail: "d.gavrila.formule.ets@gmail.com",
                     linkedin: "https://www.linkedin.com/"
                 },
                 {
@@ -109,27 +109,6 @@ const team2022 = {
                     linkedin: "https://www.linkedin.com/"
                 },
                 {
-                    img: '/static/team/members/marc_antoine.jpg',
-                    fullName: "MARC-ANTOINE DOYON",
-                    role: "",
-                    mail: "ma.doyon.formule.ets@gmail.com",
-                    linkedin: "https://www.linkedin.com/"
-                },
-                {
-                    img: '/static/team/members/felix_groleau.jpg',
-                    fullName: "FELIX GROLEAU",
-                    role: "",
-                    mail: "f.groleau.formule.ets@gmail.com",
-                    linkedin: "https://www.linkedin.com/"
-                },
-                {
-                    img: '/static/team/members/komi_kevin.jpg',
-                    fullName: "KOMI KEVIN AWATOR",
-                    role: "",
-                    mail: "k.awator.formule.ets@gmail.com",
-                    linkedin: "https://www.linkedin.com/"
-                },
-                {
                     img: '',
                     fullName: "Jérôme Bolduc",
                     role: "",
@@ -151,14 +130,14 @@ const team2022 = {
                 {
                     img: '/static/team/members/karl_vreeze.jpg',
                     fullName: "KARL DE VREEZE",
-                    role: "message.team.roles.head-power-drive-elec",
+                    role: "message.team.roles.head-power-drive-meca",
                     mail: "k.devreeze.formule.ets@gmail.com",
                     linkedin: "https://www.linkedin.com/"
                 },
                 {
                     img: '/static/team/members/jean_carlo.jpg',
                     fullName: "JEAN-CARLO DORAY",
-                    role: "message.team.roles.head-power-drive-meca",
+                    role: "message.team.roles.head-power-drive-elec",
                     mail: "jc.doray.formule.ets@gmail.com",
                     linkedin: "https://www.linkedin.com/"
                 },
@@ -174,6 +153,67 @@ const team2022 = {
                     fullName: "Tommy Gélinas",
                     role: "",
                     mail: "t.gelinas.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                },
+                {
+                    img: '/static/team/members/marc_antoine.jpg',
+                    fullName: "MARC-ANTOINE DOYON",
+                    role: "",
+                    mail: "ma.doyon.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                },
+                {
+                    img: '/static/team/members/felix_groleau.jpg',
+                    fullName: "FELIX GROLEAU",
+                    role: "",
+                    mail: "f.groleau.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                },
+                {
+                    img: '/static/team/members/komi_kevin.jpg',
+                    fullName: "KOMI KEVIN AWATOR",
+                    role: "",
+                    mail: "k.awator.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                },
+            ]
+        },
+        {
+            name: "message.team.machining",
+            members: [
+                {
+                    img: '',
+                    fullName: "Tommy Gélinas",
+                    role: "",
+                    mail: "t.gelinas.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                },
+                {
+                    img: "",
+                    fullName: "Antoine Gringas",
+                    role: "",
+                    mail: "a.gringas.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                },
+                {
+                    img: '/static/team/members/alexandre_valsorda.jpg',
+                    fullName: "ALEXANDRE VALSORDA",
+                    role: "",
+                    mail: "a.valsorda.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                },
+                {
+                    img: '',
+                    fullName: "Charles Deschenes",
+                    role: "",
+                    mail: "c.deschenes.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                },
+                {
+                    img: '/static/team/members/jimmy_jr.jpg',
+                    fullName: "JIMMY JR OZAETA",
+                    role: "",
+                    mail: "j.ozaeta.formule.ets@gmail.com",
                     linkedin: "https://www.linkedin.com/"
                 },
             ]
