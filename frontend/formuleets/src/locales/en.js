@@ -38,6 +38,10 @@ const en = {
         "toronto": "Toronto competition",
         "france": "France challenge"
       },
+      "days": "Days",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds",
       "time": "{0} Days {1} Hours {2} Minutes {3} Seconds"
     },
 

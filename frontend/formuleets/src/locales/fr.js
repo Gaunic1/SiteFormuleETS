@@ -38,6 +38,10 @@ const fr = {
         "toronto": "Toronto concours",
         "france": "France challenge"
       },
+      "days": "Jours",
+      "hours": "Heures",
+      "minutes": "Minutes",
+      "seconds": "Secondes",
       "time": "{0} Jours {1} Heures {2} Minutes {3} Secondes"
     },
 

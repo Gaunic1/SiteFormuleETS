@@ -3,26 +3,26 @@
    bg-white p-2 dark:text-white z-40 text-center">
         <h3 class="text-sm font-bold mb-3">{{ $t(title) }}</h3>
         <div class="flex flex-col text-xs">
-            <div class="flex mb-3">
-                <p>Days </p>
+            <div class="flex">
+                <p>{{ $t('message.date.days') }}</p>
                 <div class="flex-1 flex justify-end ml-3">
                     <NumberDisplay :time="time[0]"></NumberDisplay>
                 </div>
             </div>
-            <div class="flex mb-3">
-                <p>Hours </p>
+            <div class="flex">
+                <p>{{ $t('message.date.hours') }}</p>
                 <div class="flex-1 flex justify-end ml-3">
                     <NumberDisplay :time="time[1]"></NumberDisplay>
                 </div>
             </div>
-            <div class="flex mb-3">
-                <p>Minutes </p>
+            <div class="flex">
+                <p>{{ $t('message.date.minutes') }}</p>
                 <div class="flex-1 flex justify-end ml-3">
                     <NumberDisplay :time="time[2]"></NumberDisplay>
                 </div>
             </div>
-            <div class="flex mb-3">
-                <p>Seconds </p>
+            <div class="flex">
+                <p>{{ $t('message.date.seconds') }}</p>
                 <div class="flex-1 flex justify-end ml-3">
                     <NumberDisplay :time="time[3]"></NumberDisplay>
                 </div>
