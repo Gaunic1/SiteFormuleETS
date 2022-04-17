@@ -1,5 +1,12 @@
-- date et animation
+# TODO
 - default photo team
 - 3d cars
-- folder pour les photos par années
 - linkedin
+
+# DONE
+- folder pour les photos par années
+- date et animation
+
+# OTHER
+- tailwind 3 [impossible pour le moment] 
+- https://bestofvue.com/repo/Aridez-vue-tailwind-webpack-boilerplate#vue--tailwind--webpack-boilerplate
