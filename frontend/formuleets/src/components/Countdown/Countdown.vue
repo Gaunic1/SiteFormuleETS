@@ -1,8 +1,8 @@
 <template>
     <div class="rounded-md border dark:border-[#ffffff41] dark:bg-dark-mode
    bg-white p-2 dark:text-white z-40 text-center">
-        <h3 class="text-sm font-bold mb-3">{{ $t(title) }}</h3>
-        <div class="flex flex-col text-xs">
+        <h3 class="text-xl font-bold mb-3">{{ $t(title) }}</h3>
+        <div class="flex flex-col text-lg">
             <div class="flex">
                 <p>{{ $t('message.date.days') }}</p>
                 <div class="flex-1 flex justify-end ml-3">

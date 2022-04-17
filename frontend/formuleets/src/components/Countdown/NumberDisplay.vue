@@ -77,8 +77,8 @@ export default {
 
 .timer{
   position: relative;
-  width: 1rem;
-  height: 1.3rem;
+  width: 1.2rem;
+  height: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
