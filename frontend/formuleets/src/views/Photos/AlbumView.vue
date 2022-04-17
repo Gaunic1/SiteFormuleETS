@@ -36,6 +36,7 @@ import googleDriveMixin from "./google-drive-mixin";
 
 export default {
     name: "Photos",
+    props: ["year"],
     mixins: [googleDriveMixin],
     data(){
         return {
@@ -44,13 +45,13 @@ export default {
     },
 
     async mounted(){
-        await this.getDb(this.drive);
+        await this.getDb(this.drive, this.year);
         this.loaded = true;
     },
 
     methods: {
         getImage(item){
-            const img = this.db.images.find(e => e.name.includes(item));
+            const img = this.db.images.find(e => e.name.includes(item) && e.name.includes(this.year));
             return img ? img.url : "/static/photos/404.jpg";
         }
     }
