@@ -4,7 +4,7 @@
             <!-- SOCIAL MEDIAS -->
             <div class="flex-initial w-full p-3 flex justify-center items-center gap-3">
                 <template v-for="media of medias" :key="media">
-                    <a :href="media.link" 
+                    <a :href="media.link" target="_blank" rel="noopener noreferrer"
                     class="ml-3 text-white hover:bg-gray-500 transition-all 
                     text-lg md:border border-gray-500 rounded-full flex items-center 
                     justify-center w-16 h-16">

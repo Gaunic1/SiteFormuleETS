@@ -18,7 +18,7 @@
 
         <!-- LEFT -->
         <article class="lg:w-1/2 w-full p-5" data-aos="zoom-in">
-            <a :href="links.link1">
+            <a :href="links.link1" target="_blank" rel="noopener noreferrer">
                 <button class="w-full h-16 dark:bg-white bg-dark-mode text-white dark:text-black uppercase font-bold">
                     {{ $t("message.donate.particular.button") }}
                 </button>
@@ -30,7 +30,7 @@
 
         <!-- RIGHT -->
         <article class="lg:w-1/2 w-full p-5" data-aos="zoom-in">
-            <a :href="links.link2">
+            <a :href="links.link2" target="_blank" rel="noopener noreferrer">
                 <button class="w-full h-16 dark:bg-white bg-dark-mode text-white dark:text-black uppercase font-bold">
                     {{ $t("message.donate.sponsorship.button") }}
                 </button>
@@ -38,7 +38,7 @@
             <h3 class="uppercase mb-5 mt-5 font-bold text-lg">{{ $t("message.donate.sponsorship.title") }}</h3>
             <p>{{ $t("message.donate.sponsorship.text") }}</p>
             <p class="italic mt-5 mb-5">{{ $t("message.donate.sponsorship.italic") }}</p>
-            <a :href="links.link3" class="uppercase font-bold underline">{{ $t("message.donate.sponsorship.link") }}</a>
+            <a :href="links.link3" class="uppercase font-bold underline" target="_blank" rel="noopener noreferrer">{{ $t("message.donate.sponsorship.link") }}</a>
         </article>
     </section>
 
