@@ -15,7 +15,6 @@ import Team from '../views/Team/Team.vue'
 import Videos from '../views/Videos/Videos.vue'
 import AlbumView from '../views/Photos/AlbumView.vue'
 import PhotosView from '../views/Photos/PhotosView.vue'
-import YearsView from '../views/Photos/YearsView.vue'
 
 const routes = [
   {
@@ -75,15 +74,15 @@ const routes = [
   },
   {
     path: "/media/photos/:year",
-    name: "AlbumView",
+    name: "AlbumsYear",
     props: true,
     component: AlbumView,
-    pageName: "Albums photos"
+    pageName: "Albums"
   },
   {
     path: "/media/photos",
-    name: "YearsView",
-    component: YearsView,
+    name: "Albums",
+    component: AlbumView,
     pageName: "Albums"
   },
   {
