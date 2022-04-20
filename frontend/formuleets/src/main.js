@@ -16,7 +16,11 @@ import 'lazy-attr/dist/lazy-attr-animation.css'
 //Parallax
 import parallaxy from "parallaxy-img/dist/parallaxy";
 
+//Pinia
+import { createPinia } from 'pinia'
+
 createApp(App)
+.use(createPinia())
 .use(i18n)
 .use(AOS.init())
 .use(parallaxy)
