@@ -25,7 +25,7 @@
                 clickable: true,
             }"
             :modules="modules">
-            <swiper-slide v-for="img of db.images" :key="img.id">
+            <swiper-slide v-for="img of db" :key="img.id">
 
                 <!-- IMAGE -->
                 <div class="bg-cover bg-center w-full h-full lazy-skeleton" 
@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import googleDriveMixin from './google-drive-mixin'
+import { useAlbumsStore } from '../../store/AlbumsStore';
 
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue/swiper-vue.js';
@@ -52,10 +52,20 @@ export default {
       Swiper,
       SwiperSlide,
     },
-    mixins: [googleDriveMixin],
+    data(){
+        const store = useAlbumsStore();
+
+        return {
+            store: store,
+            db: []
+        }
+    },
     async mounted(){
-        await this.getDb(this.id);
-        if(this.db.images.length == 0){
+        await this.store.getAlbum(this.id);
+
+        this.db = this.store.getImagesByFolderId(this.id);
+
+        if(this.db.length == 0){
             this.$router.go(-1);
         }
     },

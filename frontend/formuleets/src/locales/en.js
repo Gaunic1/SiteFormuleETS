@@ -57,6 +57,11 @@ const en = {
       "title": "Page not found"
     },
 
+    "albums": {
+      "title": "Albums",
+      "year": "Year"
+    },
+
     "team": {
       "title": "The team",
       "teams": "Teams",

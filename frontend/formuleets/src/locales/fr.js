@@ -57,6 +57,11 @@ const fr = {
       "title": "Page non trouvée"
     },
 
+    "albums": {
+      "title": "Albumes",
+      "year": "Année"
+    },
+
     "team": {
       "title": "L'équipe",
       "teams": "Équipes",
