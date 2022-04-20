@@ -6,6 +6,7 @@
 # DONE
 - folder pour les photos par années
 - date et animation
+- pinia installation
 
 # OTHER
 - tailwind 3 [impossible pour le moment] 
