@@ -1,5 +1,6 @@
 <template>
-  <header :class="headerClass" class="fixed top-0 left-0 transition-all w-full dark:text-dark-mode z-50">
+  <header :class="headerClass" class="pointer-events-none nesthub:pointer-events-auto
+   fixed top-0 left-0 transition-all w-full dark:text-dark-mode z-50">
       <nav class="flex justify-center items-center w-full h-full">
           <!-- LOGO -->
           <!-- <div id="logo" class="flex-auto h-full p-3">
@@ -9,7 +10,7 @@
           </div> -->
 
           <!-- COMPUTER -->
-          <ul class="hidden list-none p-3 nesthub:flex">
+          <ul class="pointer-events-auto hidden list-none p-3 nesthub:flex">
               <template v-for="item of menu" :key="item.name">
                     <!-- DROPDOWN -->
                     <li v-if="item.type == 'dropdown'" class="dropdown flex items-center justify-center group">
@@ -53,7 +54,7 @@
           </ul>
 
           <!-- PHONE -->
-            <ul class="flex list-none p-3 nesthub:hidden absolute right-0">
+            <ul class="pointer-events-auto flex list-none p-3 nesthub:hidden absolute right-0">
               <i @click="displayMenuPhone()" class="dark:bg-dark-mode bg-white pr-1 pl-1 rounded-lg fas fa-bars cursor-pointer text-3xl dark:text-white"></i>
 
               <div data-aos="fade-right" v-if="showMenu" 
