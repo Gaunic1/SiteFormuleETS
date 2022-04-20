@@ -16,7 +16,7 @@
         <h1
             data-aos="zoom-in"
             class="dark:text-white font-bold text-4xl uppercase italic mb-20"
-        >{{ $t('message.team.title') }} - {{ year || store.db.years[0]?.title }}</h1>
+        >{{ $t('message.albums.title') }} - {{ year || store.db.years[0]?.title }}</h1>
 
         <hr data-aos="zoom-in" class="border border-red-500 bg-red-500 m-5" />
     </div>
