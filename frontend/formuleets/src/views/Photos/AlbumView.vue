@@ -27,7 +27,7 @@
         <i v-if="!loaded" class="mt-10 fa-solid fa-spinner text-red-500 text-7xl animate-spin"></i>
 
         <!-- CONTENT -->
-        <template v-for="item of db" :key="item.name">
+        <template v-else v-for="item of db" :key="item.name">
 
             <router-link :to="'/photos/' + item.id">
                 <div class="dark:text-white
