@@ -1,7 +1,7 @@
 const en = {
   "message": {
       "header": {
-        "aboutus": "About us",
+        "aboutus": "Home",
         "project": "the project",
         "team": "the team",
         "sponsors": "Sponsors",
@@ -59,6 +59,7 @@ const en = {
 
     "albums": {
       "title": "Albums",
+      "title_aside": "Years",
       "year": "Year"
     },
 

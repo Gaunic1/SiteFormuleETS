@@ -1,7 +1,7 @@
 const fr = {
   "message": {
     "header": {
-      "aboutus": "à propos de nous",
+      "aboutus": "Accueil",
       "project": "le projet",
       "team": "l'équipe",
       "sponsors": "Commanditaires",
@@ -58,7 +58,8 @@ const fr = {
     },
 
     "albums": {
-      "title": "Albumes",
+      "title": "Albums",
+      "title_aside": "Années",
       "year": "Année"
     },
 
