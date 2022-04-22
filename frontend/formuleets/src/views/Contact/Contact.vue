@@ -31,7 +31,7 @@
 
                 <span>(1) 514-396-8800 Poste: 7741</span>
                 <span>Bureau: D-2016</span>
-                <span>formule@ens.etsmtl.ca</span>
+                <a href="mailto:formule@ens.etsmtl.ca" class="underline">formule@ens.etsmtl.ca</a>
             </div>
             
             <iframe lazy-src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5491.523246577794!2d-73.562965!3d45.495101!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4e9357b01ffef3ef!2s%C3%89cole%20de%20Technologie%20Sup%C3%A9rieure!5e1!3m2!1sfr!2sca!4v1641331931733!5m2!1sfr!2sca" 
