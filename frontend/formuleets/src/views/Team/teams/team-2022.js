@@ -69,7 +69,7 @@ const team2022 = {
             name: "message.team.dynamics",
             members: [
                 {
-                    img: '',
+                    img: '/static/team/members/charles_deschenes.png',
                     fullName: "Charles Deschenes",
                     role: "message.team.roles.heade-dynamic",
                     mail: "c.deschenes.formule.ets@gmail.com",
@@ -89,6 +89,27 @@ const team2022 = {
                     mail: "l.bruneau.formule.ets@gmail.com",
                     linkedin: "https://www.linkedin.com/"
                 },
+                {
+                    img: '/static/team/members/felix_groleau.jpg',
+                    fullName: "FELIX GROLEAU",
+                    role: "",
+                    mail: "f.groleau.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                },
+                {
+                    img: '/static/team/members/komi_kevin.jpg',
+                    fullName: "KOMI KEVIN AWATOR",
+                    role: "",
+                    mail: "k.awator.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                },
+                {
+                    img: '/static/team/members/victor_avezard.jpg',
+                    fullName: "VICTOR AVEZARD",
+                    role: "",
+                    mail: "v.avezard.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                },
             ]
         },
         {
@@ -99,13 +120,6 @@ const team2022 = {
                     fullName: "FÉLIX PAQUET",
                     role: "message.team.roles.head-electronic",
                     mail: "f.paquet.formule.ets@gmail.com",
-                    linkedin: "https://www.linkedin.com/"
-                },
-                {
-                    img: '/static/team/members/victor_avezard.jpg',
-                    fullName: "VICTOR AVEZARD",
-                    role: "",
-                    mail: "v.avezard.formule.ets@gmail.com",
                     linkedin: "https://www.linkedin.com/"
                 },
                 {
@@ -142,13 +156,6 @@ const team2022 = {
                     linkedin: "https://www.linkedin.com/"
                 },
                 {
-                    img: '/static/team/members/steve_groleau.jpg',
-                    fullName: "Steve Groleau",
-                    role: "",
-                    mail: "s.groleau.formule.ets@gmail.com",
-                    linkedin: "https://www.linkedin.com/"
-                },
-                {
                     img: '',
                     fullName: "Tommy Gélinas",
                     role: "",
@@ -160,20 +167,6 @@ const team2022 = {
                     fullName: "MARC-ANTOINE DOYON",
                     role: "",
                     mail: "ma.doyon.formule.ets@gmail.com",
-                    linkedin: "https://www.linkedin.com/"
-                },
-                {
-                    img: '/static/team/members/felix_groleau.jpg',
-                    fullName: "FELIX GROLEAU",
-                    role: "",
-                    mail: "f.groleau.formule.ets@gmail.com",
-                    linkedin: "https://www.linkedin.com/"
-                },
-                {
-                    img: '/static/team/members/komi_kevin.jpg',
-                    fullName: "KOMI KEVIN AWATOR",
-                    role: "",
-                    mail: "k.awator.formule.ets@gmail.com",
                     linkedin: "https://www.linkedin.com/"
                 },
             ]
@@ -214,6 +207,13 @@ const team2022 = {
                     fullName: "JIMMY JR OZAETA",
                     role: "",
                     mail: "j.ozaeta.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/"
+                },
+                {
+                    img: '/static/team/members/steve_groleau.jpg',
+                    fullName: "Steve Groleau",
+                    role: "",
+                    mail: "s.groleau.formule.ets@gmail.com",
                     linkedin: "https://www.linkedin.com/"
                 },
             ]
