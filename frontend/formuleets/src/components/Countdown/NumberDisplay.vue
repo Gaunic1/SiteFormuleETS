@@ -82,7 +82,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #dddddd;
+  border: 1px solid #dddddd50;
   transform-style: preserve-3d;
   perspective: 300px;
   background-color: #1b1b1b;
@@ -116,7 +116,7 @@ export default {
   overflow: visible;
   transform-style: preserve-3d;
   transform-origin: bottom;
-  border: 1px solid #dddddd;
+  border: 1px solid #dddddd50;
 }
 
 .play-animation{
@@ -145,7 +145,7 @@ export default {
   position: absolute;
   height: 1px;
   width: 100%;
-  background-color: #dddddd;
+  background-color: #dddddd50;
   opacity: 0.5;
   z-index: 15;
 }
