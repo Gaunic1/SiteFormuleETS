@@ -20,7 +20,7 @@
     class="w-full z-10 dark:text-white flex">
 
         <div class="w-1/2 flex items-center px-8 my-10" :class="index%2 == 0 ? 'justify-end' : 'ml-auto'">
-            <Countdown :date="item.date" :hour="item.hour" :title="item.title"></Countdown>
+            <Countdown :link="item.link" :date="item.date" :hour="item.hour" :title="item.title"></Countdown>
             <div class="rounded-full bg-red-800 border border-red-600 w-4 h-4
              ml-10 absolute right-1/2 transform translate-x-1/2"></div>
         </div>
@@ -39,7 +39,7 @@ export default {
     components: { Countdown },
     data(){
       return {
-        dateList: dateList
+        dateList: dateList.length > 0 ? dateList.sort((a, b) => (a.date+a.hour).localeCompare(b.date+b.hour)) : dateList
       }
     }
 }

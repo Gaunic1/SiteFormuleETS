@@ -27,6 +27,9 @@
                     <NumberDisplay :time="time[3]"></NumberDisplay>
                 </div>
             </div>
+            <a :href="link" v-if="link" class="underline text-sm w-full text-left mt-3" target="_blank" rel="noopener noreferrer">
+                 {{ $t('message.date.informations') }}
+            </a>
         </div>
     </div>
 </template>
@@ -49,6 +52,9 @@ export default {
             required: true,
             type: String
         },
+        link: {
+            type: String
+        }
     },
     data() {
         return {

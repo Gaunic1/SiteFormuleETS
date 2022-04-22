@@ -38,6 +38,7 @@ const fr = {
         "michigan": "Formula SAE michigan",
         "recruitment": "Recrutement été"
       },
+      "informations": "Plus d'informations",
       "days": "Jours",
       "hours": "Heures",
       "minutes": "Minutes",
