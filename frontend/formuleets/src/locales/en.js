@@ -34,9 +34,9 @@ const en = {
     "date": {
       "mainTitle": "Important dates",
       "title": {
-        "unveiling": "Unveiling",
-        "toronto": "Toronto competition",
-        "france": "France challenge"
+        "shootout": "Pittsburgh Shootout",
+        "michigan": "Formula SAE michigan",
+        "recruitment": "Summer recruitment"
       },
       "days": "Days",
       "hours": "Hours",
