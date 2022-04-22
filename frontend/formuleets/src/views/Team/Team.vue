@@ -10,7 +10,7 @@
         <!-- TEAM DISPLAY -->
         <section class="flex-1 relative">
             <div class="absolute top-12 left-5 flex dark:text-white justify-center animate-pulse
-            items-center p-3 text-2xl cursor-pointer z-10" @click="modal = true">
+            items-center p-3 text-2xl z-10" @click="modal = true">
                 <p class="mr-3">{{ $t('message.team.teams') }}</p>
                 <i class="fa-solid fa-circle-arrow-right"></i>
             </div>
@@ -42,7 +42,7 @@
                         >
                             <!-- IMAGE -->
                             <div
-                                class="bg-cover bg-center h-2/3 w-full lazy-skeleton card cursor-pointer"
+                                class="bg-cover bg-center h-2/3 w-full lazy-skeleton card"
                                 :lazy-background="member.img != '' && member.img ? member.img : '/static/team/members/default.png'"
                             >
                                 <!-- OVERLAY -->
