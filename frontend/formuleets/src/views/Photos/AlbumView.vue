@@ -22,7 +22,7 @@
     </div>
 
     <!-- ALBUMS -->
-    <div class="flex flex-wrap h-full relative gap-10 justify-center">
+    <div class="flex flex-wrap h-full relative gap-10 justify-center p-5">
         <!-- LOADER -->
         <i v-if="!loaded" class="mt-10 fa-solid fa-spinner text-red-500 text-7xl animate-spin"></i>
 
