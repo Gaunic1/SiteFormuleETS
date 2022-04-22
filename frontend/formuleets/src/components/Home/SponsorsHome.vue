@@ -25,7 +25,7 @@
         </div>
 
         <div
-            class="w-full flex h-36"
+            class="w-full flex h-44"
             style="margin-left: -100vh"
             parallaxy-x
             parallaxy-overflow-x
