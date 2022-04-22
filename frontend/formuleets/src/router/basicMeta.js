@@ -17,7 +17,7 @@ const basicMeta = [
     },
     {
       property: "og:image",
-      content: "/presentation.jpg"
+      content: "/og-image.png"
     }
   ]
 
