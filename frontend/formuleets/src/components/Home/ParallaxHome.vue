@@ -11,17 +11,17 @@
                 alt="Image"
                 parallaxy-y
                 parallaxy-scale="1"
-                :parallaxy-speed-y="0.65"
+                parallaxy-speed-y="0.65"
                 parallaxy-overflow-y
             />
              <img
                 v-if="isMobile"
-                :src="item.image"
+                :src="item.mobileImage ? item.mobileImage : item.image"
                 class="w-full"
                 alt="Image"
                 parallaxy-y
                 parallaxy-scale="1.4"
-                :parallaxy-speed-y="0.3"
+                parallaxy-speed-y="0.3"
                 parallaxy-axes="80"
             />
         </div>

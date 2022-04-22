@@ -41,7 +41,7 @@
 
         <!-- PARALLAX LEFT -->
         <ParallaxHome
-          :item="{text: 'message.home.aboutUs', image: '/static/home/fond3.jpg'}"
+          :item="{text: 'message.home.aboutUs', image: '/static/home/fond-pc.png', mobileImage: '/static/home/fond-mobile.png'}"
           :isMobile="isMobile"
           position="left"
         ></ParallaxHome>
