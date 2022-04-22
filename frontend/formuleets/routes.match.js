@@ -13,6 +13,6 @@ while((res = reg.exec(textRoutes)) != null){
 //remove duplicate
 const finalPath = [...new Set(path)];
 
-console.log('Matched routes: ', finalPath);
+console.log('Matched routes: ', finalPath, "\n");
 
 module.exports = finalPath;
