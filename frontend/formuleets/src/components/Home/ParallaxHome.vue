@@ -1,9 +1,10 @@
 <template>
     <section
-        class="flex justify-center items-center flex-col flex-wrap w-full min-h-screen relative overflow-hidden"
+        class="flex justify-center flex-col flex-wrap w-full min-h-screen relative overflow-hidden"
+        :class="position == 'right' ? 'items-end' : ''"
     >
         <!-- IMAGE PARALLAX -->
-        <div class="flex justify-center items-center overflow-hidden h-48 nesthub:h-full">
+        <div class="flex justify-center items-center overflow-hidden h-full nesthub:absolute nesthub:h-full">
             <img
                 v-if="!isMobile"
                 :src="item.image"
@@ -28,8 +29,9 @@
 
         <!-- TEXT CONTENT -->
         <article
-            class="h-full nesthub:w-2/5 text-justify p-10 nesthub:absolute dark:bg-dark-mode bg-white border-black dark:border-white flex justify-center flex-col top-0"
-            :class="position == 'right' != 0 ? 'right-0 nesthub:border-l' : 'left-0 nesthub:border-r'"
+            class="h-full nesthub:min-h-screen nesthub:w-2/5 text-justify p-10 dark:bg-dark-mode bg-white 
+            border-black dark:border-white flex justify-center flex-col top-0 z-10"
+            :class="position == 'right' != 0 ? 'nesthub:border-l' : 'nesthub:border-r'"
         >
             <h1
                 class="text-red-600 text-4xl my-3 font-bold italic tracking-wider text-shadow z-10 uppercase text-center"
