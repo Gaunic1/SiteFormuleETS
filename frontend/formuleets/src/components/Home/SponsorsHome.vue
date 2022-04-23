@@ -17,7 +17,7 @@
             parallaxy-inverted-x
             parallaxy-scale="1"
         >
-            <template v-for="sponsor of sponsors.diamond" :key="sponsor.src">
+            <template v-for="sponsor of sponsors.diamond.concat(sponsors.diamond)" :key="sponsor.src">
                 <img :src="isDarModeActually ? 
                 (sponsor.whiteVersion ? sponsor.whiteVersion : sponsor.imageSrc) 
                 : sponsor.imageSrc" alt="Sponsor" class="h-full" />
