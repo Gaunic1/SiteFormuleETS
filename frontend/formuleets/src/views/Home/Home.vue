@@ -101,7 +101,7 @@ export default {
       if (scroll < window.innerHeight) {
         const formule = document.querySelector("#formule");
         if (formule)
-          formule.style = `transition: none!important; transform: translate(${-scroll}px, ${scroll}px)`;
+          formule.style = `transition: none!important; transform: translate(${-scroll}px, ${scroll}px) scale(1.25)`;
         else
           document.removeEventListener("scroll", this.scrollFormule);
       }
