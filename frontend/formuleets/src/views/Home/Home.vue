@@ -22,9 +22,8 @@
           <img
             id="formule"
             src="/static/home/final2022.png"
-            data-aos="fade-left"
             alt="Formule"
-            class="z-0 w-full"
+            class="z-0 w-full transform scale-125 slide-from-right"
             style="will-change: transform;"
           />
         </div>
@@ -112,7 +111,16 @@ export default {
 </script>
 
 <style scoped>
-*:focus {
-  outline: none;
+.slide-from-right{
+  animation: slide-right-an 0.4s ease forwards;
+  opacity: 0;
+  margin-right: -2rem;
+}
+
+@keyframes slide-right-an {
+  to{
+    opacity: 1;
+    margin-right: 0;
+  }
 }
 </style>
