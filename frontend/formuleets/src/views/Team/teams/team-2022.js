@@ -238,7 +238,7 @@ const team2022 = {
                     linkedin: ""
                 },
                 {
-                    img: '',
+                    img: '/static/team/members/charles_deschenes.png',
                     fullName: "Charles Deschenes",
                     role: "",
                     mail: "c.deschenes.formule.ets@gmail.com",
