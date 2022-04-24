@@ -125,7 +125,7 @@ const en = {
         },
         "electronics": {
           "title": "Electronics",
-          "label": "<b>Formule ETS Designed :</b> <br> Accumulator <br> PMU (power Management Unit) <br><br> Programmed Vehicle Control Unit (VCU). <br> Full 3D CAD drawing of Low Voltage (LV), High Voltage (HV) harness and electrical components."
+          "label": "<b>Formule ETS Designed :</b> <br> Accumulator. <br> PMU (power Management Unit). <br> Programmed Vehicle Control Unit (VCU). <br> Full 3D CAD drawing of Low Voltage (LV), High Voltage (HV) harness and electrical components."
         },
         "aerodynamics": {
           "title": "Aerodynamics",

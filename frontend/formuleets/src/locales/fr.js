@@ -125,7 +125,7 @@ const fr = {
         },
         "electronics": {
           "title": "Électronique",
-          "label": "<b>Conçu par Formule ETS :</b> <br> Accumulateur <br> Module de gestion du courant (Power Management Unit) <br><br> Unité de contrôle du véhicule (VCU) programmée. <br> Dessins 3D complets en CAO des harnais bas voltage (LV), haut voltage (HV) et des composantes électriques."
+          "label": "<b>Conçu par Formule ETS :</b> <br> Accumulateur. <br> Module de gestion du courant (Power Management Unit). <br> Unité de contrôle du véhicule (VCU) programmée. <br> Dessins 3D complets en CAO des harnais bas voltage (LV), haut voltage (HV) et des composantes électriques."
         },
         "aerodynamics": {
           "title": "Aérodynamique",

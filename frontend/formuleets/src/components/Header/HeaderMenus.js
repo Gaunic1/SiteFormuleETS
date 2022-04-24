@@ -20,10 +20,6 @@ const HeaderMenus = [
         to: "/donate"
     },
     {
-        name: "message.header.contact-us",
-        to: "/contact-us"
-    },
-    {
         name: "message.header.media",
         type: "dropdown",
         menus: [
@@ -38,9 +34,13 @@ const HeaderMenus = [
         ]
     },
     {
-        name: "message.header.model",
-        to: "/3d-model"
-    }
+        name: "message.header.contact-us",
+        to: "/contact-us"
+    },
+    // {
+    //     name: "message.header.model",
+    //     to: "/3d-model"
+    // }
 ];
 
 export default HeaderMenus;

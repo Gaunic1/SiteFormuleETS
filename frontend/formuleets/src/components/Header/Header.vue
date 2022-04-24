@@ -36,7 +36,7 @@
                         <router-link class="ml-2 mr-2 no-underline uppercase dark:text-white" :to="item.to">{{ $t(item.name) }}</router-link>
                     </li>
               </template>
-              <li>
+              <li class="ml-3">
                 <!-- DARK MODE -->
                 <i class="w-9 h-9 flex justify-center items-center cursor-pointer dark:text-white border border-black dark:border-white rounded-full"
                 :class="darkMode ? 'fas fa-lightbulb' : 'far fa-lightbulb'" @click="changeDarkMode()"></i>
