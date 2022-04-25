@@ -6,8 +6,8 @@
     <div class="lg:h-screen h-auto w-full flex justify-center items-center relative overflow-hidden">
         
     <!-- BACKGROUND IMAGE -->
-    <img src="/static/donate/fond.jpg" alt="Fond" class="absolute h-full lg:w-full left-0 top-0"
-    parallaxy-x parallaxy-inverted-x parallaxy-speed-x="0.15">
+    <img src="/static/donate/fond.png" alt="Fond" class="absolute h-full lg:w-full left-0 top-0"
+    parallaxy-x parallaxy-speed-x="0.15">
 
     <!-- OVERLAY -->
     <div class="absolute top-0 left-0 h-full w-full bg-overlay"></div>
