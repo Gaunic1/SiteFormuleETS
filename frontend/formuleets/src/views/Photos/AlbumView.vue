@@ -19,7 +19,9 @@
     <!-- YEARS -->
     <div class="w-full overflow-hidden" v-else v-for="year of years" :key="year">
 
-        <h2 lazy-animation="zoomin" class="dark:text-white m-5 text-3xl font-bold">{{ year }}</h2>
+        <h2 lazy-animation="zoomin" class="dark:text-white m-5 text-3xl font-bold">
+            {{ $t('message.albums.year') + ' ' + year }}
+        </h2>
 
         <hr lazy-animation="zoomin" class="border border-red-500 bg-red-500 m-5" />
 
