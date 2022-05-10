@@ -66,7 +66,7 @@
                                     class="text-lg"
                                     v-if="member.role && member.role.trim() != ''"
                                 >{{ $t(member.role) }}</p>
-                                <a :href="'mailto:'+member.mail" class="underline text-lg break-words translate-z-25">{{ member.mail }}</a>
+                                <a :href="'mailto:'+member.mail" class="underline break-words translate-z-25">{{ member.mail }}</a>
                             </div>
                         </div>
                     </article>

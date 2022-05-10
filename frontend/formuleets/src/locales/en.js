@@ -35,8 +35,8 @@ const en = {
       "mainTitle": "Important dates",
       "title": {
         "shootout": "Pittsburgh Shootout",
-        "michigan": "Formula SAE michigan",
-        "recruitment": "Summer recruitment"
+        "michigan": "Formula SAE Michigan",
+        "recruitment": "Unveiling"
       },
       "informations": "More informations",
       "days": "Days",
@@ -81,13 +81,13 @@ const en = {
         "technical-director": "Technical director",
         "management-director": "Management director",
         "head-aerodynamics": "Head of Aerodynamics",
-        "head-chassis": "Head of chassis",
-        "heade-dynamic": "Head of dynamics",
-        "head-electronic": "Head of electronics",
+        "head-chassis": "Head of Chassis",
+        "heade-dynamic": "Head of Dynamics",
+        "head-electronic": "Head of Electronics",
         "head-media-sponsors": "Head of Sponsors & Media",
-        "head-power-drive": "Head of power & drive",
-        "head-power-drive-elec": "Head of power & drive electrical",
-        "head-power-drive-meca": "Head of power & drive mechanical"
+        "head-power-drive": "Head of Power & Drive",
+        "head-power-drive-elec": "Head of Power & Drive Electrical",
+        "head-power-drive-meca": "Head of Power & Drive Mechanical"
       }
     },
 
@@ -97,7 +97,7 @@ const en = {
 
     "sponsors": {
       "button": "Become a partner",
-      "diamond": "Diamonds",
+      "diamond": "Diamond",
       "gold": "Gold",
       "silver": "Silver",
       "bronze": "Bronze"
@@ -121,11 +121,11 @@ const en = {
         },
         "dynamics": {
           "title": "Dynamics",
-          "label": "Custom decoupled roll dampers. <br> Conception of custom front/rear brake calipers. <br> Front pull rods and rear push rod system."
+          "label": "Decoupled suspension with the DSSV technology. <br/> Conception of custom front/rear brake calipers. <br/> Front pull rods and rear push rod system."
         },
         "electronics": {
           "title": "Electronics",
-          "label": "<b>Formule ETS Designed :</b> <br> Accumulator. <br> PMU (power Management Unit). <br> Programmed Vehicle Control Unit (VCU). <br> Full 3D CAD drawing of Low Voltage (LV), High Voltage (HV) harness and electrical components."
+          "label": "<b>Formule ETS Designed :</b> <br> Accumulator. <br/> PMU (Power Management Unit). <br/> VCU (Programmed Vehicle Control Unit)."
         },
         "aerodynamics": {
           "title": "Aerodynamics",

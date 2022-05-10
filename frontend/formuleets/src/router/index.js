@@ -73,13 +73,6 @@ const routes = [
     pageName: "Videos"
   },
   {
-    path: "/media/photos/:year",
-    name: "AlbumsYear",
-    props: true,
-    component: AlbumView,
-    pageName: "Albums"
-  },
-  {
     path: "/media/photos",
     name: "Albums",
     component: AlbumView,

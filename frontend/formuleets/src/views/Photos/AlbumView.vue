@@ -7,68 +7,60 @@
 
     <!-- SIDE MENU -->
     <div class="w-full text-center relative mb-10">
-        <div class="absolute top-12 left-5 flex dark:text-white justify-center animate-pulse
-            items-center p-3 text-2xl cursor-pointer z-10" @click="modal = true">
-                <p class="mr-3">{{ $t('message.albums.title_aside') }}</p>
-                <i class="fa-solid fa-circle-arrow-right"></i>
-        </div>
-
         <h1
             data-aos="zoom-in"
             class="dark:text-white font-bold text-4xl uppercase italic mb-20"
-        >{{ $t('message.albums.title') }} - {{ year || store.db.years[0]?.title }}</h1>
-
-        <hr data-aos="zoom-in" class="border border-red-500 bg-red-500 m-5" />
+        >{{ $t('message.albums.title') }}</h1>
     </div>
 
-    <!-- ALBUMS -->
-    <div class="flex flex-wrap h-full relative gap-10 justify-center p-5">
-        <!-- LOADER -->
-        <i v-if="!loaded" class="mt-10 fa-solid fa-spinner text-red-500 text-7xl animate-spin"></i>
+    <!-- LOADER -->
+    <i v-if="!loaded" class="mt-10 fa-solid fa-spinner text-red-500 text-7xl animate-spin"></i>
 
-        <!-- CONTENT -->
-        <template v-else v-for="item of db" :key="item.name">
+    <!-- YEARS -->
+    <div class="w-full overflow-hidden" v-else v-for="year of years" :key="year">
 
-            <router-link :to="'/photos/' + item.id">
-                <div class="calc-w rounded-md dark:bg-dark-mode 
-                bg-white border dark:border-gray-100 cursor-pointer 
-                mb-5 h-60 overflow-hidden relative"
-                lazy-animation="zoomin" :key="item.thumbnail">
+        <h2 lazy-animation="zoomin" class="dark:text-white m-5 text-3xl font-bold">{{ year }}</h2>
 
-                    <!-- TEXT -->
-                    <div class="flex p-5 justify-center items-center 
-                    absolute top-0 left-0 w-full h-full bg-overlay z-10
-                    text-center group">
-                        <h2 class="text-2xl text-white uppercase font-bold transition-all
-                        group-hover:tracking-wider">{{ item.name }}</h2>
+        <hr lazy-animation="zoomin" class="border border-red-500 bg-red-500 m-5" />
+
+        <!-- ALBUMS -->
+        <div class="flex flex-wrap h-full relative gap-10 justify-center p-5">
+            <!-- CONTENT -->
+            <template v-for="item of store.getByYear(year)" :key="item.name">
+
+                <router-link :to="'/photos/' + item.id">
+                    <div class="calc-w rounded-md dark:bg-dark-mode 
+                    bg-white border dark:border-gray-100 cursor-pointer 
+                    mb-5 h-60 overflow-hidden relative"
+                    lazy-animation="zoomin" :key="item.thumbnail">
+
+                        <!-- TEXT -->
+                        <div class="flex p-5 justify-center items-center 
+                        absolute top-0 left-0 w-full h-full bg-overlay z-10
+                        text-center group">
+                            <h2 class="text-2xl text-white uppercase font-bold transition-all
+                            group-hover:tracking-wider">{{ item.name }}</h2>
+                        </div>
+
+                        <!-- IMAGE -->
+                        <div class="bg-cover bg-center w-full h-full lazy-skeleton"
+                        :lazy-background="item.thumbnail">
+                        </div>
                     </div>
+                </router-link>
 
-                    <!-- IMAGE -->
-                    <div class="bg-cover bg-center w-full h-full lazy-skeleton"
-                    :lazy-background="item.thumbnail">
-                    </div>
-                </div>
-            </router-link>
-
-        </template>
-     </div>
+            </template>
+        </div>
+    </div>
 
   </div>
-
-  <Aside :opened="modal" @close="modal = false" 
-        :beforeItem="$t('message.albums.year') + ' - ' " 
-        :itemsMenu="store.db.years" @clicked="changeDefault"
-        :title="$t('message.albums.title')"></Aside>
 </template>
 
 <script>
 import { useAlbumsStore } from "../../store/AlbumsStore";
-import Aside from "../../components/Asidebar/Aside.vue";
 
 export default {
     name: "Photos",
-    props: ["year"],
-    components: {Aside},
 
     data(){
         const store = useAlbumsStore();
@@ -76,37 +68,15 @@ export default {
         return {
             loaded: false,
             store: store,
-            db: store.db,
-            modal: false
-        }
-    },
-
-    watch: {
-        year(){
-            this.changeAlbums();
+            years: [],
         }
     },
 
     async mounted(){
         await this.store.getAlbum(this.store.drive);
         this.loaded = true;
-        this.changeAlbums();
+        this.years = this.store.db?.years?.map(e => e.title);
     },
-
-    methods: {
-        changeAlbums(){
-            this.db = this.store.getByYear(this.year);
-        },
-
-        changeDefault(year){
-            this.$router.push({
-                name: "AlbumsYear",
-                params: {
-                    year: year
-                }
-            })
-        }
-    }
 }
 </script>
 

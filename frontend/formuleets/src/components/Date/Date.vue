@@ -39,8 +39,18 @@ export default {
     components: { Countdown },
     data(){
       return {
-        dateList: dateList.length > 0 ? dateList.sort((a, b) => (a.date+a.hour).localeCompare(b.date+b.hour)) : dateList
+        dateList: dateList.list.length > 0 ? dateList.list.sort((a, b) => (a.date+a.hour).localeCompare(b.date+b.hour)) : dateList.list
       }
+    },
+    mounted(){
+      this.dateList = this.dateList.filter(e => {
+        const d = new Date();
+        d.setDate(d.getDate() + dateList.stopDisplayingAfterDays);
+
+        const c = new Date(e.date + " " + e.hour);
+
+        return c > d;
+      });
     }
 }
 </script>

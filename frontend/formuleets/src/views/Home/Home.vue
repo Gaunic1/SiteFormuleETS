@@ -34,10 +34,6 @@
       <div class="flex-initial w-full z-10 bg-first overflow-x-hidden bg-white dark:bg-dark-mode">
         <hr lazy-animation="zoomin" lazy-reset class="border-red-600 m-3" />
 
-        <Date></Date>
-
-        <hr lazy-animation="zoomin" lazy-reset class="border-red-600 m-3" />
-
         <!-- PARALLAX LEFT -->
         <ParallaxHome
           :item="{text: 'message.home.aboutUs', image: '/static/home/fond-pc.png', mobileImage: '/static/home/fond-mobile.png'}"
@@ -59,6 +55,11 @@
           position="right"
         ></ParallaxHome>
 
+        <hr v-if="dateDisplay" lazy-animation="zoomin" lazy-reset class="border-red-600 m-3" />
+
+        <!-- DATES -->
+        <Date v-if="dateDisplay"></Date>
+
         <hr lazy-animation="zoomin" lazy-reset class="border-red-600 m-3" />
 
         <!-- CONTACT US -->
@@ -74,6 +75,7 @@ import ParallaxHome from "../../components/Home/ParallaxHome.vue";
 import SponsorsHome from "../../components/Home/SponsorsHome.vue";
 import FormContact from "../../components/Form/FormContact.vue";
 import Date from "../../components/Date/Date.vue";
+import dateList from "../../components/Date/date";
 
 export default {
   name: "Home",
@@ -87,6 +89,18 @@ export default {
         ETS: "ETS",
       },
     };
+  },
+  computed: {
+    dateDisplay(){
+      return dateList?.list?.filter(e => {
+        const d = new window.Date();
+        d.setDate(d.getDate() + dateList.stopDisplayingAfterDays);
+
+        const c = new window.Date(e.date + " " + e.hour);
+
+        return c > d;
+      })?.length > 0;
+    }
   },
   created() {
     this.$data.mobileSize = "1024px";

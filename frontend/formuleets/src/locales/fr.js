@@ -35,8 +35,8 @@ const fr = {
       "mainTitle": "Dates importantes",
       "title": {
         "shootout": "Pittsburgh Shootout",
-        "michigan": "Formula SAE michigan",
-        "recruitment": "Recrutement été"
+        "michigan": "Formula SAE Michigan",
+        "recruitment": "Dévoilement"
       },
       "informations": "Plus d'informations",
       "days": "Jours",
@@ -73,21 +73,21 @@ const fr = {
       "chassis": "Châssis",
       "dynamics": "Dynamique",
       "electronics": "Électronique",
-      "power_n_drive": "Groupe motopropulseur",
+      "power_n_drive": "Groupe Motopropulseur",
       "machining": "Usinage",
       "sponsors_n_media": "Commanditaires & Média",
       "roles": {
         "captain": "Capitaine",
         "technical-director": "Directeur technique",
         "management-director": "Directeur de gestion",
-        "head-aerodynamics": "Chef d'aérodynamique",
-        "head-chassis": "Chef de châssis",
-        "heade-dynamic": "Chef de dynamique",
-        "head-electronic": "Chef d'électronique",
+        "head-aerodynamics": "Chef d'Aérodynamique",
+        "head-chassis": "Chef de Châssis",
+        "heade-dynamic": "Chef de Dynamique",
+        "head-electronic": "Chef d'Électronique",
         "head-media-sponsors": "Chef de Commanditaires & Média",
-        "head-power-drive": "Chef de motopropulseur",
-        "head-power-drive-elec": "Chef de motopropulseur électrique",
-        "head-power-drive-meca": "Chef de motopropulseur mécanique"
+        "head-power-drive": "Chef de Motopropulseur",
+        "head-power-drive-elec": "Chef de Motopropulseur Électrique",
+        "head-power-drive-meca": "Chef de Motopropulseur Mécanique"
       }
     },
 
@@ -97,7 +97,7 @@ const fr = {
 
     "sponsors": {
       "button": "Devenez un partenaire",
-      "diamond": "Diamants",
+      "diamond": "Diamant",
       "gold": "Or",
       "silver": "Argent",
       "bronze": "Bronze"
@@ -121,11 +121,11 @@ const fr = {
         },
         "dynamics": {
           "title": "Dynamique du véhicule",
-          "label": "Amortisseurs sur mesure découplés de roulis (roll). <br> Conception d’étrier de freins sur-mesure avant/arrière à pistons multiples. <br> Système à tiges à traction à l’avant (pull rod) et de tiges poussantes à l’arrière (push rod)."
+          "label": "Suspension découplée avec la technologie DSSV. <br/> Conception d'étriers de frein avant/arrière sur mesure. <br/> Tiges de traction avant et système de tige de poussée arrière."
         },
         "electronics": {
           "title": "Électronique",
-          "label": "<b>Conçu par Formule ETS :</b> <br> Accumulateur. <br> Module de gestion du courant (Power Management Unit). <br> Unité de contrôle du véhicule (VCU) programmée. <br> Dessins 3D complets en CAO des harnais bas voltage (LV), haut voltage (HV) et des composantes électriques."
+          "label": "<b>Conçu par Formule ETS :</b> <br> Accumulateur. <br/> Unité de gestion de l'alimentation (PMU). <br/> Unité de commande de véhicule programmée (VCU)."
         },
         "aerodynamics": {
           "title": "Aérodynamique",
