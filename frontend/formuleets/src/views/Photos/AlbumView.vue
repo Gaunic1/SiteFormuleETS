@@ -14,7 +14,9 @@
     </div>
 
     <!-- LOADER -->
-    <i v-if="!loaded" class="mt-10 fa-solid fa-spinner text-red-500 text-7xl animate-spin"></i>
+    <div v-if="!loaded" class="w-full flex justify-center">
+        <i class="mt-10 fa-solid fa-spinner text-red-500 text-7xl animate-spin"></i>
+    </div>
 
     <!-- YEARS -->
     <div class="w-full overflow-hidden" v-else v-for="year of years" :key="year">
