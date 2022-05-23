@@ -76,9 +76,16 @@ const team2022 = {
             name: "message.team.dynamics",
             members: [
                 {
+                    img: '/static/team/members/steve_groleau.jpg',
+                    fullName: "Steve Groleau",
+                    role: "message.team.roles.heade-dynamic",
+                    mail: "s.groleau.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/in/steve-groleau-1636a01b9/"
+                },
+                {
                     img: '/static/team/members/charles_deschenes.png',
                     fullName: "Charles Deschenes",
-                    role: "message.team.roles.heade-dynamic",
+                    role: "",
                     mail: "c.deschenes.formule.ets@gmail.com",
                     linkedin: ""
                 },
@@ -123,18 +130,18 @@ const team2022 = {
             name: "message.team.electronics",
             members: [
                 {
-                    img: '/static/team/members/felix_paquet.jpg',
-                    fullName: "FÉLIX PAQUET",
-                    role: "message.team.roles.head-electronic",
-                    mail: "f.paquet.formule.ets@gmail.com",
-                    linkedin: "https://www.linkedin.com/in/felix-paquet/"
-                },
-                {
                     img: '/static/team/members/victor_avezard.jpg',
                     fullName: "VICTOR AVEZARD",
-                    role: "",
+                    role: "message.team.roles.head-electronic",
                     mail: "v.avezard.formule.ets@gmail.com",
                     linkedin: "https://www.linkedin.com/in/victor-avezard"
+                },
+                {
+                    img: '/static/team/members/felix_paquet.jpg',
+                    fullName: "FÉLIX PAQUET",
+                    role: "",
+                    mail: "f.paquet.formule.ets@gmail.com",
+                    linkedin: "https://www.linkedin.com/in/felix-paquet/"
                 },
                 {
                     img: '/static/team/members/marc_antoine.jpg',
@@ -189,13 +196,6 @@ const team2022 = {
                     role: "",
                     mail: "ma.doyon.formule.ets@gmail.com",
                     linkedin: "https://www.linkedin.com/in/marc-antoine-doyon/"
-                },
-                {
-                    img: '/static/team/members/steve_groleau.jpg',
-                    fullName: "Steve Groleau",
-                    role: "",
-                    mail: "s.groleau.formule.ets@gmail.com",
-                    linkedin: "https://www.linkedin.com/in/steve-groleau-1636a01b9/"
                 },
                 {
                     img: '/static/team/members/felix_groleau.jpg',
