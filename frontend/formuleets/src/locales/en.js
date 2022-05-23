@@ -17,17 +17,15 @@ const en = {
       "presentation": "Formule ETS is a club bringing together several students from the École de technologie supérieure, passionate about designing an electric racing car.",
       "aboutUs": {
         "title": "Who are we ?",
-        "text": "Formule ETS is a Formula SAE team made up of engineering students from the École de technologie supérieure de Montreal. The Collegiate Design Series competitions bring together more than 600 university teams around the world. compete by presenting a business plan to judges, describing their vehicle design philosophy, creating the project cost list and of course competing against top Formula SAE teams in thrilling races. <br > <br> In the past, we have stood out from the competition by repeatedly having the lightest vehicle, demonstrating an exemplary finish of the vehicle and having repeatedly reached the podium. Formule ETS has been designing electric cars since 2020 and racing cars since 1988."
+        "text": "Formule ETS is a Formula SAE team composed of engineering students from the École de technologie supérieure of Montréal. The Collegiate Design Series competition brings together over 600 universities teams from around the world. They compete by presenting a business plan to judges, describing their vehicle design philosophy, creating a project cost list and of course competing against the best teams in Formula SAE in exciting races. <br/><br/> In the past, we have distinguished ourselves from the competition by repeatedly having the lightest vehicle, demonstrating exemplary vehicle finishing and repeatedly reaching the podium. Formule ETS has been designing electric cars since 2020 and racing cars since 1988."
       },
       "project": {
         "title": "The project !",
-        "text": `Formule ETS has been designing and building racing cars with the aim of participating in Formula SAE competitions for a little over 30 years now with the same goal: "WIN" <br> <br> `+
-        `The vehicles that come out of the Formula ETS workshop reflect our design philosophy. Thus, we constantly pursue the design of the lightest vehicle, year after year. <br> <br> ` +
-        `Our first electric car weighs around 195 kg and is powered by four AMK motors located at each wheel. MANIC is shod with 16-inch Hoosier tires mounted on aluminum wheels and specially designed brake calipers for each one.`
+        "text": `Formule ETS has been designing and building race cars for the purpose of competing in Formula SAE for over 30 years now with the same goal in mind: "WINNING" <br/><br/> The vehicles that leave the Formula ETS shop reflect our design philosophy. Thus, we relentlessly pursue the design of the lightest vehicle, year after year. <br/><br/> Our first electric car weights about 195 kg and is powered by four AMK motors located inside of each wheel. MANIC is equipped with 16-inch Hoosier tires mounted on aluminum wheels and brake calipers designed specifically for each wheel.`,
       },
       "team": {
         "title": "The team!",
-        "text": `FormuleETS is a club made up of more than 30 members all passionate about design, engineering and mechanics. <br> <br> This is why within our team you will find an atmosphere of solidarity and mutual aid. If you want to help us do not hesitate to come and see us in our offices. <br> <br> To learn more about our team go to the "Team" section .`
+        "text": `Formule ETS is a club made up of more than 30 members all passionate about design, engineering and mechanics. <br> <br> This is why within our team you will find an atmosphere of solidarity and mutual aid. If you want to help us do not hesitate to come and see us in our offices. <br> <br> To learn more about our team go to the "Team" section .`
       }
     },
 

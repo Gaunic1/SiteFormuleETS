@@ -21,7 +21,7 @@ const fr = {
       },
       "project": {
         "title": "Le projet !",
-        "text": `Formule ETS conçoit et fabrique des voitures de course dans le but de participer à des compétitions de Formula SAE depuis maintenant un peu plus de 30 ans avec toujours le même objectif : "GAGNER" <br><br> ` +
+        "text": `Formule ETS conçoit et fabrique des voitures de course dans le but de participer à des compétitions de Formula SAE depuis maintenant plus de 30 ans avec toujours le même objectif : "GAGNER" <br><br> ` +
         `Les véhicules qui sortent de l'atelier de la Formule ETS reflètent notre philosophie de conception. Ainsi, nous poursuivons incessamment la conception du véhicule le plus léger, année après année. <br><br>` +
         `Notre première voiture électrique pèse environ 195 kg et est propulsée par quatre moteurs AMK situés à chaque roue. MANIC est chaussée de pneu Hoosier de 16 pouces montés sur des roues en aluminium et des étriers de frein conçu spécialement pour chacune de celle-ci.`
       },
