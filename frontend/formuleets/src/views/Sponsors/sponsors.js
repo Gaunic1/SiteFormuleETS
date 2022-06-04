@@ -166,6 +166,14 @@ const sponsors = {
             "src": "https://stelia-northamerica.com/",
             "imageSrc": "/static/sponsors/stelia.png"
         },
+        {
+            "src": "https://www.vectisdrive.com/",
+            "imageSrc": "/static/sponsors/vectis.png"
+        },
+        {
+            "src": "https://vegtech.ca/",
+            "imageSrc": "/static/sponsors/vegtech.png"
+        }
     ],
 
     //BRONZE
