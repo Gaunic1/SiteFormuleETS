@@ -14,14 +14,14 @@ const en = {
     },
 
     "home": {
-      "presentation": "Formule ETS is a club bringing together several students from the École de technologie supérieure, passionate about designing an electric racing car.",
+      "presentation": "Formule ETS is a scientific club composed of several students from the École de Technologie Supérieure, who design and build an electric race car to participate in competitions.",
       "aboutUs": {
         "title": "Who are we ?",
-        "text": "Formule ETS is a Formula SAE team composed of engineering students from the École de technologie supérieure of Montréal. The Collegiate Design Series competition brings together over 600 universities teams from around the world. They compete by presenting a business plan to judges, describing their vehicle design philosophy, creating a project cost list and of course competing against the best teams in Formula SAE in exciting races. <br/><br/> In the past, we have distinguished ourselves from the competition by repeatedly having the lightest vehicle, demonstrating exemplary vehicle finishing and repeatedly reaching the podium. Formule ETS has been designing electric cars since 2020 and racing cars since 1988."
+        "text": "Formule ETS is a Formula SAE team composed of engineering students from the École de Technologie Supérieure in Montreal. The Collegiate Design Series competition brings together over 600 teams from universities around the world. They compete by presenting a business plan to judges, by describing their vehicle design philosophy, by creating a project cost list and by competing against the best teams in Formula SAE races. <br/><br/> In the past, we have distinguished ourselves from our competitors by having the lightest vehicle, by demonstrating exemplary vehicle finishing and by repeatedly reaching the podium. Formule ETS has been designing combustion cars since 1988 and is now designing electric cars since 2020."
       },
       "project": {
         "title": "The project !",
-        "text": `Formule ETS has been designing and building race cars for the purpose of competing in Formula SAE for over 30 years now with the same goal in mind: "WINNING" <br/><br/> The vehicles that leave the Formula ETS shop reflect our design philosophy. Thus, we relentlessly pursue the design of the lightest vehicle, year after year. <br/><br/> Our first electric car weights about 195 kg and is powered by four AMK motors located inside of each wheel. MANIC is equipped with 16-inch Hoosier tires mounted on aluminum wheels and brake calipers designed specifically for each wheel.`,
+        "text": `Formule ETS has been designing and building race cars for the purpose of competing in Formula SAE for over 30 years now with the same goal in mind: "WINNING" <br/><br/> The vehicles that come out of the Formule ETS shop reflect our design philosophy. Thus, we relentlessly pursue the design of the lightest vehicle, year after year. <br/><br/> Our first electric car, MANIC-20, weighs 195 kg and is powered by four AMK motors located inside of each wheel. MANIC-20 is equipped with 16-inch Hoosier tires mounted on aluminum wheels with custom designed brake calipers. `,
       },
       "team": {
         "title": "The team!",
@@ -111,19 +111,19 @@ const en = {
       "text": {
         "chassis": {
           "title": "Chassis",
-          "label": "Carbon fibre monocoque designed around the driver. <br> Honeycomb core structure optimized for driver safety, chassis rigidity and low mass. <br> Precise and efficient manufacturing method."
+          "label": "Carbon fiber monocoque designed around the driver. <br> Honeycomb core structure optimized for driver safety, chassis rigidity and low mass. <br> Precise and efficient manufacturing method."
         },
         "power_drive": {
           "title": "Power & Drive",
-          "label": "In-house designed uprights and manufactured on 5-axis CNC. <br> Planetary gearbox assembly. <br> Complete liquid cooling system."
+          "label": "In-house designed uprights manufactured on 5-axis CNC. <br> Planetary gearbox assembly. <br> Complete liquid cooling system."
         },
         "dynamics": {
           "title": "Dynamics",
-          "label": "Decoupled suspension with the DSSV technology. <br/> Conception of custom front/rear brake calipers. <br/> Front pull rods and rear push rod system."
+          "label": "Decoupled suspension with the DSSV technology. <br/> Conception of custom front/rear brake calipers. <br/> Front pull rods and rear push rods system."
         },
         "electronics": {
           "title": "Electronics",
-          "label": "<b>Formule ETS Designed :</b> <br> Accumulator. <br/> PMU (Power Management Unit). <br/> VCU (Programmed Vehicle Control Unit)."
+          "label": "<b>In-house Designed :</b> <br> Accumulator. <br/> PMU (Power Management Unit). <br/> VCU (Programmed Vehicle Control Unit)."
         },
         "aerodynamics": {
           "title": "Aerodynamics",
@@ -156,7 +156,7 @@ const en = {
       "sponsorship": {
         "button": "Sponsorship (company)",
         "title": "THE FINANCIAL SPONSORSHIP",
-        "text": `By clicking on the link above, you will be transferred to the secure site of the ÉTS Development Fund. In order to sponsor the ETS Formula as a company, make sure to check "corporate" then fill out the form. The link below is our sponsorship document outlining the benefits available to you depending on your sponsorship level.`,
+        "text": `By clicking on the link above, you will be transferred to the secure site of the ÉTS Development Fund. In order to sponsor the Formule ETS as a company, make sure to check "corporate" then fill out the form. The link below is our sponsorship document outlining the benefits available to you depending on your sponsorship level.`,
         "italic": "Looking forward to working with you!",
         "link": "OFFICIAL SPONSORSHIP DOCUMENT"
       }
