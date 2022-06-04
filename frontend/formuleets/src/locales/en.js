@@ -131,7 +131,7 @@ const en = {
         },
         "thank": {
           "title": "Media",
-          "label": "Production of photos and videos. <br> Maintenance of the website. <br> Management of social networks and sponsors. <br><br> Thank you for following this animation to the end."
+          "label": "Production of photos and videos. <br> Maintenance of the website. <br> Management of social networks and sponsors."
         } 
       }
     },
