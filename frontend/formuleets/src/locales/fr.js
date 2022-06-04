@@ -14,16 +14,16 @@ const fr = {
     },
 
     "home": {
-      "presentation": "Formule ETS est un club regroupant plusieurs étudiants, de l'École de technologie supérieure, passionnés dans le but de concevoir une voiture de course électrique.",
+      "presentation": "Formule ETS est un club scientifique formé d’étudiants de l'École de technologie supérieure qui conçoit et fabrique une voiture électrique dans le but de prendre part à des compétitons.",
       "aboutUs": {
         "title": "Qui somme nous ?",
-        "text": "Formule ETS est une équipe de Formule SAE composée d'étudiants en ingénierie de l'École de technologie supérieure de Montréal. Les compétitions de la Collegiate Design Series regroupe plus de 600 équipes universitaires à travers le monde. Elles s’affrontent en présentant un plan d'affaires à des juges, en décrivant leur philosophie de conception de leur véhicule, en créant la liste des coûts du projet et bien sûr en se mesurant aux meilleures équipes de la Formule SAE lors de courses palpitantes. <br><br> Par le passé, nous nous sommes démarqués de la compétition en ayant à plusieurs reprises le véhicule le plus léger, en démontrant une finition du véhicule exemplaire et en ayant à de nombreuses reprises atteint les marches du podium. Formule ETS conçoit des voitures électriques depuis 2020 et des voitures de courses depuis 1988."
+        "text": "Formule ETS est une équipe de Formule SAE composée d'étudiants en ingénierie de l'École de technologie supérieure de Montréal. Les compétitions de la Collegiate Design Series regroupe plus de 600 équipes universitaires à travers le monde. Elles s’affrontent en présentant un plan d'affaires à des juges, en décrivant leur philosophie de conception de leur véhicule, en créant la liste des coûts du projet et bien sûr en se mesurant aux meilleures équipes de Formule SAE lors de courses palpitantes. <br><br> Nous nous sommes démarqués à plusieurs reprises dans ces compétitions en ayant le véhicule le plus léger, en démontrant une finition exemplaire et en ayant à de nombreuses reprises montées sur les marches du podium. Formule ETS conçoit des voitures de course depuis 1988, électriques depuis 2020. "
       },
       "project": {
         "title": "Le projet !",
-        "text": `Formule ETS conçoit et fabrique des voitures de course dans le but de participer à des compétitions de Formula SAE depuis maintenant plus de 30 ans avec toujours le même objectif : "GAGNER" <br><br> ` +
+        "text": `Formule ETS conçoit et fabrique des voitures de course dans le but de participer à des compétitions de Formule SAE depuis maintenant plus de 30 ans avec toujours le même objectif : "GAGNER" <br><br> ` +
         `Les véhicules qui sortent de l'atelier de la Formule ETS reflètent notre philosophie de conception. Ainsi, nous poursuivons incessamment la conception du véhicule le plus léger, année après année. <br><br>` +
-        `Notre première voiture électrique pèse environ 195 kg et est propulsée par quatre moteurs AMK situés à chaque roue. MANIC est chaussée de pneu Hoosier de 16 pouces montés sur des roues en aluminium et des étriers de frein conçu spécialement pour chacune de celle-ci.`
+        `Notre première voiture électrique, MANIC-20, pèse 195 kg et est propulsée par quatre moteurs AMK. MANIC est chaussée de pneu Hoosier de 16 pouces montés sur des roues en aluminium et des étriers de frein sur mesure conçus à l’interne.`
       },
       "team": {
         "title": "L'équipe !",
@@ -113,7 +113,7 @@ const fr = {
       "text": {
         "chassis": {
           "title": "Châssis",
-          "label": "Monocoque en fibre de carbone développée autour du pilote. <br> Structure en cœur de nid d’abeille optimisée pour la sécurité du pilote, la rigidité de la plateforme et sa légèreté. <br> Méthode de fabrication précise et efficace."
+          "label": "Monocoque en fibre de carbone développée autour du pilote. <br> Structure en cœur de nid d’abeille optimisée pour la sécurité du pilote, la rigidité de la plateforme ainsi que sa légèreté. <br> Méthode de fabrication précise et efficace."
         },
         "power_drive": {
           "title": "Motopropulseur",
@@ -121,7 +121,7 @@ const fr = {
         },
         "dynamics": {
           "title": "Dynamique du véhicule",
-          "label": "Suspension découplée avec la technologie DSSV. <br/> Conception d'étriers de frein avant/arrière sur mesure. <br/> Tiges de traction avant et système de tige de poussée arrière."
+          "label": "Suspension découplée avec la technologie DSSV. <br/> Conception d'étriers de frein avants/arrières sur mesure  <br/> Tiges de traction avant et système de tiges de poussée arrière."
         },
         "electronics": {
           "title": "Électronique",
@@ -133,7 +133,7 @@ const fr = {
         },
         "thank": {
           "title": "Média",
-          "label": "Réalisations des photos et vidéos. <br> Maintenance du site. <br> Gestion des réseaux sociaux et des commanditaires. <br><br> Nous vous remercions d'avoir suivi cette animation jusqu'au bout."
+          "label": "Réalisations des photos et vidéos. <br> Maintenance du site. <br> Gestion des réseaux sociaux et des commanditaires."
         }
       }
     },
