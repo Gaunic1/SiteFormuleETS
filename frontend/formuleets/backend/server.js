@@ -9,9 +9,6 @@ const cors = require("cors");
 
 const GetGoogleDrive = require('drive-album');
 
-const path = require('path');
-const fs = require('fs');
-
 function TimeBetweenTwoDate(startDate, stopDate){
     const diff = (stopDate.getTime() - startDate.getTime()) / 1000;
     console.log(Math.abs(diff))
@@ -23,6 +20,8 @@ const corsOptions = {
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE"
 }
 
+const data = {};
+
 //cors
 app.use(cors(corsOptions))
 
@@ -30,28 +29,25 @@ router.get(
     '/album/:id',
     async (request, res) => {
         const id = request.params.id;
-        const file = path.join(__dirname, "./db/" + id + ".json");
+        const exist = data[id];
       
         const startDate = new Date();
       
         try {
             let content = {type: "scrap", content: [], date: new Date()};
       
-            const fileExist = fs.existsSync(file);
-      
-            if(fileExist){
-              content = JSON.parse(fs.readFileSync(file, "utf8"));
+            if(exist){
+              content = exist;
             }
       
-            if(!fileExist || TimeBetweenTwoDate(startDate, new Date(content.date)) >= 60 * 60){
-              content.type = "scrap";
+            if(!exist || TimeBetweenTwoDate(startDate, new Date(content.date)) >= 60 * 60){
               content.content = await GetGoogleDrive(id);
-              fs.writeFileSync(file, JSON.stringify({
+              data[id] = {
                   type: "loaded from file",
                   id: id,
                   content: content.content,
                   date: new Date()
-              }));
+              };
             }
       
             res.json(content);
@@ -66,19 +62,17 @@ router.get(
     "/force-refresh/:id",
     async (request, res) => {
         const id = request.params.id;
-        const file = path.join(__dirname, "./db/" + id + ".json");
       
         try {
             let content = {type: "scrap", content: [], date: new Date()};
       
-            content.type = "scrap";
             content.content = await GetGoogleDrive(id);
-            fs.writeFileSync(file, JSON.stringify({
+            data[id] = {
                 type: "loaded from file",
                 id: id,
                 content: content.content,
                 date: new Date()
-            }));
+            };
       
             res.json(content);
         } catch(e){
