@@ -14,7 +14,7 @@ const en = {
     },
 
     "home": {
-      "presentation": "Formule ETS is a scientific club composed of several students from the École de Technologie Supérieure, who design and build an electric race car to participate in competitions.",
+      "presentation": "Formule ETS is a scientific club composed of several students from the École de Technologie Supérieure, who design and build an electric race car to win Formula SAE and Formula Student competitions.",
       "aboutUs": {
         "title": "Who are we ?",
         "text": "Formule ETS is a Formula SAE team composed of engineering students from the École de Technologie Supérieure in Montreal. The Collegiate Design Series competition brings together over 600 teams from universities around the world. They compete by presenting a business plan to judges, by describing their vehicle design philosophy, by creating a project cost list and by competing against the best teams in Formula SAE races. <br/><br/> In the past, we have distinguished ourselves from our competitors by having the lightest vehicle, by demonstrating exemplary vehicle finishing and by repeatedly reaching the podium. Formule ETS has been designing combustion cars since 1988 and is now designing electric cars since 2020."
@@ -32,9 +32,8 @@ const en = {
     "date": {
       "mainTitle": "Important dates",
       "title": {
-        "shootout": "Pittsburgh Shootout",
-        "michigan": "Formula SAE Michigan",
-        "recruitment": "Unveiling"
+        "toronto": "Totonto Shootout",
+        "quebec": "Quebec Electric Test",
       },
       "informations": "More informations",
       "days": "Days",

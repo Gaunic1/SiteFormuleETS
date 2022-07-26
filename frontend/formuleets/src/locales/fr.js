@@ -14,9 +14,9 @@ const fr = {
     },
 
     "home": {
-      "presentation": "Formule ETS est un club scientifique formé d’étudiants de l'École de technologie supérieure qui conçoit et fabrique une voiture électrique dans le but de prendre part à des compétitons.",
+      "presentation": "Formule ETS est un club scientifique formé d’étudiants de l'École de technologie supérieure qui conçoit et fabrique une voiture électrique dans le but de remporter des competitions Formula SAE et Formula Student.",
       "aboutUs": {
-        "title": "Qui somme nous ?",
+        "title": "Qui sommes nous ?",
         "text": "Formule ETS est une équipe de Formule SAE composée d'étudiants en ingénierie de l'École de technologie supérieure de Montréal. Les compétitions de la Collegiate Design Series regroupe plus de 600 équipes universitaires à travers le monde. Elles s’affrontent en présentant un plan d'affaires à des juges, en décrivant leur philosophie de conception de leur véhicule, en créant la liste des coûts du projet et bien sûr en se mesurant aux meilleures équipes de Formule SAE lors de courses palpitantes. <br><br> Nous nous sommes démarqués à plusieurs reprises dans ces compétitions en ayant le véhicule le plus léger, en démontrant une finition exemplaire et en ayant à de nombreuses reprises montées sur les marches du podium. Formule ETS conçoit des voitures de course depuis 1988, électriques depuis 2020. "
       },
       "project": {
@@ -34,9 +34,8 @@ const fr = {
     "date": {
       "mainTitle": "Dates importantes",
       "title": {
-        "shootout": "Pittsburgh Shootout",
-        "michigan": "Formula SAE Michigan",
-        "recruitment": "Dévoilement"
+        "toronto": "Totonto Shootout",
+        "quebec": "Épreuve électrique du Québec",
       },
       "informations": "Plus d'informations",
       "days": "Jours",
