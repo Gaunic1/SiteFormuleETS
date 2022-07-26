@@ -91,7 +91,7 @@ fastify.get(
 );
 
 
-// fastify.use('/.netlify/functions/server', fastify);
+fastify.use('/.netlify/functions/server', fastify);
 
 // const ADDRESS = "0.0.0.0";
 // const PORT = process.env.PORT || 3000;
