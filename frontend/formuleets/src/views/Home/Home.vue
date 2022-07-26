@@ -9,8 +9,8 @@
           landscape:w-1/2 tb:w-1/2 flex flex-col justify-end landscape:justify-center tb:justify-center items-center z-20 text-dark-mode-2 p-10"
           data-aos="fade-right"
         >
-          <img :src="isMobile ? '/static/home/logo-fets-mobile.png' : '/static/home/logo-fets.png'" 
-          alt="logo" class="w-full min-w-calc -m-2" />
+          <img src="/static/home/logo-light.png" alt="logo" class="dark:block hidden w-full min-w-calc -m-2" />
+          <img src="/static/home/logo-dark.png" alt="logo" class="dark:hidden flex w-full min-w-calc -m-2" />
           <p
             class="mt-7 dark:text-white text-center landscape:text-left tb:text-left"
           >{{ $t('message.home.presentation') }}</p>
