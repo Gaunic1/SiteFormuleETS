@@ -1,31 +1,13 @@
-# formuleets
+# FormuleEts
 
-## Color palette
+- [Production website](https://formule-ets.ca/)
+- [Developement website](https://formuleets-dev.netlify.app/)
 
-- red-500
-- gray-800
-- white
-- black
+## How to run ?
 
-## Project setup
-```
-npm install
-```
+Don't forget to set TAILWIND_MODE=watch in .env file but not when pushing !
 
-### Compiles and hot-reloads for development
 ```
 npm run serve
+npm run server-local
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

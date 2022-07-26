@@ -46,7 +46,7 @@
                                 :lazy-background="member.img != '' && member.img ? member.img : '/static/team/members/default.png'"
                             >
                                 <!-- OVERLAY -->
-                                <a v-if="member.linkedin && member.linkedin != ''" :href="member.linkedin"  target="_blank" rel="noopener noreferrer">
+                                <a v-if="member.linkedin && member.linkedin != ''" :href="member.linkedin" target="_blank" rel="noopener noreferrer">
                                     <div
                                         class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex justify-center items-center text-white h-full w-full bg-overlay cursor-pointer"
                                     >

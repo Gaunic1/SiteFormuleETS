@@ -1,4 +1,5 @@
 import { defineStore } from 'pinia'
+import { config } from '../config';
 
 export const useAlbumsStore = defineStore('albums', {
   state: () => { 
@@ -9,8 +10,8 @@ export const useAlbumsStore = defineStore('albums', {
         images: [],
       },
 
-      api: "https://formuleets-api.herokuapp.com/album/:id",
-      drive: "1UJ4PiRfyhPelXacznccRoGBPXLDEDvCb",
+      api: config.apiUrl,
+      drive: config.driveId,
       registeredId: []
     }
   },

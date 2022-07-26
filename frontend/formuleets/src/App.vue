@@ -4,18 +4,21 @@
   <Footer></Footer>
 
   <go-to-top></go-to-top>
+  <Notifications></Notifications>
 </template>
 <script>
 import Header from "./components/Header/Header.vue"
 import Footer from "./components/Footer/Footer.vue"
 import GoToTop from './components/GoToTop/GoToTop.vue';
+import Notifications from "./components/Notifications/Notifications.vue";
 
 export default {
   components: {
     Header,
     Footer,
     GoToTop,
-  },
+    Notifications
+},
   data(){
     return {
       // All of those data are for the title of the page
