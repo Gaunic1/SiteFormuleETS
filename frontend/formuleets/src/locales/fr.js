@@ -13,6 +13,10 @@ const fr = {
       "model": "Model 3D"
     },
 
+    "notifications": {
+      "join": "Rejoignez l'équipe"
+    },
+
     "home": {
       "presentation": "Formule ETS est un club scientifique formé d’étudiants de l'École de technologie supérieure qui conçoit et fabrique une voiture électrique dans le but de remporter des competitions Formula SAE et Formula Student.",
       "aboutUs": {
