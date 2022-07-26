@@ -1,11 +1,16 @@
 "use strict";
 require("dotenv").config();
 
-const fastify = require('fastify')({ logger: true });
+const express = require("express");
+const app = express();
+const router = express.Router();
+const serverless = require("serverless-http");
+const cors = require("cors");
+
 const GetGoogleDrive = require('drive-album');
+
 const path = require('path');
 const fs = require('fs');
-const serverless = require("serverless-http");
 
 function TimeBetweenTwoDate(startDate, stopDate){
     const diff = (stopDate.getTime() - startDate.getTime()) / 1000;
@@ -13,22 +18,15 @@ function TimeBetweenTwoDate(startDate, stopDate){
     return Math.abs(diff);
 }
 
+const corsOptions = {
+    origin: /(formule-ets)|(formuleets)|(localhost)/gi,
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE"
+}
+
 //cors
-fastify.register(require('fastify-cors'), () => (req, callback) => {
-    const origin = req.headers.origin || "localhost";
+app.use(cors(corsOptions))
 
-    console.log("ORIGIN: " + origin);
-
-    // do not include CORS headers for requests from localhost
-    if (/localhost/.test(origin) || /formuleets/.test(origin)) {
-        callback(null, true);
-        return
-    }
-
-    callback(new Error("Not allowed"));
-});
-
-fastify.get(
+router.get(
     '/album/:id',
     async (request) => {
         const id = request.params.id;
@@ -64,7 +62,7 @@ fastify.get(
       }
 );
 
-fastify.get(
+router.get(
     "/force-refresh/:id",
     async (request) => {
         const id = request.params.id;
@@ -90,17 +88,7 @@ fastify.get(
       }
 );
 
+app.use('/.netlify/functions/server', router);  // path must route to lambda
 
-fastify.use('/.netlify/functions/server', fastify);
-
-// const ADDRESS = "0.0.0.0";
-// const PORT = process.env.PORT || 3000;
-
-// fastify.listen(PORT, ADDRESS, (err) => {
-//    if (err) {
-//       console.log(err);
-//       process.exit(1);
-//    }
-// });
-
-module.exports.handler = serverless(fastify);
+module.exports = app;
+module.exports.handler = serverless(app);
