@@ -28,7 +28,7 @@ app.use(cors(corsOptions))
 
 router.get(
     '/album/:id',
-    async (request) => {
+    async (request, res) => {
         const id = request.params.id;
         const file = path.join(__dirname, "./db/" + id + ".json");
       
@@ -54,17 +54,17 @@ router.get(
               }));
             }
       
-            return content;
+            res.json(content);
         } catch(e){
             console.error(e);
-            return {error: true, msg: e};
+            res.json({error: true, msg: e});
         }
       }
 );
 
 router.get(
     "/force-refresh/:id",
-    async (request) => {
+    async (request, res) => {
         const id = request.params.id;
         const file = path.join(__dirname, "./db/" + id + ".json");
       
@@ -80,10 +80,10 @@ router.get(
                 date: new Date()
             }));
       
-            return content;
+            res.json(content);
         } catch(e){
             console.error(e);
-            return {error: true, msg: e};
+            res.json({error: true, msg: e});
         }
       }
 );
