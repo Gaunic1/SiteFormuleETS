@@ -1,11 +1,11 @@
 "use strict";
-
 require("dotenv").config();
 
 const fastify = require('fastify')({ logger: true });
 const GetGoogleDrive = require('drive-album');
 const path = require('path');
 const fs = require('fs');
+const serverless = require("serverless-http");
 
 function TimeBetweenTwoDate(startDate, stopDate){
     const diff = (stopDate.getTime() - startDate.getTime()) / 1000;
@@ -14,7 +14,7 @@ function TimeBetweenTwoDate(startDate, stopDate){
 }
 
 //cors
-fastify.register(require('fastify-cors'), (instance) => (req, callback) => {
+fastify.register(require('fastify-cors'), () => (req, callback) => {
     const origin = req.headers.origin || "localhost";
 
     console.log("ORIGIN: " + origin);
@@ -90,12 +90,17 @@ fastify.get(
       }
 );
 
-const ADDRESS = "0.0.0.0";
-const PORT = process.env.PORT || 3000;
 
-fastify.listen(PORT, ADDRESS, (err, address) => {
-   if (err) {
-      console.log(err);
-      process.exit(1);
-   }
-});
+// fastify.use('/.netlify/functions/server', fastify);
+
+// const ADDRESS = "0.0.0.0";
+// const PORT = process.env.PORT || 3000;
+
+// fastify.listen(PORT, ADDRESS, (err) => {
+//    if (err) {
+//       console.log(err);
+//       process.exit(1);
+//    }
+// });
+
+module.exports.handler = serverless(fastify);
