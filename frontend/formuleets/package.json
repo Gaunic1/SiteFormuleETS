@@ -17,6 +17,7 @@
     "parallaxy-img": "^1.0.8",
     "pinia": "^2.0.13",
     "prerender-spa-plugin": "^3.4.0",
+    "sitemap-webpack-plugin": "^1.1.1",
     "swiper": "^8.0.6",
     "three": "^0.136.0",
     "vue": "^3.0.0",

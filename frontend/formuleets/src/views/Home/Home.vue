@@ -10,7 +10,7 @@
           data-aos="fade-right"
         >
           <img :src="isMobile ? '/static/home/logo-fets-mobile.png' : '/static/home/logo-fets.png'" 
-          alt="logo" class="w-full min-w-[40vw] -m-2" />
+          alt="logo" class="w-full min-w-calc -m-2" />
           <p
             class="mt-7 dark:text-white text-center landscape:text-left tb:text-left"
           >{{ $t('message.home.presentation') }}</p>
@@ -125,6 +125,10 @@ export default {
 </script>
 
 <style scoped>
+.min-w-calc{
+  min-width: 40vw;
+}
+
 .slide-from-right{
   animation: slide-right-an 0.4s ease forwards;
   opacity: 0;

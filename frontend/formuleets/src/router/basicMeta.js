@@ -1,7 +1,7 @@
 const basicMeta = [
     {
       name: "keywords",
-      content: "formule1, formuleets, formule, ets, student, website, ca, canada, sponsors, team, photos, videos, club, project, f1, formula, sponsors, donate, media, 3d, presentation, about",
+      content: "formule1, formula, formula 1, f1, formuleets, formule-ets, formule, ets, student, website, ca, canada, quebec, sponsors, team, photos, videos, club, project, sponsors, donate, media, 3d, presentation, about",
     },
     {
       name: "robots",

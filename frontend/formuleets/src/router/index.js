@@ -117,7 +117,9 @@ routes.forEach(e => {
     },
     {
       name: "description",
-      content: `Welcome to the ${e.pageName.toLowerCase()} page of the FormuleETS club. Formule ETS is a team of engineering students from the École de technologie supérieure in Montreal. The team has been designing and building racing cars with the aim of participating in Formula SAE competitions for a little over 30 years now with the same goal: WIN !`
+      content: e.path === "/" ?
+      `Formule ETS is a team of engineering students from the École de technologie supérieure in Montreal. The team has been designing and building racing cars with the aim of participating in Formula SAE competitions for a little over 30 years now with the same goal: WIN !`
+      : `Welcome to the ${e.pageName.toLowerCase()} page of the FormuleETS club.`
     },
   ]);
 });

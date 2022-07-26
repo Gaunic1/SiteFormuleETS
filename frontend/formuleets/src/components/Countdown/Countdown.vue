@@ -1,5 +1,5 @@
 <template>
-    <div class="rounded-md border dark:border-[#ffffff41] dark:bg-dark-mode
+    <div class="rounded-md border dark:border-white-opacity dark:bg-dark-mode
    bg-white p-2 dark:text-white z-40 text-center">
         <h3 class="text-xl font-bold mb-3">{{ $t(title) }}</h3>
         <div class="flex flex-col text-lg">

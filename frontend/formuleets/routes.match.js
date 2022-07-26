@@ -11,7 +11,7 @@ while((res = reg.exec(textRoutes)) != null){
 }
 
 //remove duplicate
-const finalPath = [...new Set(path)];
+const finalPath = [...new Set(path)].filter(e => e !== "/easter-eggs");
 
 console.log('Matched routes: ', finalPath, "\n");
 

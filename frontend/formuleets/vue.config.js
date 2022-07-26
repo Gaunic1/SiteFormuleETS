@@ -1,5 +1,6 @@
 const path = require('path');
 const PrerenderSPAPlugin = require('prerender-spa-plugin');
+const SitemapPlugin = require('sitemap-webpack-plugin').default;
 const routes = require('./routes.match');
 
 module.exports = {
@@ -8,14 +9,10 @@ module.exports = {
     return {
       plugins: [
         new PrerenderSPAPlugin(
-          // Absolute path to compiled SPA
           path.resolve(__dirname, 'dist'),
-          // List of routes to prerender
-          routes,
-          {
-            // options
-          }
-        ),
+          routes
+        ), //Pre render
+        new SitemapPlugin({ base: 'https://formule-ets.ca', paths: routes }) //Sitemap for google indexation
       ]
     }
   },

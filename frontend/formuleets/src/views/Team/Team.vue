@@ -32,9 +32,8 @@
                     <article data-aos="fade-up" class="flex flex-wrap">
                         <div
                             class="m-5 rounded overflow-hidden 
-                            h-[30rem] 
-                            w-[calc(100%-(2*1.225rem))]
-                            sm:w-[20rem]
+                            calc-w-h
+                            sm:w-20rem
                             shadow bg-white dark:bg-dark-mode 
                             group"
                             v-for="member of categorie.members"
@@ -119,3 +118,10 @@ export default {
     },
 }
 </script>
+
+<style scoped>
+.calc-w-h{
+    width: calc(100% - (2 * 1.225rem));
+    height: 30rem;
+}
+</style>
