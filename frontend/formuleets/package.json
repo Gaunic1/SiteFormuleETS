@@ -14,7 +14,7 @@
     "aos": "^2.3.4",
     "core-js": "^3.6.5",
     "lazy-attr": "^1.2.3",
-    "parallaxy-img": "^1.0.8",
+    "parallaxy-img": "^1.1.0",
     "pinia": "^2.0.13",
     "prerender-spa-plugin": "^3.4.0",
     "sitemap-webpack-plugin": "^1.1.1",
