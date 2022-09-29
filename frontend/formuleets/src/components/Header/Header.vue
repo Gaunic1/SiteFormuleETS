@@ -4,13 +4,6 @@
     class="pointer-events-none nesthub:pointer-events-auto fixed top-0 left-0 transition-all w-full dark:text-dark-mode z-50"
   >
     <nav class="flex justify-center items-center w-full h-full">
-      <!-- LOGO -->
-      <!-- <div id="logo" class="flex-auto h-full p-3">
-              <a href="/">
-                <img src="/static/header/logo-f1.png" alt="Logo" class="h-full"/>
-              </a>
-          </div> -->
-
       <!-- COMPUTER -->
       <ul class="pointer-events-auto hidden list-none p-3 nesthub:flex">
         <template v-for="item of menu" :key="item.name">
@@ -78,9 +71,7 @@
                 ? background('english')
                 : background('french')
             "
-          >
-            <!-- {{ $root.$i18n.getLocale() == "fr" ? "en" : "fr" }} -->
-          </div>
+          ></div>
         </li>
       </ul>
 
@@ -155,9 +146,7 @@
                     ? background('english')
                     : background('french')
                 "
-              >
-                <!-- {{ $root.$i18n.getLocale() == "fr" ? "en" : "fr" }} -->
-              </div>
+              ></div>
             </li>
           </ul>
         </div>

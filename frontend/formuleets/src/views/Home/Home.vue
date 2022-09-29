@@ -110,6 +110,8 @@ import FormContact from "../../components/Form/FormContact.vue";
 import Date from "../../components/Date/Date.vue";
 import dateList from "../../components/Date/date";
 
+import "parallaxy-img/dist/parallaxy";
+
 export default {
   name: "Home",
   mixins: [phoneMixin],

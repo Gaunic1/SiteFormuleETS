@@ -107,8 +107,8 @@ export default {
   methods: {
     submitForm(e) {
       e.preventDefault();
-      let myForm = document.querySelector("form");
-      let formData = new FormData(myForm);
+      const myForm = document.querySelector("form");
+      const formData = new FormData(myForm);
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },

@@ -3,7 +3,6 @@ import { createRouter, createWebHistory } from "vue-router";
 import meta from "./meta";
 import basicMeta from "./basicMeta";
 
-import Cars from "../views/3DCars/3DCars.vue";
 import Contact from "../views/Contact/Contact.vue";
 import Donate from "../views/Donate/Donate.vue";
 import EASTEREGG from "../views/Easter-EGG/EASTEREGG.vue";
@@ -47,12 +46,6 @@ const routes = [
     name: "Project",
     component: Project,
     pageName: "Project",
-  },
-  {
-    path: "/3d-model",
-    name: "3DModel",
-    component: Cars,
-    pageName: "3D Model",
   },
   {
     path: "/donate",

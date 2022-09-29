@@ -69,6 +69,7 @@
 
 <script>
 import link from "./link";
+import "parallaxy-img/dist/parallaxy";
 
 export default {
   name: "Donate",

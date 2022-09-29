@@ -37,10 +37,6 @@ const HeaderMenus = [
     name: "message.header.contact-us",
     to: "/contact-us",
   },
-  // {
-  //     name: "message.header.model",
-  //     to: "/3d-model"
-  // }
 ];
 
 export default HeaderMenus;

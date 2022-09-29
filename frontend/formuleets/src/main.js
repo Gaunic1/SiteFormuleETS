@@ -9,12 +9,9 @@ import "@/assets/styles/main.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-//Lazy-attr
+// //Lazy-attr
 import "lazy-attr";
 import "lazy-attr/dist/lazy-attr-animation.css";
-
-//Parallax
-import "parallaxy-img/dist/parallaxy";
 
 //Pinia
 import { createPinia } from "pinia";
