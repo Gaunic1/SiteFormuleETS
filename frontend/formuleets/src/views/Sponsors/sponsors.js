@@ -2,7 +2,7 @@ const sponsors = {
   //BUTTON
   button: {
     title: "message.sponsors.button",
-    link: "/static/pdf/Partnership+Proposal+2022.pdf",
+    link: "message.donate.sponsorship.link.href",
   },
 
   //DIAMOND

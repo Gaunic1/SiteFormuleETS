@@ -39,9 +39,9 @@ const team2022 = {
         },
         {
           img: "",
-          fullName: "Antoine Gringas",
+          fullName: "Antoine Gingras",
           role: "",
-          mail: "a.gringas.formule.ets@gmail.com",
+          mail: "a.gingras.formule.ets@gmail.com",
           linkedin: "",
         },
         {

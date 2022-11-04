@@ -56,11 +56,11 @@
           {{ $t("message.donate.sponsorship.italic") }}
         </p>
         <a
-          :href="links.link3"
+          :href="$t('message.donate.sponsorship.link.href')"
           class="uppercase font-bold underline"
           target="_blank"
           rel="noopener noreferrer"
-          >{{ $t("message.donate.sponsorship.link") }}</a
+          >{{ $t("message.donate.sponsorship.link.message") }}</a
         >
       </article>
     </section>
