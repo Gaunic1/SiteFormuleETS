@@ -44,6 +44,7 @@ const fr = {
         RollOut: "Roll Out",
       },
       informations: "Plus d'informations",
+      months: "Mois",
       days: "Jours",
       hours: "Heures",
       minutes: "Minutes",
