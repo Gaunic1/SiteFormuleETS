@@ -40,10 +40,11 @@ const fr = {
     date: {
       mainTitle: "Dates importantes",
       title: {
-        toronto: "Totonto Shootout",
-        quebec: "Épreuve électrique du Québec",
+        fsaeElectric: "Formula SAE Electric",
+        RollOut: "Roll Out",
       },
       informations: "Plus d'informations",
+      months: "Mois",
       days: "Jours",
       hours: "Heures",
       minutes: "Minutes",
@@ -173,7 +174,10 @@ const fr = {
         title: "LA COMMANDITE FINANCIÈRE",
         text: `En cliquant sur le lien ci-dessus, vous serez transféré au site sécurisé du Fonds de développement de l'ÉTS. Afin de commanditer la Formule ETS en tant que compagnie, assurez vous de cocher "corporatif"  puis remplissez le formulaire. Le lien ci-dessous  est notre document de commandite décrivant les bénéfices qui vous sont disponibles selon votre niveau de commandite.`,
         italic: "Au plaisir de travailler avec vous!",
-        link: "DOCUMENT DE COMMANDITE OFFICIEL",
+        link: {
+          message : "DOCUMENT DE COMMANDITE OFFICIEL",
+          href : "static/pdf/FormuleETS_PlanDePartenariat_2023.pdf"
+        },
       },
     },
   },

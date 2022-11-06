@@ -2,16 +2,15 @@ const dateList = {
   stopDisplayingAfterDays: 1,
   list: [
     {
-      title: "message.date.title.quebec",
-      date: "08/13/2022", // mm/dd/yyyy
+      title: "message.date.title.RollOut",
+      date: "04/15/2023", // mm/dd/yyyy
       hour: "10:00:00", // hours:minutes:secondes
-      link: "https://www.facebook.com/%C3%89preuve-%C3%89lectrique-de-Qu%C3%A9bec-103533708669002/",
     },
     {
-      title: "message.date.title.toronto",
-      date: "10/01/2022", // mm/dd/yyyy
+      title: "message.date.title.fsaeElectric",
+      date: "06/14/2023", // mm/dd/yyyy
       hour: "10:00:00", // hours:minutes:secondes
-      link: "https://fsaeutoronto.ca/shootout",
+      link: "https://www.sae.org/attend/student-events/formula-sae-electric",
     },
   ],
 };

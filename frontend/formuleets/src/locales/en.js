@@ -37,10 +37,11 @@ const en = {
     date: {
       mainTitle: "Important dates",
       title: {
-        toronto: "Totonto Shootout",
-        quebec: "Quebec Electric Test",
+        fsaeElectric: "Formula SAE Electric",
+        RollOut: "Roll Out",
       },
       informations: "More informations",
+      months: "Months",
       days: "Days",
       hours: "Hours",
       minutes: "Minutes",
@@ -169,7 +170,10 @@ const en = {
         title: "THE FINANCIAL SPONSORSHIP",
         text: `By clicking on the link above, you will be transferred to the secure site of the ÉTS Development Fund. In order to sponsor the Formule ETS as a company, make sure to check "corporate" then fill out the form. The link below is our sponsorship document outlining the benefits available to you depending on your sponsorship level.`,
         italic: "Looking forward to working with you!",
-        link: "OFFICIAL SPONSORSHIP DOCUMENT",
+        link: {
+          message : "OFFICIAL SPONSORSHIP DOCUMENT",
+          href : "static/pdf/FormuleETS_PartnershipProposal_2023.pdf"
+        },
       },
     },
   },
