@@ -5,27 +5,33 @@
     <h3 class="text-xl font-bold mb-3">{{ $t(title) }}</h3>
     <div class="flex flex-col text-lg">
       <div class="flex">
-        <p>{{ $t("message.date.days") }}</p>
+        <p>{{ $t("message.date.months") }}</p>
         <div class="flex-1 flex justify-end ml-3">
           <NumberDisplay :time="time[0]"></NumberDisplay>
         </div>
       </div>
       <div class="flex">
-        <p>{{ $t("message.date.hours") }}</p>
-        <div class="flex-1 flex justify-end ml-3">
-          <NumberDisplay :time="time[1]"></NumberDisplay>
-        </div>
+      <p>{{ $t("message.date.days") }}</p>
+      <div class="flex-1 flex justify-end ml-3">
+        <NumberDisplay :time="time[1]"></NumberDisplay>
       </div>
+    </div>
       <div class="flex">
-        <p>{{ $t("message.date.minutes") }}</p>
+        <p>{{ $t("message.date.hours") }}</p>
         <div class="flex-1 flex justify-end ml-3">
           <NumberDisplay :time="time[2]"></NumberDisplay>
         </div>
       </div>
       <div class="flex">
-        <p>{{ $t("message.date.seconds") }}</p>
+        <p>{{ $t("message.date.minutes") }}</p>
         <div class="flex-1 flex justify-end ml-3">
           <NumberDisplay :time="time[3]"></NumberDisplay>
+        </div>
+      </div>
+      <div class="flex">
+        <p>{{ $t("message.date.seconds") }}</p>
+        <div class="flex-1 flex justify-end ml-3">
+          <NumberDisplay :time="time[4]"></NumberDisplay>
         </div>
       </div>
       <a
@@ -94,16 +100,19 @@ export default {
         let minutes = Math.floor(seconds / 60);
         let hours = Math.floor(minutes / 60);
         let days = Math.floor(hours / 24);
+        let months = Math.floor(days / 30);
+        days %= 30;
         hours %= 24;
         minutes %= 60;
         seconds %= 60;
 
+        months = months.toString().padStart(2, "0").split("");
         days = days.toString().padStart(2, "0").split("");
         hours = hours.toString().padStart(2, "0").split("");
         minutes = minutes.toString().padStart(2, "0").split("");
         seconds = seconds.toString().padStart(2, "0").split("");
 
-        return [days, hours, minutes, seconds];
+        return [months, days, hours, minutes, seconds];
       }
     },
     changeHour() {
