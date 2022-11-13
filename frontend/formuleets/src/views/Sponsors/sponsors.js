@@ -100,7 +100,7 @@ const sponsors = {
       imageSrc: "/static/sponsors/sea.png",
     },
     {
-      src: "http://www.bmrs.net/",
+      src: "http://www.bmrswired.com/",
       imageSrc: "/static/sponsors/BMRS.png",
     },
     {
