@@ -100,7 +100,7 @@ const sponsors = {
       imageSrc: "/static/sponsors/sea.png",
     },
     {
-      src: "http://www.bmrs.net/",
+      src: "http://www.bmrswired.com/",
       imageSrc: "/static/sponsors/BMRS.png",
     },
     {
@@ -123,6 +123,23 @@ const sponsors = {
 
   //SILVER
   silver: [
+    {
+      src : "https://adsdata.ca/",
+        imageSrc: "/static/sponsors/ADS.png",
+
+    },
+    {
+      src:"https://rapidharness.com/",
+      imageSrc: "/static/sponsors/Rapid+Harness.png",
+    },
+    {
+      src: "https://www.altair.com/",
+      imageSrc: "/static/sponsors/Altair.png",
+    },
+    {
+      src: "https://www.henkel.com/brands-and-businesses/adhesive-technologies",
+      imageSrc: "/static/sponsors/Loctite.png",
+    },
     {
       src: "https://tuboquip.equipeibs.com/fr/",
       imageSrc: "/static/sponsors/Tuboquip.png",
@@ -179,6 +196,18 @@ const sponsors = {
 
   //BRONZE
   bronze: [
+    {
+      src: "https://hawkeyeind.com/",
+      imageSrc: "/static/sponsors/Hawkeye.png",
+    },
+    {
+      src:"https://mgchemicals.com/",
+      imageSrc: "/static/sponsors/MG+Chemicals.png",
+    },
+    {
+      src: "https://chemtrend.com/",
+        imageSrc: "/static/sponsors/Chem+Trend.png",
+    },
     {
       src: "http://www.nsk.com/",
       imageSrc: "/static/sponsors/NSK.png",
