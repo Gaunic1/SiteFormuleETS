@@ -58,6 +58,10 @@ const sponsors = {
   //GOLD
   gold: [
     {
+      src:"https://www.danatm4.com/fr/",
+      imageSrc: "/static/sponsors/DanaTM4.png",
+    },
+    {
       src: "https://www.airtechintl.com/",
       imageSrc: "/static/sponsors/Airtech.png",
     },
