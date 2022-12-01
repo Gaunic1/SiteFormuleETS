@@ -58,6 +58,10 @@ const sponsors = {
   //GOLD
   gold: [
     {
+      src: "https://www.bombardier.com/",
+      imageSrc: "/static/sponsors/Bombardier.png",
+    },
+    {
       src:"https://www.danatm4.com/fr/",
       imageSrc: "/static/sponsors/DanaTM4.png",
     },
@@ -127,6 +131,14 @@ const sponsors = {
 
   //SILVER
   silver: [
+    {
+        src: "https://perryautolaval.com/",
+        imageSrc: "/static/sponsors/Perry.jpg",
+    },
+    {
+      src: "https://www.opal-rt.com/",
+      imageSrc: "/static/sponsors/Opal+RT.png",
+    },
     {
       src : "https://adsdata.ca/",
         imageSrc: "/static/sponsors/ADS.png",
@@ -200,6 +212,10 @@ const sponsors = {
 
   //BRONZE
   bronze: [
+    {
+      src: "https://www.orthogone.ca/",
+        imageSrc: "/static/sponsors/Orthogone.png"
+    },
     {
       src: "https://hawkeyeind.com/",
       imageSrc: "/static/sponsors/Hawkeye.png",
