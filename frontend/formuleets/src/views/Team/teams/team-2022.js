@@ -286,6 +286,13 @@ const team2022 = {
           mail: "j.ozaeta.formule.ets@gmail.com",
           linkedin: "",
         },
+        {
+          img: "",
+          fullName: "Gustave Dromain",
+          role: "",
+          mail: "g.dromain.formule.ets@gmail.com",
+          linkedin: "https://www.linkedin.com/in/gustave-dromain-9b590a181/"
+         },
       ],
     },
   ],
