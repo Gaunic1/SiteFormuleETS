@@ -213,6 +213,10 @@ const sponsors = {
   //BRONZE
   bronze: [
     {
+      src:"https://www.comet-pumpen.de/en/start.html",
+      imageSrc: "/static/sponsors/Comet+pumpen.png",
+    },
+    {
       src: "https://www.orthogone.ca/",
         imageSrc: "/static/sponsors/Orthogone.png"
     },
