@@ -284,14 +284,7 @@ const sponsors = {
       src: "https://www.ptselectrique.com/",
       imageSrc: "/static/sponsors/ptselec.png",
     },
-    {
-      src: "https://disensors.com/",
-      imageSrc: "/static/sponsors/disensor.png",
-    },
-    {
-      src: "http://www.sodel.com/",
-      imageSrc: "/static/sponsors/sodel.png",
-    },
+
     {
       src: "http://ultraspec.ca/",
       imageSrc: "/static/sponsors/ultraspec.png",
