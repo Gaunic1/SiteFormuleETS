@@ -83,7 +83,7 @@ const team2023 = {
           linkedin: "https://www.linkedin.com/in/l%C3%A9a-bruneau-6a045921b/",
         },
         {
-          img: "/static/team/members/charles_deschenes.png",
+          img: "/static/team/members/charles_deschenes.jpg",
           fullName: "Charles Deschenes",
           role: "",
           mail: "c.deschenes.formule.ets@gmail.com",
@@ -123,7 +123,7 @@ const team2023 = {
         {
           img: "/static/team/members/felix_groleau.jpg",
           fullName: "Félix Groleau",
-          role: "message.team.roles.lead-electronics",
+          role: "message.team.roles.lead-electronic",
           mail: "f.groleau.formule.ets@gmail.com",
           linkedin: "https://www.linkedin.com/in/f%C3%A9lix-groleau-28b5b3231",
         },
@@ -214,7 +214,7 @@ const team2023 = {
           linkedin: "https://www.linkedin.com/in/alexandre-valsorda-3015831a5/",
         },
         {
-          img: "/static/team/members/charles_deschenes.png",
+          img: "/static/team/members/charles_deschenes.jpg",
           fullName: "Charles Deschenes",
           role: "",
           mail: "c.deschenes.formule.ets@gmail.com",
@@ -242,7 +242,7 @@ const team2023 = {
         {
           img: "/static/team/members/thomas_viejo.jpg",
           fullName: "Thomas Viejo",
-          role: "message.team.roles.head-media-sponsors",
+          role: "message.team.roles.lead-external-relationship",
           mail: "t.viejo.formule.ets@gmail.com",
           linkedin:
             "https://www.linkedin.com/in/thomas-viejo-9a213b195/?originalSubdomain=fr",
