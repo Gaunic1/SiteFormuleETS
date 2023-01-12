@@ -225,8 +225,11 @@ const team2022 = {
           linkedin: "",
         },
         {
+
           img: "/static/team/members/antoine_gingras.jpg",
-          fullName: "Antoine Gringas",
+          
+          fullName: "Antoine Gingras",
+
           role: "",
           mail: "a.gringas.formule.ets@gmail.com",
           linkedin: "https://www.linkedin.com/in/antoine-gingras-227850236/",

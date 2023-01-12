@@ -132,6 +132,13 @@ const sponsors = {
   //SILVER
   silver: [
     {
+
+      src: "https://www.orthogone.ca/",
+
+        imageSrc: "/static/sponsors/Orthogone.png"
+
+    },
+    {
         src: "https://perryautolaval.com/",
         imageSrc: "/static/sponsors/Perry.jpg",
     },
@@ -212,6 +219,7 @@ const sponsors = {
 
   //BRONZE
   bronze: [
+
     {
       src:"https://www.comet-pumpen.de/en/start.html",
       imageSrc: "/static/sponsors/Comet+pumpen.png",
@@ -220,6 +228,9 @@ const sponsors = {
       src: "https://www.orthogone.ca/",
         imageSrc: "/static/sponsors/Orthogone.png"
     },
+
+    
+
     {
       src: "https://hawkeyeind.com/",
       imageSrc: "/static/sponsors/Hawkeye.png",
