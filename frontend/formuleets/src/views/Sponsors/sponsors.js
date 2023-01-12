@@ -219,7 +219,18 @@ const sponsors = {
 
   //BRONZE
   bronze: [
+
+    {
+      src:"https://www.comet-pumpen.de/en/start.html",
+      imageSrc: "/static/sponsors/Comet+pumpen.png",
+    },
+    {
+      src: "https://www.orthogone.ca/",
+        imageSrc: "/static/sponsors/Orthogone.png"
+    },
+
     
+
     {
       src: "https://hawkeyeind.com/",
       imageSrc: "/static/sponsors/Hawkeye.png",
@@ -284,14 +295,7 @@ const sponsors = {
       src: "https://www.ptselectrique.com/",
       imageSrc: "/static/sponsors/ptselec.png",
     },
-    {
-      src: "https://disensors.com/",
-      imageSrc: "/static/sponsors/disensor.png",
-    },
-    {
-      src: "http://www.sodel.com/",
-      imageSrc: "/static/sponsors/sodel.png",
-    },
+
     {
       src: "http://ultraspec.ca/",
       imageSrc: "/static/sponsors/ultraspec.png",
