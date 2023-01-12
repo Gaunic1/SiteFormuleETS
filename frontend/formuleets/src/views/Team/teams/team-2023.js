@@ -12,7 +12,7 @@ const team2023 = {
           linkedin: "https://www.linkedin.com/in/simon-aubin-lavoie/",
         },
         {
-          img: "/static/team/members/steve-groleau.jpg",
+          img: "/static/team/members/steve_groleau.jpg",
           fullName: "Steve Groleau",
           role: "message.team.roles.technical-director",
           mail: "s.groleau.formule.ets@gmail.com",
