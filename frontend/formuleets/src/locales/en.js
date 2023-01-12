@@ -86,7 +86,7 @@ const en = {
       logistics: "Logistics",
       driverless: "Driverless",
       roles: {
-        captain: "Captain",
+        captain: "Team captain",
         "technical-director": "Technical director",
         "management-director": "Management director",
         "head-aerodynamics": "Head of Aerodynamics",
