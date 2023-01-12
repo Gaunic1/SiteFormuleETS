@@ -160,6 +160,26 @@ const team2023 = {
           mail: "k.devreeze.formule.ets@gmail.com",
           linkedin: "https://www.linkedin.com/in/karl-de-vreeze-89524b180/",
         },
+        {
+
+          img: "/static/team/members/tommy_gelinas.jpg",
+
+          fullName: "Tommy Gélinas",
+
+          role: "",
+
+          mail: "t.gelinas.formule.ets@gmail.com",
+
+          linkedin: "https://www.linkedin.com/in/tommy-g%C3%A9linas-4a3935245/",
+
+        },
+        {
+          img:"/static/team/members/alek_cyr.jpg",
+          fullName:"Alek Cyr",
+          role:"",
+          mail:"a.cyr.formule.ets@gmail.com",
+          linkedin:"https://www.linkedin.com/in/alek-cyr-9397b6192"
+          }
       ],
     },
     {
