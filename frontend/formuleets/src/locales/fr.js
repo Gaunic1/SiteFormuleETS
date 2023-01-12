@@ -90,7 +90,7 @@ const fr = {
       logistics : "Logistique",
       driverless: "Conduite autonome",
       roles: {
-        captain: "Capitaine",
+        captain: "Capitaine de l'équipe",
         "technical-director": "Directeur technique",
         "management-director": "Directeur de gestion",
         "head-aerodynamics": "Chef d'Aérodynamique",
