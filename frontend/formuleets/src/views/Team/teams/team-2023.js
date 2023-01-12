@@ -257,7 +257,7 @@ const team2023 = {
       ],
     },
     {
-      name: "message.team.external_relationships",
+      name: "message.team.external_relationship",
       members: [
         {
           img: "/static/team/members/thomas_viejo.jpg",
