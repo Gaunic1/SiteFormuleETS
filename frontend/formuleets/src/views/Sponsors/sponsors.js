@@ -240,8 +240,8 @@ const sponsors = {
   bronze: [
 
     {
-      src: "http://aciervulcan.com/",
-      imageSrc: "/static/sponsors/Acier+vulcan.png",
+      src: "https://www.vulcain.com",
+      imageSrc: "/static/sponsors/Produits+de+metal+vulcain.jpg",
     },
     {
       src:"https://www.comet-pumpen.de/en/start.html",
