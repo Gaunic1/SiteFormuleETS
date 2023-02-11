@@ -8,6 +8,11 @@ const sponsors = {
   //DIAMOND
   diamond: [
     {
+      src: "https://www.alstom.com/",
+      imageSrc: "/static/sponsors/Alstom.png",
+      whiteVersion: "/static/sponsors/Alstom-white.png",
+    },
+    {
       src: "http://www.avior.ca/index_fr.html",
       imageSrc: "/static/sponsors/Avior.png",
       whiteVersion: "/static/sponsors/Avior-white.png",
@@ -16,6 +21,11 @@ const sponsors = {
       src: "http://www.blaxes.com/",
       imageSrc: "/static/sponsors/Blaxes.png",
       whiteVersion: "/static/sponsors/Blaxes-white.png",
+    },
+    {
+      src: "https://www.diacarb.com/en/",
+      imageSrc: "/static/sponsors/Diacarb.png",
+      whiteVersion: "/static/sponsors/Diacarb-white.png",
     },
     {
       src: "https://www.etsmtl.ca/",
@@ -43,6 +53,11 @@ const sponsors = {
       whiteVersion: "/static/sponsors/RACE-white.png",
     },
     {
+      src: "https://www.renishaw.fr/fr/renishaw-amelioration-du-rendement-en-fabrication-et-en-soins-de-sante--1030",
+      imageSrc: "/static/sponsors/Renishaw.png",
+      whiteVersion: "/static/sponsors/Renishaw-white.png",
+    },
+    {
       src: "http://supalloy.com/fr/",
       imageSrc: "/static/sponsors/Technologie+Superieure+D%27alliage.png",
       whiteVersion:
@@ -57,6 +72,10 @@ const sponsors = {
 
   //GOLD
   gold: [
+    {
+      src: "https://www.groupenovatech.com/",
+      imageSrc: "/static/sponsors/Novatech.png",
+    },
     {
       src: "https://www.bombardier.com/",
       imageSrc: "/static/sponsors/Bombardier.png",
@@ -220,6 +239,10 @@ const sponsors = {
   //BRONZE
   bronze: [
 
+    {
+      src: "https://www.vulcain.com",
+      imageSrc: "/static/sponsors/Produits+de+metal+vulcain.jpg",
+    },
     {
       src:"https://www.comet-pumpen.de/en/start.html",
       imageSrc: "/static/sponsors/Comet+pumpen.png",
