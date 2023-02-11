@@ -23,6 +23,11 @@ const sponsors = {
       whiteVersion: "/static/sponsors/Blaxes-white.png",
     },
     {
+      src: "https://www.diacarb.com/en/",
+      imageSrc: "/static/sponsors/Diacarb.png",
+      whiteVersion: "/static/sponsors/Diacarb-white.png",
+    },
+    {
       src: "https://www.etsmtl.ca/",
       imageSrc: "/static/sponsors/ETS.png",
       whiteVersion: "/static/sponsors/ETS-white.png",
@@ -46,6 +51,11 @@ const sponsors = {
       src: "http://aeets.com/",
       imageSrc: "/static/sponsors/RACE.png",
       whiteVersion: "/static/sponsors/RACE-white.png",
+    },
+    {
+      src: "https://www.renishaw.fr/fr/renishaw-amelioration-du-rendement-en-fabrication-et-en-soins-de-sante--1030",
+      imageSrc: "/static/sponsors/Renishaw.png",
+      whiteVersion: "/static/sponsors/Renishaw-white.png",
     },
     {
       src: "http://supalloy.com/fr/",
