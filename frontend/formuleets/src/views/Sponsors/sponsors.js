@@ -8,6 +8,11 @@ const sponsors = {
   //DIAMOND
   diamond: [
     {
+      src: "https://www.alstom.com/",
+      imageSrc: "/static/sponsors/Alstom.png",
+      whiteVersion: "/static/sponsors/Alstom-white.png",
+    },
+    {
       src: "http://www.avior.ca/index_fr.html",
       imageSrc: "/static/sponsors/Avior.png",
       whiteVersion: "/static/sponsors/Avior-white.png",
@@ -57,6 +62,10 @@ const sponsors = {
 
   //GOLD
   gold: [
+    {
+      src: "https://www.groupenovatech.com/",
+      imageSrc: "/static/sponsors/Novatech.png",
+    },
     {
       src: "https://www.bombardier.com/",
       imageSrc: "/static/sponsors/Bombardier.png",
@@ -220,6 +229,10 @@ const sponsors = {
   //BRONZE
   bronze: [
 
+    {
+      src: "http://aciervulcan.com/",
+      imageSrc: "/static/sponsors/Acier+vulcan.png",
+    },
     {
       src:"https://www.comet-pumpen.de/en/start.html",
       imageSrc: "/static/sponsors/Comet+pumpen.png",
