@@ -150,6 +150,15 @@ const sponsors = {
 
   //SILVER
   silver: [
+
+
+    {
+
+      src: "https://www.lincolnelectric.com/en",
+
+      imageSrc: "/static/sponsors/lincoln.png",
+
+    },
     {
 
       src: "https://www.orthogone.ca/",
@@ -248,13 +257,6 @@ const sponsors = {
       imageSrc: "/static/sponsors/Comet+pumpen.png",
     },
     {
-      src: "https://www.orthogone.ca/",
-        imageSrc: "/static/sponsors/Orthogone.png"
-    },
-
-    
-
-    {
       src: "https://hawkeyeind.com/",
       imageSrc: "/static/sponsors/Hawkeye.png",
     },
@@ -297,10 +299,6 @@ const sponsors = {
     {
       src: "http://www.izzeracing.com/",
       imageSrc: "/static/sponsors/racing.png",
-    },
-    {
-      src: "https://www.lincolnelectric.com/en",
-      imageSrc: "/static/sponsors/lincoln.png",
     },
     {
       src: "https://www.messer-ca.com/",
