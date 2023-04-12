@@ -63,7 +63,7 @@ const sponsors = {
     },
     {
       src: "https://www.hutchinson.com/fr/aerospace/",
-      imageSrc: "/static/sponsors/Hutinson.png",
+      imageSrc: "/static/sponsors/Hutchinson.png",
     },
     {
       src: "https://www.brp.com/",
