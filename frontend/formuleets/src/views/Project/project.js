@@ -1,7 +1,7 @@
 const project = {
   //animation speed
-  speed: 10,
-  phoneSpeed: 10,
+  speed: 15,
+  phoneSpeed: 15,
 
   //Speed of scroll when automatic button is pressed
   autoSpeed: 100,
