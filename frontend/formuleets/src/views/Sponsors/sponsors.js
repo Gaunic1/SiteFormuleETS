@@ -78,11 +78,7 @@ const sponsors = {
     },
     {
       src: "https://www.hutchinson.com/fr/aerospace/",
-      imageSrc: "/static/sponsors/Huchtinson.png",
-    },
-    {
-      src: "https://www.brp.com/",
-      imageSrc: "/static/sponsors/Megatech.png",
+      imageSrc: "/static/sponsors/Hutchinson.png",
     },
     {
       src: "https://www.brp.com/",
