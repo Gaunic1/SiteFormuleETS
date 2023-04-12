@@ -73,6 +73,34 @@ const sponsors = {
   //GOLD
   gold: [
     {
+      src: "https://www.soucy-group.com/fr/",
+      imageSrc: "/static/sponsors/Soucy.png",
+    },
+    {
+      src: "https://www.hutchinson.com/fr/aerospace/",
+      imageSrc: "/static/sponsors/Huchtinson.png",
+    },
+    {
+      src: "https://www.brp.com/",
+      imageSrc: "/static/sponsors/Megatech.png",
+    },
+    {
+      src: "https://www.brp.com/",
+      imageSrc: "/static/sponsors/Megatech.png",
+    },
+    {
+      "src": "https://www.3mcanada.ca/3M/fr_CA/company-ca/",
+      "imageSrc": "/static/sponsors/3M.png"
+    },
+    {
+      "src": "https://www.fusia-groupe.com/",
+      "imageSrc": "/static/sponsors/fusia.png"
+    },
+    {
+      "src": "https://www.brp.com/",
+      "imageSrc": "/static/sponsors/BRP.png"
+    },
+    {
       src: "https://www.groupenovatech.com/",
       imageSrc: "/static/sponsors/Novatech.png",
     },
@@ -150,7 +178,6 @@ const sponsors = {
 
   //SILVER
   silver: [
-
 
     {
 
