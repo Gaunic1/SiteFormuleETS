@@ -157,7 +157,7 @@ const sponsors = {
       imageSrc: "/static/sponsors/skf.png",
     },
     {
-      src: "https://samco-machinery.com/",
+      src: "https://www.moulesamco.com/",
       imageSrc: "/static/sponsors/samco.png",
     },
     {
