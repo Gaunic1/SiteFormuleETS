@@ -1,10 +1,10 @@
 const project = {
   //animation speed
-  speed: 20,
-  phoneSpeed: 20,
+  speed: 25,
+  phoneSpeed: 25,
 
   //Speed of scroll when automatic button is pressed
-  autoSpeed: 200,
+  autoSpeed: 150,
 
   //dont show at the start the 3d model
   appearAndDisapear: true,
