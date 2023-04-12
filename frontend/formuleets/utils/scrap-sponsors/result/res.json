@@ -1,5 +1,13 @@
 [
     {
+        "src": "https://www.golabo.com/fr",
+        "imageSrc": "/static/sponsors/labo-circuit.png"
+      },
+    {
+        "src": "https://avitecnet.com/fr/",
+        "imageSrc": "/static/sponsors/avitec.png"
+      },
+    {
         "src": "https://www.skf.com/ca/en",
         "imageSrc": "/static/sponsors/skf.png"
     },

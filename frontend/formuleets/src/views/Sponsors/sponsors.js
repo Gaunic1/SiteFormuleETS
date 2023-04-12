@@ -70,16 +70,16 @@ const sponsors = {
       imageSrc: "/static/sponsors/Megatech.png",
     },
     {
-      "src": "https://www.3mcanada.ca/3M/fr_CA/company-ca/",
-      "imageSrc": "/static/sponsors/3M.png"
+      src: "https://www.3mcanada.ca/3M/fr_CA/company-ca/",
+      imageSrc: "/static/sponsors/3M.png",
     },
     {
-      "src": "https://www.fusia-groupe.com/",
-      "imageSrc": "/static/sponsors/fusia.png"
+      src: "https://www.fusia-groupe.com/",
+      imageSrc: "/static/sponsors/fusia.png",
     },
     {
-      "src": "https://www.brp.com/",
-      "imageSrc": "/static/sponsors/BRP.png"
+      src: "https://www.brp.com/",
+      imageSrc: "/static/sponsors/BRP.png",
     },
     {
       src: "https://www.groupenovatech.com/",
@@ -132,6 +132,14 @@ const sponsors = {
 
   //SILVER
   silver: [
+    {
+      src: "https://www.golabo.com/fr",
+      imageSrc: "/static/sponsors/labo-circuit.png",
+    },
+    {
+      src: "https://avitecnet.com/fr/",
+      imageSrc: "/static/sponsors/avitec.png",
+    },
     {
       src: "https://www.edngroup.com/",
       imageSrc: "/static/sponsors/edn.png",
@@ -236,7 +244,7 @@ const sponsors = {
     },
   ],
 
-  //BRONZE
+  //BRONZE 
   bronze: [
     {
       src: "https://www.kiewit.com/?lang=fr-ca",
