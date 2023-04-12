@@ -33,26 +33,6 @@ const sponsors = {
       whiteVersion: "/static/sponsors/ETS-white.png",
     },
     {
-      src: "http://fddaeets.com/",
-      imageSrc: "/static/sponsors/FDDAEETS.png",
-      whiteVersion: "/static/sponsors/FDDAEETS-white.png",
-    },
-    {
-      src: "https://www.etsmtl.ca/fdets/Accueil",
-      imageSrc: "/static/sponsors/FDETS.png",
-      whiteVersion: "/static/sponsors/FDETS-white.png",
-    },
-    {
-      src: "https://www.multimatic.com/",
-      imageSrc: "/static/sponsors/Multimatic.png",
-      whiteVersion: "/static/sponsors/Multimatic-white.png",
-    },
-    {
-      src: "http://aeets.com/",
-      imageSrc: "/static/sponsors/RACE.png",
-      whiteVersion: "/static/sponsors/RACE-white.png",
-    },
-    {
       src: "https://www.renishaw.fr/fr/renishaw-amelioration-du-rendement-en-fabrication-et-en-soins-de-sante--1030",
       imageSrc: "/static/sponsors/Renishaw.png",
       whiteVersion: "/static/sponsors/Renishaw-white.png",
@@ -73,12 +53,17 @@ const sponsors = {
   //GOLD
   gold: [
     {
+      src: "https://www.multimatic.com/",
+      imageSrc: "/static/sponsors/Multimatic.png",
+      whiteVersion: "/static/sponsors/Multimatic-white.png",
+    },
+    {
       src: "https://www.soucy-group.com/fr/",
       imageSrc: "/static/sponsors/Soucy.png",
     },
     {
       src: "https://www.hutchinson.com/fr/aerospace/",
-      imageSrc: "/static/sponsors/Hutchinson.png",
+      imageSrc: "/static/sponsors/Hutinson.png",
     },
     {
       src: "https://www.brp.com/",
@@ -109,10 +94,6 @@ const sponsors = {
       imageSrc: "/static/sponsors/DanaTM4.png",
     },
     {
-      src: "https://www.airtechintl.com/",
-      imageSrc: "/static/sponsors/Airtech.png",
-    },
-    {
       src: "https://www.speedgoat.com/",
       imageSrc: "/static/sponsors/Speedgoat.png",
       whiteVersion: "/static/sponsors/Speedgoat-white.png",
@@ -127,10 +108,6 @@ const sponsors = {
       imageSrc: "/static/sponsors/AMK.png",
     },
     {
-      src: "https://www.drillmex.com/",
-      imageSrc: "/static/sponsors/Drillmex.png",
-    },
-    {
       src: "https://mdx.plm.automation.siemens.com/star-ccm-plus",
       imageSrc: "/static/sponsors/Siemens.png",
     },
@@ -143,55 +120,54 @@ const sponsors = {
       imageSrc: "/static/sponsors/Vanguard+Steel.png",
     },
     {
-      src: "https://www.calogysolutions.com/fr/",
-      imageSrc: "/static/sponsors/calogy.png",
-    },
-    {
-      src: "https://sealimited.com/",
-      imageSrc: "/static/sponsors/sea.png",
-    },
-    {
       src: "http://www.bmrswired.com/",
       imageSrc: "/static/sponsors/BMRS.png",
     },
     {
-      src: "https://www.cta-brp-udes.com/",
-      imageSrc: "/static/sponsors/cta_brp.png",
+      src: "https://www.futek.com/home",
+      imageSrc: "/static/sponsors/futek.png",
+    },
+    
+  ],
+
+  //SILVER
+  silver: [
+    {
+      src: "https://www.edngroup.com/",
+      imageSrc: "/static/sponsors/edn.png",
+    },
+    {
+      src: "https://www.drillmex.com/",
+      imageSrc: "/static/sponsors/Drillmex.png",
     },
     {
       src: "https://www.hgtbearing.com/",
       imageSrc: "/static/sponsors/US+HG+Tech+Corporation.png",
     },
     {
-      src: "https://www.futek.com/home",
-      imageSrc: "/static/sponsors/futek.png",
+      src: "https://www.skf.com/ca/en",
+      imageSrc: "/static/sponsors/skf.png",
     },
     {
-      src: "https://www.edngroup.com/",
-      imageSrc: "/static/sponsors/edn.png",
+      src: "https://samco-machinery.com/",
+      imageSrc: "/static/sponsors/samco.png",
     },
-  ],
-
-  //SILVER
-  silver: [
-
     {
-
+      src: "https://www.calogysolutions.com/fr/",
+      imageSrc: "/static/sponsors/calogy.png",
+    },
+    {
+      src: "https://www.airtechintl.com/",
+      imageSrc: "/static/sponsors/Airtech.png",
+    },
+    {
       src: "https://www.lincolnelectric.com/en",
-
       imageSrc: "/static/sponsors/lincoln.png",
-
     },
     {
-
       src: "https://www.orthogone.ca/",
+      imageSrc: "/static/sponsors/Orthogone.png"
 
-        imageSrc: "/static/sponsors/Orthogone.png"
-
-    },
-    {
-        src: "https://perryautolaval.com/",
-        imageSrc: "/static/sponsors/Perry.jpg",
     },
     {
       src: "https://www.opal-rt.com/",
@@ -215,10 +191,6 @@ const sponsors = {
       imageSrc: "/static/sponsors/Loctite.png",
     },
     {
-      src: "https://tuboquip.equipeibs.com/fr/",
-      imageSrc: "/static/sponsors/Tuboquip.png",
-    },
-    {
       src: "http://www.amcanjumax.com/",
       imageSrc: "/static/sponsors/amcan+Jumax.png",
     },
@@ -237,10 +209,6 @@ const sponsors = {
     {
       src: "https://thermetco.com/fr/accueil/",
       imageSrc: "/static/sponsors/Thermetco.png",
-    },
-    {
-      src: "http://engrenagelb.ca/",
-      imageSrc: "/static/sponsors/engrenagelb.png",
     },
     {
       src: "https://collectivlab.com/",
@@ -270,7 +238,50 @@ const sponsors = {
 
   //BRONZE
   bronze: [
-
+    {
+      src: "https://www.kiewit.com/?lang=fr-ca",
+      imageSrc: "/static/sponsors/kiewit.png",
+    },
+    {
+      src: "https://www.isabellenhuetteusa.com/",
+      imageSrc: "/static/sponsors/isabellenhuetteusa.png",
+    },
+    {
+      src: "https://www.shkarting.com/",
+      imageSrc: "/static/sponsors/sh-karting.png",
+    },
+    {
+      src: "https://techso.ca/",
+      imageSrc: "/static/sponsors/Techso.png",
+    },
+    {
+      src: "https://www.metalcn.ca/",
+      imageSrc: "/static/sponsors/metal-cn.png",
+    },
+    {
+      src: "https://www.hakko.com/",
+      imageSrc: "/static/sponsors/hakko.png",
+    },
+    {
+      src: "https://www.usinagefb.com/",
+      imageSrc: "/static/sponsors/usinage-fb.png",
+    },
+    {
+      src: "https://www.cta-brp-udes.com/",
+      imageSrc: "/static/sponsors/cta_brp.png",
+    },
+    {
+      src: "https://tuboquip.equipeibs.com/fr/",
+      imageSrc: "/static/sponsors/Tuboquip.png",
+    },
+    {
+      src: "https://perryautolaval.com/",
+      imageSrc: "/static/sponsors/Perry.jpg",
+    },
+    {
+      src: "https://www.analog.com/en/index.html",
+      imageSrc: "/static/sponsors/Analog-Device.png",
+    },
     {
       src: "https://www.vulcain.com",
       imageSrc: "/static/sponsors/Produits+de+metal+vulcain.jpg",
@@ -343,10 +354,6 @@ const sponsors = {
     {
       src: "http://ultraspec.ca/",
       imageSrc: "/static/sponsors/ultraspec.png",
-    },
-    {
-      src: "https://samco-machinery.com/",
-      imageSrc: "/static/sponsors/samco.png",
     },
     {
       src: "https://www.nitrex.com/",

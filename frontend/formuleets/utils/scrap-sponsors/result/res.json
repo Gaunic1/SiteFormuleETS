@@ -1,5 +1,41 @@
 [
     {
+        "src": "https://www.skf.com/ca/en",
+        "imageSrc": "/static/sponsors/skf.png"
+    },
+    {
+        "src": "https://www.usinagefb.com/",
+        "imageSrc": "/static/sponsors/usinage-fb.png"
+    },
+    {
+        "src": "https://www.analog.com/en/index.html",
+        "imageSrc": "/static/sponsors/Analog-Device.png"
+    },
+    {
+        "src": "https://www.hakko.com/",
+        "imageSrc": "/static/sponsors/hakko.png"
+    },
+    {
+        "src": "https://www.usinagefb.com/",
+        "imageSrc": "/static/sponsors/usinage-fb.png"
+    },
+    {
+     "src": "https://www.kiewit.com/?lang=fr-ca",
+    "imageSrc": "/static/sponsors/kiewit.png"
+    },
+    {
+    "src": "https://www.isabellenhuetteusa.com/",
+    "imageSrc": "/static/sponsors/isabellenhuetteusa.png"
+    },
+    {
+     "src": "https://www.shkarting.com/",
+     "imageSrc": "/static/sponsors/sh-karting.png"
+    },
+    {
+     "src": "https://techso.ca/",
+     "imageSrc": "/static/sponsors/Techso.png"
+    },
+    {
       "src": "https://www.soucy-group.com/fr/",
       "imageSrc": "/static/sponsors/Soucy.png"
     },
