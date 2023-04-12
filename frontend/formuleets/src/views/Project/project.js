@@ -4,7 +4,7 @@ const project = {
   phoneSpeed: 25,
 
   //Speed of scroll when automatic button is pressed
-  autoSpeed: 150,
+  autoSpeed: 100,
 
   //dont show at the start the 3d model
   appearAndDisapear: true,
