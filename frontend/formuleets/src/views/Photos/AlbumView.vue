@@ -80,7 +80,7 @@
 import { useAlbumsStore } from "../../store/AlbumsStore";
 
 export default {
-  name: "Photos",
+  name: "PhotosPage",
 
   data() {
     const store = useAlbumsStore();

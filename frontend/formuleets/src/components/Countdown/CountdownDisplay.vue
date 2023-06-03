@@ -11,11 +11,11 @@
         </div>
       </div>
       <div class="flex">
-      <p>{{ $t("message.date.days") }}</p>
-      <div class="flex-1 flex justify-end ml-3">
-        <NumberDisplay :time="time[1]"></NumberDisplay>
+        <p>{{ $t("message.date.days") }}</p>
+        <div class="flex-1 flex justify-end ml-3">
+          <NumberDisplay :time="time[1]"></NumberDisplay>
+        </div>
       </div>
-    </div>
       <div class="flex">
         <p>{{ $t("message.date.hours") }}</p>
         <div class="flex-1 flex justify-end ml-3">
@@ -50,7 +50,7 @@
 <script>
 import NumberDisplay from "./NumberDisplay.vue";
 export default {
-  name: "Countdown",
+  name: "CountdownDisplay",
   components: { NumberDisplay },
   props: {
     title: {

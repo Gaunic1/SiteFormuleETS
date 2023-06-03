@@ -39,7 +39,7 @@
 
 <script>
 export default {
-  name: "Sidebar",
+  name: "AsideBar",
   props: {
     opened: {
       required: true,

@@ -29,12 +29,12 @@
         class="w-1/2 flex items-center px-8 my-10"
         :class="index % 2 == 0 ? 'justify-end' : 'ml-auto'"
       >
-        <Countdown
+        <CountdownComponent
           :link="item.link"
           :date="item.date"
           :hour="item.hour"
           :title="item.title"
-        ></Countdown>
+        ></CountdownComponent>
         <div
           class="rounded-full bg-red-800 border border-red-600 w-4 h-4 ml-10 absolute right-1/2 transform translate-x-1/2"
         ></div>
@@ -44,12 +44,12 @@
 </template>
 
 <script>
-import Countdown from "../Countdown/Countdown.vue";
+import CountdownComponent from "../Countdown/CountdownDisplay.vue";
 import dateList from "./date";
 
 export default {
-  name: "Date",
-  components: { Countdown },
+  name: "DateDisplay",
+  components: { CountdownComponent },
   data() {
     return {
       dateList:

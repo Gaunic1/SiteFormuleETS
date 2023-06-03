@@ -107,13 +107,11 @@ import phoneMixin from "../../mixins/phone-mixin";
 import ParallaxHome from "../../components/Home/ParallaxHome.vue";
 import SponsorsHome from "../../components/Home/SponsorsHome.vue";
 import FormContact from "../../components/Form/FormContact.vue";
-import Date from "../../components/Date/Date.vue";
+import Date from "../../components/Date/DateDisplay.vue";
 import dateList from "../../components/Date/date";
 
-import "parallaxy-img/dist/parallaxy";
-
 export default {
-  name: "Home",
+  name: "HomePage",
   mixins: [phoneMixin],
   components: { ParallaxHome, FormContact, SponsorsHome, Date },
   data() {

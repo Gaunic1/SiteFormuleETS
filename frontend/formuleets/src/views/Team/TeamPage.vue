@@ -86,24 +86,24 @@
       </template>
     </section>
 
-    <Aside
+    <AsideBar
       :opened="modal"
       @close="modal = false"
       :beforeItem="$t('message.team.year') + ' - '"
       :itemsMenu="teams"
       @clicked="changeDefault"
       :title="$t('message.team.teams')"
-    ></Aside>
+    ></AsideBar>
   </div>
 </template>
 <script>
 import teams from "./teams";
-import Aside from "../../components/Asidebar/Aside.vue";
+import AsideBar from "../../components/Asidebar/AsideBar.vue";
 
 export default {
-  name: "Team",
+  name: "TeamPage",
   props: ["year"],
-  components: { Aside },
+  components: { AsideBar },
   data() {
     return {
       teams: teams,

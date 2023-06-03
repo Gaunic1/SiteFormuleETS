@@ -7,7 +7,11 @@
 
     <!-- BECOME PARTENER -->
     <section class="flex justify-center items-center">
-      <a :href="$t(sponsors.button.link)" target="_blank" rel="noopener noreferrer">
+      <a
+        :href="$t(sponsors.button.link)"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <button
           class="pb-5 pt-5 pl-10 pr-10 mb-5 uppercase dark:bg-white bg-dark-mode dark:text-black text-white font-bold"
         >
@@ -62,7 +66,7 @@
 import sponsors from "./sponsors";
 
 export default {
-  name: "Sponsors",
+  name: "SponsorsPage",
   data() {
     return {
       sponsors: sponsors,

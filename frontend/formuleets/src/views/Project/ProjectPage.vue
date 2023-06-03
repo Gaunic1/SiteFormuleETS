@@ -100,7 +100,7 @@ import project from "./project";
 import phoneMixin from "../../mixins/phone-mixin";
 
 export default {
-  name: "Project",
+  name: "ProjectPage",
   mixins: [phoneMixin],
   data() {
     return {

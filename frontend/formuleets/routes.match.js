@@ -13,6 +13,7 @@ while ((res = reg.exec(textRoutes)) != null) {
 //remove duplicate
 const finalPath = [...new Set(path)].filter((e) => e !== "/easter-eggs");
 
-console.log("Matched routes: ", finalPath, "\n");
+if (process.env.NODE_ENV === "production")
+  console.log("Matched routes: ", finalPath, "\n");
 
 module.exports = finalPath;

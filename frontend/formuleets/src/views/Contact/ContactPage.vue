@@ -62,9 +62,7 @@
 </template>
 
 <script>
-import "parallaxy-img/dist/parallaxy";
-
 export default {
-  name: "Contact",
+  name: "ContactComponent",
 };
 </script>

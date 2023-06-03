@@ -1,23 +1,23 @@
 <template>
-  <Header></Header>
+  <HeaderComponent></HeaderComponent>
   <router-view />
-  <Footer></Footer>
+  <FooterComponent></FooterComponent>
 
   <go-to-top></go-to-top>
-  <Notifications></Notifications>
+  <NotificationsComponent></NotificationsComponent>
 </template>
 <script>
-import Header from "./components/Header/Header.vue";
-import Footer from "./components/Footer/Footer.vue";
+import HeaderComponent from "./components/Header/HeaderComponent.vue";
+import FooterComponent from "./components/Footer/FooterComponent.vue";
 import GoToTop from "./components/GoToTop/GoToTop.vue";
-import Notifications from "./components/Notifications/Notifications.vue";
+import NotificationsComponent from "./components/Notifications/NotificationsComponent.vue";
 
 export default {
   components: {
-    Header,
-    Footer,
+    HeaderComponent,
+    FooterComponent,
     GoToTop,
-    Notifications,
+    NotificationsComponent,
   },
   data() {
     return {

@@ -43,7 +43,7 @@
 import medias from "./medias";
 
 export default {
-  name: "Footer",
+  name: "FooterComponent",
   data() {
     return {
       medias: medias,

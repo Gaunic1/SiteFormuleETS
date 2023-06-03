@@ -43,12 +43,16 @@
 import { useAlbumsStore } from "../../store/AlbumsStore";
 
 // Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from "swiper/vue/swiper-vue.js";
 import { Pagination, Autoplay, Navigation } from "swiper";
-import "swiper/swiper-bundle.css";
+import { Swiper, SwiperSlide } from "swiper/vue";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 export default {
-  name: "Album",
+  name: "AlbumPage",
   props: ["id"],
   components: {
     Swiper,

@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: "Notifications",
+  name: "NotificationsComponent",
   data() {
     return {
       show: true,

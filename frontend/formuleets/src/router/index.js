@@ -3,15 +3,15 @@ import { createRouter, createWebHistory } from "vue-router";
 import meta from "./meta";
 import basicMeta from "./basicMeta";
 
-import Contact from "../views/Contact/Contact.vue";
-import Donate from "../views/Donate/Donate.vue";
-import EASTEREGG from "../views/Easter-EGG/EASTEREGG.vue";
-import Error404 from "../views/Error404/Error404.vue";
-import Home from "../views/Home/Home.vue";
-import Project from "../views/Project/Project.vue";
-import Sponsors from "../views/Sponsors/Sponsors.vue";
-import Team from "../views/Team/Team.vue";
-import Videos from "../views/Videos/Videos.vue";
+import Contact from "../views/Contact/ContactPage.vue";
+import Donate from "../views/Donate/DonatePage.vue";
+import EASTEREGG from "../views/Easter-EGG/EastereggPage.vue";
+import Error404 from "../views/Error404/Error404Page.vue";
+import Home from "../views/Home/HomePage.vue";
+import Project from "../views/Project/ProjectPage.vue";
+import Sponsors from "../views/Sponsors/SponsorsPage.vue";
+import Team from "../views/Team/TeamPage.vue";
+import Videos from "../views/Videos/VideosPage.vue";
 import AlbumView from "../views/Photos/AlbumView.vue";
 import PhotosView from "../views/Photos/PhotosView.vue";
 

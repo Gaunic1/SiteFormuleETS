@@ -76,7 +76,7 @@
 import ytb from "./ytb";
 import phoneMixin from "../../mixins/phone-mixin";
 export default {
-  name: "Videos",
+  name: "VideosPage",
   mixins: [phoneMixin],
   data() {
     return {

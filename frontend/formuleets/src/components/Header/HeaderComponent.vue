@@ -159,7 +159,7 @@
 import HeaderMenus from "./HeaderMenus";
 
 export default {
-  name: "Header",
+  name: "HeaderComponent",
   created() {
     this.setDarkMode();
     document.addEventListener("scroll", this.scroll, { passive: true });

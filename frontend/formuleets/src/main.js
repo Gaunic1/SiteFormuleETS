@@ -13,6 +13,9 @@ import "aos/dist/aos.css";
 import "lazy-attr";
 import "lazy-attr/dist/lazy-attr-animation.css";
 
+//Parallax effect
+import "parallaxy-img";
+
 //Pinia
 import { createPinia } from "pinia";
 
