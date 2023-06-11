@@ -1,7 +1,7 @@
 type Team = {
   title: string;
   categories: {
-    name: "message.team.management";
+    name: string;
     members: {
       img: string;
       fullName: string;

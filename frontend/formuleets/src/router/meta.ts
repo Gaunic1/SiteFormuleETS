@@ -1,22 +1,29 @@
-const meta = (to, from, next) => {
+import { NavigationGuardNext, RouteLocationNormalized } from "vue-router";
+import { SuperRoute } from ".";
+
+const meta = (
+  to: RouteLocationNormalized,
+  from: RouteLocationNormalized,
+  next: NavigationGuardNext
+) => {
   // This goes through the matched routes from last to first, finding the closest route with a title.
   // e.g., if we have `/some/deep/nested/route` and `/some`, `/deep`, and `/nested` have titles,
   // `/nested`'s will be chosen.
   const nearestWithTitle = to.matched
     .slice()
     .reverse()
-    .find((r) => r.meta && r.meta.title);
+    .find((r) => r.meta && r.meta.title) as unknown as SuperRoute;
 
   // Find the nearest route element with meta tags.
   const nearestWithMeta = to.matched
     .slice()
     .reverse()
-    .find((r) => r.meta && r.meta.metaTags);
+    .find((r) => r.meta && r.meta.metaTags) as unknown as SuperRoute;
 
   const previousNearestWithMeta = from.matched
     .slice()
     .reverse()
-    .find((r) => r.meta && r.meta.metaTags);
+    .find((r) => r.meta && r.meta.metaTags) as unknown as SuperRoute;
 
   // If a route with a title was found, set the document (page) title to that value.
   if (nearestWithTitle) {

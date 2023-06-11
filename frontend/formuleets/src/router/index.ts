@@ -1,7 +1,7 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { RouterOptions, createRouter, createWebHistory } from "vue-router";
 
 import meta from "./meta";
-import basicMeta from "./basicMeta";
+import basicMeta, { Meta } from "./basicMeta";
 
 import Contact from "../views/Contact/ContactPage.vue";
 import Donate from "../views/Donate/DonatePage.vue";
@@ -15,7 +15,11 @@ import Videos from "../views/Videos/VideosPage.vue";
 import AlbumView from "../views/Photos/AlbumView.vue";
 import PhotosView from "../views/Photos/PhotosView.vue";
 
-const routes = [
+type SuperRoute = RouterOptions["routes"][number] & {
+  pageName: string;
+  meta?: { metaTags?: Meta[]; title?: string };
+};
+const routes: SuperRoute[] = [
   {
     path: "/",
     name: "Home",
@@ -97,13 +101,13 @@ const routes = [
 ];
 
 //setup meta
-routes.forEach((e) => {
-  const title = e.pageName + " — FormuleETS Montréal";
+routes.forEach((route) => {
+  const title = route.pageName + " — FormuleETS Montréal";
 
-  e.meta = {};
-  e.meta.title = title;
-  e.meta.metaTags = basicMeta;
-  e.meta.metaTags = e.meta.metaTags.concat([
+  route.meta = {};
+  route.meta.title = title;
+  route.meta.metaTags = basicMeta;
+  route.meta.metaTags = route.meta.metaTags.concat([
     {
       name: "title",
       content: title,
@@ -111,15 +115,14 @@ routes.forEach((e) => {
     {
       name: "description",
       content:
-        e.path === "/"
+        route.path === "/"
           ? `Formule ETS is a team of engineering students from the École de technologie supérieure in Montreal. The team has been designing and building racing cars with the aim of participating in Formula SAE competitions for a little over 30 years now with the same goal: WIN !`
-          : `Welcome to the ${e.pageName.toLowerCase()} page of the FormuleETS club.`,
+          : `Welcome to the ${route.pageName.toLowerCase()} page of the FormuleETS club.`,
     },
   ]);
 });
 
 const router = createRouter({
-  mode: "history",
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
 });
@@ -133,3 +136,4 @@ router.beforeEach((to, from, next) => {
 });
 
 export default router;
+export { SuperRoute };

@@ -3,15 +3,15 @@ type SimpleMenu = {
   to: string;
 };
 
-type HeaderMenu =
-  | SimpleMenu
-  | {
-      name: string;
-      type: "dropdown";
-      menus: SimpleMenu;
-    };
+type DropDownMenu = {
+  name: string;
+  type: "dropdown";
+  menus: SimpleMenu[];
+};
 
-const HeaderMenus = [
+type HeaderMenu = SimpleMenu | DropDownMenu;
+
+const HeaderMenus: HeaderMenu[] = [
   {
     name: "message.header.aboutus",
     to: "/",
@@ -53,3 +53,4 @@ const HeaderMenus = [
 ];
 
 export default HeaderMenus;
+export { HeaderMenu, SimpleMenu, DropDownMenu };

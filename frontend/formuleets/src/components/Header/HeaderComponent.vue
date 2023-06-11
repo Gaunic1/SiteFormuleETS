@@ -6,10 +6,10 @@
     <nav class="flex justify-center items-center w-full h-full">
       <!-- COMPUTER -->
       <ul class="pointer-events-auto hidden list-none p-3 nesthub:flex">
-        <template v-for="item of menu" :key="item.name">
+        <template v-for="item of (menu as any)" :key="item.name">
           <!-- DROPDOWN -->
           <li
-            v-if="item.type == 'dropdown'"
+            v-if="item.type === 'dropdown'"
             class="dropdown flex items-center justify-center group"
           >
             <a
@@ -30,7 +30,7 @@
                 class="h-auto flex flex-col justify-center items-center items bg-white dark:bg-dark-mode"
               >
                 <li
-                  v-for="menu of (item.menus as any)"
+                  v-for="menu of (item.menus as DropDownMenu['menus'])"
                   :key="menu.name"
                   class="py-2 px-8 flex justify-center items-center"
                 >
@@ -156,7 +156,7 @@
 </template>
 
 <script lang="ts">
-import HeaderMenus from "./HeaderMenus";
+import HeaderMenus, { DropDownMenu } from "./HeaderMenus";
 
 export default {
   name: "HeaderComponent",

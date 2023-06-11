@@ -1,4 +1,6 @@
-const medias = [
+type Media = { name: string; icon: string; link: string };
+
+const medias: Media[] = [
   {
     name: "mail",
     icon: "fas fa-envelope",

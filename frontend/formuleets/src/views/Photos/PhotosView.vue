@@ -16,16 +16,16 @@
     <swiper
       class="size"
       :slides-per-view="1"
-      :navigation="true"
+      :navigation="(true as any)"
       :loop="true"
       :initialSlide="1"
-      :autoplay="{
-        delay: 7000,
-        disableOnInteraction: false,
-      }"
-      :pagination="{
+      :autoplay="(({
+              delay: 7000,
+              disableOnInteraction: false,
+            }) as any)"
+      :pagination="({
         clickable: true,
-      }"
+      } as any)"
       :modules="modules"
     >
       <swiper-slide v-for="img of db" :key="img.id">

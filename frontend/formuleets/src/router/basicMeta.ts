@@ -1,4 +1,6 @@
-const basicMeta = [
+type Meta = { [x: string]: string };
+
+const basicMeta: Meta[] = [
   {
     name: "keywords",
     content:
@@ -23,3 +25,4 @@ const basicMeta = [
 ];
 
 export default basicMeta;
+export { Meta };
