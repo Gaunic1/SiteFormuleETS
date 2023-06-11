@@ -16,7 +16,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 //THREE JS
 import * as THREE from "three/build/three.module.js";
 import { OBJLoader } from "three/examples/jsm/loaders/OBJLoader";
