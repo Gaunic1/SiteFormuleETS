@@ -1,0 +1,5 @@
+- Fixe webpack plugins
+- Refactoring code
+- Better typescript declaration
+- Better backend
+- Fixe parallaxy
