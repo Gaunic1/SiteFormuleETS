@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "@prerenderer/rollup-plugin": "^0.3.3",
-    "@prerenderer/webpack-plugin": "^5.3.4",
     "@types/three": "^0.152.1",
     "aos": "^2.3.4",
     "core-js": "^3.6.5",
