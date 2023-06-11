@@ -30,7 +30,7 @@
                 class="h-auto flex flex-col justify-center items-center items bg-white dark:bg-dark-mode"
               >
                 <li
-                  v-for="menu of item.menus"
+                  v-for="menu of (item.menus as any)"
                   :key="menu.name"
                   class="py-2 px-8 flex justify-center items-center"
                 >
@@ -67,7 +67,9 @@
             @click="changeLangue()"
             class="ml-3 w-9 h-9 uppercase flex justify-center items-center cursor-pointer dark:text-white border border-black dark:border-white rounded-full bg-center bg-cover"
             :style="
-              locale == 'en' ? background('english') : background('french')
+              $root.$i18n.locale == 'en'
+                ? background('english')
+                : background('french')
             "
           ></div>
         </li>
@@ -94,7 +96,7 @@
           ></i>
 
           <ul class="list-none dark:text-white text-center p-5 absolute top-10">
-            <template v-for="item of menu" :key="item.name">
+            <template v-for="item of (menu as any)" :key="item.name">
               <!-- DROPDOWN -->
               <li
                 v-if="item.type == 'dropdown'"
@@ -140,7 +142,7 @@
                 @click="changeLangue()"
                 class="ml-7 w-12 h-12 uppercase flex justify-center items-center cursor-pointer dark:text-white border border-black dark:border-white rounded-full bg-center bg-cover"
                 :style="
-                  $root.$i18n.getLocale() == 'en'
+                  $root.$i18n.locale == 'en'
                     ? background('english')
                     : background('french')
                 "

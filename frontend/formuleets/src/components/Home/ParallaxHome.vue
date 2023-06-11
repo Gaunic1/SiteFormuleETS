@@ -32,17 +32,13 @@
     <!-- TEXT CONTENT -->
     <article
       class="h-full nesthub:min-h-screen nesthub:w-2/5 text-justify p-10 dark:bg-dark-mode bg-white border-black dark:border-white flex justify-center flex-col top-0 z-10"
-      :class="
-        (position == 'right') != 0 ? 'nesthub:border-l' : 'nesthub:border-r'
-      "
+      :class="position === 'right' ? 'nesthub:border-l' : 'nesthub:border-r'"
     >
       <h1
         class="text-red-600 text-4xl my-3 font-bold italic tracking-wider text-shadow z-10 uppercase text-center"
         data-aos="zoom-in"
         :class="
-          (position == 'right') != 0
-            ? 'nesthub:text-right'
-            : 'nesthub:text-left'
+          position === 'right' ? 'nesthub:text-right' : 'nesthub:text-left'
         "
       >
         {{ $t(item.text + ".title") }}
@@ -57,6 +53,8 @@
   </section>
 </template>
 <script lang="ts">
+import { PropType } from "vue";
+
 export default {
   name: "ParallaxHome",
   props: {
@@ -64,6 +62,11 @@ export default {
       type: Boolean,
     },
     item: {
+      type: Object as PropType<{
+        text: string;
+        image: string;
+        mobileImage?: string;
+      }>,
       required: true,
     },
     position: {

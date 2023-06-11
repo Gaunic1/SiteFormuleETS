@@ -23,7 +23,7 @@
         {{ $t("message.team.title") }} - {{ team.title }}
       </h1>
 
-      <template v-for="categorie of team.members" :key="categorie.name">
+      <template v-for="categorie of team.categories" :key="categorie.name">
         <hr data-aos="zoom-in" class="border border-red-500 bg-red-500 m-5" />
 
         <div class="mt-5 text-left m-3">
@@ -99,6 +99,7 @@
 <script lang="ts">
 import teams from "./teams";
 import AsideBar from "../../components/Asidebar/AsideBar.vue";
+import Team from "./teams/team";
 
 export default {
   name: "TeamPage",
@@ -107,7 +108,7 @@ export default {
   data() {
     return {
       teams: teams,
-      team: {},
+      team: {} as Team,
       modal: false,
     };
   },

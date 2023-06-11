@@ -1,3 +1,16 @@
+type SimpleMenu = {
+  name: string;
+  to: string;
+};
+
+type HeaderMenu =
+  | SimpleMenu
+  | {
+      name: string;
+      type: "dropdown";
+      menus: SimpleMenu;
+    };
+
 const HeaderMenus = [
   {
     name: "message.header.aboutus",

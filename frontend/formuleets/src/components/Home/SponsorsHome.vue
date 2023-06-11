@@ -63,6 +63,9 @@
 </template>
 
 <script lang="ts">
+import { PropType } from "vue";
+import { Sponsor } from "../../views/Sponsors/sponsors";
+
 export default {
   name: "SponsorsHome",
   data() {
@@ -73,6 +76,7 @@ export default {
   },
   props: {
     sponsors: {
+      type: Object as PropType<Sponsor>,
       required: true,
     },
   },

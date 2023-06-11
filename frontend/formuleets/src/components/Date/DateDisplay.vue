@@ -21,7 +21,7 @@
     <!-- CONTENT -->
     <div
       v-for="(item, index) of dateList"
-      :key="item"
+      :key="item.title"
       data-aos="zoom-in"
       class="w-full z-10 dark:text-white flex"
     >

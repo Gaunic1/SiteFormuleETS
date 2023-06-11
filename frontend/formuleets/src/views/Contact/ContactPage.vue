@@ -55,7 +55,7 @@
         lazy-animation="opacity"
         class="w-full h-72"
         style="border: 0"
-        allowfullscreen=""
+        allowfullscreen="true"
       ></iframe>
     </section>
   </div>

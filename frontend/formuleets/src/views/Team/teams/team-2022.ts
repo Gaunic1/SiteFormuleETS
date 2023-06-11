@@ -1,6 +1,8 @@
-const team2022 = {
+import Team from "./team";
+
+const team2022: Team = {
   title: "2022",
-  members: [
+  categories: [
     {
       name: "message.team.management",
       members: [
@@ -206,12 +208,12 @@ const team2022 = {
           linkedin: "https://linkedin.com/in/kevin-awator",
         },
         {
-            img: "/static/team/members/alek_cyr.jpg",
-            fullName: "ALEK CYR",
-            role: "",
-            mail: "a.cyr.formule.ets@gmail.com",
-            linkedin: "https://www.linkedin.com/in/alek-cyr-9397b6192",
-        }
+          img: "/static/team/members/alek_cyr.jpg",
+          fullName: "ALEK CYR",
+          role: "",
+          mail: "a.cyr.formule.ets@gmail.com",
+          linkedin: "https://www.linkedin.com/in/alek-cyr-9397b6192",
+        },
       ],
     },
     {
@@ -225,9 +227,8 @@ const team2022 = {
           linkedin: "",
         },
         {
-
           img: "/static/team/members/antoine_gingras.jpg",
-          
+
           fullName: "Antoine Gingras",
 
           role: "",
@@ -294,8 +295,8 @@ const team2022 = {
           fullName: "Gustave Dromain",
           role: "",
           mail: "g.dromain.formule.ets@gmail.com",
-          linkedin: "https://www.linkedin.com/in/gustave-dromain-9b590a181/"
-         },
+          linkedin: "https://www.linkedin.com/in/gustave-dromain-9b590a181/",
+        },
       ],
     },
   ],

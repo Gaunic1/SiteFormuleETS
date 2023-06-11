@@ -1,6 +1,8 @@
-const team2021 = {
+import Team from "./team";
+
+const team2021: Team = {
   title: "2021",
-  members: [
+  categories: [
     {
       name: "message.team.management",
       members: [

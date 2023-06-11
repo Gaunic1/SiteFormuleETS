@@ -10,6 +10,7 @@ import "aos/dist/aos.css";
 import "lazy-attr";
 import "lazy-attr/dist/lazy-attr-animation.css";
 import "parallaxy-img";
+import "vue-i18n/dist/vue-i18n.d.ts";
 
 createApp(App)
   .use(createPinia())

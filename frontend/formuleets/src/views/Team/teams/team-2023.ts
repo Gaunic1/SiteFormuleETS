@@ -1,6 +1,8 @@
-const team2023 = {
+import Team from "./team";
+
+const team2023: Team = {
   title: "2023",
-  members: [
+  categories: [
     {
       name: "message.team.management",
       members: [
@@ -45,12 +47,12 @@ const team2023 = {
           linkedin: "https://www.linkedin.com/in/maximbrasseur/",
         },
         {
-            img: "",
-            fullName: "Gustave Dromain",
-            role: "",
-            mail: "g.dromain.formule.ets@gmail.com",
-            linkedin: "https://www.linkedin.com/in/gustave-dromain-9b590a181/",
-        }
+          img: "",
+          fullName: "Gustave Dromain",
+          role: "",
+          mail: "g.dromain.formule.ets@gmail.com",
+          linkedin: "https://www.linkedin.com/in/gustave-dromain-9b590a181/",
+        },
       ],
     },
     {
@@ -146,7 +148,8 @@ const team2023 = {
           fullName: "Jérôme Bolduc",
           role: "",
           mail: "j.bolduc.formule.ets@gmail.com",
-          linkedin:"https://www.linkedin.com/in/j%C3%A9r%C3%B4me-bolduc-7083191b1/",
+          linkedin:
+            "https://www.linkedin.com/in/j%C3%A9r%C3%B4me-bolduc-7083191b1/",
         },
       ],
     },
@@ -161,7 +164,6 @@ const team2023 = {
           linkedin: "https://www.linkedin.com/in/karl-de-vreeze-89524b180/",
         },
         {
-
           img: "/static/team/members/tommy_gelinas.jpg",
 
           fullName: "Tommy Gélinas",
@@ -171,43 +173,41 @@ const team2023 = {
           mail: "t.gelinas.formule.ets@gmail.com",
 
           linkedin: "https://www.linkedin.com/in/tommy-g%C3%A9linas-4a3935245/",
-
         },
         {
-          img:"/static/team/members/alek_cyr.jpg",
-          fullName:"Alek Cyr",
-          role:"",
-          mail:"a.cyr.formule.ets@gmail.com",
-          linkedin:"https://www.linkedin.com/in/alek-cyr-9397b6192"
-          }
+          img: "/static/team/members/alek_cyr.jpg",
+          fullName: "Alek Cyr",
+          role: "",
+          mail: "a.cyr.formule.ets@gmail.com",
+          linkedin: "https://www.linkedin.com/in/alek-cyr-9397b6192",
+        },
       ],
     },
     {
       name: "message.team.powertrain",
-        members: [
-            {
-                img: "/static/team/members/marc_antoine.jpg",
-                fullName: "Marc-Antoine Doyon",
-                role: "message.team.roles.lead-powertrain",
-                mail: "ma.doyon.formule.ets@gmail.com",
-                linkedin: "https://www.linkedin.com/in/marc-antoine-doyon/",
-            },
-            {
-                img: "/static/team/members/jean_carlo.jpg",
-                fullName: "Jean-Carlo Doray",
-                role: "",
-                mail: "jc.doray.formule.ets@gmail.com",
-                linkedin: "https://www.linkedin.com/in/jean-carlo-doray-b8614423b",
-            },
-            {
-                img: "",
-                fullName: "Gustave Dromain",
-                role: "",
-                mail: "g.dromain.formule.ets@gmail.com",
-                linkedin: "https://www.linkedin.com/in/gustave-dromain-9b590a181/",
-
-            }
-        ]
+      members: [
+        {
+          img: "/static/team/members/marc_antoine.jpg",
+          fullName: "Marc-Antoine Doyon",
+          role: "message.team.roles.lead-powertrain",
+          mail: "ma.doyon.formule.ets@gmail.com",
+          linkedin: "https://www.linkedin.com/in/marc-antoine-doyon/",
+        },
+        {
+          img: "/static/team/members/jean_carlo.jpg",
+          fullName: "Jean-Carlo Doray",
+          role: "",
+          mail: "jc.doray.formule.ets@gmail.com",
+          linkedin: "https://www.linkedin.com/in/jean-carlo-doray-b8614423b",
+        },
+        {
+          img: "",
+          fullName: "Gustave Dromain",
+          role: "",
+          mail: "g.dromain.formule.ets@gmail.com",
+          linkedin: "https://www.linkedin.com/in/gustave-dromain-9b590a181/",
+        },
+      ],
     },
     {
       name: "message.team.machining",
@@ -275,45 +275,46 @@ const team2023 = {
           linkedin: "https://www.linkedin.com/in/melina-gasparini-631991141/",
         },
         {
-            img: "",
-            fullName: "Gustave Dromain",
-            role: "",
-            mail: "g.dromain.formule.ets@gmail.com",
-            linkedin: "https://www.linkedin.com/in/gustave-dromain-9b590a181/",
+          img: "",
+          fullName: "Gustave Dromain",
+          role: "",
+          mail: "g.dromain.formule.ets@gmail.com",
+          linkedin: "https://www.linkedin.com/in/gustave-dromain-9b590a181/",
         },
       ],
     },
     {
-        name: "message.team.logistics",
-        members: [
-            {
-                img: "/static/team/members/melina_gasparini.jpg",
-                fullName: "MÉLINA GASPARINI",
-                role: "message.team.roles.lead-logistics",
-                mail: "m.gasparini.formule.ets@gmail.com",
-                linkedin: "https://www.linkedin.com/in/melina-gasparini-631991141/",
-            },
-            {
-                img: "/static/team/members/thomas_viejo.jpg",
-                fullName: "Thomas Viejo",
-                role: "",
-                mail: "t.viejo.formule.ets@gmail.com",
-                linkedin:"https://www.linkedin.com/in/thomas-viejo-9a213b195/?originalSubdomain=fr",
-            },
-        ]
+      name: "message.team.logistics",
+      members: [
+        {
+          img: "/static/team/members/melina_gasparini.jpg",
+          fullName: "MÉLINA GASPARINI",
+          role: "message.team.roles.lead-logistics",
+          mail: "m.gasparini.formule.ets@gmail.com",
+          linkedin: "https://www.linkedin.com/in/melina-gasparini-631991141/",
+        },
+        {
+          img: "/static/team/members/thomas_viejo.jpg",
+          fullName: "Thomas Viejo",
+          role: "",
+          mail: "t.viejo.formule.ets@gmail.com",
+          linkedin:
+            "https://www.linkedin.com/in/thomas-viejo-9a213b195/?originalSubdomain=fr",
+        },
+      ],
     },
     {
       name: "message.team.driverless",
-        members: [
-            {
-                img: "/static/team/members/komi_kevin.jpg",
-                fullName: "Komi Kevin Awator",
-                role: "message.team.roles.lead-driverless",
-                mail: "k.awator.formule.ets@gmail.com",
-                linkedin: "http://linkedin.com/in/kevin-awator",
-            }
-          ]
-    }
+      members: [
+        {
+          img: "/static/team/members/komi_kevin.jpg",
+          fullName: "Komi Kevin Awator",
+          role: "message.team.roles.lead-driverless",
+          mail: "k.awator.formule.ets@gmail.com",
+          linkedin: "http://linkedin.com/in/kevin-awator",
+        },
+      ],
+    },
   ],
 };
 

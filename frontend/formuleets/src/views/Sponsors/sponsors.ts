@@ -1,4 +1,21 @@
-const sponsors = {
+type SponsorDescription = {
+  src: string;
+  imageSrc: string;
+  whiteVersion?: string;
+};
+
+type Sponsor = {
+  button: {
+    title: string;
+    link: string;
+  };
+  diamond: SponsorDescription[];
+  silver: SponsorDescription[];
+  gold: SponsorDescription[];
+  bronze: SponsorDescription[];
+};
+
+const sponsors: Sponsor = {
   //BUTTON
   button: {
     title: "message.sponsors.button",
@@ -81,7 +98,7 @@ const sponsors = {
       imageSrc: "/static/sponsors/Bombardier.png",
     },
     {
-      src:"https://www.danatm4.com/fr/",
+      src: "https://www.danatm4.com/fr/",
       imageSrc: "/static/sponsors/DanaTM4.png",
     },
     {
@@ -151,27 +168,24 @@ const sponsors = {
   //SILVER
   silver: [
     {
-
       src: "https://www.orthogone.ca/",
 
-        imageSrc: "/static/sponsors/Orthogone.png"
-
+      imageSrc: "/static/sponsors/Orthogone.png",
     },
     {
-        src: "https://perryautolaval.com/",
-        imageSrc: "/static/sponsors/Perry.jpg",
+      src: "https://perryautolaval.com/",
+      imageSrc: "/static/sponsors/Perry.jpg",
     },
     {
       src: "https://www.opal-rt.com/",
       imageSrc: "/static/sponsors/Opal+RT.png",
     },
     {
-      src : "https://adsdata.ca/",
-        imageSrc: "/static/sponsors/ADS.png",
-
+      src: "https://adsdata.ca/",
+      imageSrc: "/static/sponsors/ADS.png",
     },
     {
-      src:"https://rapidharness.com/",
+      src: "https://rapidharness.com/",
       imageSrc: "/static/sponsors/Rapid+Harness.png",
     },
     {
@@ -238,33 +252,30 @@ const sponsors = {
 
   //BRONZE
   bronze: [
-
     {
       src: "https://www.vulcain.com",
       imageSrc: "/static/sponsors/Produits+de+metal+vulcain.jpg",
     },
     {
-      src:"https://www.comet-pumpen.de/en/start.html",
+      src: "https://www.comet-pumpen.de/en/start.html",
       imageSrc: "/static/sponsors/Comet+pumpen.png",
     },
     {
       src: "https://www.orthogone.ca/",
-        imageSrc: "/static/sponsors/Orthogone.png"
+      imageSrc: "/static/sponsors/Orthogone.png",
     },
-
-    
 
     {
       src: "https://hawkeyeind.com/",
       imageSrc: "/static/sponsors/Hawkeye.png",
     },
     {
-      src:"https://mgchemicals.com/",
+      src: "https://mgchemicals.com/",
       imageSrc: "/static/sponsors/MG+Chemicals.png",
     },
     {
       src: "https://chemtrend.com/",
-        imageSrc: "/static/sponsors/Chem+Trend.png",
+      imageSrc: "/static/sponsors/Chem+Trend.png",
     },
     {
       src: "http://www.nsk.com/",
@@ -335,3 +346,4 @@ const sponsors = {
 };
 
 export default sponsors;
+export { Sponsor };

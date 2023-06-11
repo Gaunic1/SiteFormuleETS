@@ -1,4 +1,6 @@
-const games = [
+type Game = {name: string, url: string}
+
+const games: Game[] = [
   {
     name: "Minecraft ONLINE",
     url: "https://classic.minecraft.net/",

@@ -1,4 +1,9 @@
-const dateList = {
+type DateList = {
+  stopDisplayingAfterDays: number;
+  list: { title: string; date: string; hour: string; link?: string }[];
+};
+
+const dateList: DateList = {
   stopDisplayingAfterDays: 1,
   list: [
     {

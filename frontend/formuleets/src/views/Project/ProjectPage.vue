@@ -162,9 +162,7 @@ export default {
     document.body.style.overflowY = "auto";
     clearInterval(this.autoScrollInterval);
 
-    document.removeEventListener("scroll", this.animateFormule, {
-      passive: false,
-    });
+    document.removeEventListener("scroll", this.animateFormule);
     window.removeEventListener("resize", this.calcHeight, true);
   },
   methods: {
@@ -288,7 +286,7 @@ export default {
         }
 
         //text handler
-        let text = {};
+        let text: { title?: string; label?: string } = {};
 
         const sort = project.text.sort(function (a, b) {
           return a.imageCount - b.imageCount;
