@@ -3,7 +3,7 @@ const PrerendererWebpackPlugin = require("@prerenderer/webpack-plugin");
 const SitemapPlugin = require("sitemap-webpack-plugin").default;
 const routes = require("./routes.match");
 
-module.exports = {
+export default {
   configureWebpack: () => {
     if (process.env.NODE_ENV !== "production") return;
     return {

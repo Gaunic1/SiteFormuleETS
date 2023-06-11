@@ -1,4 +1,4 @@
-const fs = require("fs");
+import fs from "fs";
 
 const textRoutes = fs.readFileSync("./src/router/index.js", "utf-8");
 const reg = new RegExp(/['"]?path['"]?:\s*['"]?(.+?)['"]?,/gi);
@@ -16,4 +16,4 @@ const finalPath = [...new Set(path)].filter((e) => e !== "/easter-eggs");
 if (process.env.NODE_ENV === "production")
   console.log("Matched routes: ", finalPath, "\n");
 
-module.exports = finalPath;
+export default finalPath;

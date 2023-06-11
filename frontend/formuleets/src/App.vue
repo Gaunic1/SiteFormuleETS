@@ -6,7 +6,7 @@
   <go-to-top></go-to-top>
   <NotificationsComponent></NotificationsComponent>
 </template>
-<script>
+<script lang="ts">
 import HeaderComponent from "./components/Header/HeaderComponent.vue";
 import FooterComponent from "./components/Footer/FooterComponent.vue";
 import GoToTop from "./components/GoToTop/GoToTop.vue";

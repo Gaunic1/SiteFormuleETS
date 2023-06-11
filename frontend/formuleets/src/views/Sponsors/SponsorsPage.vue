@@ -62,7 +62,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import sponsors from "./sponsors";
 
 export default {

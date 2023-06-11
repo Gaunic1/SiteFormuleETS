@@ -96,7 +96,7 @@
     ></AsideBar>
   </div>
 </template>
-<script>
+<script lang="ts">
 import teams from "./teams";
 import AsideBar from "../../components/Asidebar/AsideBar.vue";
 
@@ -126,7 +126,7 @@ export default {
       const year = this.year.toString();
       this.team = this.teams.find((e) => e.title == year);
     },
-    changeDefault(title) {
+    changeDefault(title: string) {
       this.$router.push({
         name: "TeamYear",
         params: {

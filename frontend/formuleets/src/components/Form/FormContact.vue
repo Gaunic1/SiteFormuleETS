@@ -75,7 +75,7 @@
   </section>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "FormContact",
   props: {
@@ -112,7 +112,7 @@ export default {
       fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
+        body: new URLSearchParams(formData as any).toString(),
       })
         .then(() => {
           this.form = {

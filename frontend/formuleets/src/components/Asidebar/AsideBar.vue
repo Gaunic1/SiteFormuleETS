@@ -37,7 +37,9 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { PropType } from "vue";
+
 export default {
   name: "AsideBar",
   props: {
@@ -51,7 +53,7 @@ export default {
       default: () => "Navbar",
     },
     itemsMenu: {
-      type: Array,
+      type: Array as PropType<{ title: string }[]>,
       required: true,
     },
     beforeItem: {

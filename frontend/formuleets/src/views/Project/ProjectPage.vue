@@ -95,7 +95,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import project from "./project";
 import phoneMixin from "../../mixins/phone-mixin";
 

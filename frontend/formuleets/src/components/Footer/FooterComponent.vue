@@ -39,7 +39,7 @@
     </div>
   </footer>
 </template>
-<script>
+<script lang="ts">
 import medias from "./medias";
 
 export default {

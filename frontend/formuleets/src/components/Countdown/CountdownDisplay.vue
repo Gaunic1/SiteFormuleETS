@@ -47,7 +47,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import NumberDisplay from "./NumberDisplay.vue";
 export default {
   name: "CountdownDisplay",
@@ -96,11 +96,13 @@ export default {
         return [0, 0, 0, 0];
       } else {
         this.stop = false;
-        let seconds = Math.floor(difference / 1000);
-        let minutes = Math.floor(seconds / 60);
-        let hours = Math.floor(minutes / 60);
-        let days = Math.floor(hours / 24);
-        let months = Math.floor(days / 30);
+
+        let seconds: number | string[] = Math.floor(difference / 1000);
+        let minutes: number | string[] = Math.floor(seconds / 60);
+        let hours: number | string[] = Math.floor(minutes / 60);
+        let days: number | string[] = Math.floor(hours / 24);
+        let months: number | string[] = Math.floor(days / 30);
+
         days %= 30;
         hours %= 24;
         minutes %= 60;

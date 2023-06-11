@@ -39,7 +39,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { useAlbumsStore } from "../../store/AlbumsStore";
 
 // Import Swiper Vue.js components

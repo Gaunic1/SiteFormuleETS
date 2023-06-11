@@ -1,23 +1,15 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
-import "@/assets/styles/main.css";
+import "./assets/styles/main.css";
 import i18n from "./i18n";
-import "@/assets/styles/main.css";
-
-//AOS
+import "./assets/styles/main.css";
+import { createPinia } from "pinia";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
-// //Lazy-attr
 import "lazy-attr";
 import "lazy-attr/dist/lazy-attr-animation.css";
-
-//Parallax effect
 import "parallaxy-img";
-
-//Pinia
-import { createPinia } from "pinia";
 
 createApp(App)
   .use(createPinia())

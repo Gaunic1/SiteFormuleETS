@@ -101,7 +101,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import sponsors from "../Sponsors/sponsors";
 import phoneMixin from "../../mixins/phone-mixin";
 import ParallaxHome from "../../components/Home/ParallaxHome.vue";

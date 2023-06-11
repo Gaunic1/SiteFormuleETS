@@ -67,9 +67,7 @@
             @click="changeLangue()"
             class="ml-3 w-9 h-9 uppercase flex justify-center items-center cursor-pointer dark:text-white border border-black dark:border-white rounded-full bg-center bg-cover"
             :style="
-              $root.$i18n.getLocale() == 'en'
-                ? background('english')
-                : background('french')
+              locale == 'en' ? background('english') : background('french')
             "
           ></div>
         </li>
@@ -155,7 +153,7 @@
   </header>
 </template>
 
-<script>
+<script lang="ts">
 import HeaderMenus from "./HeaderMenus";
 
 export default {
@@ -165,7 +163,7 @@ export default {
     document.addEventListener("scroll", this.scroll, { passive: true });
   },
   beforeUnmount() {
-    document.removeEventListener("scroll", this.scroll, { passive: true });
+    document.removeEventListener("scroll", this.scroll);
   },
   data() {
     return {

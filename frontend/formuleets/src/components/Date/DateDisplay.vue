@@ -43,7 +43,7 @@
   </section>
 </template>
 
-<script>
+<script lang="ts">
 import CountdownComponent from "../Countdown/CountdownDisplay.vue";
 import dateList from "./date";
 

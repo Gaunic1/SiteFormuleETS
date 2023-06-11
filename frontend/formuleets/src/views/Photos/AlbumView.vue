@@ -76,7 +76,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { useAlbumsStore } from "../../store/AlbumsStore";
 
 export default {

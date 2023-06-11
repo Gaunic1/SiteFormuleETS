@@ -54,7 +54,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import games from "./games";
 
 export default {
