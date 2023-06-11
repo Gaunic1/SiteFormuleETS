@@ -1,5 +1,5 @@
 import path from "path";
-import { defineConfig } from "vite";
+import { PluginOption, defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import PrerendererWebpackPlugin from "@prerenderer/webpack-plugin";
 import SitemapPlugin from "sitemap-webpack-plugin";
@@ -13,9 +13,9 @@ export default defineConfig({
 
     //Prerendering
     process.env.NODE_ENV === "production" &&
-      new PrerendererWebpackPlugin({
+      (new PrerendererWebpackPlugin({
         routes,
-      }),
+      }) as any),
 
     // Generate SiteMap for Google indexation
     process.env.NODE_ENV === "production" &&
