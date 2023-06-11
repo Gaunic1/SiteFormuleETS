@@ -3,8 +3,7 @@ import { PluginOption, defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import PrerendererWebpackPlugin from "@prerenderer/webpack-plugin";
 import SitemapPlugin from "sitemap-webpack-plugin";
-
-const routes = require("./routes.match");
+import routes from "./routes.match";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -12,14 +11,14 @@ export default defineConfig({
     vue(),
 
     //Prerendering
-    process.env.NODE_ENV === "production" &&
-      (new PrerendererWebpackPlugin({
-        routes,
-      }) as any),
+    // process.env.NODE_ENV === "production" &&
+    //   (new PrerendererWebpackPlugin({
+    //     routes,
+    //   }) as any),
 
-    // Generate SiteMap for Google indexation
-    process.env.NODE_ENV === "production" &&
-      new SitemapPlugin({ base: "https://formule-ets.ca", paths: routes }),
+    // // Generate SiteMap for Google indexation
+    // process.env.NODE_ENV === "production" &&
+    //   new SitemapPlugin({ base: "https://formule-ets.ca", paths: routes }),
   ].filter(Boolean),
 
   resolve: {
