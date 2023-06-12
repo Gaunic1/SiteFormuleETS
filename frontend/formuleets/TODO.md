@@ -2,3 +2,4 @@
 - Better typescript declaration
 - Better backend
 - Fixe parallaxy
+- Netlify cache for chromium
