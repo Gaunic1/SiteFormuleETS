@@ -186,9 +186,9 @@ export default {
       return "background-image: url('/static/flags/" + name + ".png')";
     },
     changeLangue() {
-      const lg = this.$root.$i18n.getLocale();
+      const lg = this.$root.$i18n.locale;
       const newLg = lg == "fr" ? "en" : "fr";
-      this.$root.$i18n.setLocale(newLg);
+      this.$root.$i18n.locale = newLg;
 
       localStorage.langage = newLg;
     },

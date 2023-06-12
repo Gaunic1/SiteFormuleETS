@@ -33,9 +33,8 @@ export default {
   },
   mounted() {
     const lg = localStorage.langage;
-    this.$root.$i18n.setLocale(
-      lg != null && lg ? lg : navigator.language.split("-")[0]
-    );
+    this.$root.$i18n.locale =
+      lg != null && lg ? lg : navigator.language.split("-")[0];
 
     document.addEventListener("visibilitychange", this.animateTitle);
   },
