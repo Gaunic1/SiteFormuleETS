@@ -2,7 +2,7 @@ import path from "path";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import routes from "./routes.match";
-import prerender from "@prerenderer/rollup-plugin";
+import prerender from "./plugins/prerender";
 
 const isProd = process.env.NODE_ENV === "production";
 
@@ -10,11 +10,7 @@ const isProd = process.env.NODE_ENV === "production";
 export default defineConfig({
   plugins: [
     vue(),
-
-    // Generate SiteMap for Google indexation
-    // process.env.NODE_ENV === "production" &&
-    //   new SitemapPlugin({ base: "https://formule-ets.ca", paths: routes }),
-    prerender({ routes }),
+    prerender({ buildDir: path.resolve(__dirname, "./dist"), routes }),
   ],
 
   resolve: {
