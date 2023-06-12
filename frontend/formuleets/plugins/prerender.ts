@@ -67,7 +67,7 @@ function savePage(options: Options, route: string, html: string) {
 
 const prerender = (options: Options): Plugin => {
   return {
-    name: "vite-plugin-html-prerender",
+    name: "prerender",
     apply: "build",
     enforce: "post",
     async closeBundle() {
