@@ -140,6 +140,14 @@ const sponsors = {
   //SILVER
   silver: [
     {
+      src: "https://www.cegepsl.qc.ca/",
+      imageSrc: "/static/sponsors/Cegep-de-saint-laurent.png"
+   },
+    {
+      src: "https://www.facebook.com/DrivenLogicCnc/",
+      imageSrc: "/static/sponsors/DrivenLogic.png",
+    },
+    {
       src: "https://www.golabo.com/fr",
       imageSrc: "/static/sponsors/labo-circuit.png",
     },

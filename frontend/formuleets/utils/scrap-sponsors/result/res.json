@@ -68,6 +68,14 @@
       "imageSrc": "/static/sponsors/3M.png"
     },
     {
+        "src": "https://www.cegepsl.qc.ca/",
+        "imageSrc": "/static/sponsors/Cegep-de-saint-laurent.png"
+     },
+    {
+        "src": "https://www.facebook.com/DrivenLogicCnc/",
+        "imageSrc": "/static/sponsors/DrivenLogic.png"
+      },
+    {
       "src": "https://www.fusia-groupe.com/",
       "imageSrc": "/static/sponsors/fusia.png"
     },
