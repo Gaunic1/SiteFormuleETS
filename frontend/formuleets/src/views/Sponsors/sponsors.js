@@ -8,6 +8,11 @@ const sponsors = {
   //DIAMOND
   diamond: [
     {
+      src: "https://www.sbg-systems.com/fr/",
+      imageSrc: "/static/sponsors/SBG.png",
+      whiteVersion: "/static/sponsors/SBG-white.png",
+    },
+    {
       src: "https://www.alstom.com/",
       imageSrc: "/static/sponsors/Alstom.png",
       whiteVersion: "/static/sponsors/Alstom-white.png",
@@ -48,11 +53,7 @@ const sponsors = {
       imageSrc: "/static/sponsors/Usinage+Villeneuve.png",
       whiteVersion: "/static/sponsors/Usinage+Villeneuve-white.png",
     },
-    {
-      src: "https://www.sbg-systems.com/fr/",
-      imageSrc: "/static/sponsors/SBG.png",
-      whiteVersion: "/static/sponsors/SBG-white.png",
-    },
+    
 
   ],
 
@@ -247,6 +248,10 @@ const sponsors = {
     {
       src: "https://vegtech.ca/",
       imageSrc: "/static/sponsors/vegtech.png",
+    },
+    {
+      src: "https://www.harting.com/US/en",
+      imageSrc: "/static/sponsors/Harting.png",
     },
   ],
 
