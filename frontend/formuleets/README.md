@@ -6,6 +6,8 @@
 ## How to run ?
 
 ```
-npm run serve
+export NODE_OPTIONS=--openssl-legacy-provider
+
+set NODE_OPTIONS=--openssl-legacy-provider  &&  npm run serve
 npm run server-local
 ```

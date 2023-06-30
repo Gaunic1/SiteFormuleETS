@@ -1,5 +1,9 @@
 [
     {
+        "src": "https://www.sbg-systems.com/fr/",
+        "imageSrc": "/static/sponsors/SBG.png"
+      },
+    {
         "src": "https://www.golabo.com/fr",
         "imageSrc": "/static/sponsors/labo-circuit.png"
       },
