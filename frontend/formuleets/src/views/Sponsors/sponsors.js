@@ -140,6 +140,14 @@ const sponsors = {
   //SILVER
   silver: [
     {
+    src: "https://www.wemas.de/fr",
+    imageSrc: "/static/sponsors/Wemas.png"
+ },
+  {
+    src: "https://www.avl.com/en",
+    imageSrc: "/static/sponsors/AVL.png",
+  },
+    {
       src: "https://www.cegepsl.qc.ca/",
       imageSrc: "/static/sponsors/Cegep-de-saint-laurent.png"
    },
