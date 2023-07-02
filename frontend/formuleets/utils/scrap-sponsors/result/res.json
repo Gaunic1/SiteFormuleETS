@@ -73,7 +73,7 @@
      },
       {
         "src": "https://www.avl.com/en",
-        "imageSrc": "/static/sponsors/AVL.png",
+        "imageSrc": "/static/sponsors/AVL.png"
       },
     {
         "src": "https://www.cegepsl.qc.ca/",
@@ -99,6 +99,10 @@
         "src": "http://www.avior.ca/index_fr.html",
         "imageSrc": "/static/sponsors/Avior.png"
     },
+    {
+        "src": "https://www.alstom.com/",
+        "imageSrc": "/static/sponsors/Alstom.png"
+      },
     {
         "src": "http://www.blaxes.com/",
         "imageSrc": "/static/sponsors/Blaxes.png"

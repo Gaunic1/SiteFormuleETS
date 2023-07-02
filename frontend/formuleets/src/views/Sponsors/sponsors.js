@@ -8,9 +8,9 @@ const sponsors = {
   //DIAMOND
   diamond: [
     {
-      src: "https://www.sbg-systems.com/fr/",
-      imageSrc: "/static/sponsors/SBG.png",
-      whiteVersion: "/static/sponsors/SBG-white.png",
+      src: "https://www.etsmtl.ca/",
+      imageSrc: "/static/sponsors/ETS.png",
+      whiteVersion: "/static/sponsors/ETS-white.png",
     },
     {
       src: "https://www.alstom.com/",
@@ -33,11 +33,6 @@ const sponsors = {
       whiteVersion: "/static/sponsors/Diacarb-white.png",
     },
     {
-      src: "https://www.etsmtl.ca/",
-      imageSrc: "/static/sponsors/ETS.png",
-      whiteVersion: "/static/sponsors/ETS-white.png",
-    },
-    {
       src: "https://www.renishaw.fr/fr/renishaw-amelioration-du-rendement-en-fabrication-et-en-soins-de-sante--1030",
       imageSrc: "/static/sponsors/Renishaw.png",
       whiteVersion: "/static/sponsors/Renishaw-white.png",
@@ -52,6 +47,11 @@ const sponsors = {
       src: "http://usinagevilleneuve.com/",
       imageSrc: "/static/sponsors/Usinage+Villeneuve.png",
       whiteVersion: "/static/sponsors/Usinage+Villeneuve-white.png",
+    },
+    {
+      src: "https://www.sbg-systems.com/fr/",
+      imageSrc: "/static/sponsors/SBG.png",
+      whiteVersion: "/static/sponsors/SBG-white.png",
     },
     
 
