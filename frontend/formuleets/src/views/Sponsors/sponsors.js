@@ -139,6 +139,11 @@ const sponsors = {
 
   //SILVER
   silver: [
+
+    {
+      src: "https://www.kiewit.com/?lang=fr-ca",
+      imageSrc: "/static/sponsors/kiewit.png",
+    },
     {
     src: "https://www.wemas.de/fr",
     imageSrc: "/static/sponsors/Wemas.png"
@@ -273,10 +278,7 @@ const sponsors = {
 
   //BRONZE 
   bronze: [
-    {
-      src: "https://www.kiewit.com/?lang=fr-ca",
-      imageSrc: "/static/sponsors/kiewit.png",
-    },
+
     {
       src: "https://www.isabellenhuetteusa.com/",
       imageSrc: "/static/sponsors/isabellenhuetteusa.png",
