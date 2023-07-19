@@ -37,8 +37,10 @@ const en = {
     date: {
       mainTitle: "Important dates",
       title: {
-        fsaeElectric: "Formula SAE Electric",
-        RollOut: "Roll Out",
+        FSEAST: "Formula Student EAST",
+        FSG: "Formula Student Germany",
+        FSG: "Formula Student Alpe Adria",
+        
       },
       informations: "More informations",
       months: "Months",

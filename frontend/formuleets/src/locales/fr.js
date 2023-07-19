@@ -40,8 +40,9 @@ const fr = {
     date: {
       mainTitle: "Dates importantes",
       title: {
-        fsaeElectric: "Formula SAE Electric",
-        RollOut: "Roll Out",
+        FSEAST: "Formula Student EAST",
+        FSG: "Formula Student Germany",
+        FSG: "Formula Student Alpe Adria",
       },
       informations: "Plus d'informations",
       months: "Mois",
