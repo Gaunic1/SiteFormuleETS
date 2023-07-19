@@ -89,7 +89,7 @@ const fr = {
       external_relationship: "Relations externes",
       logistics : "Logistique",
       driverless: "Conduite autonome",
-      statics: "statique"
+      statics: "statique",
       roles: {
         captain: "Capitaine de l'équipe",
         "technical-director": "Directeur technique",

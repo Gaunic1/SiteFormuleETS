@@ -85,7 +85,7 @@ const en = {
       external_relationship: "External Relationship",
       logistics: "Logistics",
       driverless: "Driverless",
-      statics: "Statics"
+      statics: "Statics",
       roles: {
         captain: "Team captain",
         "technical-director": "Technical director",

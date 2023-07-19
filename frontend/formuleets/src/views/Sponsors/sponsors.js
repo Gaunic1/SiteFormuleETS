@@ -53,8 +53,6 @@ const sponsors = {
       imageSrc: "/static/sponsors/Usinage+Villeneuve.png",
       whiteVersion: "/static/sponsors/Usinage+Villeneuve-white.png",
     },
-    
-    
 
   ],
 

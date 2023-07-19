@@ -43,7 +43,7 @@ const team2023 = {
             role: "",
             mail: "g.dromain.formule.ets@gmail.com",
             linkedin: "https://www.linkedin.com/in/gustave-dromain-9b590a181/",
-        }
+        },
         {
           img: "",
           fullName: "Éline Houri",
@@ -84,7 +84,7 @@ const team2023 = {
       members: [
         {
           img: "/static/team/members/lea_bruneau.jpg",
-          fullName: "Lea Bruneau",
+          fullName: "Léa Bruneau",
           role: "message.team.roles.lead-dynamic",
           mail: "l.bruneau.formule.ets@gmail.com",
           linkedin: "https://www.linkedin.com/in/l%C3%A9a-bruneau-6a045921b/",
@@ -282,7 +282,7 @@ const team2023 = {
             linkedin: "",
           },
           ]
-    }
+    },
     {
       name: "message.team.external_relationship",
       members: [
