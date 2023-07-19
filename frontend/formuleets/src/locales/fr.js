@@ -89,6 +89,7 @@ const fr = {
       external_relationship: "Relations externes",
       logistics : "Logistique",
       driverless: "Conduite autonome",
+      statics: "statique"
       roles: {
         captain: "Capitaine de l'équipe",
         "technical-director": "Directeur technique",
@@ -112,6 +113,7 @@ const fr = {
         "lead-logistics": "Responsable Logistique",
         "lead-machining": "Responsable Usinage",
         "lead-driverless": "Responsable Conduite autonome",
+        "lead-driverless-mec": "Responsable Mécanique Conduite autonome",
       },
     },
 

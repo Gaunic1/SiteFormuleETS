@@ -12,13 +12,6 @@ const team2023 = {
           linkedin: "https://www.linkedin.com/in/simon-aubin-lavoie/",
         },
         {
-          img: "/static/team/members/steve_groleau.jpg",
-          fullName: "Steve Groleau",
-          role: "message.team.roles.technical-director",
-          mail: "s.groleau.formule.ets@gmail.com",
-          linkedin: "https://www.linkedin.com/in/steve-groleau-1636a01b9/",
-        },
-        {
           img: "/static/team/members/samuel_gagne.jpg",
           fullName: "SAMUEL GAGNÉ",
           role: "message.team.roles.technical-director",
@@ -56,6 +49,13 @@ const team2023 = {
           fullName: "Éline Houri",
           role: "",
           mail: "e.houri.formule.ets@gmail.com",
+          linkedin: "",
+        },
+        {
+          img: "",
+          fullName: "Lucas Brilland",
+          role: "",
+          mail: "l.brilland.formule.ets@gmail.com",
           linkedin: "",
         },
       ],
@@ -263,7 +263,7 @@ const team2023 = {
             {
               img: "",
               fullName: "Charles Barette",
-              role: "message.team.roles.lead-driverless",
+              role: "message.team.roles.lead-driverless-mec",
               mail: "c.barette.formule.ets@gmail.com",
               linkedin: "",
           },
@@ -327,6 +327,25 @@ const team2023 = {
           fullName: "Shawn Kileen",
           role: "",
           mail: "s.kileen.formule.ets@gmail.com",
+          linkedin: "",
+        },
+      ],
+    },
+    {
+      name: "message.team.statics",
+      members: [
+        {
+          img: "",
+          fullName: "Léa Tonini",
+          role: "",
+          mail: "l.tonini.formule.ets@gmail.com",
+          linkedin: "",
+        },
+        {
+          img: "",
+          fullName: "Éline Houri",
+          role: "",
+          mail: "e.houri.formule.ets@gmail.com",
           linkedin: "",
         },
       ],
