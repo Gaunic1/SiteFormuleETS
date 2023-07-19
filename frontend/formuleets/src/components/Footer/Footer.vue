@@ -22,6 +22,7 @@
         <span class="text-white">
           FORMULE ETS, 1219 RUE WILLIAM, MONTRÉAL, QC, H3C 1R1, CANADA  +1 514-396-8800
           <a href="mailto:FORMULE@ENS.ETSMTL.CA" class="ml-1 font-bold">
+          FORMULE@ENS.ETSMTL.CA
           </a>
         </span>
       </div>
