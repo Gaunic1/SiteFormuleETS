@@ -42,7 +42,7 @@ const fr = {
       title: {
         FSEAST: "Formula Student EAST",
         FSG: "Formula Student Germany",
-        FSG: "Formula Student Alpe Adria",
+        FSAA: "Formula Student Alpe Adria",
       },
       informations: "Plus d'informations",
       months: "Mois",
