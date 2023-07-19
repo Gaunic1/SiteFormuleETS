@@ -288,6 +288,20 @@ const team2023 = {
             mail: "r.roumat.formule.ets@gmail.com",
             linkedin: "",
           },
+          {
+            img: "",
+            fullName: "Zacharie Morin",
+            role: "",
+            mail: "z.morin.formule.ets@gmail.com",
+            linkedin: "",
+        },
+        {
+          img: "",
+          fullName: "Nicolas Gaulin-Metivier",
+          role: "",
+          mail: "n.gaulin-metivier.formule.ets@gmail.com",
+          linkedin: "",
+      },
           ]
     },
     {
