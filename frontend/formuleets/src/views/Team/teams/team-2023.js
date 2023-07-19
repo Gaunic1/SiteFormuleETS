@@ -200,7 +200,14 @@ const team2023 = {
                 role: "",
                 mail: "z.morin.formule.ets@gmail.com",
                 linkedin: "",
-            }
+            },
+            {
+              img: "",
+              fullName: "Alexis St-Pierre",
+              role: "",
+              mail: "a.stpierre.formule.ets@gmail.com",
+              linkedin:"",
+            },
         ]
     },
     {
