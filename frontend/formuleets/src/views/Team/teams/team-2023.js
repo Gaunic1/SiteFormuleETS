@@ -196,7 +196,7 @@ const team2023 = {
             },
             {
                 img: "",
-                fullName: "Zacharie Morain",
+                fullName: "Zacharie Morin",
                 role: "",
                 mail: "z.morin.formule.ets@gmail.com",
                 linkedin: "",
@@ -242,11 +242,11 @@ const team2023 = {
           linkedin: "https://www.linkedin.com/in/steve-groleau-1636a01b9/",
         },
         {
-          img: "/static/team/members/steve_groleau.jpg",
+          img: "/static/team/members/maxim_brasseur.jpg",
           fullName: "Maxim Brasseur",
           role: "",
           mail: "m.brasseur.formule.ets@gmail.com",
-          linkedin: "https://www.linkedin.com/in/steve-groleau-1636a01b9/",
+          linkedin: "https://www.linkedin.com/in/maximbrasseur/",
         },
       ],
     },
