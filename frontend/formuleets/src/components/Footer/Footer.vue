@@ -25,17 +25,7 @@
         </h2>
       </div>
 
-      <!-- CREDIT -->
-      <div class="flex-initial w-full p-2 text-center">
-        <span class="text-white">
-          Made with
-          <i class="fas fa-heart text-red-600 mr-1 ml-1"></i>
-          by
-          <a href="mailto:charbonn.yoann@gmail.com" class="ml-1 font-bold">
-            yoannchb
-          </a>
-        </span>
-      </div>
+      
     </div>
   </footer>
 </template>
