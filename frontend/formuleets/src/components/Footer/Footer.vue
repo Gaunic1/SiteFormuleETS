@@ -21,7 +21,8 @@
       <div class="flex-initial w-full p-5 text-center">
         <h2 class="font-serif text-sm text-white">
           FORMULE ETS, 1219 RUE WILLIAM, MONTRÉAL, QC, H3C 1R1,
-          CANADA  +1 514-396-8800 mailto:FORMULE@ENS.ETSMTL.CA
+          CANADA  +1 514-396-8800 
+          <a href="mailto:charbonn.yoann@gmail.com" class="ml-1 font-bold">
         </h2>
       </div>
 
