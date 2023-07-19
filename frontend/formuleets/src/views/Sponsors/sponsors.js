@@ -44,15 +44,16 @@ const sponsors = {
         "/static/sponsors/Technologie+Superieure+D_alliage-white.png",
     },
     {
-      src: "http://usinagevilleneuve.com/",
-      imageSrc: "/static/sponsors/Usinage+Villeneuve.png",
-      whiteVersion: "/static/sponsors/Usinage+Villeneuve-white.png",
-    },
-    {
       src: "https://www.sbg-systems.com/fr/",
       imageSrc: "/static/sponsors/SBG.png",
       whiteVersion: "/static/sponsors/SBG-white.png",
     },
+    {
+      src: "http://usinagevilleneuve.com/",
+      imageSrc: "/static/sponsors/Usinage+Villeneuve.png",
+      whiteVersion: "/static/sponsors/Usinage+Villeneuve-white.png",
+    },
+    
     
 
   ],
