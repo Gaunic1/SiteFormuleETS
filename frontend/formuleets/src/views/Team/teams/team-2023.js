@@ -297,7 +297,7 @@ const team2023 = {
         },
         {
           img: "",
-          fullName: "Nicolas Gaulin-Metivier",
+          fullName: "Nicolas Gaulin-Metivier ",
           role: "",
           mail: "n.gaulin-metivier.formule.ets@gmail.com",
           linkedin: "",
