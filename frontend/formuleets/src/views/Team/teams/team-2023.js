@@ -18,6 +18,13 @@ const team2023 = {
           mail: "s.groleau.formule.ets@gmail.com",
           linkedin: "https://www.linkedin.com/in/steve-groleau-1636a01b9/",
         },
+        {
+          img: "/static/team/members/samuel_gagne.jpg",
+          fullName: "SAMUEL GAGNÉ",
+          role: "message.team.roles.technical-director",
+          mail: "s.gagne.formule.ets@gmail.com",
+          linkedin: "https://www.linkedin.com/in/samuel-gagne-978529183",
+        },
       ],
     },
     {
@@ -29,13 +36,6 @@ const team2023 = {
           role: "message.team.roles.lead-aerodynamics",
           mail: "d.gavrila.formule.ets@gmail.com",
           linkedin: "https://www.linkedin.com/in/daniel-gavrila-59665318a/",
-        },
-        {
-          img: "/static/team/members/antoine_gingras.jpg",
-          fullName: "Antoine Gingras",
-          role: "",
-          mail: "a.gingras.formule.ets@gmail.com",
-          linkedin: "https://www.linkedin.com/in/antoine-gingras-227850236",
         },
         {
           img: "/static/team/members/maxim_brasseur.jpg",
@@ -51,6 +51,13 @@ const team2023 = {
             mail: "g.dromain.formule.ets@gmail.com",
             linkedin: "https://www.linkedin.com/in/gustave-dromain-9b590a181/",
         }
+        {
+          img: "",
+          fullName: "Éline Houri",
+          role: "",
+          mail: "e.houri.formule.ets@gmail.com",
+          linkedin: "",
+        },
       ],
     },
     {
@@ -96,6 +103,20 @@ const team2023 = {
           mail: "a.valsorda.formule.ets@gmail.com",
           linkedin: "https://www.linkedin.com/in/alexandre-valsorda-3015831a5/",
         },
+        {
+          img: "",
+          fullName: "Charles Barette",
+          role: "",
+          mail: "c.barette.formule.ets@gmail.com",
+          linkedin: "",
+        },
+        {
+          img: "",
+          fullName: "Léa Tonini",
+          role: "",
+          mail: "l.tonini.formule.ets@gmail.com",
+          linkedin: "",
+        },
       ],
     },
     {
@@ -107,13 +128,6 @@ const team2023 = {
           role: "message.team.roles.lead-control",
           mail: "s.groleau.formule.ets@gmail.com",
           linkedin: "https://www.linkedin.com/in/steve-groleau-1636a01b9/",
-        },
-        {
-          img: "/static/team/members/victor_avezard.jpg",
-          fullName: "Victor Avezard",
-          role: "",
-          mail: "v.avezard.formule.ets@gmail.com",
-          linkedin: "www.linkedin.com/in/victor-avezard",
         },
       ],
     },
@@ -128,25 +142,18 @@ const team2023 = {
           linkedin: "https://www.linkedin.com/in/f%C3%A9lix-groleau-28b5b3231",
         },
         {
-          img: "/static/team/members/victor_avezard.jpg",
-          fullName: "VICTOR AVEZARD",
-          role: "",
-          mail: "v.avezard.formule.ets@gmail.com",
-          linkedin: "https://www.linkedin.com/in/victor-avezard",
-        },
-        {
-          img: "/static/team/members/marc_antoine.jpg",
-          fullName: "MARC-ANTOINE DOYON",
-          role: "",
-          mail: "ma.doyon.formule.ets@gmail.com",
-          linkedin: "https://www.linkedin.com/in/marc-antoine-doyon/",
-        },
-        {
           img: "",
           fullName: "Jérôme Bolduc",
           role: "",
           mail: "j.bolduc.formule.ets@gmail.com",
           linkedin:"https://www.linkedin.com/in/j%C3%A9r%C3%B4me-bolduc-7083191b1/",
+        },
+        {
+          img: "",
+          fullName: "Alexis St-Pierre",
+          role: "",
+          mail: "a.stpierre.formule.ets@gmail.com",
+          linkedin:"",
         },
       ],
     },
@@ -161,15 +168,10 @@ const team2023 = {
           linkedin: "https://www.linkedin.com/in/karl-de-vreeze-89524b180/",
         },
         {
-
           img: "/static/team/members/tommy_gelinas.jpg",
-
           fullName: "Tommy Gélinas",
-
           role: "",
-
           mail: "t.gelinas.formule.ets@gmail.com",
-
           linkedin: "https://www.linkedin.com/in/tommy-g%C3%A9linas-4a3935245/",
 
         },
@@ -186,26 +188,18 @@ const team2023 = {
       name: "message.team.powertrain",
         members: [
             {
-                img: "/static/team/members/marc_antoine.jpg",
-                fullName: "Marc-Antoine Doyon",
-                role: "message.team.roles.lead-powertrain",
-                mail: "ma.doyon.formule.ets@gmail.com",
-                linkedin: "https://www.linkedin.com/in/marc-antoine-doyon/",
-            },
-            {
                 img: "/static/team/members/jean_carlo.jpg",
                 fullName: "Jean-Carlo Doray",
-                role: "",
+                role: "message.team.roles.lead-powertrain",
                 mail: "jc.doray.formule.ets@gmail.com",
                 linkedin: "https://www.linkedin.com/in/jean-carlo-doray-b8614423b",
             },
             {
                 img: "",
-                fullName: "Gustave Dromain",
+                fullName: "Zacharie Morain",
                 role: "",
-                mail: "g.dromain.formule.ets@gmail.com",
-                linkedin: "https://www.linkedin.com/in/gustave-dromain-9b590a181/",
-
+                mail: "z.morin.formule.ets@gmail.com",
+                linkedin: "",
             }
         ]
     },
@@ -218,13 +212,6 @@ const team2023 = {
           role: "message.team.roles.lead-machining",
           mail: "t.gelinas.formule.ets@gmail.com",
           linkedin: "https://www.linkedin.com/in/tommy-g%C3%A9linas-4a3935245/",
-        },
-        {
-          img: "/static/team/members/antoine_gingras.jpg",
-          fullName: "Antoine Gringas",
-          role: "",
-          mail: "a.gringas.formule.ets@gmail.com",
-          linkedin: "https://www.linkedin.com/in/antoine-gingras-227850236",
         },
         {
           img: "/static/team/members/alexandre_valsorda.jpg",
@@ -254,8 +241,48 @@ const team2023 = {
           mail: "s.groleau.formule.ets@gmail.com",
           linkedin: "https://www.linkedin.com/in/steve-groleau-1636a01b9/",
         },
+        {
+          img: "/static/team/members/steve_groleau.jpg",
+          fullName: "Maxim Brasseur",
+          role: "",
+          mail: "m.brasseur.formule.ets@gmail.com",
+          linkedin: "https://www.linkedin.com/in/steve-groleau-1636a01b9/",
+        },
       ],
     },
+    {
+      name: "message.team.driverless",
+        members: [
+            {
+                img: "/static/team/members/komi_kevin.jpg",
+                fullName: "Komi Kevin Awator",
+                role: "message.team.roles.lead-driverless",
+                mail: "k.awator.formule.ets@gmail.com",
+                linkedin: "http://linkedin.com/in/kevin-awator",
+            },
+            {
+              img: "",
+              fullName: "Charles Barette",
+              role: "message.team.roles.lead-driverless",
+              mail: "c.barette.formule.ets@gmail.com",
+              linkedin: "",
+          },
+          {
+            img: "",
+            fullName: "Shawn Kileen",
+            role: "",
+            mail: "s.kileen.formule.ets@gmail.com",
+            linkedin: "",
+          },
+          {
+            img: "",
+            fullName: "Raphaël Roumat",
+            role: "",
+            mail: "r.roumat.formule.ets@gmail.com",
+            linkedin: "",
+          },
+          ]
+    }
     {
       name: "message.team.external_relationship",
       members: [
@@ -269,7 +296,7 @@ const team2023 = {
         },
         {
           img: "/static/team/members/melina_gasparini.jpg",
-          fullName: "MÉLINA GASPARINI",
+          fullName: "Mélina Gasparini",
           role: "",
           mail: "m.gasparini.formule.ets@gmail.com",
           linkedin: "https://www.linkedin.com/in/melina-gasparini-631991141/",
@@ -281,39 +308,30 @@ const team2023 = {
             mail: "g.dromain.formule.ets@gmail.com",
             linkedin: "https://www.linkedin.com/in/gustave-dromain-9b590a181/",
         },
+        {
+          img: "",
+          fullName: "Léa Tonini",
+          role: "",
+          mail: "l.tonini.formule.ets@gmail.com",
+          linkedin: "",
+        },
+        {
+          img: "",
+          fullName: "Mathilde Vigon",
+          role: "",
+          mail: "m.vigon.formule.ets@gmail.com",
+          linkedin: "",
+        },
+        {
+          img: "",
+          fullName: "Shawn Kileen",
+          role: "",
+          mail: "s.kileen.formule.ets@gmail.com",
+          linkedin: "",
+        },
       ],
     },
-    {
-        name: "message.team.logistics",
-        members: [
-            {
-                img: "/static/team/members/melina_gasparini.jpg",
-                fullName: "MÉLINA GASPARINI",
-                role: "message.team.roles.lead-logistics",
-                mail: "m.gasparini.formule.ets@gmail.com",
-                linkedin: "https://www.linkedin.com/in/melina-gasparini-631991141/",
-            },
-            {
-                img: "/static/team/members/thomas_viejo.jpg",
-                fullName: "Thomas Viejo",
-                role: "",
-                mail: "t.viejo.formule.ets@gmail.com",
-                linkedin:"https://www.linkedin.com/in/thomas-viejo-9a213b195/?originalSubdomain=fr",
-            },
-        ]
-    },
-    {
-      name: "message.team.driverless",
-        members: [
-            {
-                img: "/static/team/members/komi_kevin.jpg",
-                fullName: "Komi Kevin Awator",
-                role: "message.team.roles.lead-driverless",
-                mail: "k.awator.formule.ets@gmail.com",
-                linkedin: "http://linkedin.com/in/kevin-awator",
-            }
-          ]
-    }
+    
   ],
 };
 
