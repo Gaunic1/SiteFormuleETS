@@ -1,5 +1,9 @@
 [
     {
+        "src": "https://www.desjardins.com/qc/fr.html",
+        "imageSrc": "/static/sponsors/Desjardins.png"
+      },
+    {
         "src": "https://www.sbg-systems.com/fr/",
         "imageSrc": "/static/sponsors/SBG.png"
       },

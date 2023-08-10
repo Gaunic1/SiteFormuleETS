@@ -151,6 +151,10 @@ const sponsors = {
     src: "https://www.avl.com/en",
     imageSrc: "/static/sponsors/AVL.png",
   },
+  {
+    src: "https://www.desjardins.com/qc/fr.html",
+    imageSrc: "/static/sponsors/Desjardins.png",
+  },
     {
       src: "https://www.cegepsl.qc.ca/",
       imageSrc: "/static/sponsors/Cegep-de-saint-laurent.png"
