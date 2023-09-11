@@ -276,9 +276,9 @@ const team2023 = {
           },
           {
             img: "",
-            fullName: "Shawn Kileen",
+            fullName: "Shawn Killeen",
             role: "",
-            mail: "s.kileen.formule.ets@gmail.com",
+            mail: "s.killeen.formule.ets@gmail.com",
             linkedin: "",
           },
           {
