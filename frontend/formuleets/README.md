@@ -11,3 +11,11 @@ export NODE_OPTIONS=--openssl-legacy-provider
 set NODE_OPTIONS=--openssl-legacy-provider  &&  npm run serve
 npm run server-local
 ```
+
+## How to really run (Windows) ?
+- Download or update Node.js (verify version with npm -v)
+- Open terminal and go under SiteFormuleETS\frontend\formuleets
+- Enter ``` $env:NODE_OPTIONS="--openssl-legacy-provider" ```
+- Verify environment variable with ``` Get-Childitem -path env: ```
+- ``` npm install ```
+- ``` npm run serve ```

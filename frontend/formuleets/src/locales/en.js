@@ -84,12 +84,13 @@ const en = {
       drivetrain: "Drivetrain",
       machining: "Machining",
       sponsors_n_media: "Sponsors & Media",
-      external_relationship: "External Relationship",
+      external_relationship: "External Relationship & Logistics",
       logistics: "Logistics",
       driverless: "Driverless",
       statics: "Statics",
       roles: {
         captain: "Team captain",
+        "co-captaine": "Team co-captain",
         "technical-director": "Technical director",
         "management-director": "Management director",
         "head-aerodynamics": "Head of Aerodynamics",
@@ -102,7 +103,7 @@ const en = {
         "head-electronic": "Head of Electronics",
         "lead-electronic": "Electronics Lead",
         "head-media-sponsors": "Head of Sponsors & Media",
-        "lead-external-relationship": "External Relationship Lead",
+        "lead-external-relationship": "External Relationship & Logistics Lead",
         "head-power-drive": "Head of Power & Drive",
         "lead-powertrain": "Powertrain Lead",
         "lead-drivetrain": "Drivetrain Lead",
@@ -112,7 +113,8 @@ const en = {
         "lead-logistics": "Logistics Lead",
         "lead-driverless": "Driverless Lead",
         "lead-driverless-mec": "Driverless Mechanical Lead",
-
+        "lead-statics": "Statics Lead",
+        "treasurer": "Treasurer",
       },
     },
 
