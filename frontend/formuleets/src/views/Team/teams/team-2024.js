@@ -45,13 +45,6 @@ const team2024 = {
           linkedin: "https://www.linkedin.com/in/eline-houri-0961aa220/",
         },
         {
-          img: "/static/team/members/maxim_brasseur.jpg",
-          fullName: "Maxim Brasseur",
-          role: "",
-          mail: "m.brasseur.formule.ets@gmail.com",
-          linkedin: "https://www.linkedin.com/in/maximbrasseur/",
-        },
-        {
             img: "",
             fullName: "Gustave Dromain",
             role: "",
@@ -175,12 +168,26 @@ const team2024 = {
           linkedin:"https://www.linkedin.com/in/alek-cyr-9397b6192"
         },
         {
+          img: "/static/team/members/maxim_brasseur.jpg",
+          fullName: "Maxim Brasseur",
+          role: "",
+          mail: "m.brasseur.formule.ets@gmail.com",
+          linkedin: "https://www.linkedin.com/in/maximbrasseur/",
+        },
+        {
           img: "/static/team/members/tommy_gelinas.jpg",
           fullName: "Tommy Gélinas",
           role: "",
           mail: "t.gelinas.formule.ets@gmail.com",
           linkedin: "https://www.linkedin.com/in/tommy-g%C3%A9linas-4a3935245/",
 
+        },
+        {
+          img: "/static/team/members/charles_deschenes.jpg",
+          fullName: "Charles Deschenes",
+          role: "",
+          mail: "c.deschenes.formule.ets@gmail.com",
+          linkedin: "https://www.linkedin.com/in/charles-deschenes-a1b739165/",
         },
         {
           img: "",
@@ -249,6 +256,20 @@ const team2024 = {
           mail: "m.brasseur.formule.ets@gmail.com",
           linkedin: "https://www.linkedin.com/in/maximbrasseur/",
         },
+        {
+          img: "/static/team/members/etienne_paillereau.jpg",
+          fullName: "Etienne Paillereau",
+          role: "",
+          mail: "e.paillereau.formule.ets@gmail.com",
+          linkedin: "https://www.linkedin.com/in/etienne-paillereau-746855203",
+        },
+        {
+          img: "",
+          fullName: "Gustave Dromain",
+          role: "",
+          mail: "g.dromain.formule.ets@gmail.com",
+          linkedin: "https://www.linkedin.com/in/gustave-dromain-9b590a181/",
+      },
       ],
     },
     {

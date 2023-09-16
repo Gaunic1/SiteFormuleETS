@@ -89,7 +89,7 @@ const fr = {
       sponsors_n_media: "Commanditaires & Média",
       external_relationship: "Relations externes et Logistique",
       logistics : "Logistique",
-      driverless: "Conduite autonome",
+      driverless: "Logiciel et système autonome",
       statics: "Statique",
       roles: {
         captain: "Capitaine de l'équipe",
@@ -114,7 +114,7 @@ const fr = {
         "head-power-drive-meca": "Chef de Motopropulseur Mécanique",
         "lead-logistics": "Responsable Logistique",
         "lead-machining": "Responsable Usinage",
-        "lead-driverless": "Responsable Conduite autonome",
+        "lead-driverless": "Responsable Logiciel et Conduite Autonome",
         "lead-driverless-mec": "Responsable Mécanique Conduite autonome",
         "lead-statics": "Responsable épreuves statiques",
         "treasurer": "Trésorier",
@@ -168,9 +168,9 @@ const fr = {
             "Assemblage aérodynamique cohésif et efficace. <br> Assemblage exploitant l’effet du sol. <br> Système de réduction de trainée à double action.",
         },
         thank: {
-          title: "Média",
+          title: "Relations Externes et Logistique",
           label:
-            "Réalisations des photos et vidéos. <br> Maintenance du site. <br> Gestion des réseaux sociaux et des commanditaires.",
+            "Réalisations des photos et vidéos. <br> Maintenance du site. <br> Gestion des réseaux sociaux et des commanditaires. <br> Organiser des évènements et des salons.",
         },
       },
     },

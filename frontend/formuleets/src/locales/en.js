@@ -86,7 +86,7 @@ const en = {
       sponsors_n_media: "Sponsors & Media",
       external_relationship: "External Relationship & Logistics",
       logistics: "Logistics",
-      driverless: "Driverless",
+      driverless: "Software and Autonomous System",
       statics: "Statics",
       roles: {
         captain: "Team captain",
@@ -111,7 +111,7 @@ const en = {
         "head-power-drive-elec": "Head of Power & Drive Electrical",
         "head-power-drive-meca": "Head of Power & Drive Mechanical",
         "lead-logistics": "Logistics Lead",
-        "lead-driverless": "Driverless Lead",
+        "lead-driverless": "Software & Autonomous System Lead",
         "lead-driverless-mec": "Driverless Mechanical Lead",
         "lead-statics": "Statics Lead",
         "treasurer": "Treasurer",
@@ -165,9 +165,9 @@ const en = {
             "Efficient and cohesive packaging. <br> Aerodynamic package exploiting ground effect. <br> Double action drag reduction system (DRS).",
         },
         thank: {
-          title: "Media",
+          title: "External Relationship & Logistics",
           label:
-            "Production of photos and videos. <br> Maintenance of the website. <br> Management of social networks and sponsors.",
+            "Production of photos and videos. <br> Maintenance of the website. <br> Management of social networks and sponsors. <br> Organise events and shows.",
         },
       },
     },
