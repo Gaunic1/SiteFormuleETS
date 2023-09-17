@@ -19,3 +19,11 @@ npm run server-local
 - Verify environment variable with ``` Get-Childitem -path env: ```
 - ``` npm install ```
 - ``` npm run serve ```
+
+## How to deploy
+- Installer Filezilla
+- ```npm run build```
+- Trouver le dossier dist dans ton projet
+- Allez sur Web Hosting Canada -> Hosted Website -> cpanel
+- ![Alt text](filezillaconfig.png)
+- Clique droit + Update
